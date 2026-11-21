@@ -54,6 +54,9 @@ importers:
       '@electric-sql/pglite-postgis':
         specifier: 0.2.17
         version: 0.2.17(@electric-sql/pglite@0.5.17)
+      '@formatjs/icu-messageformat-parser':
+        specifier: 3.5.23
+        version: 3.5.23
       '@playwright/test':
         specifier: ^1.65.1
         version: 1.65.1

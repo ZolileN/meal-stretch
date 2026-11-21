@@ -46,6 +46,7 @@
   "devDependencies": {
     "@electric-sql/pglite": "0.5.17",
     "@electric-sql/pglite-postgis": "0.2.17",
+    "@formatjs/icu-messageformat-parser": "3.5.23",
     "@playwright/test": "^1.65.1",
     "@tailwindcss/postcss": "^4.3.5",
     "@types/node": "^22.20.5",
