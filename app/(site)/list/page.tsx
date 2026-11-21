@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { getDb } from '@/lib/db';
 import { currentHousehold } from '@/lib/household';
-import { latestPlan } from '@/lib/plans/service';
+import { latestPlanFresh } from '@/lib/plans/service';
 import { buildListView, whatsappText } from '@/lib/plans/list';
 import { formatRand } from '@/lib/money';
 import { track } from '@/lib/events';
@@ -13,7 +13,7 @@ export const dynamic = 'force-dynamic';
 export default async function ListPage() {
   const db = getDb();
   const h = await currentHousehold(db);
-  const plan = h ? await latestPlan(db, h.id) : null;
+  const plan = h ? await latestPlanFresh(db, h.id) : null;
   if (!h || !plan) redirect('/start');
   const [view, t] = await Promise.all([buildListView(db, plan), getTranslations('list')]);
   await track(db, h.id, 'list_opened');

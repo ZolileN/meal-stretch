@@ -5,7 +5,7 @@ import { CookingPot } from 'lucide-react';
 import { getDb } from '@/lib/db';
 import { currentHousehold } from '@/lib/household';
 import { isoDateInSA } from '@/lib/period';
-import { latestPlan } from '@/lib/plans/service';
+import { latestPlanFresh } from '@/lib/plans/service';
 import { buildPlanView } from '@/lib/plans/view';
 import { pickTonight } from '@/lib/plans/tonight';
 import { loadCookView } from '@/lib/recipes/cook';
@@ -18,7 +18,7 @@ export const dynamic = 'force-dynamic';
 export default async function TonightPage() {
   const db = getDb();
   const h = await currentHousehold(db);
-  const plan = h ? await latestPlan(db, h.id) : null;
+  const plan = h ? await latestPlanFresh(db, h.id) : null;
   if (!plan) redirect('/start');
   const locale = await getLocale();
   const [t, view] = await Promise.all([getTranslations('home'), buildPlanView(db, plan, locale)]);

@@ -101,6 +101,25 @@ export async function getPlan(db: Db, householdId: string, planId: string): Prom
   return rows[0] ? mapPlan(rows[0]) : null;
 }
 
+/**
+ * latestPlan for page loads: an active plan that couldn't price some ingredients is re-planned (same request)
+ * once prices for any of them have arrived since it was made. Plans without unpriced items are never touched.
+ */
+export async function latestPlanFresh(db: Db, householdId: string): Promise<StoredPlan | null> {
+  const plan = await latestPlan(db, householdId);
+  if (!plan || plan.status !== 'active' || plan.result.unpriced.length === 0) return plan;
+  const ids = plan.result.unpriced.map((u) => u.ingredientId);
+  const [fresh] = await query<{ yes: boolean }>(
+    db,
+    sql`select exists (
+          select 1 from price_observations o join products p on p.id = o.product_id
+          where p.ingredient_id in (${sql.join(ids.map((i) => sql`${i}`), sql`, `)}) and o.created_at > ${plan.createdAt}::timestamptz
+        ) as yes`,
+  );
+  if (!fresh?.yes) return plan;
+  return createPlanFromRequest(db, householdId, plan.request);
+}
+
 export async function latestPlan(db: Db, householdId: string): Promise<StoredPlan | null> {
   const rows = await query<Record<string, unknown>>(
     db,
