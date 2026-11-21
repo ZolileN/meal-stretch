@@ -6,6 +6,7 @@ import type { Household } from '@/lib/household';
 import { track } from '@/lib/events';
 import { recipeNames } from '@/lib/recipes/queries';
 import { engine, engineContext, pantryOf, PlanError, saveResult, type StoredPlan } from './service';
+import { cuisineOf, ideaCandidates, pickIdeas } from './ideas';
 
 /** The request an action runs with: the stored plan + the household's current cards, never-swap list and pantry. */
 async function actionRequest(db: Db, h: Household, plan: StoredPlan): Promise<PlanRequest> {
@@ -35,6 +36,45 @@ export async function swapOptionsFor(db: Db, h: Household, plan: StoredPlan, day
       return { recipeId: o.recipeId, name: names.get(o.recipeId)?.name ?? o.recipeId, cookMinutes: names.get(o.recipeId)?.cookMinutes ?? 0, deltaCents: o.deltaCents, perPlateCents: m.perPlateCents };
     }),
   };
+}
+
+/**
+ * Meal ideas for one day: Claude picks from our published recipes (lib/plans/ideas.ts), then the engine
+ * prices each pick as if it replaced that day's supper. Nothing is saved; choosing one uses replaceMeal.
+ */
+export async function ideasFor(db: Db, h: Household, plan: StoredPlan, day: number, text: string) {
+  assertDay(plan, day);
+  const req = await actionRequest(db, h, plan);
+  const candidates = await ideaCandidates(db, { exclusions: req.exclusions, inPlan: plan.result.meals.map((m) => m.recipeId) });
+  if (candidates.length === 0) return { day, understood: false, options: [] };
+  const { understood, recipeIds } = await pickIdeas(db, h.id, text, candidates);
+  const ctx = await ctxFor(db, plan, req);
+  const byId = new Map(candidates.map((c) => [c.id, c]));
+  const options = [];
+  for (const id of recipeIds) {
+    let result: PlanResult;
+    try {
+      result = engine.replace(req, plan.result, day, id, ctx);
+    } catch {
+      continue; // e.g. not usable on this day; never shown
+    }
+    const meal = result.meals.find((m) => m.day === day);
+    const c = byId.get(id)!;
+    if (!meal || meal.recipeId !== id) continue;
+    options.push({
+      recipeId: id,
+      name: c.name,
+      cookMinutes: c.cookMinutes,
+      cuisine: cuisineOf(c.tags),
+      perPlateCents: meal.perPlateCents,
+      deltaCents: result.totals.paidCents - plan.result.totals.paidCents,
+      unpriced: result.unpriced.filter((u) => u.recipes.includes(id)).length,
+    });
+  }
+  // Budget first: of the matching ideas, the ones that cost least extra come first (ties keep Claude's order).
+  options.sort((a, b) => a.deltaCents - b.deltaCents);
+  await track(db, h.id, 'ideas_requested', { understood, options: options.length });
+  return { day, understood: understood && options.length > 0, options };
 }
 
 async function mainProtein(db: Db, recipeId: string | undefined): Promise<{ id: string; name: string } | null> {

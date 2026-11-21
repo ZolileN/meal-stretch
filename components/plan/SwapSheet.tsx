@@ -7,13 +7,14 @@ import { Button } from '@/components/ui/Button';
 import { SavingsChip } from '@/components/ui/SavingsChip';
 import { Sheet } from '@/components/ui/Sheet';
 import { Skeleton } from '@/components/ui/Skeleton';
+import { IdeaSearch } from './IdeaSearch';
 
 interface SwapData {
   current: { recipeId: string; protein: { id: string; name: string } | null } | null;
   options: { recipeId: string; name: string; cookMinutes: number; deltaCents: number; perPlateCents: number }[];
 }
 
-export function SwapSheet({ planId, day, name, onClose, onDone }: { planId: string; day: number; name: string; onClose: () => void; onDone: () => void }) {
+export function SwapSheet({ planId, day, name, onClose, onDone, ideasFirst = false }: { planId: string; day: number; name: string; onClose: () => void; onDone: () => void; ideasFirst?: boolean }) {
   const t = useTranslations('actions');
   const tp = useTranslations('plan');
   const [data, setData] = useState<SwapData | null>(null);
@@ -54,8 +55,10 @@ export function SwapSheet({ planId, day, name, onClose, onDone }: { planId: stri
 
   const protein = data?.current?.protein;
 
+  const ideas = <IdeaSearch planId={planId} day={day} busy={busy} onChoose={choose} autoFocus={ideasFirst} />;
   return (
     <Sheet title={t('swapTitle', { name })} closeLabel={t('close')} onClose={onClose}>
+      {ideasFirst && <div className="mb-5">{ideas}</div>}
       {!data && (
         <div className="space-y-2 pb-4" aria-busy="true">
           <span className="sr-only">{t('loadingOptions')}</span>
@@ -93,6 +96,7 @@ export function SwapSheet({ planId, day, name, onClose, onDone }: { planId: stri
           ))}
         </ul>
       )}
+      {!ideasFirst && <div className="mt-5 border-t border-border pt-4">{ideas}</div>}
       {protein && (
         <label className="tap mt-3 mb-2 flex items-center gap-3 text-small">
           <input type="checkbox" className="size-5 accent-primary" checked={never} disabled={never} onChange={neverSwap} />

@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { Clock, CookingPot, PackageCheck, Repeat, TrendingDown, Zap } from 'lucide-react';
+import { Clock, CookingPot, PackageCheck, Repeat, Sparkles, TrendingDown, Zap } from 'lucide-react';
 import { formatRandShort } from '@/lib/money';
 import { pickTonight } from '@/lib/plans/tonight';
 import type { PlanView } from '@/lib/plans/view';
@@ -25,7 +25,7 @@ export function HomeScreen({ view, today }: { view: PlanView; today: string }) {
   const ta = useTranslations('actions');
   const router = useRouter();
   const [notice, setNotice] = useState<string | null>(null);
-  const [swap, setSwap] = useState(false);
+  const [swap, setSwap] = useState<false | 'swap' | 'ideas'>(false);
   const [busy, setBusy] = useState<string | null>(null);
   const clear = useCallback(() => setNotice(null), []);
   const editable = view.status === 'active';
@@ -66,7 +66,7 @@ export function HomeScreen({ view, today }: { view: PlanView; today: string }) {
                 {t('startCooking')}
               </ButtonLink>
               {editable && (
-                <Button variant="translucent" onClick={() => setSwap(true)} icon={<Repeat aria-hidden className="size-4" />}>
+                <Button variant="translucent" onClick={() => setSwap('swap')} icon={<Repeat aria-hidden className="size-4" />}>
                   {tp('swap')}
                 </Button>
               )}
@@ -79,6 +79,7 @@ export function HomeScreen({ view, today }: { view: PlanView; today: string }) {
           planId={view.planId}
           day={tonight.meal.day}
           name={tonight.meal.name}
+          ideasFirst={swap === 'ideas'}
           onClose={() => setSwap(false)}
           onDone={() => {
             setSwap(false);
@@ -103,6 +104,7 @@ export function HomeScreen({ view, today }: { view: PlanView; today: string }) {
         <>
           <SectionHeader title={t('shortcuts')} className="pt-3" />
           <div className="grid grid-cols-[repeat(auto-fit,minmax(6.5rem,1fr))] gap-3">
+            {tonight && <ShortcutTile icon={<Sparkles className="size-5" />} title={t('ideas')} subtitle={t('ideasSub')} onClick={() => setSwap('ideas')} />}
             <ShortcutTile
               icon={<TrendingDown className="size-5" />}
               title={t('cheaperWeek')}

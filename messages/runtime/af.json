@@ -31,7 +31,9 @@
     "pointSavingsText": "Your savings add up each time you shop. Scan a slip to confirm them.",
     "nothingTonight": "No supper planned for tonight",
     "nothingTonightText": "This plan has ended. Make a new one for the days ahead.",
-    "newPlan": "Make a new plan"
+    "newPlan": "Make a new plan",
+    "ideas": "Meal ideas",
+    "ideasSub": "Tell us what you feel like"
   },
   "location": {
     "barNear": "Shopping near {place}",
@@ -458,7 +460,19 @@
     "listSize": "List size (items per plan)",
     "medianList": "Median list size, 7 suppers for 4: {items}",
     "matchRate": "Receipt match rate",
-    "na": "n/a"
+    "na": "n/a",
+    "draftTitle": "Draft recipes with Claude",
+    "draftHelp": "Describe what you need. Drafts use only our ingredients and are saved unpublished: review, cook-test and publish them yourself.",
+    "draftNoKey": "ANTHROPIC_API_KEY is not set, so drafting is unavailable.",
+    "draftBriefLabel": "Brief",
+    "draftPlaceholder": "e.g. quick Greek suppers under 30 minutes",
+    "draftCount": "How many",
+    "draftSubmit": "Draft recipes",
+    "drafted": "{count, plural, one {# draft saved} other {# drafts saved}} (highlighted below).{rejected, plural, =0 {} one { # failed validation.} other { # failed validation.}}",
+    "draftBrief": "Write a brief of at least 5 characters.",
+    "draftFailed": "Claude couldn't draft recipes right now. Try again.",
+    "recipeCounts": "{total} recipes · {published} published",
+    "minutesShort": "{count} min"
   },
   "privacy": {
     "title": "Privacy",
@@ -481,5 +495,40 @@
     "next": "Next",
     "done": "Got it",
     "step": "Tip {n} of {total}"
+  },
+  "ideas": {
+    "title": "Ask for ideas",
+    "label": "What do you feel like?",
+    "placeholder": "e.g. something Italian in 15 minutes",
+    "submit": "Find ideas",
+    "working": "Finding ideas…",
+    "results": "Ideas from our recipes",
+    "none": "Nothing in our recipes matches that yet. Try other words or a chip below.",
+    "cap": "You've asked for lots of ideas today. Try again tomorrow.",
+    "failed": "Ideas aren't available right now. Please try again.",
+    "unpriced": "{count, plural, one {# ingredient we can't price yet} other {# ingredients we can't price yet}}",
+    "footnote": "Ideas come from our tested recipes and are priced at your shops.",
+    "chip15": "15 minutes",
+    "chipMeatFree": "Meat-free",
+    "chipItalian": "Italian",
+    "chipCurry": "Curry",
+    "chipChinese": "Chinese",
+    "chipKids": "Kids will love it",
+    "cuisine": {
+      "south_african": "South African",
+      "afrikaans": "Afrikaans",
+      "cape_malay": "Cape Malay",
+      "indian": "Indian",
+      "portuguese": "Portuguese",
+      "italian": "Italian",
+      "chinese": "Chinese",
+      "mexican": "Mexican",
+      "american": "American",
+      "british": "British",
+      "greek": "Greek",
+      "middle_eastern": "Middle Eastern",
+      "thai": "Thai",
+      "spanish": "Spanish"
+    }
   }
 }

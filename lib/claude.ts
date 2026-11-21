@@ -18,10 +18,10 @@ import { env } from '@/lib/env';
 import { log } from '@/lib/log';
 import { isoDateInSA } from '@/lib/period';
 
-export type Purpose = 'tweak' | 'receipt' | 'leaflet' | 'recipe_draft' | 'translation';
+export type Purpose = 'tweak' | 'receipt' | 'leaflet' | 'recipe_draft' | 'translation' | 'ideas';
 
 /** Per-household daily caps (PRD §15). */
-export const DAILY_CAPS: Partial<Record<Purpose, number>> = { tweak: 10, receipt: 5 };
+export const DAILY_CAPS: Partial<Record<Purpose, number>> = { tweak: 10, receipt: 5, ideas: 20 };
 
 /** Models that accept the server-side refusal fallback (skill: claude-api, 2026-11). */
 const SERVER_FALLBACK = new Set(['claude-fable-5-2', 'claude-fable-5-1', 'claude-opus-5-5', 'claude-opus-5', 'claude-sonnet-5-5']);
@@ -179,5 +179,7 @@ export async function claudeTool<T>(c: ClaudeCall<T>): Promise<ClaudeResult<T>> 
 
 export const models = {
   vision: () => env().CLAUDE_MODEL_VISION,
+  /** Careful writing (admin recipe drafts): the same capable model as vision. */
+  smart: () => env().CLAUDE_MODEL_VISION,
   fast: () => env().CLAUDE_MODEL_FAST,
 };
