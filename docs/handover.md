@@ -34,6 +34,7 @@ The first start takes about 20 s while PGlite loads PostGIS and seeds. The data 
 | `pnpm bench:engine` | Engine benchmark, fails if p95 ≥ 300 ms |
 | `pnpm db:local` | The local DB on its own (Neon-compatible HTTP endpoint on :4444) |
 | `pnpm db:migrate` / `pnpm db:seed [--production]` | Against `DATABASE_URL` (Neon) |
+| `pnpm import:leaflet <file.pdf> --retailer <id>` | Leaflets of any size → review batches in /admin/leaflets (needs ANTHROPIC_API_KEY) |
 | `pnpm import:prices file.csv [--source manual\|catalogue\|leaflet] [--dry-run]` | CSV price import |
 | `pnpm import:osm [ZA-EC ZA-WC]` | OpenStreetMap stores + places |
 | `pnpm harness:receipts [--record]` | Receipt extraction accuracy (calls the real API: opt-in) |

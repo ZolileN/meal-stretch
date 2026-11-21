@@ -23,6 +23,7 @@
     "db:local": "tsx scripts/local-db.ts",
     "import:prices": "tsx scripts/import-prices-csv.ts",
     "import:osm": "tsx scripts/import-osm.ts",
+    "import:leaflet": "tsx scripts/import-leaflet.ts",
     "bench:engine": "pnpm --filter @mealstretch/engine bench",
     "harness:receipts": "tsx scripts/receipt-harness.ts",
     "prebuild": "tsx scripts/sync-messages.ts"
@@ -54,6 +55,7 @@
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.6",
     "fast-check": "^4.10.3",
+    "pdf-lib": "1.17.1",
     "postcss": "^8.5.33",
     "tailwindcss": "^4.3.5",
     "tsx": "^4.23.15",

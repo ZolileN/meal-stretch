@@ -20,7 +20,9 @@ export default async function Leaflets({ searchParams }: { searchParams: Promise
     'use server';
     const admin = await requireAdmin();
     const file = f.get('file');
-    if (!(file instanceof File) || file.size === 0 || file.size > 20 * 1024 * 1024) redirect('/admin/leaflets?error=file');
+    if (!(file instanceof File) || file.size === 0) redirect('/admin/leaflets?error=file');
+    // Vercel accepts ~4.5 MB per request; bigger leaflets go through `pnpm import:leaflet` (no size limit).
+    if (file.size > 4 * 1024 * 1024) redirect('/admin/leaflets?error=too_big');
     let id: number;
     try {
       id = await extractLeaflet(getDb(), { retailerId: String(f.get('retailer')), uploadedBy: admin.id, file: { base64: Buffer.from(await file.arrayBuffer()).toString('base64'), type: file.type } });
@@ -32,7 +34,8 @@ export default async function Leaflets({ searchParams }: { searchParams: Promise
   return (
     <main className="space-y-4">
       <h1 className="text-2xl font-bold">{t('leaflets')}</h1>
-      {sp.error && <p className="rounded bg-danger-soft p-2">{sp.error}</p>}
+      {sp.error && <p className="rounded bg-danger-soft p-2" role="alert">{sp.error === 'too_big' ? t('leafletTooBig') : sp.error === 'file' ? t('leafletNoFile') : sp.error}</p>}
+      <p className="text-sm text-text-muted">{t('leafletHelp')}</p>
       <form action={upload} className="flex flex-wrap items-end gap-2 rounded border p-3">
         <label>{t('retailer')}<select name="retailer" className="block rounded border px-2 py-1">{retailers.map((r) => <option key={r.id} value={r.id}>{r.name}</option>)}</select></label>
         <label>{t('upload')}<input type="file" name="file" accept="application/pdf,image/*" required className="block" /></label>

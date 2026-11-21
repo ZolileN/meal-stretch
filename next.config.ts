@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
   agentRules: false,
   transpilePackages: ['@mealstretch/engine'],
   serverExternalPackages: ['@electric-sql/pglite', '@electric-sql/pglite-postgis'],
+  // Admin leaflet uploads: Vercel rejects request bodies over ~4.5 MB, so allow up to 4 MB here.
+  // Bigger leaflets: `pnpm import:leaflet` on a laptop (scripts/import-leaflet.ts).
+  experimental: { serverActions: { bodySizeLimit: '4mb' } },
 };
 
 export default withNextIntl(nextConfig);
