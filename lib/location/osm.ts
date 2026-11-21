@@ -105,7 +105,6 @@ export function toPlace(e: OsmElement): OsmPlace | null {
   };
 }
 
-/** Overpass QL for a province (ISO 3166-2, e.g. ZA-EC). */
 /** Same filters as overpassQuery, limited to a radius around a point (light enough for busy public servers). */
 export function overpassAroundQuery(lat: number, lng: number, radiusM: number): string {
   if (![lat, lng, radiusM].every(Number.isFinite) || Math.abs(lat) > 90 || Math.abs(lng) > 180 || radiusM <= 0 || radiusM > 100_000)
@@ -125,6 +124,46 @@ export const PILOT_AREAS = [
   { name: 'Somerset West', iso: 'ZA-WC', lat: -34.077, lng: 18.846 },
 ] as const;
 
+/** Generous bounding boxes [south, west, north, east] of SA provinces (OSM ISO 3166-2 codes, checked 2026-11). */
+export const PROVINCE_BBOX: Record<string, [number, number, number, number]> = {
+  'ZA-WC': [-34.9, 17.7, -30.4, 24.3],
+  'ZA-EC': [-34.3, 22.7, -30.0, 30.3],
+  'ZA-NC': [-32.9, 16.4, -24.7, 25.7],
+  'ZA-FS': [-30.8, 24.3, -26.6, 29.9],
+  'ZA-GP': [-27.0, 27.1, -25.0, 29.1],
+  'ZA-KZN': [-31.2, 28.8, -26.8, 33.0],
+  'ZA-NW': [-28.0, 22.6, -24.6, 28.4],
+  'ZA-LP': [-25.5, 26.3, -22.1, 31.9],
+  'ZA-MP': [-27.5, 28.1, -24.3, 32.1],
+};
+
+/** Split a province's box into tiles of about `step` degrees (~55 km at 0.5°). */
+export function provinceTiles(iso: string, step = 0.5): [number, number, number, number][] {
+  const box = PROVINCE_BBOX[iso];
+  if (!box) throw new Error(`no bounding box for ${iso}`);
+  const [s, w, n, e] = box;
+  const out: [number, number, number, number][] = [];
+  const r = (x: number) => Math.round(x * 1000) / 1000;
+  for (let lat = s; lat < n - 1e-9; lat += step)
+    for (let lng = w; lng < e - 1e-9; lng += step) out.push([r(lat), r(lng), r(Math.min(lat + step, n)), r(Math.min(lng + step, e))]);
+  return out;
+}
+
+/** Shops and places inside the province AND one tile: small queries that busy public Overpass servers can answer. */
+export function overpassTileQuery(iso: string, [s, w, n, e]: [number, number, number, number]): string {
+  if (!/^ZA-[A-Z]{1,3}$/.test(iso)) throw new Error(`bad ISO code ${iso}`);
+  if (![s, w, n, e].every(Number.isFinite) || s >= n || w >= e) throw new Error(`bad tile ${s},${w},${n},${e}`);
+  const b = `${s},${w},${n},${e}`;
+  return `[out:json][timeout:90];
+area["ISO3166-2"="${iso}"]->.a;
+(
+  nwr["shop"~"^(supermarket|convenience|wholesale)$"](area.a)(${b});
+  node["place"~"^(city|town|suburb|neighbourhood|quarter|village|hamlet)$"](area.a)(${b});
+);
+out center tags;`;
+}
+
+/** Overpass QL for a whole province (ISO 3166-2, e.g. ZA-EC). Heavy: prefer --tiles on public servers. */
 export function overpassQuery(iso: string): string {
   if (!/^ZA-[A-Z]{1,3}$/.test(iso)) throw new Error(`bad ISO code ${iso}`);
   return `[out:json][timeout:180];
