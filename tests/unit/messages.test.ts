@@ -30,3 +30,23 @@ describe('runtime messages (generated)', () => {
     expect(JSON.parse(readFileSync('messages/runtime/en.json', 'utf8'))).toEqual(en);
   });
 });
+
+import { parse } from '@formatjs/icu-messageformat-parser';
+describe('every message is valid ICU (what next-intl precompiles at build)', () => {
+  const flat = (m: Msgs, p = ''): [string, string][] =>
+    Object.entries(m).flatMap(([k, v]) => (typeof v === 'string' ? [[p + k, v] as [string, string]] : flat(v, `${p}${k}.`)));
+  for (const loc of ['en', 'xh', 'af']) {
+    it(`${loc}: parses (e.g. no "<file>" text, which ICU reads as an unclosed tag)`, () => {
+      const rt = JSON.parse(readFileSync(`messages/runtime/${loc}.json`, 'utf8')) as Msgs;
+      const bad = flat(rt).filter(([, v]) => {
+        try {
+          parse(v);
+          return false;
+        } catch {
+          return true;
+        }
+      });
+      expect(bad.map(([k]) => k)).toEqual([]);
+    });
+  }
+});

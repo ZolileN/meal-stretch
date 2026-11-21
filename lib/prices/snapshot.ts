@@ -1,6 +1,6 @@
 /**
  * Builds the engine's PriceSnapshot from current_prices for the household's shops (PRD §9.1, §10.1).
- * Per branch, branch-level and chain-wide resolved rows are combined with the §10.1 ordering.
+ * Per branch, its own rows, its province's rows and national rows (0005) are combined with the §10.1 ordering.
  * Member prices are included only when the household holds that retailer's card (Offer contract:
  * "loyalty price if card held, else null"); expired specials are dropped.
  */
@@ -40,7 +40,8 @@ export async function loadPriceSnapshot(
           cp.member_price_cents, cp.special_price_cents, cp.special_ends_on, cp.source, cp.observed_at
         from branches b
         join retailers r on r.id = b.retailer_id
-        join current_prices cp on cp.retailer_id = b.retailer_id and (cp.branch_id = b.id or cp.branch_id is null)
+        join current_prices cp on cp.retailer_id = b.retailer_id
+             and (cp.branch_id = b.id or (cp.branch_id is null and (cp.province is null or cp.province = b.province)))
         where b.id = any(${pgArray(ids)}::bigint[]) and cp.ingredient_id is not null
         order by b.id, cp.product_id, cp.is_fresh desc, (case when cp.is_fresh then cp.trust else 0 end) desc,
                  cp.observed_at desc, cp.observation_id desc`,

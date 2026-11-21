@@ -472,7 +472,15 @@
     "draftBrief": "Write a brief of at least 5 characters.",
     "draftFailed": "Claude couldn't draft recipes right now. Try again.",
     "recipeCounts": "{total} recipes · {published} published",
-    "minutesShort": "{count} min"
+    "minutesShort": "{count} min",
+    "leafletTooBig": "That file is over 4 MB, the most the website accepts. Use the laptop command instead, for example: pnpm import:leaflet leaflet.pdf --retailer checkers. It splits big leaflets into page batches that appear here for review.",
+    "leafletNoFile": "Choose a PDF or photo of the leaflet.",
+    "leafletHelp": "Upload leaflets the retailer publishes for customers (PDF or photos, up to 4 MB). Claude reads them; nothing is published until you approve each batch.",
+    "scope": "Where do these prices apply?",
+    "scopeNational": "National (all provinces)",
+    "scopeApplies": "Prices from this batch apply to {province} branches only.",
+    "scopeAppliesNational": "Prices from this batch apply to every branch nationally.",
+    "leafletProvince": "Choose a province, or National."
   },
   "privacy": {
     "title": "Privacy",

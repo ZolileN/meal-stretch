@@ -74,7 +74,9 @@ async function normalPrice(db: Db, productId: number, branchId: number | null): 
   const [r] = await query<{ price_cents: number }>(
     db,
     sql`select cp.price_cents from current_prices cp join products p on p.id = cp.product_id
-        where cp.product_id = ${productId} and (cp.branch_id = ${branchId}::bigint or cp.branch_id is null)
+        where cp.product_id = ${productId}
+          and (cp.branch_id = ${branchId}::bigint
+               or (cp.branch_id is null and (cp.province is null or cp.province = (select b.province from branches b where b.id = ${branchId}::bigint))))
         order by cp.is_fresh desc, (case when cp.is_fresh then cp.trust else 0 end) desc, cp.observed_at desc limit 1`,
   );
   return r ? Number(r.price_cents) : null;
