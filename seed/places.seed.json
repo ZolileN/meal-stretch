@@ -1,0 +1,15 @@
+{
+  "_comment": "Approximate centre points for local dev and tests only. The OpenStreetMap import (pnpm import:osm) replaces these with real data.",
+  "places": [
+    { "key": "bluewater-bay", "name": "Bluewater Bay", "kind": "suburb", "parent": "Gqeberha", "province": "EC", "lat": -33.857, "lng": 25.632, "rank": 10 },
+    { "key": "amsterdamhoek", "name": "Amsterdamhoek", "kind": "suburb", "parent": "Gqeberha", "province": "EC", "lat": -33.853, "lng": 25.622, "rank": 5 },
+    { "key": "swartkops", "name": "Swartkops", "kind": "suburb", "parent": "Gqeberha", "province": "EC", "lat": -33.866, "lng": 25.605, "rank": 5 },
+    { "key": "motherwell", "name": "Motherwell", "kind": "township", "parent": "Gqeberha", "province": "EC", "lat": -33.8, "lng": 25.59, "rank": 6 },
+    { "key": "gqeberha", "name": "Gqeberha", "kind": "city", "parent": "Nelson Mandela Bay", "province": "EC", "lat": -33.958, "lng": 25.6, "rank": 8 },
+    { "key": "somerset-west", "name": "Somerset West", "kind": "town", "parent": "Cape Town", "province": "WC", "lat": -34.076, "lng": 18.843, "rank": 10 },
+    { "key": "strand", "name": "Strand", "kind": "town", "parent": "Cape Town", "province": "WC", "lat": -34.115, "lng": 18.826, "rank": 7 },
+    { "key": "gordons-bay", "name": "Gordon's Bay", "kind": "town", "parent": "Cape Town", "province": "WC", "lat": -34.157, "lng": 18.866, "rank": 6 },
+    { "key": "macassar", "name": "Macassar", "kind": "township", "parent": "Cape Town", "province": "WC", "lat": -34.065, "lng": 18.76, "rank": 5 },
+    { "key": "sir-lowrys-pass", "name": "Sir Lowry's Pass Village", "kind": "village", "parent": "Cape Town", "province": "WC", "lat": -34.11, "lng": 18.915, "rank": 4 }
+  ]
+}

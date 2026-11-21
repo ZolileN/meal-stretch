@@ -1,0 +1,24 @@
+# Local PostGIS for machines with Docker. Integration tests otherwise use in-memory PGlite + PostGIS.
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: mealstretch
+      POSTGRES_PASSWORD: mealstretch
+      POSTGRES_DB: mealstretch
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  db_test:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: mealstretch
+      POSTGRES_PASSWORD: mealstretch
+      POSTGRES_DB: mealstretch_test
+    ports:
+      - "5434:5432"
+    tmpfs:
+      - /var/lib/postgresql/data
+volumes:
+  pgdata:

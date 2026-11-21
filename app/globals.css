@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #0f766e;
+  --color-brand-dark: #115e59;
+  --color-accent: #f59e0b;
+  --color-danger: #b91c1c;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body { background: #ffffff; color: #111827; }
+
+/* Touch targets ≥ 44 px (PRD §15) */
+.tap { min-height: 44px; min-width: 44px; }
+
+:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }

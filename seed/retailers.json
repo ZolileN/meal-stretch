@@ -1,0 +1,9 @@
+[
+  { "id": "checkers", "name": "Checkers", "loyaltyProgramId": "xtra_savings", "loyaltyProgramName": "Xtra Savings" },
+  { "id": "shoprite", "name": "Shoprite", "loyaltyProgramId": "xtra_savings", "loyaltyProgramName": "Xtra Savings" },
+  { "id": "pnp", "name": "Pick n Pay", "loyaltyProgramId": "smart_shopper", "loyaltyProgramName": "Smart Shopper" },
+  { "id": "spar", "name": "SPAR", "loyaltyProgramId": "spar_rewards", "loyaltyProgramName": "SPAR Rewards" },
+  { "id": "woolworths", "name": "Woolworths Food", "loyaltyProgramId": "wrewards", "loyaltyProgramName": "WRewards" },
+  { "id": "boxer", "name": "Boxer", "loyaltyProgramId": "boxer_rewards", "loyaltyProgramName": "Boxer Rewards" },
+  { "id": "usave", "name": "Usave", "loyaltyProgramId": null, "loyaltyProgramName": null }
+]

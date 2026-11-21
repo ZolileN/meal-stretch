@@ -1,0 +1,54 @@
+{
+  "name": "mealstretch",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:next": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit && pnpm -r --filter ./packages/* typecheck",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:unit": "vitest run --project unit --project engine",
+    "test:db": "vitest run --project db",
+    "test:e2e": "playwright test",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:local": "tsx scripts/local-db.ts",
+    "import:prices": "tsx scripts/import-prices-csv.ts",
+    "import:osm": "tsx scripts/import-osm.ts",
+    "bench:engine": "pnpm --filter @mealstretch/engine bench"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.1",
+    "drizzle-orm": "^0.45.4",
+    "next": "^16.4.6",
+    "next-intl": "^4.15.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.17",
+    "@electric-sql/pglite-postgis": "0.2.17",
+    "@playwright/test": "^1.65.1",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.6",
+    "fast-check": "^4.10.3",
+    "postcss": "^8.5.33",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "vitest": "^5.1.1"
+  }
+}

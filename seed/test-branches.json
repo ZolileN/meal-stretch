@@ -1,0 +1,14 @@
+{
+  "_comment": "FICTIONAL test branches for local dev and automated tests only. Names start with TEST. Never shown in production: the OSM import provides real branches.",
+  "branches": [
+    { "key": "test-checkers-bwb", "retailerId": "checkers", "name": "TEST Checkers Bluewater Bay", "suburb": "Bluewater Bay", "city": "Gqeberha", "province": "EC", "lat": -33.86, "lng": 25.628 },
+    { "key": "test-spar-bwb", "retailerId": "spar", "name": "TEST SPAR Bluewater Bay", "suburb": "Bluewater Bay", "city": "Gqeberha", "province": "EC", "lat": -33.856, "lng": 25.636 },
+    { "key": "test-pnp-bwb", "retailerId": "pnp", "name": "TEST Pick n Pay Swartkops", "suburb": "Swartkops", "city": "Gqeberha", "province": "EC", "lat": -33.865, "lng": 25.62 },
+    { "key": "test-shoprite-mw", "retailerId": "shoprite", "name": "TEST Shoprite Motherwell", "suburb": "Motherwell", "city": "Gqeberha", "province": "EC", "lat": -33.805, "lng": 25.595 },
+    { "key": "test-checkers-sw", "retailerId": "checkers", "name": "TEST Checkers Somerset West", "suburb": "Somerset West", "city": "Cape Town", "province": "WC", "lat": -34.078, "lng": 18.846 },
+    { "key": "test-pnp-sw", "retailerId": "pnp", "name": "TEST Pick n Pay Somerset West", "suburb": "Somerset West", "city": "Cape Town", "province": "WC", "lat": -34.073, "lng": 18.851 },
+    { "key": "test-shoprite-strand", "retailerId": "shoprite", "name": "TEST Shoprite Strand", "suburb": "Strand", "city": "Cape Town", "province": "WC", "lat": -34.112, "lng": 18.828 },
+    { "key": "test-spar-sw", "retailerId": "spar", "name": "TEST SPAR Somerset West", "suburb": "Somerset West", "city": "Cape Town", "province": "WC", "lat": -34.083, "lng": 18.84 },
+    { "key": "test-woolworths-sw", "retailerId": "woolworths", "name": "TEST Woolworths Food Somerset West", "suburb": "Somerset West", "city": "Cape Town", "province": "WC", "lat": -34.075, "lng": 18.855 }
+  ]
+}

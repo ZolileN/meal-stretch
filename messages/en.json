@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "description": "Tell us how much you have and until when. We plan your suppers around this week's specials at the shops near you."
+  },
+  "home": {
+    "headline": "Suppers that fit your budget",
+    "intro": "Tell us how much you have and until when. We plan your suppers around this week's specials at the shops near you, and show you exactly what you'll save.",
+    "start": "Get started"
+  }
+}
