@@ -106,6 +106,25 @@ export function toPlace(e: OsmElement): OsmPlace | null {
 }
 
 /** Overpass QL for a province (ISO 3166-2, e.g. ZA-EC). */
+/** Same filters as overpassQuery, limited to a radius around a point (light enough for busy public servers). */
+export function overpassAroundQuery(lat: number, lng: number, radiusM: number): string {
+  if (![lat, lng, radiusM].every(Number.isFinite) || Math.abs(lat) > 90 || Math.abs(lng) > 180 || radiusM <= 0 || radiusM > 100_000)
+    throw new Error(`bad area ${lat},${lng},${radiusM}`);
+  const a = `around:${Math.round(radiusM)},${lat},${lng}`;
+  return `[out:json][timeout:90];
+(
+  nwr["shop"~"^(supermarket|convenience|wholesale)$"](${a});
+  node["place"~"^(city|town|suburb|neighbourhood|quarter|village|hamlet)$"](${a});
+);
+out center tags;`;
+}
+
+/** Pilot areas (PRD §17): 25 km covers the 15 km store radius plus nearby suburbs. */
+export const PILOT_AREAS = [
+  { name: 'Bluewater Bay', iso: 'ZA-EC', lat: -33.857, lng: 25.632 },
+  { name: 'Somerset West', iso: 'ZA-WC', lat: -34.077, lng: 18.846 },
+] as const;
+
 export function overpassQuery(iso: string): string {
   if (!/^ZA-[A-Z]{1,3}$/.test(iso)) throw new Error(`bad ISO code ${iso}`);
   return `[out:json][timeout:180];

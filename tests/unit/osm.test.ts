@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { matchRetailer, overpassQuery, toBranch, toPlace } from '@/lib/location/osm';
+import { matchRetailer, overpassAroundQuery, overpassQuery, toBranch, toPlace } from '@/lib/location/osm';
 
 describe('OSM mapping', () => {
   it.each([
@@ -33,5 +33,8 @@ describe('OSM mapping', () => {
   it('builds safe Overpass queries', () => {
     expect(overpassQuery('ZA-EC')).toContain('"ZA-EC"');
     expect(() => overpassQuery('ZA-EC"];out;')).toThrow();
+    expect(overpassAroundQuery(-33.857, 25.632, 25_000)).toContain('around:25000,-33.857,25.632');
+    expect(() => overpassAroundQuery(Number.NaN, 25, 1000)).toThrow();
+    expect(() => overpassAroundQuery(-33, 25, 500_000)).toThrow();
   });
 });

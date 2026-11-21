@@ -2,22 +2,28 @@
  * OpenStreetMap import: supermarket branches + searchable places per province via Overpass.
  *   pnpm import:osm                 # ZA-EC and ZA-WC (pilot provinces)
  *   pnpm import:osm ZA-GP           # any province
+ *   pnpm import:osm --pilot         # only 25 km around the two pilot areas (light; use when Overpass is busy)
  *   pnpm import:osm --file dump.json --province ZA-EC   # from a saved Overpass response
+ *   OVERPASS_URL=… to use another Overpass server
  * Idempotent (upsert on osm_id). Never overwrites name/location of branches marked verified.
  * Data © OpenStreetMap contributors (ODbL); attribution is shown in the store picker.
  */
 import { readFileSync } from 'node:fs';
-import { matchRetailer, overpassQuery, toBranch, toPlace, type OsmElement } from '../lib/location/osm';
+import { matchRetailer, overpassAroundQuery, overpassQuery, PILOT_AREAS, toBranch, toPlace, type OsmElement } from '../lib/location/osm';
 import { loadEnvFile, scriptRunner } from './db-runner';
 
 loadEnvFile();
 const OVERPASS = process.env.OVERPASS_URL ?? 'https://overpass-api.de/api/interpreter';
 
 async function fetchProvince(iso: string): Promise<OsmElement[]> {
+  return runOverpass(overpassQuery(iso));
+}
+
+async function runOverpass(query: string): Promise<OsmElement[]> {
   const res = await fetch(OVERPASS, {
     method: 'POST',
     headers: { 'content-type': 'application/x-www-form-urlencoded', 'user-agent': 'budget-meal-planner-osm-import/0.1' },
-    body: 'data=' + encodeURIComponent(overpassQuery(iso)),
+    body: 'data=' + encodeURIComponent(query),
   });
   if (!res.ok) throw new Error(`Overpass ${res.status}: ${await res.text()}`);
   return ((await res.json()) as { elements: OsmElement[] }).elements;
@@ -30,8 +36,9 @@ async function main() {
   const retailers = (await db.query<{ id: string; name: string }>('select id, name from retailers')).rows;
   const names = Object.fromEntries(retailers.map((r) => [r.id, r.name]));
   const provinces = args.filter((a) => /^ZA-/.test(a));
-  const jobs: { iso: string; elements: () => Promise<OsmElement[]> }[] =
-    fileIdx >= 0
+  const jobs: { iso: string; elements: () => Promise<OsmElement[]> }[] = args.includes('--pilot')
+    ? PILOT_AREAS.map((a) => ({ iso: a.iso, elements: () => runOverpass(overpassAroundQuery(a.lat, a.lng, 25_000)) }))
+    : fileIdx >= 0
       ? [{ iso: args[args.indexOf('--province') + 1] ?? 'ZA-EC', elements: async () => (JSON.parse(readFileSync(args[fileIdx + 1]!, 'utf8')) as { elements: OsmElement[] }).elements }]
       : (provinces.length ? provinces : ['ZA-EC', 'ZA-WC']).map((iso) => ({ iso, elements: () => fetchProvince(iso) }));
 
