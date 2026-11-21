@@ -83,7 +83,7 @@ export const DEV_LIST: ListView = {
   planId: PLAN_ID,
   status: 'active',
   totalCents: 81240,
-  count: 7,
+  count: 8,
   stores: [
     {
       branchId: 9001,
@@ -100,7 +100,7 @@ export const DEV_LIST: ListView = {
   ],
   staples: [{ ingredientId: 'oil', name: 'Sunflower oil', costCents: 4299 }],
   staplesSubtotalCents: 4299,
-  unpriced: [],
+  unpriced: [{ key: 'unpriced:fresh_coriander', ingredientId: 'fresh_coriander', name: 'Fresh coriander', needed: '30 g', category: 'produce' }],
   ticks: { onion: { ticked: true, at: `${DEV_TODAY}T08:00:00.000Z` } },
 };
 

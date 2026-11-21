@@ -24,7 +24,7 @@ export default async function SharedList({ params }: { params: Promise<{ token: 
       </main>
     );
   const view = await buildListView(db, plan);
-  const share = whatsappText(view, { header: tl('shareHeader', { count: view.count }), at: (s) => tl('at', { store: s }), total: tl('shareTotal', { amount: formatRand(view.totalCents) }) });
+  const share = whatsappText(view, { header: tl('shareHeader', { count: view.count }), at: (s) => tl('at', { store: s }), total: tl('shareTotal', { amount: formatRand(view.totalCents) }), noPrice: (name, needed) => tl('shareNoPrice', { name, needed }) });
   return (
     <div className="mx-auto max-w-md">
       <div className="space-y-2 px-gutter pt-4 pb-2">

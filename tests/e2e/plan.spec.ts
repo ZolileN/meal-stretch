@@ -52,6 +52,18 @@ test.describe('onboarding + plan screen (Phase 4)', () => {
     expect(plan!.result.unpriced.length).toBeGreaterThan(0);
     const n = Number(/(\d+) items?/.exec((await unpriced.locator('summary').textContent()) ?? '')?.[1]);
     expect(n).toBe(plan!.result.unpriced.length);
+
+    // They are still on the shopping list: counted, with the amount needed, tickable, no price.
+    await expect(page.getByRole('link', { name: new RegExp(`See shopping list · ${plan!.result.totals.items + n} items`) })).toBeVisible();
+    await page.goto('/list');
+    const lines = page.getByTestId('list-line-unpriced');
+    await expect(lines).toHaveCount(n);
+    await expect(lines.first()).toContainText(/needed/);
+    await expect(lines.first()).toContainText('No price yet');
+    const footer = page.getByTestId('list-footer');
+    const before = /(\d+)\/(\d+) ticked/.exec((await footer.textContent()) ?? '')!;
+    await lines.first().getByRole('checkbox').check();
+    await expect(footer).toContainText(`${Number(before[1]) + 1}/${before[2]} ticked`);
   });
 });
 
