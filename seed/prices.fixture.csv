@@ -105,6 +105,23 @@ shoprite,,Green Beans 400 g,FIXTURE,400,g,green_beans,2299,,,,2026-11-20
 shoprite,,Button Mushrooms 250 g,FIXTURE,250,g,mushrooms,2599,,,,2026-11-20
 shoprite,,Sweet Potatoes 1 kg,FIXTURE,1000,g,sweet_potatoes,2299,,,,2026-11-20
 shoprite,,Smooth Peanut Butter 400 g,FIXTURE,400,g,peanut_butter,3799,,,,2026-11-20
+shoprite,,Tortilla Wraps 6 pack,FIXTURE,6,unit,tortilla_wraps,3299,,,,2026-11-20
+shoprite,,Hot Dog Rolls 6 pack,FIXTURE,6,unit,bread_rolls,2199,,,,2026-11-20
+shoprite,,Burger Buns 6 pack,FIXTURE,6,unit,bread_rolls,2299,,,,2026-11-20
+shoprite,,Egg Noodles 250 g,FIXTURE,250,g,egg_noodles,2299,,,,2026-11-20
+shoprite,,Chickpeas 400 g,FIXTURE,400,g,chickpeas_tin,1699,,,,2026-11-20
+shoprite,,Red Kidney Beans 410 g,FIXTURE,410,g,kidney_beans_tin,1699,,,,2026-11-20
+shoprite,,Coconut Milk 400 ml,FIXTURE,400,ml,coconut_milk,2799,,,,2026-11-20
+shoprite,,Feta Cheese 200 g,FIXTURE,200,g,feta_cheese,4199,,,,2026-11-20
+shoprite,,Fresh Ginger approx 100 g,FIXTURE,100,g,ginger,1399,,,,2026-11-20
+shoprite,,Lemons 1 kg,FIXTURE,1000,g,lemons,2799,,,,2026-11-20
+shoprite,,Cucumber each (approx 350 g),FIXTURE,350,g,cucumber,1499,,,,2026-11-20
+shoprite,,Fruit Chutney 470 g,FIXTURE,470,g,fruit_chutney,3099,,,,2026-11-20
+shoprite,,Soy Sauce 250 ml,FIXTURE,250,ml,soy_sauce,2799,,,,2026-11-20
+shoprite,,Brown Vinegar 750 ml,FIXTURE,750,ml,brown_vinegar,1899,,,,2026-11-20
+shoprite,,Ground Cumin,FIXTURE,50,g,ground_cumin,1899,,,,2026-11-20
+shoprite,,Chilli Powder,FIXTURE,50,g,chilli_powder,1899,,,,2026-11-20
+shoprite,,Ground Cinnamon,FIXTURE,50,g,ground_cinnamon,1899,,,,2026-11-20
 checkers,,Chicken Mixed Portions Value Pack,FIXTURE,2000,g,chicken_portions_mixed,11999,,9999,2026-11-25,2026-11-20
 checkers,,Chicken Mixed Portions,FIXTURE,1000,g,chicken_portions_mixed,6499,,,,2026-11-20
 checkers,,Chicken Drumsticks,FIXTURE,1000,g,chicken_drumsticks,6999,,,,2026-11-20
@@ -209,6 +226,23 @@ checkers,,Green Beans 400 g,FIXTURE,400,g,green_beans,2499,,,,2026-11-20
 checkers,,Button Mushrooms 250 g,FIXTURE,250,g,mushrooms,2799,,,,2026-11-20
 checkers,,Sweet Potatoes 1 kg,FIXTURE,1000,g,sweet_potatoes,2499,,,,2026-11-20
 checkers,,Smooth Peanut Butter 400 g,FIXTURE,400,g,peanut_butter,3999,,,,2026-11-20
+checkers,,Tortilla Wraps 6 pack,FIXTURE,6,unit,tortilla_wraps,3499,,,,2026-11-20
+checkers,,Hot Dog Rolls 6 pack,FIXTURE,6,unit,bread_rolls,2299,,,,2026-11-20
+checkers,,Burger Buns 6 pack,FIXTURE,6,unit,bread_rolls,2499,,,,2026-11-20
+checkers,,Egg Noodles 250 g,FIXTURE,250,g,egg_noodles,2499,,,,2026-11-20
+checkers,,Chickpeas 400 g,FIXTURE,400,g,chickpeas_tin,1799,,,,2026-11-20
+checkers,,Red Kidney Beans 410 g,FIXTURE,410,g,kidney_beans_tin,1799,,,,2026-11-20
+checkers,,Coconut Milk 400 ml,FIXTURE,400,ml,coconut_milk,2999,,,,2026-11-20
+checkers,,Feta Cheese 200 g,FIXTURE,200,g,feta_cheese,4499,,,,2026-11-20
+checkers,,Fresh Ginger approx 100 g,FIXTURE,100,g,ginger,1499,,,,2026-11-20
+checkers,,Lemons 1 kg,FIXTURE,1000,g,lemons,2999,,,,2026-11-20
+checkers,,Cucumber each (approx 350 g),FIXTURE,350,g,cucumber,1599,,,,2026-11-20
+checkers,,Fruit Chutney 470 g,FIXTURE,470,g,fruit_chutney,3299,,,,2026-11-20
+checkers,,Soy Sauce 250 ml,FIXTURE,250,ml,soy_sauce,2999,,,,2026-11-20
+checkers,,Brown Vinegar 750 ml,FIXTURE,750,ml,brown_vinegar,1999,,,,2026-11-20
+checkers,,Ground Cumin,FIXTURE,50,g,ground_cumin,1999,,,,2026-11-20
+checkers,,Chilli Powder,FIXTURE,50,g,chilli_powder,1999,,,,2026-11-20
+checkers,,Ground Cinnamon,FIXTURE,50,g,ground_cinnamon,1999,,,,2026-11-20
 pnp,,Chicken Mixed Portions Value Pack,FIXTURE,2000,g,chicken_portions_mixed,12499,,,,2026-11-20
 pnp,,Chicken Mixed Portions,FIXTURE,1000,g,chicken_portions_mixed,6799,,,,2026-11-20
 pnp,,Chicken Drumsticks,FIXTURE,1000,g,chicken_drumsticks,7299,,,,2026-11-20
@@ -313,6 +347,23 @@ pnp,,Green Beans 400 g,FIXTURE,400,g,green_beans,2599,,,,2026-11-20
 pnp,,Button Mushrooms 250 g,FIXTURE,250,g,mushrooms,2899,,,,2026-11-20
 pnp,,Sweet Potatoes 1 kg,FIXTURE,1000,g,sweet_potatoes,2599,,,,2026-11-20
 pnp,,Smooth Peanut Butter 400 g,FIXTURE,400,g,peanut_butter,4199,,,,2026-11-20
+pnp,,Tortilla Wraps 6 pack,FIXTURE,6,unit,tortilla_wraps,3599,,,,2026-11-20
+pnp,,Hot Dog Rolls 6 pack,FIXTURE,6,unit,bread_rolls,2399,,,,2026-11-20
+pnp,,Burger Buns 6 pack,FIXTURE,6,unit,bread_rolls,2599,,,,2026-11-20
+pnp,,Egg Noodles 250 g,FIXTURE,250,g,egg_noodles,2599,,,,2026-11-20
+pnp,,Chickpeas 400 g,FIXTURE,400,g,chickpeas_tin,1899,,,,2026-11-20
+pnp,,Red Kidney Beans 410 g,FIXTURE,410,g,kidney_beans_tin,1899,,,,2026-11-20
+pnp,,Coconut Milk 400 ml,FIXTURE,400,ml,coconut_milk,3099,,,,2026-11-20
+pnp,,Feta Cheese 200 g,FIXTURE,200,g,feta_cheese,4699,,,,2026-11-20
+pnp,,Fresh Ginger approx 100 g,FIXTURE,100,g,ginger,1599,,,,2026-11-20
+pnp,,Lemons 1 kg,FIXTURE,1000,g,lemons,3099,,,,2026-11-20
+pnp,,Cucumber each (approx 350 g),FIXTURE,350,g,cucumber,1699,,,,2026-11-20
+pnp,,Fruit Chutney 470 g,FIXTURE,470,g,fruit_chutney,3399,,,,2026-11-20
+pnp,,Soy Sauce 250 ml,FIXTURE,250,ml,soy_sauce,3099,,,,2026-11-20
+pnp,,Brown Vinegar 750 ml,FIXTURE,750,ml,brown_vinegar,2099,,,,2026-11-20
+pnp,,Ground Cumin,FIXTURE,50,g,ground_cumin,2099,,,,2026-11-20
+pnp,,Chilli Powder,FIXTURE,50,g,chilli_powder,2099,,,,2026-11-20
+pnp,,Ground Cinnamon,FIXTURE,50,g,ground_cinnamon,2099,,,,2026-11-20
 spar,,Chicken Mixed Portions Value Pack,FIXTURE,2000,g,chicken_portions_mixed,13099,,,,2026-11-20
 spar,,Chicken Mixed Portions,FIXTURE,1000,g,chicken_portions_mixed,7099,,,,2026-11-20
 spar,,Chicken Drumsticks,FIXTURE,1000,g,chicken_drumsticks,7599,,,,2026-11-20
@@ -415,6 +466,23 @@ spar,,Green Beans 400 g,FIXTURE,400,g,green_beans,2699,,,,2026-11-20
 spar,,Button Mushrooms 250 g,FIXTURE,250,g,mushrooms,3099,,,,2026-11-20
 spar,,Sweet Potatoes 1 kg,FIXTURE,1000,g,sweet_potatoes,2699,,,,2026-11-20
 spar,,Smooth Peanut Butter 400 g,FIXTURE,400,g,peanut_butter,4399,,,,2026-11-20
+spar,,Tortilla Wraps 6 pack,FIXTURE,6,unit,tortilla_wraps,3799,,,,2026-11-20
+spar,,Hot Dog Rolls 6 pack,FIXTURE,6,unit,bread_rolls,2499,,,,2026-11-20
+spar,,Burger Buns 6 pack,FIXTURE,6,unit,bread_rolls,2699,,,,2026-11-20
+spar,,Egg Noodles 250 g,FIXTURE,250,g,egg_noodles,2699,,,,2026-11-20
+spar,,Chickpeas 400 g,FIXTURE,400,g,chickpeas_tin,1999,,,,2026-11-20
+spar,,Red Kidney Beans 410 g,FIXTURE,410,g,kidney_beans_tin,1999,,,,2026-11-20
+spar,,Coconut Milk 400 ml,FIXTURE,400,ml,coconut_milk,3299,,,,2026-11-20
+spar,,Feta Cheese 200 g,FIXTURE,200,g,feta_cheese,4899,,,,2026-11-20
+spar,,Fresh Ginger approx 100 g,FIXTURE,100,g,ginger,1599,,,,2026-11-20
+spar,,Lemons 1 kg,FIXTURE,1000,g,lemons,3299,,,,2026-11-20
+spar,,Cucumber each (approx 350 g),FIXTURE,350,g,cucumber,1699,,,,2026-11-20
+spar,,Fruit Chutney 470 g,FIXTURE,470,g,fruit_chutney,3599,,,,2026-11-20
+spar,,Soy Sauce 250 ml,FIXTURE,250,ml,soy_sauce,3299,,,,2026-11-20
+spar,,Brown Vinegar 750 ml,FIXTURE,750,ml,brown_vinegar,2199,,,,2026-11-20
+spar,,Ground Cumin,FIXTURE,50,g,ground_cumin,2199,,,,2026-11-20
+spar,,Chilli Powder,FIXTURE,50,g,chilli_powder,2199,,,,2026-11-20
+spar,,Ground Cinnamon,FIXTURE,50,g,ground_cinnamon,2199,,,,2026-11-20
 usave,,Pilchards in Tomato Sauce,FIXTURE,400,g,pilchards_tin,2499,,,,2026-11-20
 usave,,Pilchards in Tomato Sauce Small,FIXTURE,155,g,pilchards_tin,1199,,,,2026-11-20
 usave,,Large Eggs 6,FIXTURE,6,unit,eggs,2599,,,,2026-11-20

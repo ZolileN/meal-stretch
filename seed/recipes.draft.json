@@ -9,7 +9,8 @@
    "tags": [
     "protein:chicken_livers",
     "starch:maize_meal",
-    "no_oven"
+    "no_oven",
+    "cuisine:portuguese"
    ],
    "steps": [
     "Cook the pap.",
@@ -63,7 +64,8 @@
     "starch:rice",
     "meat_free",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Boil the eggs 10 minutes and peel.",
@@ -120,7 +122,8 @@
     "protein:beef_stewing",
     "starch:cake_flour",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown the beef in oil, add onion, then water, stock and soup powder; simmer 1 hour.",
@@ -182,7 +185,8 @@
     "starch:rice",
     "meat_free",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion, garlic and curry powder.",
@@ -240,7 +244,8 @@
     "starch:pasta",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:italian"
    ],
    "steps": [
     "Cook the pasta, adding the peas for the last 3 minutes.",
@@ -290,7 +295,8 @@
     "starch:potatoes",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown the chicken with onion.",
@@ -342,7 +348,8 @@
    "tags": [
     "protein:boerewors",
     "starch:maize_meal",
-    "no_oven"
+    "no_oven",
+    "cuisine:afrikaans"
    ],
    "steps": [
     "Cook stiff pap.",
@@ -391,7 +398,8 @@
     "protein:pilchards_tin",
     "starch:maize_meal",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the pap.",
@@ -441,7 +449,8 @@
     "starch:pasta",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:italian"
    ],
    "steps": [
     "Brown the mince with onion and garlic.",
@@ -498,7 +507,8 @@
     "protein:chicken_feet",
     "starch:maize_meal",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Clean the feet and boil 20 minutes; drain.",
@@ -551,7 +561,8 @@
     "protein:chicken_portions_mixed",
     "starch:rice",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion, garlic and curry powder in oil.",
@@ -609,7 +620,8 @@
     "starch:pasta",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:italian"
    ],
    "steps": [
     "Brown the chicken mince with onion and carrot.",
@@ -665,7 +677,8 @@
    "tags": [
     "protein:chicken_drumsticks",
     "starch:potatoes",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:south_african"
    ],
    "steps": [
     "Heat the oven to 200 °C.",
@@ -715,7 +728,8 @@
     "starch:rice",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:chinese"
    ],
    "steps": [
     "Cook the rice (or use yesterday's).",
@@ -764,7 +778,8 @@
     "protein:viennas",
     "starch:maize_meal",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the pap.",
@@ -808,7 +823,8 @@
    "tags": [
     "protein:pork_chops",
     "starch:potatoes",
-    "no_oven"
+    "no_oven",
+    "cuisine:british"
    ],
    "steps": [
     "Boil and mash the potatoes with margarine and milk.",
@@ -860,7 +876,8 @@
    "tags": [
     "protein:pork_sausages",
     "starch:potatoes",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:afrikaans"
    ],
    "steps": [
     "Heat the oven to 200 °C.",
@@ -904,7 +921,8 @@
    "tags": [
     "protein:hake_fillets",
     "starch:potatoes",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Par-boil the potato wedges 8 minutes and drain.",
@@ -949,7 +967,8 @@
     "protein:tuna_tin",
     "starch:rice",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:chinese"
    ],
    "steps": [
     "Cook the rice.",
@@ -997,7 +1016,8 @@
    "tags": [
     "protein:beef_mince",
     "starch:potatoes",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:british"
    ],
    "steps": [
     "Brown the mince with onion and carrots; add tomatoes and soup powder.",
@@ -1057,7 +1077,8 @@
    "tags": [
     "protein:beef_mince",
     "starch:samp",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Soak and boil the samp about 1 hour until soft.",
@@ -1111,7 +1132,8 @@
     "starch:bread",
     "meat_free",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Fry onion and curry powder.",
@@ -1165,7 +1187,8 @@
     "starch:rice",
     "meat_free",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Soak the beans overnight, then boil 50 minutes until soft.",
@@ -1219,7 +1242,8 @@
     "starch:rice",
     "meat_free",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion and curry powder.",
@@ -1274,7 +1298,8 @@
     "meat_free",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:italian"
    ],
    "steps": [
     "Cook the macaroni.",
@@ -1320,7 +1345,8 @@
     "starch:maize_meal",
     "meat_free",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the pap.",
@@ -1377,7 +1403,8 @@
     "protein:chicken_portions_mixed",
     "starch:rice",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Brown the chicken with onion and spices.",
@@ -1438,7 +1465,8 @@
     "protein:beef_mince",
     "starch:bread",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion and curry powder, add mince and brown.",
@@ -1492,7 +1520,8 @@
     "starch:maize_meal",
     "meat_free",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the pap.",
@@ -1537,7 +1566,8 @@
     "protein:eggs",
     "starch:maize_meal",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the pap.",
@@ -1586,7 +1616,8 @@
     "protein:chicken_livers",
     "starch:rice",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion, garlic and curry powder.",
@@ -1639,7 +1670,8 @@
     "protein:pilchards_tin",
     "starch:rice",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion and curry powder.",
@@ -1688,7 +1720,8 @@
     "protein:boerewors",
     "starch:bread",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:afrikaans"
    ],
    "steps": [
     "Fry or braai the wors.",
@@ -1737,7 +1770,8 @@
     "protein:beef_mince",
     "starch:cake_flour",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:south_african"
    ],
    "steps": [
     "Mix flour, baking powder, salt and water into a dough; rest 20 minutes.",
@@ -1791,7 +1825,8 @@
     "starch:rice",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:british"
    ],
    "steps": [
     "Fry diced chicken and onion.",
@@ -1847,7 +1882,8 @@
    "tags": [
     "protein:chicken_breast_fillets",
     "starch:rice",
-    "no_oven"
+    "no_oven",
+    "cuisine:chinese"
    ],
    "steps": [
     "Cook the rice.",
@@ -1897,7 +1933,8 @@
     "starch:rice",
     "meat_free",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion and curry powder.",
@@ -1955,7 +1992,8 @@
     "starch:bread",
     "meat_free",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion, curry powder and turmeric.",
@@ -2008,7 +2046,8 @@
     "protein:red_lentils",
     "starch:potatoes",
     "meat_free",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:british"
    ],
    "steps": [
     "Simmer lentils with onion, carrot, tomatoes and stock 20 minutes.",
@@ -2064,7 +2103,8 @@
    "tags": [
     "protein:beef_stewing",
     "starch:samp",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Boil soaked samp about 1 hour.",
@@ -2117,7 +2157,8 @@
     "protein:chicken_portions_mixed",
     "starch:bread",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Simmer the chicken in water with stock 25 minutes.",
@@ -2171,7 +2212,8 @@
     "starch:pasta",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:italian"
    ],
    "steps": [
     "Cook the pasta.",
@@ -2222,7 +2264,8 @@
     "meat_free",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:chinese"
    ],
    "steps": [
     "Cook the rice.",
@@ -2268,7 +2311,8 @@
     "starch:rice",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown mince with onion and green pepper.",
@@ -2320,7 +2364,8 @@
    "tags": [
     "protein:chicken_drumsticks",
     "starch:rice",
-    "no_oven"
+    "no_oven",
+    "cuisine:portuguese"
    ],
    "steps": [
     "Rub drumsticks with peri-peri spice and oil.",
@@ -2369,7 +2414,8 @@
     "protein:hake_fillets",
     "starch:rice",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion, garlic and curry powder.",
@@ -2421,7 +2467,8 @@
    "tags": [
     "protein:tuna_tin",
     "starch:potatoes",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:afrikaans"
    ],
    "steps": [
     "Par-boil sliced potatoes 8 minutes.",
@@ -2470,7 +2517,8 @@
     "protein:beef_mince",
     "starch:maize_meal",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook stiff pap.",
@@ -2515,7 +2563,8 @@
     "protein:chicken_mince",
     "starch:potatoes",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:afrikaans"
    ],
    "steps": [
     "Mix the mince with grated onion, egg and bread.",
@@ -2571,7 +2620,8 @@
    "tags": [
     "protein:beef_mince",
     "starch:pasta",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:italian"
    ],
    "steps": [
     "Cook the macaroni.",
@@ -2621,7 +2671,8 @@
     "starch:rice",
     "meat_free",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion, garlic and curry powder.",
@@ -2678,7 +2729,8 @@
     "protein:chicken_portions_mixed",
     "starch:samp",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Boil soaked samp about 1 hour.",
@@ -2726,7 +2778,8 @@
    "tags": [
     "protein:beef_mince",
     "starch:rice",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the rice.",
@@ -2775,7 +2828,8 @@
     "protein:chicken_portions_mixed",
     "starch:potatoes",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:afrikaans"
    ],
    "steps": [
     "Brown the chicken with onion.",
@@ -2828,7 +2882,8 @@
     "protein:beef_mince",
     "starch:rice",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:mexican"
    ],
    "steps": [
     "Brown mince with onion and green pepper.",
@@ -2885,7 +2940,8 @@
     "protein:polony",
     "starch:potatoes",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:british"
    ],
    "steps": [
     "Boil diced potatoes 8 minutes and drain.",
@@ -2930,7 +2986,8 @@
     "protein:sugar_beans",
     "starch:samp",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Boil soaked samp and beans until soft.",
@@ -2974,7 +3031,8 @@
    "tags": [
     "protein:chicken_livers",
     "starch:pasta",
-    "no_oven"
+    "no_oven",
+    "cuisine:italian"
    ],
    "steps": [
     "Cook the pasta.",
@@ -3024,7 +3082,8 @@
     "starch:bread",
     "meat_free",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:british"
    ],
    "steps": [
     "Simmer lentils with onion, tomatoes and stock 20 minutes.",
@@ -3080,7 +3139,8 @@
    "tags": [
     "protein:pork_chops",
     "starch:rice",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the rice.",
@@ -3129,7 +3189,8 @@
     "protein:hake_fillets",
     "starch:potatoes",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:british"
    ],
    "steps": [
     "Poach the hake and flake it.",
@@ -3182,7 +3243,8 @@
     "protein:chicken_feet",
     "starch:rice",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Clean and boil the feet 20 minutes; drain.",
@@ -3234,7 +3296,8 @@
    "tags": [
     "protein:chicken_gizzards",
     "starch:maize_meal",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Rinse the gizzards and simmer them in salted water for 40 minutes until tender; drain.",
@@ -3295,7 +3358,8 @@
    "tags": [
     "protein:chicken_gizzards",
     "starch:rice",
-    "no_oven"
+    "no_oven",
+    "cuisine:portuguese"
    ],
    "steps": [
     "Simmer the gizzards in salted water for 40 minutes until tender; drain.",
@@ -3348,7 +3412,8 @@
    "tags": [
     "protein:chicken_wings",
     "starch:potatoes",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:south_african"
    ],
    "steps": [
     "Heat the oven to 200 °C.",
@@ -3390,7 +3455,8 @@
     "protein:chicken_wings",
     "starch:rice",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the rice.",
@@ -3444,7 +3510,8 @@
     "protein:chicken_breast_fillets",
     "starch:pasta",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:italian"
    ],
    "steps": [
     "Boil the pasta in salted water.",
@@ -3506,7 +3573,8 @@
     "protein:chicken_portions_mixed",
     "starch:rice",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:indian"
    ],
    "steps": [
     "Brown the chicken in oil; remove.",
@@ -3568,7 +3636,8 @@
     "protein:chicken_portions_mixed",
     "starch:rice",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown the chicken in oil with onion.",
@@ -3625,7 +3694,8 @@
    "tags": [
     "protein:chicken_drumsticks",
     "starch:sweet_potatoes",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:south_african"
    ],
    "steps": [
     "Heat the oven to 200 °C.",
@@ -3674,7 +3744,8 @@
    "tags": [
     "protein:chicken_livers",
     "starch:bread",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Fry onion in oil until soft.",
@@ -3723,7 +3794,8 @@
     "protein:chicken_mince",
     "starch:rice",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Cook the rice.",
@@ -3781,7 +3853,8 @@
     "protein:chicken_portions_mixed",
     "starch:cake_flour",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown the chicken with onion in a large pot.",
@@ -3834,7 +3907,8 @@
    "tags": [
     "protein:chicken_portions_mixed",
     "starch:maize_meal",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown the chicken with onion and garlic.",
@@ -3888,7 +3962,8 @@
     "protein:chicken_breast_fillets",
     "starch:bread",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:british"
    ],
    "steps": [
     "Poach the chicken in salted water for 12 minutes; shred.",
@@ -3936,7 +4011,8 @@
    "tags": [
     "protein:chicken_drumsticks",
     "starch:maize_meal",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Rub the drumsticks with braai spice and brown in oil.",
@@ -3990,7 +4066,8 @@
     "protein:chicken_portions_mixed",
     "starch:rice",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown the chicken with onion and garlic.",
@@ -4043,7 +4120,8 @@
     "protein:beef_tripe",
     "starch:maize_meal",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:south_african"
    ],
    "steps": [
     "Rinse the cleaned tripe well and cut into pieces.",
@@ -4093,7 +4171,8 @@
     "protein:beef_tripe",
     "starch:rice",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:indian"
    ],
    "steps": [
     "Simmer the tripe in salted water about 2 hours until tender.",
@@ -4149,7 +4228,8 @@
    "tags": [
     "protein:corned_beef_tin",
     "starch:rice",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the rice.",
@@ -4198,7 +4278,8 @@
     "protein:corned_beef_tin",
     "starch:potatoes",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:british"
    ],
    "steps": [
     "Boil diced potatoes for 8 minutes; drain.",
@@ -4246,7 +4327,8 @@
    "tags": [
     "protein:corned_beef_tin",
     "starch:maize_meal",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the pap.",
@@ -4299,7 +4381,8 @@
     "protein:beef_mince",
     "starch:rice",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the rice.",
@@ -4348,7 +4431,8 @@
     "protein:beef_mince",
     "starch:rice",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown the mince with onion and garlic.",
@@ -4404,7 +4488,8 @@
    "tags": [
     "protein:beef_mince",
     "starch:maize_meal",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown the mince with onion and curry powder.",
@@ -4457,7 +4542,8 @@
     "protein:beef_stewing",
     "starch:rice",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown the beef in oil with onion.",
@@ -4515,7 +4601,8 @@
     "protein:beef_mince",
     "starch:pasta",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:italian"
    ],
    "steps": [
     "Mix the mince with breadcrumbs, egg, half the onion, mixed herbs and salt; roll into balls.",
@@ -4573,7 +4660,8 @@
     "protein:beef_mince",
     "starch:bread",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:british"
    ],
    "steps": [
     "Brown the mince with onion and curry powder; add tomato paste and cook until thick.",
@@ -4628,7 +4716,8 @@
    "cookMinutes": 50,
    "tags": [
     "protein:beef_mince",
-    "starch:rice"
+    "starch:rice",
+    "cuisine:south_african"
    ],
    "steps": [
     "Heat the oven to 180 °C and cook the rice.",
@@ -4680,7 +4769,8 @@
    "tags": [
     "protein:beef_mince",
     "starch:pasta",
-    "no_oven"
+    "no_oven",
+    "cuisine:italian"
    ],
    "steps": [
     "Boil the pasta.",
@@ -4738,7 +4828,8 @@
     "protein:beef_stewing",
     "starch:bread",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown the beef with onion in a heavy pot.",
@@ -4795,7 +4886,8 @@
     "protein:beef_mince",
     "starch:rice",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:afrikaans"
    ],
    "steps": [
     "Mix the mince with breadcrumbs, egg, grated onion and salt; shape into patties.",
@@ -4852,7 +4944,8 @@
     "protein:russians",
     "starch:potatoes",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:british"
    ],
    "steps": [
     "Boil the potatoes and mash with margarine and milk.",
@@ -4904,7 +4997,8 @@
    "tags": [
     "protein:russians",
     "starch:maize_meal",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the pap.",
@@ -4946,7 +5040,8 @@
     "starch:bread",
     "kid_friendly",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown the sausages; slice.",
@@ -4998,7 +5093,8 @@
    "tags": [
     "protein:pork_chops",
     "starch:sweet_potatoes",
-    "no_oven"
+    "no_oven",
+    "cuisine:afrikaans"
    ],
    "steps": [
     "Boil the sweet potatoes until soft, about 20 minutes.",
@@ -5043,7 +5139,8 @@
     "protein:viennas",
     "starch:rice",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the rice.",
@@ -5087,7 +5184,8 @@
    "tags": [
     "protein:polony",
     "starch:rice",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the rice.",
@@ -5138,7 +5236,8 @@
    "cookMinutes": 50,
    "tags": [
     "protein:boerewors",
-    "starch:potatoes"
+    "starch:potatoes",
+    "cuisine:afrikaans"
    ],
    "steps": [
     "Heat the oven to 200 °C.",
@@ -5182,7 +5281,8 @@
    "tags": [
     "protein:boerewors",
     "starch:pasta",
-    "no_oven"
+    "no_oven",
+    "cuisine:italian"
    ],
    "steps": [
     "Boil the pasta.",
@@ -5231,7 +5331,8 @@
     "protein:fish_fingers",
     "starch:potatoes",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:british"
    ],
    "steps": [
     "Boil the potatoes and mash with margarine and milk.",
@@ -5280,7 +5381,8 @@
     "protein:fish_fingers",
     "starch:bread",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:british"
    ],
    "steps": [
     "Fry the fish fingers until golden.",
@@ -5327,7 +5429,8 @@
    "tags": [
     "protein:pilchards_tin",
     "starch:maize_meal",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the pap.",
@@ -5371,7 +5474,8 @@
    "tags": [
     "protein:pilchards_tin",
     "starch:pasta",
-    "no_oven"
+    "no_oven",
+    "cuisine:italian"
    ],
    "steps": [
     "Boil the pasta.",
@@ -5420,7 +5524,8 @@
     "protein:tuna_tin",
     "starch:pasta",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:italian"
    ],
    "steps": [
     "Boil the pasta.",
@@ -5468,7 +5573,8 @@
    "tags": [
     "protein:tuna_tin",
     "starch:rice",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the rice.",
@@ -5516,7 +5622,8 @@
    "tags": [
     "protein:hake_fillets",
     "starch:rice",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the rice.",
@@ -5571,7 +5678,8 @@
    "cookMinutes": 40,
    "tags": [
     "protein:hake_fillets",
-    "starch:sweet_potatoes"
+    "starch:sweet_potatoes",
+    "cuisine:south_african"
    ],
    "steps": [
     "Heat the oven to 200 °C; roast cubed sweet potato with oil and salt for 25 minutes.",
@@ -5620,7 +5728,8 @@
     "protein:tuna_tin",
     "starch:potatoes",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:british"
    ],
    "steps": [
     "Boil and mash the potatoes.",
@@ -5678,7 +5787,8 @@
     "starch:bread",
     "meat_free",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:middle_eastern"
    ],
    "steps": [
     "Fry onion, garlic and green pepper until soft.",
@@ -5735,7 +5845,8 @@
     "protein:eggs",
     "starch:rice",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Hard-boil the eggs for 10 minutes; peel.",
@@ -5792,7 +5903,8 @@
     "protein:eggs",
     "starch:potatoes",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:spanish"
    ],
    "steps": [
     "Thinly slice the potatoes and onion and fry gently in oil for 15 minutes until soft.",
@@ -5838,7 +5950,8 @@
     "starch:bread",
     "meat_free",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:british"
    ],
    "steps": [
     "Beat the eggs with milk and a pinch of salt.",
@@ -5884,7 +5997,8 @@
     "starch:rice",
     "meat_free",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion, garlic and curry powder.",
@@ -5941,7 +6055,8 @@
     "protein:butter_beans",
     "starch:maize_meal",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Fry onion and garlic.",
@@ -5999,7 +6114,8 @@
     "starch:pasta",
     "meat_free",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:italian"
    ],
    "steps": [
     "Fry onion, garlic and grated carrot.",
@@ -6057,7 +6173,8 @@
     "starch:rice",
     "meat_free",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion, garlic, curry powder and turmeric.",
@@ -6119,7 +6236,8 @@
     "starch:bread",
     "meat_free",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:south_african"
    ],
    "steps": [
     "Soak the beans overnight; drain.",
@@ -6176,7 +6294,8 @@
     "protein:peanut_butter",
     "starch:maize_meal",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the pap.",
@@ -6224,7 +6343,8 @@
    "tags": [
     "protein:soya_mince",
     "starch:potatoes",
-    "meat_free"
+    "meat_free",
+    "cuisine:british"
    ],
    "steps": [
     "Heat the oven to 200 °C. Boil and mash the potatoes with margarine and milk.",
@@ -6286,7 +6406,8 @@
     "starch:bread",
     "meat_free",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:south_african"
    ],
    "steps": [
     "Fry onion in oil until soft.",
@@ -6340,7 +6461,8 @@
     "starch:cake_flour",
     "meat_free",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Mix the sweetcorn, egg, flour, baking powder and salt into a thick batter.",
@@ -6390,7 +6512,8 @@
     "starch:rice",
     "meat_free",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion, garlic, curry powder and turmeric.",
@@ -6451,7 +6574,8 @@
     "protein:cheddar_cheese",
     "starch:pasta",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:italian"
    ],
    "steps": [
     "Boil the pasta.",
@@ -6508,7 +6632,8 @@
     "protein:butter_beans",
     "starch:maize_meal",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Fry onion and curry powder.",
@@ -6561,7 +6686,8 @@
     "protein:cheddar_cheese",
     "starch:cake_flour",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Mix flour, baking powder, salt and water into a soft dough; rest 20 minutes.",
@@ -6606,7 +6732,8 @@
     "protein:sugar_beans",
     "starch:cake_flour",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Soak the beans overnight; simmer about 1½ hours until soft.",
@@ -6661,7 +6788,8 @@
     "starch:bread",
     "meat_free",
     "kid_friendly",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Fry onion and garlic, add tomatoes, a stock cube, sugar and a cup of water; simmer 15 minutes.",
@@ -6723,7 +6851,8 @@
     "starch:bread",
     "meat_free",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:south_african"
    ],
    "steps": [
     "Fry onion and curry powder.",
@@ -6780,7 +6909,8 @@
     "protein:eggs",
     "starch:maize_meal",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Cook the pap.",
@@ -6830,7 +6960,8 @@
     "starch:rice",
     "meat_free",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:afrikaans"
    ],
    "steps": [
     "Fry onion until golden.",
@@ -6883,7 +7014,8 @@
     "protein:eggs",
     "starch:bread",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:british"
    ],
    "steps": [
     "Beat the eggs with salt.",
@@ -6929,7 +7061,8 @@
     "starch:rice",
     "meat_free",
     "no_oven",
-    "one_pot"
+    "one_pot",
+    "cuisine:south_african"
    ],
    "steps": [
     "Fry onion and mushrooms until golden.",
@@ -6978,7 +7111,8 @@
     "protein:sugar_beans",
     "starch:bread",
     "meat_free",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Fry onion, garlic and curry powder.",
@@ -7038,7 +7172,8 @@
    "tags": [
     "protein:chicken_portions_mixed",
     "starch:bread",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Brown the chicken with onion, garlic, curry powder and turmeric.",
@@ -7098,7 +7233,8 @@
    "tags": [
     "protein:beef_mince",
     "starch:bread",
-    "no_oven"
+    "no_oven",
+    "cuisine:indian"
    ],
    "steps": [
     "Brown the mince with onion, garlic and curry powder.",
@@ -7141,6 +7277,3845 @@
     {
      "id": "salt",
      "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "garlic_chilli_spaghetti_egg",
+   "name": "Garlic & chilli spaghetti with a fried egg",
+   "description": "Spaghetti tossed in garlic oil and chilli, topped with a fried egg.",
+   "cookMinutes": 15,
+   "tags": [
+    "protein:eggs",
+    "starch:pasta",
+    "meat_free",
+    "no_oven",
+    "cuisine:italian"
+   ],
+   "steps": [
+    "Boil the spaghetti in salted water.",
+    "Gently fry sliced garlic and chilli powder in the oil for 1 minute; don't let it burn.",
+    "Toss the drained pasta in the garlic oil with a splash of pasta water.",
+    "Fry an egg per person and serve on top with grated cheese."
+   ],
+   "ingredients": [
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "garlic",
+     "qty": 10
+    },
+    {
+     "id": "chilli_powder",
+     "qty": 1
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 15
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 15
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "tuna_sweetcorn_wraps",
+   "name": "Tuna & sweetcorn wraps",
+   "description": "No-cook wraps with tuna, sweetcorn, cucumber and mayo.",
+   "cookMinutes": 10,
+   "tags": [
+    "protein:tuna_tin",
+    "starch:tortilla_wraps",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:american"
+   ],
+   "steps": [
+    "Drain the tuna and mix with sweetcorn, mayonnaise and black pepper.",
+    "Slice the cucumber and tomato.",
+    "Fill the wraps, roll up tightly and cut in half."
+   ],
+   "ingredients": [
+    {
+     "id": "tortilla_wraps",
+     "qty": 2
+    },
+    {
+     "id": "tuna_tin",
+     "qty": 60
+    },
+    {
+     "id": "sweetcorn_tin",
+     "qty": 50
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 15
+    },
+    {
+     "id": "cucumber",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "black_pepper",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "bean_cheese_quesadillas",
+   "name": "Bean & cheese quesadillas",
+   "description": "Crispy wraps filled with spiced beans and melted cheese.",
+   "cookMinutes": 15,
+   "tags": [
+    "protein:kidney_beans_tin",
+    "starch:tortilla_wraps",
+    "meat_free",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:mexican"
+   ],
+   "steps": [
+    "Mash the drained beans with cumin, paprika and a pinch of salt.",
+    "Spread on half of each wrap, add grated cheese and fold over.",
+    "Toast in a dry pan for 2–3 minutes a side until golden and melted.",
+    "Cut into wedges and serve with chopped tomato."
+   ],
+   "ingredients": [
+    {
+     "id": "tortilla_wraps",
+     "qty": 2
+    },
+    {
+     "id": "kidney_beans_tin",
+     "qty": 100
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 30
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "veg_egg_noodle_stir_fry",
+   "name": "Vegetable egg-noodle stir-fry",
+   "description": "Noodles stir-fried with vegetables, egg and soy sauce.",
+   "cookMinutes": 15,
+   "tags": [
+    "protein:eggs",
+    "starch:egg_noodles",
+    "meat_free",
+    "no_oven",
+    "cuisine:chinese"
+   ],
+   "steps": [
+    "Soak or boil the noodles as the packet says; drain.",
+    "Stir-fry the frozen vegetables, garlic and ginger in hot oil for 4 minutes.",
+    "Push aside, scramble the eggs, then add the noodles and soy sauce.",
+    "Toss everything together for 2 minutes."
+   ],
+   "ingredients": [
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "mixed_veg_frozen",
+     "qty": 100
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "soy_sauce",
+     "qty": 15
+    },
+    {
+     "id": "egg_noodles",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "feta_spinach_omelette",
+   "name": "Feta & spinach omelette",
+   "description": "A quick omelette with spinach and feta, with toast.",
+   "cookMinutes": 10,
+   "tags": [
+    "protein:eggs",
+    "starch:bread",
+    "meat_free",
+    "no_oven",
+    "cuisine:greek"
+   ],
+   "steps": [
+    "Wilt the spinach in a little oil; set aside.",
+    "Beat the eggs with pepper and pour into the hot pan.",
+    "When nearly set, add the spinach and crumbled feta, fold and cook 1 minute.",
+    "Serve with toast."
+   ],
+   "ingredients": [
+    {
+     "id": "eggs",
+     "qty": 2
+    },
+    {
+     "id": "spinach",
+     "qty": 50
+    },
+    {
+     "id": "feta_cheese",
+     "qty": 25
+    },
+    {
+     "id": "black_pepper",
+     "qty": 1
+    },
+    {
+     "id": "bread",
+     "qty": 100
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "creamy_tuna_pasta",
+   "name": "Creamy tuna & pea pasta",
+   "description": "Pasta in a quick cheesy milk sauce with tuna and peas.",
+   "cookMinutes": 15,
+   "tags": [
+    "protein:tuna_tin",
+    "starch:pasta",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:italian"
+   ],
+   "steps": [
+    "Boil the pasta; add the peas for the last 3 minutes.",
+    "Melt margarine, stir in the flour, then whisk in the milk until thick.",
+    "Stir in grated cheese and the drained tuna.",
+    "Toss with the pasta and peas."
+   ],
+   "ingredients": [
+    {
+     "id": "tuna_tin",
+     "qty": 60
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 50
+    },
+    {
+     "id": "margarine",
+     "qty": 10
+    },
+    {
+     "id": "cake_flour",
+     "qty": 10
+    },
+    {
+     "id": "milk",
+     "qty": 150
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 20
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "viennas_carbonara",
+   "name": "Vienna carbonara",
+   "description": "A family-friendly carbonara with viennas, egg and cheese.",
+   "cookMinutes": 15,
+   "tags": [
+    "protein:viennas",
+    "starch:pasta",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:italian"
+   ],
+   "steps": [
+    "Boil the pasta.",
+    "Fry the sliced viennas and garlic until golden.",
+    "Beat the egg with grated cheese and black pepper.",
+    "Off the heat, toss the hot pasta with the viennas and egg mix until creamy, adding a splash of pasta water."
+   ],
+   "ingredients": [
+    {
+     "id": "viennas",
+     "qty": 75
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 20
+    },
+    {
+     "id": "black_pepper",
+     "qty": 1
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "scrambled_eggs_tomato_toast",
+   "name": "Scrambled eggs & tomato on toast",
+   "description": "Soft scrambled eggs with fried tomato on toast.",
+   "cookMinutes": 10,
+   "tags": [
+    "protein:eggs",
+    "starch:bread",
+    "meat_free",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:british"
+   ],
+   "steps": [
+    "Fry thick tomato slices in a little margarine; season.",
+    "Beat the eggs with milk and salt and scramble gently on low heat.",
+    "Serve on buttered toast with the tomato."
+   ],
+   "ingredients": [
+    {
+     "id": "eggs",
+     "qty": 2
+    },
+    {
+     "id": "milk",
+     "qty": 20
+    },
+    {
+     "id": "tomato",
+     "qty": 100
+    },
+    {
+     "id": "margarine",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    },
+    {
+     "id": "bread",
+     "qty": 100
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_mayo_wraps",
+   "name": "Chicken mayo wraps",
+   "description": "Shredded chicken, crunchy cabbage and mayo in a wrap.",
+   "cookMinutes": 15,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:tortilla_wraps",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:american"
+   ],
+   "steps": [
+    "Slice the chicken thinly and fry in oil with paprika for 6 minutes.",
+    "Mix shredded cabbage and grated carrot with mayonnaise.",
+    "Fill the wraps with chicken and slaw and roll up."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "cabbage",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 25
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 15
+    },
+    {
+     "id": "tortilla_wraps",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "wrap_pizzas",
+   "name": "Wrap pizzas",
+   "description": "Crispy pan pizzas on wraps with tomato, cheese and toppings.",
+   "cookMinutes": 15,
+   "tags": [
+    "protein:cheddar_cheese",
+    "starch:tortilla_wraps",
+    "meat_free",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:italian"
+   ],
+   "steps": [
+    "Mix tomato paste with mixed herbs and a little water.",
+    "Spread on the wraps, top with sliced green pepper, onion and grated cheese.",
+    "Cook in a covered pan on medium heat for 4–5 minutes until the base is crisp and the cheese melts."
+   ],
+   "ingredients": [
+    {
+     "id": "tortilla_wraps",
+     "qty": 2
+    },
+    {
+     "id": "tomato_paste",
+     "qty": 20
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 1
+    },
+    {
+     "id": "green_pepper",
+     "qty": 25
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 40
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "hot_dogs_slaw",
+   "name": "Hot dogs with slaw",
+   "description": "Viennas in rolls with tomato sauce and cabbage slaw.",
+   "cookMinutes": 15,
+   "tags": [
+    "protein:viennas",
+    "starch:bread_rolls",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:american"
+   ],
+   "steps": [
+    "Simmer the viennas in water for 5 minutes.",
+    "Mix shredded cabbage and carrot with mayonnaise.",
+    "Fry sliced onion until soft.",
+    "Fill the rolls with viennas, onion and slaw."
+   ],
+   "ingredients": [
+    {
+     "id": "viennas",
+     "qty": 100
+    },
+    {
+     "id": "bread_rolls",
+     "qty": 2
+    },
+    {
+     "id": "cabbage",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 25
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 15
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "thai_peanut_noodles",
+   "name": "Thai-style peanut noodles",
+   "description": "Noodles in a quick peanut, soy and ginger sauce with vegetables.",
+   "cookMinutes": 15,
+   "tags": [
+    "protein:peanut_butter",
+    "starch:egg_noodles",
+    "meat_free",
+    "no_oven",
+    "cuisine:thai"
+   ],
+   "steps": [
+    "Cook the noodles; drain.",
+    "Whisk peanut butter, soy sauce, grated ginger, a pinch of sugar and hot water into a sauce.",
+    "Stir-fry grated carrot and shredded cabbage for 3 minutes.",
+    "Toss the noodles and vegetables in the sauce."
+   ],
+   "ingredients": [
+    {
+     "id": "peanut_butter",
+     "qty": 25
+    },
+    {
+     "id": "soy_sauce",
+     "qty": 15
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "sugar",
+     "qty": 3
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "cabbage",
+     "qty": 50
+    },
+    {
+     "id": "egg_noodles",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "tuna_tomato_cucumber_sandwiches",
+   "name": "Tuna, tomato & cucumber sandwiches",
+   "description": "A light no-cook supper for hot evenings.",
+   "cookMinutes": 10,
+   "tags": [
+    "protein:tuna_tin",
+    "starch:bread",
+    "no_oven",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Mix the tuna with mayonnaise, lemon juice and pepper.",
+    "Slice the tomato and cucumber.",
+    "Build the sandwiches and cut in half."
+   ],
+   "ingredients": [
+    {
+     "id": "tuna_tin",
+     "qty": 60
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 15
+    },
+    {
+     "id": "lemons",
+     "qty": 15
+    },
+    {
+     "id": "black_pepper",
+     "qty": 1
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "cucumber",
+     "qty": 50
+    },
+    {
+     "id": "margarine",
+     "qty": 5
+    },
+    {
+     "id": "bread",
+     "qty": 100
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chickpea_feta_wraps",
+   "name": "Chickpea, feta & cucumber wraps",
+   "description": "Smashed chickpeas with lemon, feta and cucumber in wraps.",
+   "cookMinutes": 15,
+   "tags": [
+    "protein:chickpeas_tin",
+    "starch:tortilla_wraps",
+    "meat_free",
+    "no_oven",
+    "cuisine:greek"
+   ],
+   "steps": [
+    "Lightly mash the drained chickpeas with lemon juice, cumin and salt.",
+    "Add crumbled feta, diced cucumber and tomato.",
+    "Spoon into the wraps and roll up."
+   ],
+   "ingredients": [
+    {
+     "id": "chickpeas_tin",
+     "qty": 100
+    },
+    {
+     "id": "lemons",
+     "qty": 15
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "feta_cheese",
+     "qty": 25
+    },
+    {
+     "id": "cucumber",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "tortilla_wraps",
+     "qty": 2
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "penne_arrabbiata",
+   "name": "Penne arrabbiata",
+   "description": "Pasta in a spicy garlic and tomato sauce.",
+   "cookMinutes": 15,
+   "tags": [
+    "protein:cheddar_cheese",
+    "starch:pasta",
+    "meat_free",
+    "no_oven",
+    "cuisine:italian"
+   ],
+   "steps": [
+    "Boil the pasta.",
+    "Fry garlic and chilli powder in oil for 1 minute.",
+    "Add the tomatoes and a pinch of sugar; simmer 8 minutes.",
+    "Toss with the pasta and top with grated cheese."
+   ],
+   "ingredients": [
+    {
+     "id": "garlic",
+     "qty": 10
+    },
+    {
+     "id": "chilli_powder",
+     "qty": 1
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 125
+    },
+    {
+     "id": "sugar",
+     "qty": 2
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 15
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "egg_fried_noodles_polony",
+   "name": "Fried noodles with egg & polony",
+   "description": "Quick fried noodles with polony strips and cabbage.",
+   "cookMinutes": 15,
+   "tags": [
+    "protein:polony",
+    "starch:egg_noodles",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:chinese"
+   ],
+   "steps": [
+    "Cook the noodles; drain.",
+    "Fry polony strips and shredded cabbage for 4 minutes.",
+    "Add the noodles, soy sauce and a beaten egg; toss until the egg sets."
+   ],
+   "ingredients": [
+    {
+     "id": "polony",
+     "qty": 50
+    },
+    {
+     "id": "cabbage",
+     "qty": 75
+    },
+    {
+     "id": "soy_sauce",
+     "qty": 10
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "egg_noodles",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chakalaka_beans_toast",
+   "name": "Chakalaka beans on toast",
+   "description": "Warm chakalaka and baked beans on toast with cheese.",
+   "cookMinutes": 10,
+   "tags": [
+    "protein:baked_beans",
+    "starch:bread",
+    "meat_free",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Heat the baked beans and chakalaka together.",
+    "Toast and butter the bread.",
+    "Spoon the beans over and top with grated cheese."
+   ],
+   "ingredients": [
+    {
+     "id": "baked_beans",
+     "qty": 100
+    },
+    {
+     "id": "chakalaka",
+     "qty": 50
+    },
+    {
+     "id": "margarine",
+     "qty": 5
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 15
+    },
+    {
+     "id": "bread",
+     "qty": 100
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_quesadillas",
+   "name": "Chicken & pepper quesadillas",
+   "description": "Spiced chicken, peppers and cheese toasted in wraps.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:tortilla_wraps",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:mexican"
+   ],
+   "steps": [
+    "Slice the chicken, pepper and onion; fry with cumin and paprika for 8 minutes.",
+    "Spread over half of each wrap, add cheese and fold.",
+    "Toast in a dry pan until golden on both sides.",
+    "Cut into wedges."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "green_pepper",
+     "qty": 50
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 25
+    },
+    {
+     "id": "tortilla_wraps",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_fajitas",
+   "name": "Chicken fajitas",
+   "description": "Sizzling spiced chicken strips with peppers and onion in wraps.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:tortilla_wraps",
+    "no_oven",
+    "cuisine:mexican"
+   ],
+   "steps": [
+    "Slice the chicken, pepper and onion into strips.",
+    "Toss the chicken with cumin, paprika, chilli powder, lemon juice and salt.",
+    "Fry the chicken on high heat for 6 minutes, add the vegetables and fry 4 minutes more.",
+    "Serve in warm wraps with chopped tomato."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "green_pepper",
+     "qty": 50
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "chilli_powder",
+     "qty": 1
+    },
+    {
+     "id": "lemons",
+     "qty": 15
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "tortilla_wraps",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "beef_mince_soft_tacos",
+   "name": "Beef mince soft tacos",
+   "description": "Spiced mince in wraps with cabbage, tomato and cheese.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:beef_mince",
+    "starch:tortilla_wraps",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:mexican"
+   ],
+   "steps": [
+    "Brown the mince with onion, garlic, cumin, paprika and chilli powder.",
+    "Add tomato paste and a splash of water; cook until thick.",
+    "Fill the wraps with mince, shredded cabbage, tomato and grated cheese."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "chilli_powder",
+     "qty": 1
+    },
+    {
+     "id": "tomato_paste",
+     "qty": 15
+    },
+    {
+     "id": "cabbage",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 15
+    },
+    {
+     "id": "tortilla_wraps",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "fish_tacos_slaw",
+   "name": "Fish tacos with lemon slaw",
+   "description": "Paprika hake in wraps with crunchy lemon slaw.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:hake_fillets",
+    "starch:tortilla_wraps",
+    "no_oven",
+    "cuisine:mexican"
+   ],
+   "steps": [
+    "Season the hake with paprika, cumin and salt; fry 3 minutes a side until it flakes.",
+    "Toss shredded cabbage and carrot with mayonnaise and lemon juice.",
+    "Fill the wraps with flaked fish and slaw."
+   ],
+   "ingredients": [
+    {
+     "id": "hake_fillets",
+     "qty": 100
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "cabbage",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 25
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 15
+    },
+    {
+     "id": "lemons",
+     "qty": 15
+    },
+    {
+     "id": "tortilla_wraps",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_chow_mein",
+   "name": "Chicken chow mein",
+   "description": "Egg noodles with chicken, cabbage and carrot in soy sauce.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:egg_noodles",
+    "no_oven",
+    "cuisine:chinese"
+   ],
+   "steps": [
+    "Cook the noodles; drain.",
+    "Stir-fry thin chicken strips with garlic and ginger for 5 minutes.",
+    "Add shredded cabbage and carrot; stir-fry 3 minutes.",
+    "Add the noodles, soy sauce and a pinch of sugar; toss until hot."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "cabbage",
+     "qty": 75
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "soy_sauce",
+     "qty": 15
+    },
+    {
+     "id": "sugar",
+     "qty": 2
+    },
+    {
+     "id": "egg_noodles",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "beef_mince_noodles",
+   "name": "Ginger soy mince noodles",
+   "description": "Savoury mince with ginger and soy, tossed through noodles.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:beef_mince",
+    "starch:egg_noodles",
+    "no_oven",
+    "cuisine:chinese"
+   ],
+   "steps": [
+    "Cook the noodles; drain.",
+    "Brown the mince with garlic and ginger.",
+    "Add shredded cabbage, soy sauce and a pinch of sugar; cook 4 minutes.",
+    "Toss with the noodles."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "cabbage",
+     "qty": 75
+    },
+    {
+     "id": "soy_sauce",
+     "qty": 15
+    },
+    {
+     "id": "sugar",
+     "qty": 2
+    },
+    {
+     "id": "egg_noodles",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "ginger_soy_chicken_rice",
+   "name": "Ginger soy chicken stir-fry",
+   "description": "Chicken and vegetables in a glossy ginger soy sauce, with rice.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:rice",
+    "no_oven",
+    "cuisine:chinese"
+   ],
+   "steps": [
+    "Cook the rice.",
+    "Stir-fry chicken pieces in hot oil for 5 minutes.",
+    "Add garlic, ginger, green pepper and carrot; stir-fry 3 minutes.",
+    "Add soy sauce, sugar and a little water mixed with a teaspoon of flour; cook until glossy.",
+    "Serve on the rice."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "green_pepper",
+     "qty": 25
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "soy_sauce",
+     "qty": 15
+    },
+    {
+     "id": "sugar",
+     "qty": 3
+    },
+    {
+     "id": "cake_flour",
+     "qty": 5
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "sweet_sour_chicken_rice",
+   "name": "Sweet & sour chicken",
+   "description": "Chicken pieces in a tangy tomato, vinegar and pepper sauce.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:rice",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:chinese"
+   ],
+   "steps": [
+    "Cook the rice.",
+    "Fry the chicken pieces until golden.",
+    "Add onion and green pepper; fry 3 minutes.",
+    "Stir in tomato paste, vinegar, sugar, soy sauce and a little water; simmer 5 minutes until glossy.",
+    "Serve with the rice."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "green_pepper",
+     "qty": 50
+    },
+    {
+     "id": "tomato_paste",
+     "qty": 20
+    },
+    {
+     "id": "brown_vinegar",
+     "qty": 15
+    },
+    {
+     "id": "sugar",
+     "qty": 10
+    },
+    {
+     "id": "soy_sauce",
+     "qty": 10
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "coconut_chicken_curry",
+   "name": "Thai-style coconut chicken curry",
+   "description": "Chicken simmered in coconut milk with ginger and curry, on rice.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:rice",
+    "no_oven",
+    "one_pot",
+    "cuisine:thai"
+   ],
+   "steps": [
+    "Fry onion, garlic, ginger and curry powder for 2 minutes.",
+    "Add the chicken pieces and brown lightly.",
+    "Pour in the coconut milk and simmer 12 minutes.",
+    "Stir in a squeeze of lemon and serve on rice."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "coconut_milk",
+     "qty": 100
+    },
+    {
+     "id": "lemons",
+     "qty": 10
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "coconut_lentil_dhal",
+   "name": "Coconut lentil dhal",
+   "description": "Creamy red lentils with coconut milk, cumin and turmeric.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:red_lentils",
+    "starch:rice",
+    "meat_free",
+    "no_oven",
+    "one_pot",
+    "cuisine:indian"
+   ],
+   "steps": [
+    "Fry onion, garlic, ginger, cumin and turmeric for 2 minutes.",
+    "Add the lentils, tomatoes and two cups of water; simmer 15 minutes.",
+    "Stir in the coconut milk and cook 5 minutes until creamy.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "red_lentils",
+     "qty": 60
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "turmeric",
+     "qty": 1
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 75
+    },
+    {
+     "id": "coconut_milk",
+     "qty": 75
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chana_masala_rice",
+   "name": "Chickpea curry (chana masala)",
+   "description": "Chickpeas in a spiced tomato and onion gravy.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:chickpeas_tin",
+    "starch:rice",
+    "meat_free",
+    "no_oven",
+    "one_pot",
+    "cuisine:indian"
+   ],
+   "steps": [
+    "Fry onion, garlic and ginger until soft.",
+    "Add cumin, curry powder and turmeric; fry 1 minute.",
+    "Add tomatoes and the drained chickpeas; simmer 12 minutes.",
+    "Finish with a squeeze of lemon and serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "chickpeas_tin",
+     "qty": 125
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "turmeric",
+     "qty": 1
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 125
+    },
+    {
+     "id": "lemons",
+     "qty": 10
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "aloo_matar_curry",
+   "name": "Potato & pea curry (aloo matar)",
+   "description": "A comforting potato and pea curry with rice.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:peas_frozen",
+    "starch:rice",
+    "meat_free",
+    "no_oven",
+    "one_pot",
+    "cuisine:indian"
+   ],
+   "steps": [
+    "Fry onion, garlic, ginger, cumin and curry powder.",
+    "Add diced potatoes, tomatoes and a cup of water; simmer 15 minutes.",
+    "Add the peas and cook 5 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "butter_chicken_rice",
+   "name": "Easy butter chicken",
+   "description": "Chicken in a mild, creamy tomato curry sauce.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:rice",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:indian"
+   ],
+   "steps": [
+    "Fry the chicken pieces in margarine until lightly browned.",
+    "Add onion, garlic, ginger, curry powder, cumin and a pinch of cinnamon; fry 2 minutes.",
+    "Add tomatoes and a pinch of sugar; simmer 12 minutes.",
+    "Stir in the milk and simmer 3 minutes. Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "margarine",
+     "qty": 15
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "ground_cinnamon",
+     "qty": 1
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "sugar",
+     "qty": 2
+    },
+    {
+     "id": "milk",
+     "qty": 75
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_curry_roti",
+   "name": "Chicken curry with roti",
+   "description": "Durban-style chicken and potato curry with homemade roti.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:cake_flour",
+    "no_oven",
+    "cuisine:indian"
+   ],
+   "steps": [
+    "Brown the chicken with onion, garlic, ginger, curry powder and turmeric.",
+    "Add tomatoes, diced potato and a cup of water; simmer 30 minutes.",
+    "Meanwhile mix flour, salt, a little oil and water into a soft dough; rest 10 minutes.",
+    "Roll thin rounds and cook in a dry pan for 1 minute a side, brushing with margarine.",
+    "Serve the curry with roti."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 175
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 4
+    },
+    {
+     "id": "turmeric",
+     "qty": 1
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "potatoes",
+     "qty": 75
+    },
+    {
+     "id": "cake_flour",
+     "qty": 75
+    },
+    {
+     "id": "margarine",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_shawarma_wraps",
+   "name": "Chicken shawarma-style wraps",
+   "description": "Cumin and paprika chicken in wraps with cucumber and garlic mayo.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:tortilla_wraps",
+    "no_oven",
+    "cuisine:middle_eastern"
+   ],
+   "steps": [
+    "Toss sliced chicken with cumin, paprika, cinnamon, garlic, lemon juice and oil.",
+    "Fry on high heat for 8 minutes until charred and cooked.",
+    "Mix mayonnaise with a little crushed garlic and lemon.",
+    "Fill the wraps with chicken, cucumber, tomato and garlic mayo."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "ground_cinnamon",
+     "qty": 1
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "lemons",
+     "qty": 15
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 15
+    },
+    {
+     "id": "cucumber",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "tortilla_wraps",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "lentil_rice_crispy_onions",
+   "name": "Lentils & rice with crispy onions (mujadara)",
+   "description": "Spiced lentils and rice topped with sweet fried onions.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:red_lentils",
+    "starch:rice",
+    "meat_free",
+    "no_oven",
+    "one_pot",
+    "cuisine:middle_eastern"
+   ],
+   "steps": [
+    "Slowly fry sliced onions in oil until deep golden; set half aside.",
+    "Add cumin and cinnamon to the pot, then the rice, lentils and two cups of water.",
+    "Cover and cook 18 minutes until tender.",
+    "Serve topped with the crispy onions and chopped cucumber and tomato."
+   ],
+   "ingredients": [
+    {
+     "id": "red_lentils",
+     "qty": 40
+    },
+    {
+     "id": "onion",
+     "qty": 100
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "ground_cinnamon",
+     "qty": 1
+    },
+    {
+     "id": "cucumber",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 20
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chickpea_tomato_stew_bread",
+   "name": "Chickpea & tomato stew",
+   "description": "A smoky chickpea and tomato stew with bread for dipping.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:chickpeas_tin",
+    "starch:bread",
+    "meat_free",
+    "no_oven",
+    "one_pot",
+    "cuisine:middle_eastern"
+   ],
+   "steps": [
+    "Fry onion, garlic and green pepper.",
+    "Add cumin and paprika, then tomatoes and the chickpeas.",
+    "Simmer 12 minutes until thick; crumble feta on top.",
+    "Serve with bread."
+   ],
+   "ingredients": [
+    {
+     "id": "chickpeas_tin",
+     "qty": 125
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "green_pepper",
+     "qty": 25
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 125
+    },
+    {
+     "id": "feta_cheese",
+     "qty": 20
+    },
+    {
+     "id": "bread",
+     "qty": 100
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "tomato_feta_pasta",
+   "name": "Tomato & feta pasta",
+   "description": "Pasta in a sweet tomato sauce with melted feta.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:feta_cheese",
+    "starch:pasta",
+    "meat_free",
+    "no_oven",
+    "cuisine:greek"
+   ],
+   "steps": [
+    "Boil the pasta.",
+    "Fry onion and garlic, add tomatoes and mixed herbs; simmer 8 minutes.",
+    "Crumble in the feta and stir until it softens.",
+    "Toss with the pasta."
+   ],
+   "ingredients": [
+    {
+     "id": "feta_cheese",
+     "qty": 40
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 125
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 1
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "greek_chicken_potatoes",
+   "name": "Greek lemon chicken & potatoes",
+   "description": "Chicken and potatoes roasted with lemon, garlic and herbs.",
+   "cookMinutes": 55,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:potatoes",
+    "cuisine:greek"
+   ],
+   "steps": [
+    "Heat the oven to 200 °C.",
+    "Toss potato wedges and chicken with lemon juice, garlic, mixed herbs, oil and salt.",
+    "Roast 45 minutes, turning once, until golden and cooked through.",
+    "Serve with a cucumber and tomato salad with feta."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 200
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "lemons",
+     "qty": 25
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 1
+    },
+    {
+     "id": "cucumber",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "feta_cheese",
+     "qty": 20
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 15
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "pasta_napoletana",
+   "name": "Pasta napoletana",
+   "description": "Classic tomato, garlic and herb pasta.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:cheddar_cheese",
+    "starch:pasta",
+    "meat_free",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:italian"
+   ],
+   "steps": [
+    "Boil the pasta.",
+    "Fry onion and garlic, add tomatoes, mixed herbs and a pinch of sugar; simmer 10 minutes.",
+    "Toss with the pasta and top with grated cheese."
+   ],
+   "ingredients": [
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 150
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 1
+    },
+    {
+     "id": "sugar",
+     "qty": 2
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 20
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "minestrone_soup",
+   "name": "Minestrone soup",
+   "description": "Hearty vegetable, bean and pasta soup.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:kidney_beans_tin",
+    "starch:pasta",
+    "meat_free",
+    "no_oven",
+    "one_pot",
+    "cuisine:italian"
+   ],
+   "steps": [
+    "Fry onion, carrot and garlic for 5 minutes.",
+    "Add tomatoes, a stock cube, mixed herbs and four cups of water; simmer 10 minutes.",
+    "Add the pasta, beans and cabbage; simmer 10 minutes more.",
+    "Serve with grated cheese."
+   ],
+   "ingredients": [
+    {
+     "id": "kidney_beans_tin",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 1
+    },
+    {
+     "id": "cabbage",
+     "qty": 50
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 10
+    },
+    {
+     "id": "pasta",
+     "qty": 50
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_mushroom_rice",
+   "name": "Chicken & mushroom one-pot rice",
+   "description": "Risotto-style rice with chicken and mushrooms.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:rice",
+    "no_oven",
+    "one_pot",
+    "cuisine:italian"
+   ],
+   "steps": [
+    "Brown chicken pieces with onion and garlic.",
+    "Add mushrooms and fry 3 minutes.",
+    "Add the rice, a stock cube and water; cover and cook 18 minutes.",
+    "Stir in milk and grated cheese until creamy."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "mushrooms",
+     "qty": 50
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "milk",
+     "qty": 50
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 15
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chilli_con_carne",
+   "name": "Chilli con carne",
+   "description": "Beef mince and kidney beans in a spiced tomato sauce, with rice.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:beef_mince",
+    "starch:rice",
+    "no_oven",
+    "one_pot",
+    "cuisine:mexican"
+   ],
+   "steps": [
+    "Brown the mince with onion, garlic and green pepper.",
+    "Add cumin, paprika and chilli powder; fry 1 minute.",
+    "Add tomatoes and the drained kidney beans; simmer 20 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "kidney_beans_tin",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "green_pepper",
+     "qty": 25
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "chilli_powder",
+     "qty": 1
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "bean_chilli_rice",
+   "name": "Three-bean chilli",
+   "description": "A meat-free chilli with kidney beans, baked beans and butter beans.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:kidney_beans_tin",
+    "starch:rice",
+    "meat_free",
+    "no_oven",
+    "one_pot",
+    "cuisine:mexican"
+   ],
+   "steps": [
+    "Fry onion, garlic and green pepper.",
+    "Add cumin, paprika and chilli powder.",
+    "Add tomatoes and all the beans; simmer 15 minutes.",
+    "Serve with rice and grated cheese."
+   ],
+   "ingredients": [
+    {
+     "id": "kidney_beans_tin",
+     "qty": 75
+    },
+    {
+     "id": "baked_beans",
+     "qty": 50
+    },
+    {
+     "id": "butter_beans",
+     "qty": 50
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "green_pepper",
+     "qty": 25
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "chilli_powder",
+     "qty": 1
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 15
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "burrito_rice_bowls",
+   "name": "Burrito rice bowls",
+   "description": "Cumin rice with beans, sweetcorn, tomato and cheese.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:kidney_beans_tin",
+    "starch:rice",
+    "meat_free",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:mexican"
+   ],
+   "steps": [
+    "Cook the rice with a pinch of cumin.",
+    "Warm the beans with paprika and a splash of water.",
+    "Fill bowls with rice, beans, sweetcorn, chopped tomato, cucumber and grated cheese.",
+    "Squeeze over lemon."
+   ],
+   "ingredients": [
+    {
+     "id": "kidney_beans_tin",
+     "qty": 100
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "sweetcorn_tin",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "cucumber",
+     "qty": 50
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 15
+    },
+    {
+     "id": "lemons",
+     "qty": 10
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "beef_burgers_salad",
+   "name": "Homemade beef burgers",
+   "description": "Juicy mince patties in rolls with tomato, onion and cucumber.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:beef_mince",
+    "starch:bread_rolls",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:american"
+   ],
+   "steps": [
+    "Mix the mince with grated onion, egg, salt and pepper; shape into patties.",
+    "Fry the patties 4–5 minutes a side until cooked through.",
+    "Toast the rolls in the pan.",
+    "Build the burgers with tomato, cucumber and mayonnaise."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 125
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "black_pepper",
+     "qty": 1
+    },
+    {
+     "id": "bread_rolls",
+     "qty": 1
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "cucumber",
+     "qty": 25
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 10
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_burgers",
+   "name": "Crumbed chicken burgers",
+   "description": "Crispy crumbed chicken fillets in rolls with slaw.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:bread_rolls",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:american"
+   ],
+   "steps": [
+    "Flatten the fillets, dip in beaten egg, then in flour seasoned with paprika and salt.",
+    "Fry 4 minutes a side until golden and cooked through.",
+    "Mix shredded cabbage and carrot with mayonnaise.",
+    "Serve in toasted rolls with the slaw."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "cake_flour",
+     "qty": 20
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "bread_rolls",
+     "qty": 1
+    },
+    {
+     "id": "cabbage",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 25
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 15
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 20
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "sloppy_joes",
+   "name": "Sloppy joes",
+   "description": "Saucy tomato mince piled onto rolls.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:beef_mince",
+    "starch:bread_rolls",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:american"
+   ],
+   "steps": [
+    "Brown the mince with onion and green pepper.",
+    "Add tomato paste, a little vinegar, sugar and water; simmer 10 minutes until thick.",
+    "Spoon into toasted rolls."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "green_pepper",
+     "qty": 25
+    },
+    {
+     "id": "tomato_paste",
+     "qty": 20
+    },
+    {
+     "id": "brown_vinegar",
+     "qty": 5
+    },
+    {
+     "id": "sugar",
+     "qty": 3
+    },
+    {
+     "id": "bread_rolls",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_corn_chowder",
+   "name": "Chicken & sweetcorn chowder",
+   "description": "Creamy chicken, potato and sweetcorn soup with bread.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:bread",
+    "no_oven",
+    "one_pot",
+    "kid_friendly",
+    "cuisine:american"
+   ],
+   "steps": [
+    "Fry onion and diced chicken for 5 minutes.",
+    "Add diced potato, a stock cube and two cups of water; simmer 12 minutes.",
+    "Add the sweetcorn and milk; simmer 5 minutes.",
+    "Season and serve with bread."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "sweetcorn_tin",
+     "qty": 75
+    },
+    {
+     "id": "milk",
+     "qty": 100
+    },
+    {
+     "id": "bread",
+     "qty": 100
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "bangers_mash_peas",
+   "name": "Bangers, mash & peas",
+   "description": "Pork sausages with creamy mash, peas and onion gravy.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:pork_sausages",
+    "starch:potatoes",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:british"
+   ],
+   "steps": [
+    "Boil and mash the potatoes with margarine and milk.",
+    "Fry the sausages until browned and cooked through.",
+    "Fry onion in the same pan, add soup powder mixed with water and stir until thick.",
+    "Boil the peas and serve everything together."
+   ],
+   "ingredients": [
+    {
+     "id": "pork_sausages",
+     "qty": 125
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 10
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 75
+    },
+    {
+     "id": "potatoes",
+     "qty": 250
+    },
+    {
+     "id": "margarine",
+     "qty": 10
+    },
+    {
+     "id": "milk",
+     "qty": 30
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "oven_fish_chips",
+   "name": "Oven fish & chips",
+   "description": "Crumbed hake and oven chips with lemon.",
+   "cookMinutes": 45,
+   "tags": [
+    "protein:hake_fillets",
+    "starch:potatoes",
+    "kid_friendly",
+    "cuisine:british"
+   ],
+   "steps": [
+    "Heat the oven to 220 °C. Toss potato chips with oil and salt and bake 35 minutes, turning once.",
+    "Dip the hake in beaten egg, then flour seasoned with paprika.",
+    "Pan-fry the fish 3–4 minutes a side until golden.",
+    "Serve with lemon wedges and peas."
+   ],
+   "ingredients": [
+    {
+     "id": "hake_fillets",
+     "qty": 125
+    },
+    {
+     "id": "potatoes",
+     "qty": 250
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "cake_flour",
+     "qty": 15
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "lemons",
+     "qty": 20
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 50
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 20
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "toad_in_the_hole",
+   "name": "Toad in the hole",
+   "description": "Sausages baked in a puffy batter, with onion gravy.",
+   "cookMinutes": 45,
+   "tags": [
+    "protein:pork_sausages",
+    "starch:cake_flour",
+    "kid_friendly",
+    "cuisine:british"
+   ],
+   "steps": [
+    "Heat the oven to 220 °C. Brown the sausages in an oven dish with the oil for 10 minutes.",
+    "Whisk flour, eggs, milk and salt into a smooth batter.",
+    "Pour the batter over the hot sausages and bake 25 minutes until risen and golden; don't open the oven.",
+    "Serve with onion gravy and green beans."
+   ],
+   "ingredients": [
+    {
+     "id": "pork_sausages",
+     "qty": 125
+    },
+    {
+     "id": "cake_flour",
+     "qty": 40
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "milk",
+     "qty": 75
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 10
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "green_beans",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 15
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "bobotie_yellow_rice",
+   "name": "Bobotie & yellow rice",
+   "description": "Cape Malay spiced mince baked with an egg custard, with turmeric rice.",
+   "cookMinutes": 55,
+   "tags": [
+    "protein:beef_mince",
+    "starch:rice",
+    "cuisine:cape_malay"
+   ],
+   "steps": [
+    "Heat the oven to 180 °C. Soak a slice of bread in some of the milk.",
+    "Fry onion with curry powder, turmeric and cinnamon; add the mince and brown.",
+    "Mix in the soaked bread, chutney and a little vinegar; spread in a dish.",
+    "Beat the egg with the rest of the milk, pour over and bake 30 minutes until set.",
+    "Cook the rice with turmeric and a pinch of sugar and serve with the bobotie."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "bread",
+     "qty": 25
+    },
+    {
+     "id": "milk",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "turmeric",
+     "qty": 2
+    },
+    {
+     "id": "ground_cinnamon",
+     "qty": 1
+    },
+    {
+     "id": "fruit_chutney",
+     "qty": 20
+    },
+    {
+     "id": "brown_vinegar",
+     "qty": 5
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "sugar",
+     "qty": 3
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "cape_malay_chicken_curry",
+   "name": "Cape Malay chicken curry",
+   "description": "A fragrant, mildly sweet chicken and potato curry.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:rice",
+    "no_oven",
+    "one_pot",
+    "cuisine:cape_malay"
+   ],
+   "steps": [
+    "Fry onion, garlic and ginger with curry powder, turmeric, cumin and cinnamon.",
+    "Brown the chicken in the spices.",
+    "Add tomatoes, diced potato, a spoon of chutney and a cup of water; simmer 30 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 200
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "turmeric",
+     "qty": 1
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "ground_cinnamon",
+     "qty": 1
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "potatoes",
+     "qty": 75
+    },
+    {
+     "id": "fruit_chutney",
+     "qty": 15
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_akhni",
+   "name": "Chicken akhni",
+   "description": "Cape Malay one-pot spiced chicken, potato and rice.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:rice",
+    "no_oven",
+    "one_pot",
+    "cuisine:cape_malay"
+   ],
+   "steps": [
+    "Brown the chicken with onion, garlic, ginger, curry powder, turmeric and cinnamon.",
+    "Add tomatoes and diced potatoes with a cup of water; simmer 15 minutes.",
+    "Stir in the rice and enough water to cover; cover and cook on low for 20 minutes.",
+    "Fluff up and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 175
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "turmeric",
+     "qty": 1
+    },
+    {
+     "id": "ground_cinnamon",
+     "qty": 1
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 75
+    },
+    {
+     "id": "potatoes",
+     "qty": 75
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "tamatie_bredie_mince",
+   "name": "Mince tamatiebredie",
+   "description": "Afrikaans-style tomato stew made quicker with mince, served on rice.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:beef_mince",
+    "starch:rice",
+    "no_oven",
+    "one_pot",
+    "cuisine:afrikaans"
+   ],
+   "steps": [
+    "Brown the mince with onion.",
+    "Add tomatoes, diced potato, a pinch of sugar, cinnamon and a stock cube with a cup of water.",
+    "Simmer 25 minutes until the potatoes are soft and the sauce is thick.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 150
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "sugar",
+     "qty": 3
+    },
+    {
+     "id": "ground_cinnamon",
+     "qty": 1
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "wors_pumpkin_fritters_pap",
+   "name": "Wors with pumpkin fritters",
+   "description": "Boerewors with sweet pampoenkoekies and stywe pap.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:boerewors",
+    "starch:maize_meal",
+    "no_oven",
+    "cuisine:afrikaans"
+   ],
+   "steps": [
+    "Boil the pumpkin until soft; mash and mix with flour, egg, baking powder and a pinch of cinnamon.",
+    "Fry spoonfuls in oil until golden; sprinkle with a little sugar.",
+    "Fry the boerewors.",
+    "Cook stiff pap and serve together."
+   ],
+   "ingredients": [
+    {
+     "id": "boerewors",
+     "qty": 125
+    },
+    {
+     "id": "pumpkin",
+     "qty": 100
+    },
+    {
+     "id": "cake_flour",
+     "qty": 30
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "baking_powder",
+     "qty": 1
+    },
+    {
+     "id": "ground_cinnamon",
+     "qty": 1
+    },
+    {
+     "id": "sugar",
+     "qty": 3
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "salt",
+     "qty": 4
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_potjie",
+   "name": "Chicken potjie",
+   "description": "Layered chicken and vegetables slow-cooked in one pot.",
+   "cookMinutes": 90,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:potatoes",
+    "no_oven",
+    "one_pot",
+    "cuisine:afrikaans"
+   ],
+   "steps": [
+    "Brown the chicken and onion in a heavy pot.",
+    "Layer potatoes, carrots, butternut and green beans on top; don't stir.",
+    "Pour in a stock cube dissolved in a cup of water with braai spice.",
+    "Cover and cook on low heat for about 1 hour until tender."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 200
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "butternut",
+     "qty": 75
+    },
+    {
+     "id": "green_beans",
+     "qty": 50
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "braai_spice",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "peri_peri_chicken_wraps",
+   "name": "Peri-peri chicken wraps",
+   "description": "Portuguese-style peri-peri chicken strips with lemon mayo.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:tortilla_wraps",
+    "no_oven",
+    "cuisine:portuguese"
+   ],
+   "steps": [
+    "Toss chicken strips with peri-peri spice, garlic, lemon juice and oil.",
+    "Fry on high heat for 8 minutes.",
+    "Mix mayonnaise with lemon.",
+    "Fill the wraps with chicken, lettuce-style shredded cabbage, tomato and lemon mayo."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "peri_peri_spice",
+     "qty": 2
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "lemons",
+     "qty": 15
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 15
+    },
+    {
+     "id": "cabbage",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "tortilla_wraps",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_prego_rolls",
+   "name": "Chicken prego rolls",
+   "description": "Garlicky peri-peri chicken fillets in rolls, Portuguese-style.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:bread_rolls",
+    "no_oven",
+    "cuisine:portuguese"
+   ],
+   "steps": [
+    "Flatten the fillets and marinate briefly in garlic, peri-peri spice, lemon and oil.",
+    "Fry 4 minutes a side until cooked.",
+    "Splash in a little water and margarine to make a quick pan sauce.",
+    "Serve in toasted rolls with the sauce."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 100
+    },
+    {
+     "id": "garlic",
+     "qty": 10
+    },
+    {
+     "id": "peri_peri_spice",
+     "qty": 2
+    },
+    {
+     "id": "lemons",
+     "qty": 15
+    },
+    {
+     "id": "margarine",
+     "qty": 10
+    },
+    {
+     "id": "bread_rolls",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "portuguese_chicken_rice",
+   "name": "Portuguese-style chicken & rice",
+   "description": "Paprika and garlic chicken cooked with rice, peppers and peas.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:rice",
+    "no_oven",
+    "one_pot",
+    "cuisine:portuguese"
+   ],
+   "steps": [
+    "Brown the chicken with paprika, garlic and peri-peri spice.",
+    "Add onion and green pepper; fry 3 minutes.",
+    "Add tomatoes, the rice and two cups of water; cover and cook 20 minutes.",
+    "Stir in the peas for the last 5 minutes."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 175
+    },
+    {
+     "id": "paprika",
+     "qty": 2
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "peri_peri_spice",
+     "qty": 1
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "green_pepper",
+     "qty": 25
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 75
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 50
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "lemon_garlic_hake_rice",
+   "name": "Lemon & garlic hake with rice",
+   "description": "Pan-fried hake in lemon garlic butter, with rice and green beans.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:hake_fillets",
+    "starch:rice",
+    "no_oven",
+    "cuisine:portuguese"
+   ],
+   "steps": [
+    "Cook the rice.",
+    "Season the hake and fry 3 minutes a side.",
+    "Add margarine, garlic and lemon juice to the pan and spoon over the fish.",
+    "Boil the green beans and serve together."
+   ],
+   "ingredients": [
+    {
+     "id": "hake_fillets",
+     "qty": 125
+    },
+    {
+     "id": "margarine",
+     "qty": 10
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "lemons",
+     "qty": 20
+    },
+    {
+     "id": "green_beans",
+     "qty": 75
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "durban_mince_curry_roti",
+   "name": "Durban mince & pea curry with roti",
+   "description": "A quick mince and pea curry with homemade roti.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:beef_mince",
+    "starch:cake_flour",
+    "no_oven",
+    "cuisine:indian"
+   ],
+   "steps": [
+    "Fry onion, garlic, ginger and curry powder; add the mince and brown.",
+    "Add tomatoes, peas and a little water; simmer 15 minutes.",
+    "Make a soft dough with flour, salt, a little oil and water; rest 10 minutes.",
+    "Roll thin and cook the roti in a dry pan, brushing with margarine.",
+    "Serve together."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 4
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 75
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 50
+    },
+    {
+     "id": "cake_flour",
+     "qty": 75
+    },
+    {
+     "id": "margarine",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "pap_tomato_relish_eggs",
+   "name": "Pap, tomato relish & fried eggs",
+   "description": "Quick weeknight pap with a tomato-onion relish and eggs.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:eggs",
+    "starch:maize_meal",
+    "meat_free",
+    "no_oven",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Cook the pap.",
+    "Fry onion, add chopped tomato and a pinch of sugar; cook 8 minutes into a relish.",
+    "Fry the eggs.",
+    "Serve the pap with relish and eggs."
+   ],
+   "ingredients": [
+    {
+     "id": "eggs",
+     "qty": 2
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 100
+    },
+    {
+     "id": "sugar",
+     "qty": 2
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "salt",
+     "qty": 4
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "braai_pap_salsa_chops",
+   "name": "Pork chops with pap & tomato salsa",
+   "description": "Pan-grilled braai-spice chops with pap and a fresh salsa.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:pork_chops",
+    "starch:maize_meal",
+    "no_oven",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Cook the pap.",
+    "Rub the chops with braai spice and pan-grill 5 minutes a side.",
+    "Mix chopped tomato, onion and cucumber with a dash of vinegar and salt.",
+    "Serve together."
+   ],
+   "ingredients": [
+    {
+     "id": "pork_chops",
+     "qty": 150
+    },
+    {
+     "id": "braai_spice",
+     "qty": 2
+    },
+    {
+     "id": "tomato",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "cucumber",
+     "qty": 50
+    },
+    {
+     "id": "brown_vinegar",
+     "qty": 5
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "salt",
+     "qty": 4
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_noodle_soup",
+   "name": "Chicken noodle soup",
+   "description": "Light, comforting soup with chicken, carrot and noodles.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:egg_noodles",
+    "no_oven",
+    "one_pot",
+    "kid_friendly",
+    "cuisine:chinese"
+   ],
+   "steps": [
+    "Simmer diced chicken with onion, carrot, garlic, ginger and a stock cube in four cups of water for 12 minutes.",
+    "Add the noodles and cook 4 minutes.",
+    "Season with soy sauce and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "soy_sauce",
+     "qty": 10
+    },
+    {
+     "id": "egg_noodles",
+     "qty": 50
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "egg_lemon_rice_soup",
+   "name": "Greek egg & lemon chicken rice soup",
+   "description": "Avgolemono-style soup: chicken, rice and a silky egg-lemon finish.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:rice",
+    "no_oven",
+    "one_pot",
+    "cuisine:greek"
+   ],
+   "steps": [
+    "Simmer diced chicken, onion and a stock cube in four cups of water for 10 minutes.",
+    "Add the rice and cook 15 minutes.",
+    "Whisk the egg with lemon juice, then whisk in a ladle of hot soup.",
+    "Stir the egg mix into the pot off the heat until silky."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "rice",
+     "qty": 40
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "lemons",
+     "qty": 20
+    },
+    {
+     "id": "salt",
+     "qty": 1
     }
    ],
    "published": false

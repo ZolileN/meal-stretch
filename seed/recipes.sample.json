@@ -11,7 +11,8 @@
     "starch:rice",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:indian"
    ],
    "steps": [
     "Brown the onion in oil, add the mince and cook until browned.",
@@ -69,7 +70,8 @@
     "starch:maize_meal",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:south_african"
    ],
    "steps": [
     "Brown the chicken in oil, then add the onion.",
@@ -125,7 +127,8 @@
    "tags": [
     "protein:pilchards_tin",
     "starch:potatoes",
-    "no_oven"
+    "no_oven",
+    "cuisine:british"
    ],
    "steps": [
     "Boil and mash the potatoes.",
@@ -179,7 +182,8 @@
     "starch:samp",
     "meat_free",
     "one_pot",
-    "no_oven"
+    "no_oven",
+    "cuisine:south_african"
    ],
    "steps": [
     "Soak samp and beans overnight; rinse.",
@@ -230,7 +234,8 @@
     "meat_free",
     "one_pot",
     "no_oven",
-    "kid_friendly"
+    "kid_friendly",
+    "cuisine:italian"
    ],
    "steps": [
     "Fry onion, garlic and grated carrot in oil.",
@@ -290,7 +295,8 @@
    "tags": [
     "protein:boerewors",
     "starch:potatoes",
-    "no_oven"
+    "no_oven",
+    "cuisine:afrikaans"
    ],
    "steps": [
     "Fry the boerewors in a pan until cooked; set aside.",
