@@ -11,9 +11,14 @@ export const INGREDIENT_CONTAINS: Record<string, ExclusionTag[]> = {
   viennas: ['pork'],
   pork_chops: ['pork'],
   pork_sausages: ['pork'],
+  beef_tripe: ['beef'],
+  russians: ['beef', 'pork'],
+  corned_beef_tin: ['beef'],
   pilchards_tin: ['fish'],
   tuna_tin: ['fish'],
   hake_fillets: ['fish'],
+  fish_fingers: ['fish', 'gluten'],
+  peanut_butter: ['nuts'],
   milk: ['dairy'],
   cheddar_cheese: ['dairy'],
   margarine: ['dairy'],
@@ -25,7 +30,7 @@ export const INGREDIENT_CONTAINS: Record<string, ExclusionTag[]> = {
 };
 
 const MEAT_OR_FISH_CATEGORIES = new Set(['meat', 'fish']);
-const MEAT_OR_FISH_IDS = new Set(['pilchards_tin', 'tuna_tin', 'hake_fillets']);
+const MEAT_OR_FISH_IDS = new Set(['pilchards_tin', 'tuna_tin', 'hake_fillets', 'corned_beef_tin', 'fish_fingers']);
 
 export function deriveTags(
   authored: string[],

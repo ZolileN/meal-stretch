@@ -529,5 +529,113 @@
   "perishable": false,
   "pantryStaple": true,
   "category": "spices"
+ },
+ {
+  "id": "beef_tripe",
+  "name": "Beef tripe (mogodu)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "chicken_gizzards",
+  "name": "Chicken gizzards",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "chicken_wings",
+  "name": "Chicken wings",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "russians",
+  "name": "Russian sausages",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "corned_beef_tin",
+  "name": "Corned meat (tin)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "tinned"
+ },
+ {
+  "id": "fish_fingers",
+  "name": "Fish fingers",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "frozen"
+ },
+ {
+  "id": "sweetcorn_tin",
+  "name": "Cream-style sweetcorn (tin)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "tinned"
+ },
+ {
+  "id": "pumpkin",
+  "name": "Pumpkin",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "green_beans",
+  "name": "Green beans",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "mushrooms",
+  "name": "Button mushrooms",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "sweet_potatoes",
+  "name": "Sweet potatoes",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "peanut_butter",
+  "name": "Peanut butter",
+  "unit": "g",
+  "roundTo": 10,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dry"
  }
 ]

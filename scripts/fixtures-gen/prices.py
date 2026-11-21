@@ -59,6 +59,18 @@ P = {
  "stock_cubes":[("Chicken Stock Cubes 12 pack",120,2499)],
  "sugar":[("White Sugar 2.5 kg",2500,5499)],
  "baking_powder":[("Baking Powder",100,1999)],
+ "beef_tripe":[("Beef Tripe (Mogodu) Cleaned",1000,5999)],
+ "chicken_gizzards":[("Chicken Gizzards",1000,4999),("Chicken Gizzards Small",500,2799)],
+ "chicken_wings":[("Chicken Wings",1000,7999)],
+ "russians":[("Russian Sausages",1000,7999),("Russian Sausages Small",500,4299)],
+ "corned_beef_tin":[("Corned Meat",300,3499)],
+ "fish_fingers":[("Fish Fingers",400,4499)],
+ "sweetcorn_tin":[("Cream Style Sweetcorn",410,1899)],
+ "pumpkin":[("Pumpkin 1 kg",1000,1999)],
+ "green_beans":[("Green Beans 400 g",400,2499)],
+ "mushrooms":[("Button Mushrooms 250 g",250,2799)],
+ "sweet_potatoes":[("Sweet Potatoes 1 kg",1000,2499)],
+ "peanut_butter":[("Smooth Peanut Butter 400 g",400,3999)],
 }
 ing={i['id']:i for i in json.load(open('seed/ingredients.sample.json'))}
 assert set(P)==set(ing), set(ing)^set(P)
