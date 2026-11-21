@@ -1,0 +1,377 @@
+{
+ "meals": [
+  {
+   "day": 1,
+   "date": "2026-11-21",
+   "recipeId": "viennas_beans_pap",
+   "servings": 6,
+   "costCents": 8328,
+   "perPlateCents": 1388,
+   "sharesWith": [
+    2,
+    3,
+    4,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 2,
+   "date": "2026-11-22",
+   "recipeId": "umngqusho",
+   "servings": 6,
+   "costCents": 5015,
+   "perPlateCents": 836,
+   "sharesWith": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 3,
+   "date": "2026-11-23",
+   "recipeId": "pilchard_curry_rice",
+   "servings": 6,
+   "costCents": 8322,
+   "perPlateCents": 1387,
+   "sharesWith": [
+    1,
+    2,
+    4,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 4,
+   "date": "2026-11-24",
+   "recipeId": "chakalaka_beans_pap",
+   "servings": 6,
+   "costCents": 7076,
+   "perPlateCents": 1179,
+   "sharesWith": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 5,
+   "date": "2026-11-25",
+   "recipeId": "samp_chakalaka",
+   "servings": 6,
+   "costCents": 4941,
+   "perPlateCents": 824,
+   "sharesWith": [
+    2,
+    4
+   ]
+  },
+  {
+   "day": 6,
+   "date": "2026-11-26",
+   "recipeId": "bean_potato_curry",
+   "servings": 6,
+   "costCents": 10318,
+   "perPlateCents": 1720,
+   "sharesWith": [
+    1,
+    2,
+    3,
+    4,
+    7
+   ]
+  },
+  {
+   "day": 7,
+   "date": "2026-11-27",
+   "recipeId": "cabbage_potato_curry",
+   "servings": 6,
+   "costCents": 7176,
+   "perPlateCents": 1196,
+   "sharesWith": [
+    1,
+    2,
+    3,
+    4,
+    6
+   ]
+  }
+ ],
+ "basket": [
+  {
+   "ingredientId": "baked_beans",
+   "productId": 1054,
+   "branchId": 2,
+   "packs": 3,
+   "packQty": 410,
+   "unitCents": 1499,
+   "normalUnitCents": 1699,
+   "tags": [
+    "special"
+   ],
+   "leftoverQty": 30
+  },
+  {
+   "ingredientId": "bread",
+   "productId": 1074,
+   "branchId": 2,
+   "packs": 1,
+   "packQty": 700,
+   "unitCents": 1599,
+   "normalUnitCents": 1599,
+   "tags": [],
+   "leftoverQty": 200
+  },
+  {
+   "ingredientId": "butter_beans",
+   "productId": 1055,
+   "branchId": 2,
+   "packs": 2,
+   "packQty": 410,
+   "unitCents": 1799,
+   "normalUnitCents": 1799,
+   "tags": [],
+   "leftoverQty": 220
+  },
+  {
+   "ingredientId": "cabbage",
+   "productId": 1068,
+   "branchId": 2,
+   "packs": 1,
+   "packQty": 1500,
+   "unitCents": 1999,
+   "normalUnitCents": 2299,
+   "tags": [
+    "special"
+   ],
+   "leftoverQty": 300
+  },
+  {
+   "ingredientId": "chakalaka",
+   "productId": 1056,
+   "branchId": 2,
+   "packs": 3,
+   "packQty": 410,
+   "unitCents": 1699,
+   "normalUnitCents": 1699,
+   "tags": [],
+   "leftoverQty": 30
+  },
+  {
+   "ingredientId": "maize_meal",
+   "productId": 1037,
+   "branchId": 2,
+   "packs": 1,
+   "packQty": 2500,
+   "unitCents": 3799,
+   "normalUnitCents": 3799,
+   "tags": [],
+   "leftoverQty": 1300
+  },
+  {
+   "ingredientId": "onion",
+   "productId": 1062,
+   "branchId": 2,
+   "packs": 1,
+   "packQty": 2000,
+   "unitCents": 3799,
+   "normalUnitCents": 3799,
+   "tags": [],
+   "leftoverQty": 500
+  },
+  {
+   "ingredientId": "pilchards_tin",
+   "productId": 1024,
+   "branchId": 2,
+   "packs": 4,
+   "packQty": 155,
+   "unitCents": 1199,
+   "normalUnitCents": 1199,
+   "tags": [],
+   "leftoverQty": 20
+  },
+  {
+   "ingredientId": "potatoes",
+   "productId": 1065,
+   "branchId": 2,
+   "packs": 1,
+   "packQty": 2000,
+   "unitCents": 4699,
+   "normalUnitCents": 4699,
+   "tags": [],
+   "leftoverQty": 500
+  },
+  {
+   "ingredientId": "rice",
+   "productId": 1041,
+   "branchId": 2,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2299,
+   "normalUnitCents": 2299,
+   "tags": [],
+   "leftoverQty": 150
+  },
+  {
+   "ingredientId": "samp",
+   "productId": 1044,
+   "branchId": 2,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2299,
+   "normalUnitCents": 2299,
+   "tags": [],
+   "leftoverQty": 0
+  },
+  {
+   "ingredientId": "sugar_beans",
+   "productId": 1046,
+   "branchId": 2,
+   "packs": 1,
+   "packQty": 500,
+   "unitCents": 2799,
+   "normalUnitCents": 2799,
+   "tags": [],
+   "leftoverQty": 50
+  },
+  {
+   "ingredientId": "tinned_tomatoes",
+   "productId": 1053,
+   "branchId": 2,
+   "packs": 2,
+   "packQty": 410,
+   "unitCents": 1499,
+   "normalUnitCents": 1499,
+   "tags": [],
+   "leftoverQty": 220
+  },
+  {
+   "ingredientId": "tomato",
+   "productId": 1064,
+   "branchId": 2,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 3099,
+   "normalUnitCents": 3099,
+   "tags": [],
+   "leftoverQty": 100
+  },
+  {
+   "ingredientId": "viennas",
+   "productId": 1019,
+   "branchId": 2,
+   "packs": 1,
+   "packQty": 500,
+   "unitCents": 3799,
+   "normalUnitCents": 3799,
+   "tags": [],
+   "leftoverQty": 0
+  }
+ ],
+ "unpriced": [],
+ "pantryStaples": [
+  {
+   "ingredientId": "cooking_oil",
+   "costCents": 3099
+  },
+  {
+   "ingredientId": "curry_powder",
+   "costCents": 2299
+  },
+  {
+   "ingredientId": "salt",
+   "costCents": 1199
+  },
+  {
+   "ingredientId": "stock_cubes",
+   "costCents": 2299
+  },
+  {
+   "ingredientId": "turmeric",
+   "costCents": 1899
+  }
+ ],
+ "totals": {
+  "paidCents": 51176,
+  "normalCents": 52076,
+  "savingsCents": 900,
+  "specialsCents": 900,
+  "memberCents": 0,
+  "packEfficiencyCents": 32187,
+  "perPlateCents": 1218,
+  "items": 15
+ },
+ "budget": {
+  "budgetCents": 70000,
+  "status": "under",
+  "remainingCents": 18824,
+  "shortfallCents": null,
+  "maxAffordableDays": null
+ },
+ "leftovers": [
+  {
+   "ingredientId": "baked_beans",
+   "qty": 30
+  },
+  {
+   "ingredientId": "bread",
+   "qty": 200
+  },
+  {
+   "ingredientId": "butter_beans",
+   "qty": 220
+  },
+  {
+   "ingredientId": "cabbage",
+   "qty": 300
+  },
+  {
+   "ingredientId": "chakalaka",
+   "qty": 30
+  },
+  {
+   "ingredientId": "maize_meal",
+   "qty": 1300
+  },
+  {
+   "ingredientId": "onion",
+   "qty": 500
+  },
+  {
+   "ingredientId": "pilchards_tin",
+   "qty": 20
+  },
+  {
+   "ingredientId": "potatoes",
+   "qty": 500
+  },
+  {
+   "ingredientId": "rice",
+   "qty": 150
+  },
+  {
+   "ingredientId": "sugar_beans",
+   "qty": 50
+  },
+  {
+   "ingredientId": "tinned_tomatoes",
+   "qty": 220
+  },
+  {
+   "ingredientId": "tomato",
+   "qty": 100
+  }
+ ],
+ "specialsUsed": 2,
+ "priceAsOf": "2026-11-21",
+ "engineVersion": "1.0.0",
+ "seed": 42
+}

@@ -1,0 +1,379 @@
+{
+ "meals": [
+  {
+   "day": 1,
+   "date": "2026-11-21",
+   "recipeId": "viennas_pasta",
+   "servings": 2,
+   "costCents": 5537,
+   "perPlateCents": 2769,
+   "sharesWith": [
+    2,
+    3,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 2,
+   "date": "2026-11-22",
+   "recipeId": "chakalaka_beans_pap",
+   "servings": 2,
+   "costCents": 4289,
+   "perPlateCents": 2145,
+   "sharesWith": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 3,
+   "date": "2026-11-23",
+   "recipeId": "viennas_beans_pap",
+   "servings": 2,
+   "costCents": 5436,
+   "perPlateCents": 2718,
+   "sharesWith": [
+    1,
+    2,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 4,
+   "date": "2026-11-24",
+   "recipeId": "samp_chakalaka",
+   "servings": 2,
+   "costCents": 3799,
+   "perPlateCents": 1900,
+   "sharesWith": [
+    2,
+    7
+   ]
+  },
+  {
+   "day": 5,
+   "date": "2026-11-25",
+   "recipeId": "pilchard_curry_rice",
+   "servings": 2,
+   "costCents": 7675,
+   "perPlateCents": 3838,
+   "sharesWith": [
+    1,
+    2,
+    3,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 6,
+   "date": "2026-11-26",
+   "recipeId": "chicken_livers_pasta",
+   "servings": 2,
+   "costCents": 5624,
+   "perPlateCents": 2812,
+   "sharesWith": [
+    1,
+    2,
+    3,
+    5,
+    7
+   ]
+  },
+  {
+   "day": 7,
+   "date": "2026-11-27",
+   "recipeId": "umngqusho",
+   "servings": 2,
+   "costCents": 5124,
+   "perPlateCents": 2562,
+   "sharesWith": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  }
+ ],
+ "basket": [
+  {
+   "ingredientId": "baked_beans",
+   "productId": 1234,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 410,
+   "unitCents": 1899,
+   "normalUnitCents": 1899,
+   "tags": [],
+   "leftoverQty": 10
+  },
+  {
+   "ingredientId": "chakalaka",
+   "productId": 1236,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 410,
+   "unitCents": 1899,
+   "normalUnitCents": 1899,
+   "tags": [],
+   "leftoverQty": 10
+  },
+  {
+   "ingredientId": "chicken_livers",
+   "productId": 1187,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 250,
+   "unitCents": 1999,
+   "normalUnitCents": 1999,
+   "tags": [],
+   "leftoverQty": 0
+  },
+  {
+   "ingredientId": "maize_meal",
+   "productId": 1217,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 2500,
+   "unitCents": 4199,
+   "normalUnitCents": 4199,
+   "tags": [],
+   "leftoverQty": 2100
+  },
+  {
+   "ingredientId": "milk",
+   "productId": 1211,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2299,
+   "normalUnitCents": 2299,
+   "tags": [],
+   "leftoverQty": 900
+  },
+  {
+   "ingredientId": "onion",
+   "productId": 1241,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2599,
+   "normalUnitCents": 2599,
+   "tags": [],
+   "leftoverQty": 550
+  },
+  {
+   "ingredientId": "pasta",
+   "productId": 1222,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 500,
+   "unitCents": 1499,
+   "normalUnitCents": 2099,
+   "tags": [
+    "special"
+   ],
+   "leftoverQty": 100
+  },
+  {
+   "ingredientId": "pilchards_tin",
+   "productId": 1204,
+   "branchId": 3,
+   "packs": 2,
+   "packQty": 155,
+   "unitCents": 1399,
+   "normalUnitCents": 1399,
+   "tags": [],
+   "leftoverQty": 110
+  },
+  {
+   "ingredientId": "rice",
+   "productId": 1221,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2599,
+   "normalUnitCents": 2599,
+   "tags": [],
+   "leftoverQty": 850
+  },
+  {
+   "ingredientId": "samp",
+   "productId": 1224,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2599,
+   "normalUnitCents": 2599,
+   "tags": [],
+   "leftoverQty": 600
+  },
+  {
+   "ingredientId": "sugar_beans",
+   "productId": 1226,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 500,
+   "unitCents": 3099,
+   "normalUnitCents": 3099,
+   "tags": [],
+   "leftoverQty": 300
+  },
+  {
+   "ingredientId": "tinned_tomatoes",
+   "productId": 1233,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 410,
+   "unitCents": 1699,
+   "normalUnitCents": 1699,
+   "tags": [],
+   "leftoverQty": 210
+  },
+  {
+   "ingredientId": "tomato",
+   "productId": 1244,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 3399,
+   "normalUnitCents": 3399,
+   "tags": [],
+   "leftoverQty": 700
+  },
+  {
+   "ingredientId": "tomato_paste",
+   "productId": 1238,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 50,
+   "unitCents": 699,
+   "normalUnitCents": 699,
+   "tags": [],
+   "leftoverQty": 30
+  },
+  {
+   "ingredientId": "viennas",
+   "productId": 1199,
+   "branchId": 3,
+   "packs": 1,
+   "packQty": 500,
+   "unitCents": 4199,
+   "normalUnitCents": 4199,
+   "tags": [],
+   "leftoverQty": 100
+  }
+ ],
+ "unpriced": [],
+ "pantryStaples": [
+  {
+   "ingredientId": "cooking_oil",
+   "costCents": 3399
+  },
+  {
+   "ingredientId": "curry_powder",
+   "costCents": 2599
+  },
+  {
+   "ingredientId": "peri_peri_spice",
+   "costCents": 3099
+  },
+  {
+   "ingredientId": "salt",
+   "costCents": 1399
+  },
+  {
+   "ingredientId": "stock_cubes",
+   "costCents": 2599
+  }
+ ],
+ "totals": {
+  "paidCents": 37484,
+  "normalCents": 38084,
+  "savingsCents": 600,
+  "specialsCents": 600,
+  "memberCents": 0,
+  "packEfficiencyCents": 35787,
+  "perPlateCents": 2677,
+  "items": 15
+ },
+ "budget": {
+  "budgetCents": 60000,
+  "status": "under",
+  "remainingCents": 22516,
+  "shortfallCents": null,
+  "maxAffordableDays": null
+ },
+ "leftovers": [
+  {
+   "ingredientId": "baked_beans",
+   "qty": 10
+  },
+  {
+   "ingredientId": "chakalaka",
+   "qty": 10
+  },
+  {
+   "ingredientId": "maize_meal",
+   "qty": 2100
+  },
+  {
+   "ingredientId": "milk",
+   "qty": 900
+  },
+  {
+   "ingredientId": "onion",
+   "qty": 550
+  },
+  {
+   "ingredientId": "pasta",
+   "qty": 100
+  },
+  {
+   "ingredientId": "pilchards_tin",
+   "qty": 110
+  },
+  {
+   "ingredientId": "rice",
+   "qty": 850
+  },
+  {
+   "ingredientId": "samp",
+   "qty": 600
+  },
+  {
+   "ingredientId": "sugar_beans",
+   "qty": 300
+  },
+  {
+   "ingredientId": "tinned_tomatoes",
+   "qty": 210
+  },
+  {
+   "ingredientId": "tomato",
+   "qty": 700
+  },
+  {
+   "ingredientId": "tomato_paste",
+   "qty": 30
+  },
+  {
+   "ingredientId": "viennas",
+   "qty": 100
+  }
+ ],
+ "specialsUsed": 1,
+ "priceAsOf": "2026-11-21",
+ "engineVersion": "1.0.0",
+ "seed": 42
+}

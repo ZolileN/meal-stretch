@@ -1,9 +1,9 @@
 # Build progress
 
 ## Checkpoint
-- Last completed: Phase 2 (2026-11-21)
-- Next: Phase 3, step 3.1
-- Test status: 124 unit/db/engine, 4 e2e, all green
+- Last completed: Phase 3 (2026-11-21)
+- Next: Phase 4, step 4.1
+- Test status: 199 unit/db/engine, 4 e2e, all green; bench p95 166 ms
 - Open human-todo items: 10
 
 ## Phase 0: Repo foundation
@@ -37,12 +37,13 @@ Gate: §10.1 resolution PASS (tests/db/prices.test.ts) · CSV import PASS (price
 - [x] 2.7 Tests: resolution rule, CSV validation, seed idempotency, recipe refs
 
 ## Phase 3: Planning engine
-- [ ] 3.1 Tests first (§9.10)
-- [ ] 3.2 Fixtures: 5 households + price snapshot
-- [ ] 3.3 Implement prune → greedy → local search → exact re-price → shop assignment
-- [ ] 3.4 PlanningEngine: plan, swapOptions, replace, remove
-- [ ] 3.5 Golden snapshots + fast-check properties
-- [ ] 3.6 pnpm bench:engine p95 < 300 ms
+Gate: PLN-1 PASS (planner.test determinism, golden) · PLN-2 PASS (specialsUsed, effective prices in objective) · PLN-3 PASS (leftovers, sharesWith) · PLN-4 PASS (variety tests + properties) · PLN-5 PASS engine side (budget tests) · PLN-6/7/8/9 PASS engine side (meal actions tests) · PLN-10 PASS (unpriced tests) · PLN-11 PASS (pantry test) · PLN-12 PASS (assignShops tests) · §9.7 PASS (savings tests) · purity PASS (purity.test.ts) · bench PASS.
+- [x] 3.1 Tests first (§9.10)
+- [x] 3.2 Fixtures: 5 households + price snapshot
+- [x] 3.3 Implement prune → greedy → local search → exact re-price → shop assignment
+- [x] 3.4 PlanningEngine: plan, swapOptions, replace, remove
+- [x] 3.5 Golden snapshots + fast-check properties
+- [x] 3.6 pnpm bench:engine p95 < 300 ms
 
 ## Phase 4: Onboarding + plan screen
 - [ ] 4.1 Anonymous household via device_id cookie

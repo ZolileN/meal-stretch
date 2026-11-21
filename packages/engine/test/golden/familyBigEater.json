@@ -1,0 +1,354 @@
+{
+ "meals": [
+  {
+   "day": 1,
+   "date": "2026-11-21",
+   "recipeId": "samp_chakalaka",
+   "servings": 4,
+   "costCents": 4120,
+   "perPlateCents": 1030,
+   "sharesWith": [
+    3,
+    6
+   ]
+  },
+  {
+   "day": 2,
+   "date": "2026-11-22",
+   "recipeId": "butternut_lentil_soup",
+   "servings": 4,
+   "costCents": 7697,
+   "perPlateCents": 1924,
+   "sharesWith": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 3,
+   "date": "2026-11-23",
+   "recipeId": "umngqusho",
+   "servings": 4,
+   "costCents": 4167,
+   "perPlateCents": 1042,
+   "sharesWith": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 4,
+   "date": "2026-11-24",
+   "recipeId": "pilchard_curry_rice",
+   "servings": 4,
+   "costCents": 6388,
+   "perPlateCents": 1597,
+   "sharesWith": [
+    2,
+    3,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 5,
+   "date": "2026-11-25",
+   "recipeId": "pap_wors_tomato_gravy",
+   "servings": 4,
+   "costCents": 8650,
+   "perPlateCents": 2163,
+   "sharesWith": [
+    2,
+    3,
+    4,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 6,
+   "date": "2026-11-26",
+   "recipeId": "chakalaka_beans_pap",
+   "servings": 4,
+   "costCents": 5181,
+   "perPlateCents": 1295,
+   "sharesWith": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ]
+  },
+  {
+   "day": 7,
+   "date": "2026-11-27",
+   "recipeId": "viennas_beans_pap",
+   "servings": 4,
+   "costCents": 7381,
+   "perPlateCents": 1845,
+   "sharesWith": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  }
+ ],
+ "basket": [
+  {
+   "ingredientId": "baked_beans",
+   "productId": 1144,
+   "branchId": 1,
+   "packs": 2,
+   "packQty": 410,
+   "unitCents": 1799,
+   "normalUnitCents": 1799,
+   "tags": [],
+   "leftoverQty": 20
+  },
+  {
+   "ingredientId": "boerewors",
+   "productId": 1105,
+   "branchId": 1,
+   "packs": 1,
+   "packQty": 500,
+   "unitCents": 5499,
+   "normalUnitCents": 5499,
+   "tags": [],
+   "leftoverQty": 0
+  },
+  {
+   "ingredientId": "bread",
+   "productId": 1164,
+   "branchId": 1,
+   "packs": 1,
+   "packQty": 700,
+   "unitCents": 1699,
+   "normalUnitCents": 1699,
+   "tags": [],
+   "leftoverQty": 300
+  },
+  {
+   "ingredientId": "butternut",
+   "productId": 1160,
+   "branchId": 1,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2499,
+   "normalUnitCents": 2499,
+   "tags": [],
+   "leftoverQty": 200
+  },
+  {
+   "ingredientId": "chakalaka",
+   "productId": 1146,
+   "branchId": 1,
+   "packs": 2,
+   "packQty": 410,
+   "unitCents": 1799,
+   "normalUnitCents": 1799,
+   "tags": [],
+   "leftoverQty": 20
+  },
+  {
+   "ingredientId": "maize_meal",
+   "productId": 1127,
+   "branchId": 1,
+   "packs": 1,
+   "packQty": 2500,
+   "unitCents": 3999,
+   "normalUnitCents": 3999,
+   "tags": [],
+   "leftoverQty": 1300
+  },
+  {
+   "ingredientId": "onion",
+   "productId": 1151,
+   "branchId": 1,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2499,
+   "normalUnitCents": 2499,
+   "tags": [],
+   "leftoverQty": 0
+  },
+  {
+   "ingredientId": "pilchards_tin",
+   "productId": 1113,
+   "branchId": 1,
+   "packs": 1,
+   "packQty": 400,
+   "unitCents": 2399,
+   "normalUnitCents": 2799,
+   "tags": [
+    "special"
+   ],
+   "leftoverQty": 0
+  },
+  {
+   "ingredientId": "red_lentils",
+   "productId": 1138,
+   "branchId": 1,
+   "packs": 1,
+   "packQty": 500,
+   "unitCents": 2999,
+   "normalUnitCents": 2999,
+   "tags": [],
+   "leftoverQty": 300
+  },
+  {
+   "ingredientId": "rice",
+   "productId": 1131,
+   "branchId": 1,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2499,
+   "normalUnitCents": 2499,
+   "tags": [],
+   "leftoverQty": 700
+  },
+  {
+   "ingredientId": "samp",
+   "productId": 1134,
+   "branchId": 1,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2499,
+   "normalUnitCents": 2499,
+   "tags": [],
+   "leftoverQty": 300
+  },
+  {
+   "ingredientId": "sugar_beans",
+   "productId": 1136,
+   "branchId": 1,
+   "packs": 1,
+   "packQty": 500,
+   "unitCents": 2499,
+   "normalUnitCents": 2999,
+   "tags": [
+    "member"
+   ],
+   "leftoverQty": 150
+  },
+  {
+   "ingredientId": "tomato",
+   "productId": 1154,
+   "branchId": 1,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 3299,
+   "normalUnitCents": 3299,
+   "tags": [],
+   "leftoverQty": 0
+  },
+  {
+   "ingredientId": "viennas",
+   "productId": 1109,
+   "branchId": 1,
+   "packs": 1,
+   "packQty": 500,
+   "unitCents": 3999,
+   "normalUnitCents": 3999,
+   "tags": [],
+   "leftoverQty": 150
+  }
+ ],
+ "unpriced": [],
+ "pantryStaples": [
+  {
+   "ingredientId": "cooking_oil",
+   "costCents": 3299
+  },
+  {
+   "ingredientId": "curry_powder",
+   "costCents": 2499
+  },
+  {
+   "ingredientId": "salt",
+   "costCents": 1299
+  },
+  {
+   "ingredientId": "stock_cubes",
+   "costCents": 2499
+  },
+  {
+   "ingredientId": "sugar",
+   "costCents": 5499
+  }
+ ],
+ "totals": {
+  "paidCents": 43584,
+  "normalCents": 44484,
+  "savingsCents": 900,
+  "specialsCents": 400,
+  "memberCents": 500,
+  "packEfficiencyCents": 32089,
+  "perPlateCents": 1557,
+  "items": 14
+ },
+ "budget": {
+  "budgetCents": 90000,
+  "status": "under",
+  "remainingCents": 46416,
+  "shortfallCents": null,
+  "maxAffordableDays": null
+ },
+ "leftovers": [
+  {
+   "ingredientId": "baked_beans",
+   "qty": 20
+  },
+  {
+   "ingredientId": "bread",
+   "qty": 300
+  },
+  {
+   "ingredientId": "butternut",
+   "qty": 200
+  },
+  {
+   "ingredientId": "chakalaka",
+   "qty": 20
+  },
+  {
+   "ingredientId": "maize_meal",
+   "qty": 1300
+  },
+  {
+   "ingredientId": "red_lentils",
+   "qty": 300
+  },
+  {
+   "ingredientId": "rice",
+   "qty": 700
+  },
+  {
+   "ingredientId": "samp",
+   "qty": 300
+  },
+  {
+   "ingredientId": "sugar_beans",
+   "qty": 150
+  },
+  {
+   "ingredientId": "viennas",
+   "qty": 150
+  }
+ ],
+ "specialsUsed": 1,
+ "priceAsOf": "2026-11-21",
+ "engineVersion": "1.0.0",
+ "seed": 42
+}

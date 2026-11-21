@@ -98,7 +98,7 @@ describe('fixture prices + importer', () => {
   it('snapshot covers fixture ingredients at a TEST Checkers branch with source + date on every offer', async () => {
     const snap = await loadPriceSnapshot(db, { branchIds: [branchA], loyalty: [], asOf: today });
     expect(Object.keys(snap.offers).length).toBeGreaterThanOrEqual(55);
-    for (const list of Object.values(snap.offers)) for (const o of list) {
+    for (const list of Object.values(snap.offers)) for (const o of list!) {
       expect(o.source).toBeTruthy();
       expect(o.observedAt).toMatch(/^\d{4}-\d{2}-\d{2}T/);
       expect(Number.isInteger(o.priceCents)).toBe(true);

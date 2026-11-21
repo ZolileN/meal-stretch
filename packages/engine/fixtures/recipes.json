@@ -1,0 +1,3614 @@
+[
+ {
+  "id": "curry_mince_rice",
+  "cookMinutes": 35,
+  "tags": [
+   "contains:beef",
+   "kid_friendly",
+   "no_oven",
+   "one_pot",
+   "protein:beef_mince",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "beef_mince",
+    "qtyPerServing": 120,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "garlic",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_stew_pap",
+  "cookMinutes": 50,
+  "tags": [
+   "contains:gluten",
+   "kid_friendly",
+   "no_oven",
+   "one_pot",
+   "protein:chicken_portions_mixed",
+   "starch:maize_meal"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_portions_mixed",
+    "qtyPerServing": 180,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "carrots",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "maize_meal",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "brown_onion_soup",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "pilchard_fishcakes_chakalaka",
+  "cookMinutes": 40,
+  "tags": [
+   "contains:fish",
+   "contains:gluten",
+   "no_oven",
+   "protein:pilchards_tin",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "pilchards_tin",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "eggs",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "cake_flour",
+    "qtyPerServing": 20,
+    "optional": false
+   },
+   {
+    "ingredientId": "chakalaka",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "umngqusho",
+  "cookMinutes": 90,
+  "tags": [
+   "contains:gluten",
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:sugar_beans",
+   "starch:samp"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "samp",
+    "qtyPerServing": 80,
+    "optional": false
+   },
+   {
+    "ingredientId": "sugar_beans",
+    "qtyPerServing": 40,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "soya_mince_bolognaise",
+  "cookMinutes": 30,
+  "tags": [
+   "contains:gluten",
+   "kid_friendly",
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:soya_mince",
+   "starch:pasta"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "soya_mince",
+    "qtyPerServing": 30,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "carrots",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato_paste",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "pasta",
+    "qtyPerServing": 90,
+    "optional": false
+   },
+   {
+    "ingredientId": "garlic",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "mixed_herbs",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "cabbage_boerewors",
+  "cookMinutes": 35,
+  "tags": [
+   "contains:beef",
+   "contains:pork",
+   "no_oven",
+   "protein:boerewors",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "boerewors",
+    "qtyPerServing": 125,
+    "optional": false
+   },
+   {
+    "ingredientId": "cabbage",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_livers_peri_peri_pap",
+  "cookMinutes": 25,
+  "tags": [
+   "no_oven",
+   "protein:chicken_livers",
+   "starch:maize_meal"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_livers",
+    "qtyPerServing": 125,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "maize_meal",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "garlic",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "peri_peri_spice",
+    "qtyPerServing": 2,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "egg_potato_curry",
+  "cookMinutes": 35,
+  "tags": [
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:eggs",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "eggs",
+    "qtyPerServing": 2,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "turmeric",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "beef_stew_dumplings",
+  "cookMinutes": 90,
+  "tags": [
+   "contains:beef",
+   "contains:gluten",
+   "no_oven",
+   "one_pot",
+   "protein:beef_stewing",
+   "starch:cake_flour"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "beef_stewing",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "carrots",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "cake_flour",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "baking_powder",
+    "qtyPerServing": 2,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "brown_onion_soup",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "lentil_curry_rice",
+  "cookMinutes": 30,
+  "tags": [
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:red_lentils",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "red_lentils",
+    "qtyPerServing": 60,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "spinach",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "garlic",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "tuna_pasta",
+  "cookMinutes": 20,
+  "tags": [
+   "contains:fish",
+   "contains:gluten",
+   "kid_friendly",
+   "no_oven",
+   "one_pot",
+   "protein:tuna_tin",
+   "starch:pasta"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "tuna_tin",
+    "qtyPerServing": 45,
+    "optional": false
+   },
+   {
+    "ingredientId": "pasta",
+    "qtyPerServing": 90,
+    "optional": false
+   },
+   {
+    "ingredientId": "peas_frozen",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "mayonnaise",
+    "qtyPerServing": 20,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "black_pepper",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_veg_pot",
+  "cookMinutes": 50,
+  "tags": [
+   "contains:gluten",
+   "kid_friendly",
+   "no_oven",
+   "one_pot",
+   "protein:chicken_portions_mixed",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_portions_mixed",
+    "qtyPerServing": 180,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "carrots",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "cabbage",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "pap_wors_tomato_gravy",
+  "cookMinutes": 30,
+  "tags": [
+   "contains:beef",
+   "contains:pork",
+   "no_oven",
+   "protein:boerewors",
+   "starch:maize_meal"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "boerewors",
+    "qtyPerServing": 125,
+    "optional": false
+   },
+   {
+    "ingredientId": "maize_meal",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "sugar",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "spinach_pilchard_stew",
+  "cookMinutes": 25,
+  "tags": [
+   "contains:fish",
+   "no_oven",
+   "one_pot",
+   "protein:pilchards_tin",
+   "starch:maize_meal"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "pilchards_tin",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "spinach",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "maize_meal",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "pasta_mince_tomato",
+  "cookMinutes": 30,
+  "tags": [
+   "contains:beef",
+   "contains:gluten",
+   "kid_friendly",
+   "no_oven",
+   "one_pot",
+   "protein:beef_mince",
+   "starch:pasta"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "beef_mince",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "pasta",
+    "qtyPerServing": 90,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato_paste",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "garlic",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "mixed_herbs",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_feet_stew_pap",
+  "cookMinutes": 60,
+  "tags": [
+   "contains:gluten",
+   "no_oven",
+   "one_pot",
+   "protein:chicken_feet",
+   "starch:maize_meal"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_feet",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "maize_meal",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_curry_rice",
+  "cookMinutes": 50,
+  "tags": [
+   "no_oven",
+   "one_pot",
+   "protein:chicken_portions_mixed",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_portions_mixed",
+    "qtyPerServing": 180,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "garlic",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 4,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_mince_bolognaise",
+  "cookMinutes": 30,
+  "tags": [
+   "contains:gluten",
+   "kid_friendly",
+   "no_oven",
+   "one_pot",
+   "protein:chicken_mince",
+   "starch:pasta"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_mince",
+    "qtyPerServing": 110,
+    "optional": false
+   },
+   {
+    "ingredientId": "pasta",
+    "qtyPerServing": 90,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "carrots",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato_paste",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "mixed_herbs",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "oven_drumsticks_potatoes",
+  "cookMinutes": 55,
+  "tags": [
+   "kid_friendly",
+   "protein:chicken_drumsticks",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_drumsticks",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "braai_spice",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "polony_egg_fried_rice",
+  "cookMinutes": 20,
+  "tags": [
+   "contains:pork",
+   "kid_friendly",
+   "no_oven",
+   "one_pot",
+   "protein:polony",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "polony",
+    "qtyPerServing": 60,
+    "optional": false
+   },
+   {
+    "ingredientId": "eggs",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "peas_frozen",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "viennas_beans_pap",
+  "cookMinutes": 20,
+  "tags": [
+   "contains:pork",
+   "kid_friendly",
+   "no_oven",
+   "protein:viennas",
+   "starch:maize_meal"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "viennas",
+    "qtyPerServing": 80,
+    "optional": false
+   },
+   {
+    "ingredientId": "baked_beans",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "maize_meal",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "pork_chops_cabbage_mash",
+  "cookMinutes": 35,
+  "tags": [
+   "contains:dairy",
+   "contains:pork",
+   "no_oven",
+   "protein:pork_chops",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "pork_chops",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "cabbage",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "margarine",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "milk",
+    "qtyPerServing": 30,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "pork_sausage_potato_bake",
+  "cookMinutes": 55,
+  "tags": [
+   "contains:pork",
+   "kid_friendly",
+   "protein:pork_sausages",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "pork_sausages",
+    "qtyPerServing": 125,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "mixed_herbs",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "pan_fried_hake_wedges",
+  "cookMinutes": 35,
+  "tags": [
+   "contains:fish",
+   "contains:gluten",
+   "no_oven",
+   "protein:hake_fillets",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "hake_fillets",
+    "qtyPerServing": 130,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "cake_flour",
+    "qtyPerServing": 15,
+    "optional": false
+   },
+   {
+    "ingredientId": "peas_frozen",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "tuna_fried_rice",
+  "cookMinutes": 20,
+  "tags": [
+   "contains:fish",
+   "no_oven",
+   "one_pot",
+   "protein:tuna_tin",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "tuna_tin",
+    "qtyPerServing": 45,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "mixed_veg_frozen",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "eggs",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "mince_cottage_pie",
+  "cookMinutes": 60,
+  "tags": [
+   "contains:beef",
+   "contains:dairy",
+   "contains:gluten",
+   "kid_friendly",
+   "protein:beef_mince",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "beef_mince",
+    "qtyPerServing": 110,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "carrots",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "brown_onion_soup",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "margarine",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "milk",
+    "qtyPerServing": 30,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "samp_and_mince",
+  "cookMinutes": 80,
+  "tags": [
+   "contains:beef",
+   "contains:gluten",
+   "no_oven",
+   "protein:beef_mince",
+   "starch:samp"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "samp",
+    "qtyPerServing": 80,
+    "optional": false
+   },
+   {
+    "ingredientId": "beef_mince",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "carrots",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "butternut_lentil_soup",
+  "cookMinutes": 40,
+  "tags": [
+   "contains:gluten",
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:red_lentils",
+   "starch:bread"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "butternut",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "red_lentils",
+    "qtyPerServing": 40,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "bread",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 2,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "sugar_bean_curry_rice",
+  "cookMinutes": 80,
+  "tags": [
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:sugar_beans",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "sugar_beans",
+    "qtyPerServing": 60,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "garlic",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "bean_potato_curry",
+  "cookMinutes": 30,
+  "tags": [
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:butter_beans",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "butter_beans",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 60,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "cheesy_macaroni",
+  "cookMinutes": 25,
+  "tags": [
+   "contains:dairy",
+   "contains:gluten",
+   "kid_friendly",
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:cheddar_cheese",
+   "starch:pasta"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "pasta",
+    "qtyPerServing": 90,
+    "optional": false
+   },
+   {
+    "ingredientId": "cheddar_cheese",
+    "qtyPerServing": 40,
+    "optional": false
+   },
+   {
+    "ingredientId": "milk",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "margarine",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "cake_flour",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "tomato_egg_stew_pap",
+  "cookMinutes": 25,
+  "tags": [
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:eggs",
+   "starch:maize_meal"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "eggs",
+    "qtyPerServing": 2,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "green_pepper",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "maize_meal",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "paprika",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_breyani",
+  "cookMinutes": 70,
+  "tags": [
+   "no_oven",
+   "one_pot",
+   "protein:chicken_portions_mixed",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_portions_mixed",
+    "qtyPerServing": 170,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 70,
+    "optional": false
+   },
+   {
+    "ingredientId": "red_lentils",
+    "qtyPerServing": 20,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "turmeric",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "mince_potato_curry_bread",
+  "cookMinutes": 35,
+  "tags": [
+   "contains:beef",
+   "contains:gluten",
+   "no_oven",
+   "one_pot",
+   "protein:beef_mince",
+   "starch:bread"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "beef_mince",
+    "qtyPerServing": 110,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "bread",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chakalaka_beans_pap",
+  "cookMinutes": 20,
+  "tags": [
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:baked_beans",
+   "starch:maize_meal"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "baked_beans",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "chakalaka",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "maize_meal",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "morogo_eggs_pap",
+  "cookMinutes": 20,
+  "tags": [
+   "meat_free",
+   "no_oven",
+   "protein:eggs",
+   "starch:maize_meal"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "eggs",
+    "qtyPerServing": 2,
+    "optional": false
+   },
+   {
+    "ingredientId": "spinach",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "maize_meal",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_liver_curry_rice",
+  "cookMinutes": 25,
+  "tags": [
+   "no_oven",
+   "one_pot",
+   "protein:chicken_livers",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_livers",
+    "qtyPerServing": 125,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "garlic",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "pilchard_curry_rice",
+  "cookMinutes": 20,
+  "tags": [
+   "contains:fish",
+   "no_oven",
+   "one_pot",
+   "protein:pilchards_tin",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "pilchards_tin",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "boerewors_rolls",
+  "cookMinutes": 25,
+  "tags": [
+   "contains:beef",
+   "contains:gluten",
+   "contains:pork",
+   "kid_friendly",
+   "no_oven",
+   "protein:boerewors",
+   "starch:bread"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "boerewors",
+    "qtyPerServing": 125,
+    "optional": false
+   },
+   {
+    "ingredientId": "bread",
+    "qtyPerServing": 120,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "sugar",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "mince_vetkoek",
+  "cookMinutes": 60,
+  "tags": [
+   "contains:beef",
+   "contains:gluten",
+   "kid_friendly",
+   "no_oven",
+   "protein:beef_mince",
+   "starch:cake_flour"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "beef_mince",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "cake_flour",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "baking_powder",
+    "qtyPerServing": 2,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 40,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_a_la_king_rice",
+  "cookMinutes": 30,
+  "tags": [
+   "contains:dairy",
+   "contains:gluten",
+   "kid_friendly",
+   "no_oven",
+   "one_pot",
+   "protein:chicken_breast_fillets",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_breast_fillets",
+    "qtyPerServing": 130,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "milk",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "cake_flour",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "green_pepper",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "peas_frozen",
+    "qtyPerServing": 40,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_stir_fry_rice",
+  "cookMinutes": 20,
+  "tags": [
+   "no_oven",
+   "protein:chicken_breast_fillets",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_breast_fillets",
+    "qtyPerServing": 130,
+    "optional": false
+   },
+   {
+    "ingredientId": "mixed_veg_frozen",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "garlic",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "soya_mince_curry_rice",
+  "cookMinutes": 25,
+  "tags": [
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:soya_mince",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "soya_mince",
+    "qtyPerServing": 30,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "peas_frozen",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "cabbage_potato_curry",
+  "cookMinutes": 30,
+  "tags": [
+   "contains:gluten",
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:cabbage",
+   "starch:bread"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "cabbage",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "bread",
+    "qtyPerServing": 80,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "turmeric",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "lentil_cottage_pie",
+  "cookMinutes": 60,
+  "tags": [
+   "contains:dairy",
+   "contains:gluten",
+   "kid_friendly",
+   "meat_free",
+   "protein:red_lentils",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "red_lentils",
+    "qtyPerServing": 60,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "carrots",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "margarine",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "beef_stew_samp",
+  "cookMinutes": 100,
+  "tags": [
+   "contains:beef",
+   "contains:gluten",
+   "no_oven",
+   "protein:beef_stewing",
+   "starch:samp"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "beef_stewing",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "samp",
+    "qtyPerServing": 80,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "carrots",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "brown_onion_soup",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_soup_bread",
+  "cookMinutes": 50,
+  "tags": [
+   "contains:gluten",
+   "no_oven",
+   "one_pot",
+   "protein:chicken_portions_mixed",
+   "starch:bread"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_portions_mixed",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "carrots",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "cabbage",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "bread",
+    "qtyPerServing": 80,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "viennas_pasta",
+  "cookMinutes": 20,
+  "tags": [
+   "contains:gluten",
+   "contains:pork",
+   "kid_friendly",
+   "no_oven",
+   "one_pot",
+   "protein:viennas",
+   "starch:pasta"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "viennas",
+    "qtyPerServing": 80,
+    "optional": false
+   },
+   {
+    "ingredientId": "pasta",
+    "qtyPerServing": 90,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato_paste",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "egg_veg_fried_rice",
+  "cookMinutes": 20,
+  "tags": [
+   "kid_friendly",
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:eggs",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "eggs",
+    "qtyPerServing": 2,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "mixed_veg_frozen",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "one_pot_mince_rice",
+  "cookMinutes": 40,
+  "tags": [
+   "contains:beef",
+   "kid_friendly",
+   "no_oven",
+   "one_pot",
+   "protein:beef_mince",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "beef_mince",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 80,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "green_pepper",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "paprika",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "peri_peri_drumsticks_rice",
+  "cookMinutes": 45,
+  "tags": [
+   "no_oven",
+   "protein:chicken_drumsticks",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_drumsticks",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "peri_peri_spice",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "hake_curry_rice",
+  "cookMinutes": 30,
+  "tags": [
+   "contains:fish",
+   "no_oven",
+   "one_pot",
+   "protein:hake_fillets",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "hake_fillets",
+    "qtyPerServing": 130,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "garlic",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "tuna_potato_bake",
+  "cookMinutes": 55,
+  "tags": [
+   "contains:dairy",
+   "contains:fish",
+   "contains:gluten",
+   "kid_friendly",
+   "protein:tuna_tin",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "tuna_tin",
+    "qtyPerServing": 45,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "milk",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "cake_flour",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "margarine",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "cheddar_cheese",
+    "qtyPerServing": 20,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "pap_mince_gravy",
+  "cookMinutes": 30,
+  "tags": [
+   "contains:beef",
+   "contains:gluten",
+   "no_oven",
+   "one_pot",
+   "protein:beef_mince",
+   "starch:maize_meal"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "beef_mince",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "maize_meal",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "brown_onion_soup",
+    "qtyPerServing": 15,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_frikkadels_mash",
+  "cookMinutes": 40,
+  "tags": [
+   "contains:dairy",
+   "contains:gluten",
+   "kid_friendly",
+   "no_oven",
+   "protein:chicken_mince",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_mince",
+    "qtyPerServing": 110,
+    "optional": false
+   },
+   {
+    "ingredientId": "eggs",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "bread",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "margarine",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "peas_frozen",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "mince_macaroni_bake",
+  "cookMinutes": 50,
+  "tags": [
+   "contains:beef",
+   "contains:dairy",
+   "contains:gluten",
+   "kid_friendly",
+   "protein:beef_mince",
+   "starch:pasta"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "beef_mince",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "pasta",
+    "qtyPerServing": 90,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "cheddar_cheese",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "spinach_potato_curry",
+  "cookMinutes": 30,
+  "tags": [
+   "meat_free",
+   "no_oven",
+   "one_pot",
+   "protein:spinach",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "spinach",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 60,
+    "optional": false
+   },
+   {
+    "ingredientId": "garlic",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 3,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_samp_stew",
+  "cookMinutes": 90,
+  "tags": [
+   "contains:gluten",
+   "no_oven",
+   "one_pot",
+   "protein:chicken_portions_mixed",
+   "starch:samp"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_portions_mixed",
+    "qtyPerServing": 160,
+    "optional": false
+   },
+   {
+    "ingredientId": "samp",
+    "qtyPerServing": 80,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "carrots",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "butternut_mince_rice",
+  "cookMinutes": 40,
+  "tags": [
+   "contains:beef",
+   "no_oven",
+   "protein:beef_mince",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "beef_mince",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "butternut",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 60,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_tomato_bredie",
+  "cookMinutes": 60,
+  "tags": [
+   "no_oven",
+   "one_pot",
+   "protein:chicken_portions_mixed",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_portions_mixed",
+    "qtyPerServing": 170,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "sugar",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "beef_mince_chilli_rice",
+  "cookMinutes": 35,
+  "tags": [
+   "contains:beef",
+   "no_oven",
+   "one_pot",
+   "protein:beef_mince",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "beef_mince",
+    "qtyPerServing": 80,
+    "optional": false
+   },
+   {
+    "ingredientId": "butter_beans",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "green_pepper",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "paprika",
+    "qtyPerServing": 2,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "polony_potato_hash",
+  "cookMinutes": 25,
+  "tags": [
+   "contains:pork",
+   "kid_friendly",
+   "no_oven",
+   "protein:polony",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "polony",
+    "qtyPerServing": 60,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "eggs",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "samp_chakalaka",
+  "cookMinutes": 80,
+  "tags": [
+   "contains:gluten",
+   "meat_free",
+   "no_oven",
+   "protein:sugar_beans",
+   "starch:samp"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "samp",
+    "qtyPerServing": 80,
+    "optional": false
+   },
+   {
+    "ingredientId": "sugar_beans",
+    "qtyPerServing": 30,
+    "optional": false
+   },
+   {
+    "ingredientId": "chakalaka",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_livers_pasta",
+  "cookMinutes": 25,
+  "tags": [
+   "contains:dairy",
+   "contains:gluten",
+   "no_oven",
+   "protein:chicken_livers",
+   "starch:pasta"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_livers",
+    "qtyPerServing": 110,
+    "optional": false
+   },
+   {
+    "ingredientId": "pasta",
+    "qtyPerServing": 90,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "milk",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "peri_peri_spice",
+    "qtyPerServing": 2,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "lentil_soup_egg_sandwiches",
+  "cookMinutes": 35,
+  "tags": [
+   "contains:gluten",
+   "kid_friendly",
+   "meat_free",
+   "no_oven",
+   "protein:red_lentils",
+   "starch:bread"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "red_lentils",
+    "qtyPerServing": 40,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "eggs",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "mayonnaise",
+    "qtyPerServing": 15,
+    "optional": false
+   },
+   {
+    "ingredientId": "bread",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "stock_cubes",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "pork_chop_rice_peas",
+  "cookMinutes": 30,
+  "tags": [
+   "contains:gluten",
+   "contains:pork",
+   "no_oven",
+   "protein:pork_chops",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "pork_chops",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "peas_frozen",
+    "qtyPerServing": 60,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "brown_onion_soup",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "hake_fishcakes_salad",
+  "cookMinutes": 40,
+  "tags": [
+   "contains:fish",
+   "contains:gluten",
+   "kid_friendly",
+   "no_oven",
+   "protein:hake_fillets",
+   "starch:potatoes"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "hake_fillets",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "potatoes",
+    "qtyPerServing": 150,
+    "optional": false
+   },
+   {
+    "ingredientId": "eggs",
+    "qtyPerServing": 1,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 25,
+    "optional": false
+   },
+   {
+    "ingredientId": "tomato",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "cake_flour",
+    "qtyPerServing": 15,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ },
+ {
+  "id": "chicken_feet_curry_rice",
+  "cookMinutes": 60,
+  "tags": [
+   "no_oven",
+   "one_pot",
+   "protein:chicken_feet",
+   "starch:rice"
+  ],
+  "published": true,
+  "ingredients": [
+   {
+    "ingredientId": "chicken_feet",
+    "qtyPerServing": 200,
+    "optional": false
+   },
+   {
+    "ingredientId": "rice",
+    "qtyPerServing": 75,
+    "optional": false
+   },
+   {
+    "ingredientId": "onion",
+    "qtyPerServing": 50,
+    "optional": false
+   },
+   {
+    "ingredientId": "tinned_tomatoes",
+    "qtyPerServing": 100,
+    "optional": false
+   },
+   {
+    "ingredientId": "garlic",
+    "qtyPerServing": 5,
+    "optional": false
+   },
+   {
+    "ingredientId": "curry_powder",
+    "qtyPerServing": 4,
+    "optional": false
+   },
+   {
+    "ingredientId": "cooking_oil",
+    "qtyPerServing": 10,
+    "optional": false
+   },
+   {
+    "ingredientId": "salt",
+    "qtyPerServing": 2,
+    "optional": false
+   }
+  ]
+ }
+]

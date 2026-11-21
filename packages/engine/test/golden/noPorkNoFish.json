@@ -1,0 +1,370 @@
+{
+ "meals": [
+  {
+   "day": 1,
+   "date": "2026-11-21",
+   "recipeId": "butternut_lentil_soup",
+   "servings": 3,
+   "costCents": 6117,
+   "perPlateCents": 2039,
+   "sharesWith": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 2,
+   "date": "2026-11-22",
+   "recipeId": "morogo_eggs_pap",
+   "servings": 3,
+   "costCents": 10218,
+   "perPlateCents": 3406,
+   "sharesWith": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 3,
+   "date": "2026-11-23",
+   "recipeId": "lentil_curry_rice",
+   "servings": 3,
+   "costCents": 6689,
+   "perPlateCents": 2230,
+   "sharesWith": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 4,
+   "date": "2026-11-24",
+   "recipeId": "chicken_liver_curry_rice",
+   "servings": 3,
+   "costCents": 6803,
+   "perPlateCents": 2268,
+   "sharesWith": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 5,
+   "date": "2026-11-25",
+   "recipeId": "sugar_bean_curry_rice",
+   "servings": 3,
+   "costCents": 5088,
+   "perPlateCents": 1696,
+   "sharesWith": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    7
+   ]
+  },
+  {
+   "day": 6,
+   "date": "2026-11-26",
+   "recipeId": "chicken_livers_peri_peri_pap",
+   "servings": 3,
+   "costCents": 8101,
+   "perPlateCents": 2700,
+   "sharesWith": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ]
+  },
+  {
+   "day": 7,
+   "date": "2026-11-27",
+   "recipeId": "umngqusho",
+   "servings": 3,
+   "costCents": 6766,
+   "perPlateCents": 2255,
+   "sharesWith": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  }
+ ],
+ "basket": [
+  {
+   "ingredientId": "bread",
+   "productId": 1341,
+   "branchId": 4,
+   "packs": 1,
+   "packQty": 700,
+   "unitCents": 1599,
+   "normalUnitCents": 2099,
+   "tags": [
+    "special"
+   ],
+   "leftoverQty": 400
+  },
+  {
+   "ingredientId": "butternut",
+   "productId": 1338,
+   "branchId": 4,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2699,
+   "normalUnitCents": 2699,
+   "tags": [
+    "stale"
+   ],
+   "leftoverQty": 400
+  },
+  {
+   "ingredientId": "chicken_livers",
+   "productId": 1276,
+   "branchId": 4,
+   "packs": 2,
+   "packQty": 500,
+   "unitCents": 3599,
+   "normalUnitCents": 3599,
+   "tags": [],
+   "leftoverQty": 200
+  },
+  {
+   "ingredientId": "eggs",
+   "productId": 1298,
+   "branchId": 4,
+   "packs": 1,
+   "packQty": 6,
+   "unitCents": 3199,
+   "normalUnitCents": 3199,
+   "tags": [],
+   "leftoverQty": 0
+  },
+  {
+   "ingredientId": "garlic",
+   "productId": 1340,
+   "branchId": 4,
+   "packs": 1,
+   "packQty": 200,
+   "unitCents": 2499,
+   "normalUnitCents": 2499,
+   "tags": [],
+   "leftoverQty": 140
+  },
+  {
+   "ingredientId": "maize_meal",
+   "productId": 1307,
+   "branchId": 4,
+   "packs": 1,
+   "packQty": 2500,
+   "unitCents": 4399,
+   "normalUnitCents": 4399,
+   "tags": [],
+   "leftoverQty": 1900
+  },
+  {
+   "ingredientId": "onion",
+   "productId": 1329,
+   "branchId": 4,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2699,
+   "normalUnitCents": 2699,
+   "tags": [],
+   "leftoverQty": 0
+  },
+  {
+   "ingredientId": "red_lentils",
+   "productId": 1318,
+   "branchId": 4,
+   "packs": 1,
+   "packQty": 500,
+   "unitCents": 3299,
+   "normalUnitCents": 3299,
+   "tags": [],
+   "leftoverQty": 150
+  },
+  {
+   "ingredientId": "rice",
+   "productId": 1311,
+   "branchId": 4,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2699,
+   "normalUnitCents": 2699,
+   "tags": [],
+   "leftoverQty": 250
+  },
+  {
+   "ingredientId": "samp",
+   "productId": 1314,
+   "branchId": 4,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 2699,
+   "normalUnitCents": 2699,
+   "tags": [],
+   "leftoverQty": 750
+  },
+  {
+   "ingredientId": "spinach",
+   "productId": 1337,
+   "branchId": 4,
+   "packs": 2,
+   "packQty": 300,
+   "unitCents": 2399,
+   "normalUnitCents": 2399,
+   "tags": [],
+   "leftoverQty": 150
+  },
+  {
+   "ingredientId": "sugar_beans",
+   "productId": 1316,
+   "branchId": 4,
+   "packs": 1,
+   "packQty": 500,
+   "unitCents": 3299,
+   "normalUnitCents": 3299,
+   "tags": [],
+   "leftoverQty": 150
+  },
+  {
+   "ingredientId": "tinned_tomatoes",
+   "productId": 1322,
+   "branchId": 4,
+   "packs": 3,
+   "packQty": 410,
+   "unitCents": 1699,
+   "normalUnitCents": 1699,
+   "tags": [],
+   "leftoverQty": 30
+  },
+  {
+   "ingredientId": "tomato",
+   "productId": 1332,
+   "branchId": 4,
+   "packs": 1,
+   "packQty": 1000,
+   "unitCents": 3599,
+   "normalUnitCents": 3599,
+   "tags": [],
+   "leftoverQty": 600
+  }
+ ],
+ "unpriced": [],
+ "pantryStaples": [
+  {
+   "ingredientId": "cooking_oil",
+   "costCents": 3599
+  },
+  {
+   "ingredientId": "curry_powder",
+   "costCents": 2699
+  },
+  {
+   "ingredientId": "peri_peri_spice",
+   "costCents": 3299
+  },
+  {
+   "ingredientId": "salt",
+   "costCents": 1399
+  },
+  {
+   "ingredientId": "stock_cubes",
+   "costCents": 2699
+  }
+ ],
+ "totals": {
+  "paidCents": 49782,
+  "normalCents": 50282,
+  "savingsCents": 500,
+  "specialsCents": 500,
+  "memberCents": 0,
+  "packEfficiencyCents": 45384,
+  "perPlateCents": 2371,
+  "items": 14
+ },
+ "budget": {
+  "budgetCents": 80000,
+  "status": "under",
+  "remainingCents": 30218,
+  "shortfallCents": null,
+  "maxAffordableDays": null
+ },
+ "leftovers": [
+  {
+   "ingredientId": "bread",
+   "qty": 400
+  },
+  {
+   "ingredientId": "butternut",
+   "qty": 400
+  },
+  {
+   "ingredientId": "chicken_livers",
+   "qty": 200
+  },
+  {
+   "ingredientId": "garlic",
+   "qty": 140
+  },
+  {
+   "ingredientId": "maize_meal",
+   "qty": 1900
+  },
+  {
+   "ingredientId": "red_lentils",
+   "qty": 150
+  },
+  {
+   "ingredientId": "rice",
+   "qty": 250
+  },
+  {
+   "ingredientId": "samp",
+   "qty": 750
+  },
+  {
+   "ingredientId": "spinach",
+   "qty": 150
+  },
+  {
+   "ingredientId": "sugar_beans",
+   "qty": 150
+  },
+  {
+   "ingredientId": "tinned_tomatoes",
+   "qty": 30
+  },
+  {
+   "ingredientId": "tomato",
+   "qty": 600
+  }
+ ],
+ "specialsUsed": 1,
+ "priceAsOf": "2026-11-21",
+ "engineVersion": "1.0.0",
+ "seed": 42
+}

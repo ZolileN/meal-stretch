@@ -26,6 +26,7 @@
     "bench:engine": "pnpm --filter @mealstretch/engine bench"
   },
   "dependencies": {
+    "@mealstretch/engine": "workspace:*",
     "@neondatabase/serverless": "^1.2.1",
     "drizzle-orm": "^0.45.4",
     "next": "^16.4.6",
