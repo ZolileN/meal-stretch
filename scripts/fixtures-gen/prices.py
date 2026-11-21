@@ -62,7 +62,9 @@ P = {
 }
 ing={i['id']:i for i in json.load(open('seed/ingredients.sample.json'))}
 assert set(P)==set(ing), set(ing)^set(P)
-MULT={"shoprite":94,"checkers":100,"pnp":104,"spar":109}
+MULT={"shoprite":94,"checkers":100,"pnp":104,"spar":109,"usave":90}
+# Usave stocks only a small range in the fixture, so plans there show "can't price yet" items (PLN-10 e2e).
+USAVE_RANGE={"maize_meal","rice","onion","potatoes","tinned_tomatoes","eggs","sugar_beans","cabbage","pilchards_tin","baked_beans","cooking_oil","salt","curry_powder","stock_cubes"}
 SPECIAL={("checkers","Chicken Mixed Portions Value Pack"):9999,("checkers","Beef Mince Value Pack"):8999,("checkers","Long Grain Rice 2 kg"):3999,
  ("checkers","Potatoes Pocket 7 kg"):7999,("checkers","Chopped Tomatoes"):1299,("checkers","Pilchards in Tomato Sauce"):2399,
  ("shoprite","Chicken Mixed Portions Value Pack"):9499,("shoprite","Super Maize Meal 10 kg"):10999,("shoprite","Large Eggs 30"):9999,
@@ -83,6 +85,7 @@ rows=[]
 for r,m in MULT.items():
     for iid,packs in P.items():
         if (r,iid) in MISSING: continue
+        if r=='usave' and iid not in USAVE_RANGE: continue
         for name,qty,c in packs:
             p=price(c,m); obs=base
             if (r,iid) in STALE: obs=base-datetime.timedelta(days=10)

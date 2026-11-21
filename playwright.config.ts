@@ -6,7 +6,7 @@ const baseURL = `http://localhost:${PORT}`;
 
 /**
  * E2E runs the real app against a fresh local PGlite DB (fictional TEST branches + fixture prices).
- * E2E_PROD=1 uses `next build && next start` (closer to production, slower to start).
+ * Default: `next build && next start` (production build, stable timings). E2E_DEV=1 uses `next dev`.
  */
 const dbEnv = {
   DATABASE_URL: `postgres://local:local@localhost:${DB_PORT}/mealstretch`,
@@ -38,7 +38,7 @@ export default defineConfig({
       stdout: 'pipe',
     },
     {
-      command: process.env.E2E_PROD ? `pnpm build && pnpm start -p ${PORT}` : `pnpm dev:next -p ${PORT}`,
+      command: process.env.E2E_DEV ? `pnpm dev:next -p ${PORT}` : `pnpm build && pnpm start -p ${PORT}`,
       url: baseURL,
       env: { ...dbEnv, E2E: '1', NEXT_TELEMETRY_DISABLED: '1' },
       timeout: 300_000,

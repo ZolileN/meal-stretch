@@ -4,7 +4,7 @@ import ingredientsJson from './ingredients.json';
 import recipesJson from './recipes.json';
 import pricesJson from './prices.json';
 
-export const BRANCH = { checkers: 1, shoprite: 2, pnp: 3, spar: 4 } as const;
+export const BRANCH = { checkers: 1, shoprite: 2, pnp: 3, spar: 4, usave: 5 } as const;
 export const ingredients = ingredientsJson as Record<string, EngineIngredient>;
 export const recipes = recipesJson as EngineRecipe[];
 

@@ -1,9 +1,9 @@
 # Build progress
 
 ## Checkpoint
-- Last completed: Phase 3 (2026-11-21)
-- Next: Phase 4, step 4.1
-- Test status: 199 unit/db/engine, 4 e2e, all green; bench p95 166 ms
+- Last completed: Phase 4 (2026-11-21)
+- Next: Phase 5, step 5.1
+- Test status: 212 unit/db/engine, 7 e2e, all green
 - Open human-todo items: 10
 
 ## Phase 0: Repo foundation
@@ -46,11 +46,12 @@ Gate: PLN-1 PASS (planner.test determinism, golden) · PLN-2 PASS (specialsUsed,
 - [x] 3.6 pnpm bench:engine p95 < 300 ms
 
 ## Phase 4: Onboarding + plan screen
-- [ ] 4.1 Anonymous household via device_id cookie
-- [ ] 4.2 O3 screen
-- [ ] 4.3 POST /api/plans
-- [ ] 4.4 P1 plan screen per §7.2 incl. Fit my budget
-- [ ] 4.5 Playwright: first run, over-budget, unpriced
+Gate: ONB-1 PASS (lib/household.ts device cookie; plans.test) · ONB-3 PASS (HouseholdForm portion styles; engine portions) · ONB-4 PASS (period.test payday maths) · ONB-5 PASS (avoid chips → exclusions; plans.test) · ONB-6 PASS (e2e first run, 3 screens after location) · PLN-1 PASS · PLN-5 PASS (e2e over-budget → Fit my budget → fewer suppers) · PLN-10 PASS (e2e unpriced) · ONB-2 stored on household PASS (plans.test).
+- [x] 4.1 Anonymous household via device_id cookie
+- [x] 4.2 O3 screen
+- [x] 4.3 POST /api/plans
+- [x] 4.4 P1 plan screen per §7.2 incl. Fit my budget
+- [x] 4.5 Playwright: first run, over-budget, unpriced
 
 ## Phase 5: Meal actions, list, pantry
 - [ ] 5.1 Swap sheet, Cheaper, Remove, never-swap toggle

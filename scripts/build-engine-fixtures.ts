@@ -1,7 +1,7 @@
 /**
  * Regenerates packages/engine/fixtures/*.json from seed/ (the engine package can't do I/O).
  * Prices come from seed/prices.fixture.csv (FICTIONAL), with fixed branch ids:
- *   1 = Checkers, 2 = Shoprite, 3 = Pick n Pay, 4 = SPAR, and asOf = 2026-11-21.
+ *   1 = Checkers, 2 = Shoprite, 3 = Pick n Pay, 4 = SPAR, 5 = Usave, and asOf = 2026-11-21.
  * Member prices are kept for every card; tests pass loyalty-filtered snapshots via fixtures/index.ts.
  */
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -34,8 +34,8 @@ writeFileSync(
     1,
   ),
 );
-const BRANCH: Record<string, number> = { checkers: 1, shoprite: 2, pnp: 3, spar: 4 };
-const LOYALTY: Record<string, string> = { checkers: 'xtra_savings', shoprite: 'xtra_savings', pnp: 'smart_shopper', spar: 'spar_rewards' };
+const BRANCH: Record<string, number> = { checkers: 1, shoprite: 2, pnp: 3, spar: 4, usave: 5 };
+const LOYALTY: Record<string, string> = { checkers: 'xtra_savings', shoprite: 'xtra_savings', pnp: 'smart_shopper', spar: 'spar_rewards', usave: 'none' };
 const { rows, rejected } = validateCsv(readFileSync('seed/prices.fixture.csv', 'utf8'), new Date('2100-01-01'));
 if (rejected.length) throw new Error('fixture CSV invalid');
 const offers = rows.map((r, i) => ({

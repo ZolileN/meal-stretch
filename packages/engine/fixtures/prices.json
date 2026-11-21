@@ -5371,6 +5371,381 @@
     "observedAt": "2026-11-20T08:00:00.000Z",
     "source": "catalogue"
    }
+  },
+  {
+   "ingredientId": "pilchards_tin",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1358,
+    "branchId": 5,
+    "packQty": 400,
+    "priceCents": 2499,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "pilchards_tin",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1359,
+    "branchId": 5,
+    "packQty": 155,
+    "priceCents": 1199,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "eggs",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1360,
+    "branchId": 5,
+    "packQty": 6,
+    "priceCents": 2599,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "eggs",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1361,
+    "branchId": 5,
+    "packQty": 18,
+    "priceCents": 6699,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "eggs",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1362,
+    "branchId": 5,
+    "packQty": 30,
+    "priceCents": 10799,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "maize_meal",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1363,
+    "branchId": 5,
+    "packQty": 2500,
+    "priceCents": 3599,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "maize_meal",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1364,
+    "branchId": 5,
+    "packQty": 5000,
+    "priceCents": 6299,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "maize_meal",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1365,
+    "branchId": 5,
+    "packQty": 10000,
+    "priceCents": 11699,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "rice",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1366,
+    "branchId": 5,
+    "packQty": 2000,
+    "priceCents": 3999,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "rice",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1367,
+    "branchId": 5,
+    "packQty": 1000,
+    "priceCents": 2199,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "sugar_beans",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1368,
+    "branchId": 5,
+    "packQty": 500,
+    "priceCents": 2699,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "sugar_beans",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1369,
+    "branchId": 5,
+    "packQty": 1000,
+    "priceCents": 4899,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "tinned_tomatoes",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1370,
+    "branchId": 5,
+    "packQty": 410,
+    "priceCents": 1399,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "baked_beans",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1371,
+    "branchId": 5,
+    "packQty": 410,
+    "priceCents": 1599,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "onion",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1372,
+    "branchId": 5,
+    "packQty": 1000,
+    "priceCents": 2199,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "onion",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1373,
+    "branchId": 5,
+    "packQty": 2000,
+    "priceCents": 3599,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "onion",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1374,
+    "branchId": 5,
+    "packQty": 7000,
+    "priceCents": 9899,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "potatoes",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1375,
+    "branchId": 5,
+    "packQty": 2000,
+    "priceCents": 4499,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "potatoes",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1376,
+    "branchId": 5,
+    "packQty": 7000,
+    "priceCents": 8999,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "cabbage",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1377,
+    "branchId": 5,
+    "packQty": 1500,
+    "priceCents": 2199,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "cooking_oil",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1378,
+    "branchId": 5,
+    "packQty": 750,
+    "priceCents": 2999,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "cooking_oil",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1379,
+    "branchId": 5,
+    "packQty": 2000,
+    "priceCents": 6699,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "salt",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1380,
+    "branchId": 5,
+    "packQty": 1000,
+    "priceCents": 1199,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "curry_powder",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1381,
+    "branchId": 5,
+    "packQty": 100,
+    "priceCents": 2199,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
+  },
+  {
+   "ingredientId": "stock_cubes",
+   "loyaltyProgram": "none",
+   "offer": {
+    "productId": 1382,
+    "branchId": 5,
+    "packQty": 120,
+    "priceCents": 2199,
+    "memberPriceCents": null,
+    "specialPriceCents": null,
+    "specialEndsOn": null,
+    "observedAt": "2026-11-20T08:00:00.000Z",
+    "source": "catalogue"
+   }
   }
  ]
 }

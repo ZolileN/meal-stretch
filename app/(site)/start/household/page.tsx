@@ -1,11 +1,14 @@
-import { getTranslations } from 'next-intl/server';
+import { HouseholdForm } from '@/components/onboarding/HouseholdForm';
+import { getDb } from '@/lib/db';
+import { currentHousehold } from '@/lib/household';
 
-// Placeholder until Phase 4 (O3 household + budget).
+export const dynamic = 'force-dynamic';
+
 export default async function HouseholdStep() {
-  const t = await getTranslations('home');
+  const h = await currentHousehold(getDb()).catch(() => null);
   return (
     <main className="px-4 py-6">
-      <h1 className="text-xl font-bold">{t('startPlan')}</h1>
+      <HouseholdForm paydayDom={h?.paydayDom ?? undefined} />
     </main>
   );
 }
