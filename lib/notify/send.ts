@@ -9,9 +9,9 @@ import { formatRandShort } from '@/lib/money';
 import { isoDateInSA } from '@/lib/period';
 import { recipeNames } from '@/lib/recipes/queries';
 import { decide, pickMorning, type NotifyKind, type NotifyState } from './rules';
-import en from '@/messages/en.json';
-import xh from '@/messages/xh.json';
-import af from '@/messages/af.json';
+import en from '@/messages/runtime/en.json';
+import xh from '@/messages/runtime/xh.json';
+import af from '@/messages/runtime/af.json';
 
 const MESSAGES = { en, xh, af } as const;
 type Lang = keyof typeof MESSAGES;
@@ -40,17 +40,7 @@ export const webPushSender: Sender = async (sub, payload) => {
 type T = (key: string, values?: Record<string, string | number>) => string;
 function translator(lang: string): T {
   const l = (lang in MESSAGES ? lang : 'en') as Lang;
-  const messages = (l === 'en' ? en : mergeTodo(en as Msgs, MESSAGES[l] as Msgs)) as Record<string, unknown>;
-  return createTranslator({ locale: l, messages: messages as never, namespace: 'notify' as never }) as unknown as T;
-}
-type Msgs = { [k: string]: string | Msgs };
-function mergeTodo(base: Msgs, over: Msgs): Msgs {
-  const out: Msgs = { ...base };
-  for (const [k, v] of Object.entries(over)) {
-    const b = base[k];
-    out[k] = typeof v === 'string' ? (v.startsWith('TODO:') && typeof b === 'string' ? b : v) : typeof b === 'object' ? mergeTodo(b, v) : v;
-  }
-  return out;
+  return createTranslator({ locale: l, messages: MESSAGES[l] as never, namespace: 'notify' as never }) as unknown as T;
 }
 
 interface HouseholdRow {

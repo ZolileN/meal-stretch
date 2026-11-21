@@ -18,3 +18,15 @@ describe('messages', () => {
     expect(all.includes(BRAND.name)).toBe(false);
   });
 });
+
+import { readFileSync } from 'node:fs';
+describe('runtime messages (generated)', () => {
+  it('are in sync with the sources and never contain TODO markers', () => {
+    for (const loc of ['en', 'xh', 'af']) {
+      const rt = JSON.parse(readFileSync(`messages/runtime/${loc}.json`, 'utf8'));
+      expect(keys(rt).sort()).toEqual(keys(en as Msgs).sort());
+      expect(JSON.stringify(rt)).not.toContain('TODO:');
+    }
+    expect(JSON.parse(readFileSync('messages/runtime/en.json', 'utf8'))).toEqual(en);
+  });
+});

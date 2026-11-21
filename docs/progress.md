@@ -1,9 +1,9 @@
 # Build progress
 
 ## Checkpoint
-- Last completed: Phase 8 (2026-11-21)
-- Next: Final audit + docs/handover.md
-- Test status: 300 unit/db/engine, 17 e2e, all green
+- Last completed: MVP complete, Phases 0–8 + final audit (2026-11-21)
+- Next: human-only work (docs/handover.md → "Human to-do, in priority order")
+- Test status: 307 unit/db/engine (1 skipped until real receipt photos exist), 17 e2e, all green; bench p95 166 ms
 - Open human-todo items: 20
 
 ## Phase 0: Repo foundation
@@ -89,4 +89,4 @@ Gate: ACC-1 PASS · ACC-2 PASS (phase8.test merge; e2e anonymous → sign in →
 - [x] 8.7 Playwright: anonymous → sign in → merged
 
 ## Final
-- [ ] Full audit, docs/handover.md, `chore: MVP complete`
+- [x] Full audit, docs/handover.md, `chore: MVP complete`

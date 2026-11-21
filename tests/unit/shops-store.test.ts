@@ -39,3 +39,21 @@ describe('loyalty chips (ONB-2)', () => {
     expect(readShops(JSON.stringify({ main: 5 })).main).toBeNull();
   });
 });
+
+import { parseShops } from '@/lib/location/store';
+describe('parseShops (hand-written validator)', () => {
+  const ok = { location: { lat: -34.077, lng: 18.846, label: 'Somerset West', source: 'gps' }, main: { branchId: 1, retailerId: 'checkers', retailerName: 'Checkers', branchName: 'TEST', distanceM: 110 }, topUp: null, loyalty: ['xtra_savings'], updatedAt: '2026-11-21T00:00:00Z' };
+  it('accepts valid data and defaults loyalty', () => {
+    expect(parseShops(ok)).toEqual(ok);
+    const { loyalty: _l, ...noLoyalty } = ok;
+    expect(parseShops(noLoyalty)?.loyalty).toEqual([]);
+  });
+  it.each([
+    { ...ok, location: { ...ok.location, source: 'satellite' } },
+    { ...ok, main: { ...ok.main, branchId: 1.5 } },
+    { ...ok, main: { ...ok.main, distanceM: -1 } },
+    { ...ok, loyalty: [1] },
+    { ...ok, updatedAt: 5 },
+    [],
+  ])('rejects %#', (bad) => expect(parseShops(bad)).toBeNull());
+});

@@ -10,9 +10,12 @@ import { distanceLabel } from '@/lib/location/geo';
 import type { PlanView } from '@/lib/plans/view';
 import { useShops } from '@/components/location/LocationProvider';
 import { MealActions } from './MealActions';
-import { PlanExtras } from './PlanExtras';
-import { TweakBox } from './TweakBox';
-import { AccountPrompt } from '@/components/account/AccountPrompt';
+import dynamic from 'next/dynamic';
+
+// Secondary, below-the-fold pieces load after the plan itself (first-load JS budget, PRD §15).
+const PlanExtras = dynamic(() => import('./PlanExtras').then((m) => m.PlanExtras), { ssr: false });
+const TweakBox = dynamic(() => import('./TweakBox').then((m) => m.TweakBox), { ssr: false });
+const AccountPrompt = dynamic(() => import('@/components/account/AccountPrompt').then((m) => m.AccountPrompt), { ssr: false });
 
 export function PlanScreen({ view, shoppedPrompt = false, signedIn = false }: { view: PlanView; shoppedPrompt?: boolean; signedIn?: boolean }) {
   const t = useTranslations('plan');

@@ -1,40 +1,59 @@
 /** Client-side persisted location + shops (LOC-4: persisted locally; synced to the household/user_shops). */
-import { z } from 'zod';
-
+/**
+ * Hand-written validation (no zod): this module ships to every phone, and zod would add ~30 KB gz
+ * to the first-load JS budget (PRD §15).
+ */
 export const STORAGE_KEY = 'ms_shops_v1';
 
-export const branchSummarySchema = z.object({
-  branchId: z.number().int(),
-  retailerId: z.string(),
-  retailerName: z.string(),
-  branchName: z.string(),
-  distanceM: z.number().int().nonnegative().optional(),
-});
-export type BranchSummary = z.infer<typeof branchSummarySchema>;
+export interface BranchSummary {
+  branchId: number;
+  retailerId: string;
+  retailerName: string;
+  branchName: string;
+  distanceM?: number;
+}
 
-export const savedShopsSchema = z.object({
-  location: z
-    .object({
-      lat: z.number().finite(),
-      lng: z.number().finite(),
-      label: z.string().nullable(),
-      source: z.enum(['gps', 'search', 'google']),
-    })
-    .nullable(),
-  main: branchSummarySchema.nullable(),
-  topUp: branchSummarySchema.nullable(),
-  loyalty: z.array(z.string()).default([]),
-  updatedAt: z.string(),
-});
-export type SavedShops = z.infer<typeof savedShopsSchema>;
+export interface SavedShops {
+  location: { lat: number; lng: number; label: string | null; source: 'gps' | 'search' | 'google' } | null;
+  main: BranchSummary | null;
+  topUp: BranchSummary | null;
+  loyalty: string[];
+  updatedAt: string;
+}
 
 export const emptyShops = (): SavedShops => ({ location: null, main: null, topUp: null, loyalty: [], updatedAt: new Date(0).toISOString() });
+
+const isObj = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null && !Array.isArray(v);
+const isStr = (v: unknown): v is string => typeof v === 'string';
+const isNum = (v: unknown): v is number => typeof v === 'number' && Number.isFinite(v);
+
+function branch(v: unknown): BranchSummary | null | undefined {
+  if (v === null) return null;
+  if (!isObj(v) || !Number.isInteger(v.branchId) || !isStr(v.retailerId) || !isStr(v.retailerName) || !isStr(v.branchName)) return undefined;
+  if (v.distanceM !== undefined && !(Number.isInteger(v.distanceM) && (v.distanceM as number) >= 0)) return undefined;
+  return { branchId: v.branchId as number, retailerId: v.retailerId, retailerName: v.retailerName, branchName: v.branchName, ...(v.distanceM !== undefined ? { distanceM: v.distanceM as number } : {}) };
+}
+
+export function parseShops(v: unknown): SavedShops | null {
+  if (!isObj(v) || !isStr(v.updatedAt)) return null;
+  let location: SavedShops['location'] = null;
+  if (v.location !== null) {
+    const l = v.location;
+    if (!isObj(l) || !isNum(l.lat) || !isNum(l.lng) || !(l.label === null || isStr(l.label)) || !['gps', 'search', 'google'].includes(l.source as string)) return null;
+    location = { lat: l.lat, lng: l.lng, label: l.label as string | null, source: l.source as 'gps' | 'search' | 'google' };
+  }
+  const main = branch(v.main);
+  const topUp = branch(v.topUp);
+  if (main === undefined || topUp === undefined) return null;
+  const loyalty = v.loyalty === undefined ? [] : v.loyalty;
+  if (!Array.isArray(loyalty) || !loyalty.every(isStr)) return null;
+  return { location, main, topUp, loyalty, updatedAt: v.updatedAt };
+}
 
 export function readShops(raw: string | null): SavedShops {
   if (!raw) return emptyShops();
   try {
-    const r = savedShopsSchema.safeParse(JSON.parse(raw));
-    return r.success ? r.data : emptyShops();
+    return parseShops(JSON.parse(raw)) ?? emptyShops();
   } catch {
     return emptyShops();
   }

@@ -24,7 +24,8 @@
     "import:prices": "tsx scripts/import-prices-csv.ts",
     "import:osm": "tsx scripts/import-osm.ts",
     "bench:engine": "pnpm --filter @mealstretch/engine bench",
-    "harness:receipts": "tsx scripts/receipt-harness.ts"
+    "harness:receipts": "tsx scripts/receipt-harness.ts",
+    "prebuild": "tsx scripts/sync-messages.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.12.0",

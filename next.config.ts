@@ -1,7 +1,11 @@
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+const withNextIntl = createNextIntlPlugin({
+  requestConfig: './i18n/request.ts',
+  // Precompile ICU messages at build time: keeps the message parser out of first-load JS (PRD §15 budget).
+  experimental: { messages: { path: './messages/runtime', format: 'json', locales: 'infer', sourceLocale: 'en', precompile: true } },
+});
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,

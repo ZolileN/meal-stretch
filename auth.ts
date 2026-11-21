@@ -13,7 +13,7 @@ import { sendMagicLink } from '@/lib/auth/mail';
 import { DEVICE_COOKIE } from '@/lib/household';
 import { track } from '@/lib/events';
 import { BRAND } from '@/lib/brand';
-import en from '@/messages/en.json';
+import en from '@/messages/runtime/en.json';
 
 export const { handlers, auth, signIn, signOut } = NextAuth(() => {
   const e = env();
