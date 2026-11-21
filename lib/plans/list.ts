@@ -41,7 +41,8 @@ export async function lineSources(db: Db, lines: { productId: number; branchId: 
     db,
     sql`select distinct on (b.id, cp.product_id) b.id as branch_id, cp.product_id, cp.source, cp.observed_at
         from branches b
-        join current_prices cp on cp.retailer_id = b.retailer_id and (cp.branch_id = b.id or cp.branch_id is null)
+        join current_prices cp on cp.retailer_id = b.retailer_id
+          and (cp.branch_id = b.id or (cp.branch_id is null and (cp.province is null or cp.province = b.province)))
         where b.id = any(${pgArray([...new Set(lines.map((l) => l.branchId))])}::bigint[])
           and cp.product_id = any(${pgArray([...new Set(lines.map((l) => l.productId))])}::bigint[])
         order by b.id, cp.product_id, cp.is_fresh desc, (case when cp.is_fresh then cp.trust else 0 end) desc, cp.observed_at desc, cp.observation_id desc`,

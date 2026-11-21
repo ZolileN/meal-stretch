@@ -475,7 +475,12 @@
     "minutesShort": "TODO: {count} min",
     "leafletTooBig": "TODO: That file is over 4 MB, the most the website accepts. Use the laptop command instead: pnpm import:leaflet <file.pdf> --retailer <id>. It splits big leaflets into page batches that appear here for review.",
     "leafletNoFile": "TODO: Choose a PDF or photo of the leaflet.",
-    "leafletHelp": "TODO: Upload leaflets the retailer publishes for customers (PDF or photos, up to 4 MB). Claude reads them; nothing is published until you approve each batch."
+    "leafletHelp": "TODO: Upload leaflets the retailer publishes for customers (PDF or photos, up to 4 MB). Claude reads them; nothing is published until you approve each batch.",
+    "scope": "TODO: Where do these prices apply?",
+    "scopeNational": "TODO: National (all provinces)",
+    "scopeApplies": "TODO: Prices from this batch apply to {province} branches only.",
+    "scopeAppliesNational": "TODO: Prices from this batch apply to every branch nationally.",
+    "leafletProvince": "TODO: Choose a province, or National."
   },
   "privacy": {
     "title": "TODO: Privacy",

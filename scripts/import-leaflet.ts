@@ -1,5 +1,6 @@
 /**
- * `pnpm import:leaflet <leaflet.pdf | page.jpg ...> --retailer <id> [--pages-per-batch 8] [--by admin@email]`
+ * `pnpm import:leaflet <leaflet.pdf | page.jpg ...> --retailer <id> [--province GP] [--pages-per-batch 8] [--by admin@email]`
+ * --province: where the prices apply (EC, WC, GP, KZN, FS, MP, LP, NW, NC); leave out for a national leaflet.
  *
  * For leaflets too big for the browser upload (Vercel accepts ~4 MB per request). Runs on your laptop:
  * Claude reads the leaflet (PDFs in chunks of pages), and every chunk becomes a normal review batch in
@@ -23,9 +24,15 @@ const flag = (name: string) => {
 const retailerId = flag('--retailer');
 const perBatch = Math.max(1, Math.min(20, Number(flag('--pages-per-batch') ?? 8) || 8));
 const by = flag('--by');
-const files = args.filter((a, i) => !a.startsWith('--') && !['--retailer', '--pages-per-batch', '--by'].includes(args[i - 1] ?? ''));
+const { parseScope } = await import('../lib/location/provinces');
+const province = parseScope(flag('--province'));
+const files = args.filter((a, i) => !a.startsWith('--') && !['--retailer', '--pages-per-batch', '--by', '--province'].includes(args[i - 1] ?? ''));
+if (province === undefined) {
+  console.error('--province must be one of EC, WC, GP, KZN, FS, MP, LP, NW, NC (or leave it out for national).');
+  process.exit(2);
+}
 if (!retailerId || files.length === 0) {
-  console.error('usage: pnpm import:leaflet <leaflet.pdf | page.jpg ...> --retailer <checkers|shoprite|pnp|spar|woolworths|boxer|usave> [--pages-per-batch 8] [--by admin@email]');
+  console.error('usage: pnpm import:leaflet <leaflet.pdf | page.jpg ...> --retailer <checkers|shoprite|pnp|spar|woolworths|boxer|usave> [--province GP] [--pages-per-batch 8] [--by admin@email]');
   process.exit(2);
 }
 
@@ -65,7 +72,7 @@ for (const file of files) {
   }
   for (const p of parts) {
     try {
-      const id = await extractLeaflet(db, { retailerId: retailer.id, uploadedBy: admin?.id ?? null, file: { base64: p.base64, type: p.type } });
+      const id = await extractLeaflet(db, { retailerId: retailer.id, uploadedBy: admin?.id ?? null, province, file: { base64: p.base64, type: p.type } });
       batches.push(id);
       console.log(`${file} (${p.label}): review batch ${id}`);
     } catch (e) {
@@ -74,5 +81,5 @@ for (const file of files) {
     }
   }
 }
-console.log(`\n${batches.length} batch(es) ready to review at /admin/leaflets (${retailer.name}).${failed ? ` ${failed} failed: run again for those files.` : ''}`);
+console.log(`\n${batches.length} batch(es) ready to review at /admin/leaflets (${retailer.name}, ${province ?? 'national'}).${failed ? ` ${failed} failed: run again for those files.` : ''}`);
 process.exit(failed ? 1 : 0);

@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { getDb } from '@/lib/db';
 import { requireAdmin } from '@/lib/admin/guard';
 import { publishBatch, rejectBatch, reviewBatch, type Decision } from '@/lib/leaflets';
+import { PROVINCES } from '@/lib/location/provinces';
 import { formatRandShort } from '@/lib/money';
 
 export default async function Review({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ published?: string; queued?: string }> }) {
@@ -40,6 +41,7 @@ export default async function Review({ params, searchParams }: { params: Promise
   return (
     <main className="space-y-3">
       <h1 className="text-2xl font-bold">{t('review')} #{b.id} · {b.retailerId} · {b.status}</h1>
+      <p className="text-sm" data-testid="batch-scope">{b.province ? t('scopeApplies', { province: PROVINCES.find((p) => p.code === b.province)?.name ?? b.province }) : t('scopeAppliesNational')}</p>
       {sp.published && <p className="rounded bg-surface-muted p-2">{t('published_n', { published: Number(sp.published), queued: Number(sp.queued ?? 0) })}</p>}
       <form action={publish}>
         <table className="w-full text-sm">

@@ -1,5 +1,6 @@
 /** CSV price import: parsing + per-row Zod validation (pure). DB writes live in lib/prices/import.ts. */
 import { z } from 'zod';
+import { PROVINCE_CODES } from '@/lib/location/provinces';
 
 export const CSV_COLUMNS = [
   'retailer_id', 'branch_id', 'product_name', 'brand', 'pack_qty', 'pack_unit', 'ingredient_id', 'price_cents',
@@ -54,6 +55,8 @@ export const csvRowSchema = z
   .object({
     retailer_id: z.string().regex(/^[a-z_]{2,30}$/, 'unknown retailer id format'),
     branch_id: z.preprocess(blankToNull, z.string().regex(/^\d+$/).transform(Number).nullable()),
+    /** Optional column: a province code (EC, WC, GP, KZN, …) for regional prices; blank or absent = national. */
+    province: z.preprocess((v) => (typeof v === 'string' ? (v.trim() === '' ? null : v.trim().toUpperCase()) : v ?? null), z.enum(PROVINCE_CODES, { message: `must be one of ${PROVINCE_CODES.join(', ')} or blank` }).nullable()),
     product_name: z.string().min(2).max(200),
     brand: z.preprocess(blankToNull, z.string().max(80).nullable()),
     pack_qty: z.string().regex(/^\d+(\.\d+)?$/, 'must be a number'),
@@ -79,6 +82,8 @@ export const csvRowSchema = z
     return { ...r, pack_qty: scaled, pack_unit: unit };
   })
   .superRefine((r, ctx) => {
+    if (r.branch_id !== null && r.province !== null)
+      ctx.addIssue({ code: 'custom', path: ['province'], message: 'use branch_id or province, not both' });
     if (r.special_price_cents !== null && r.special_price_cents >= r.price_cents)
       ctx.addIssue({ code: 'custom', path: ['special_price_cents'], message: 'special must be below the shelf price' });
     if (r.member_price_cents !== null && r.member_price_cents >= r.price_cents)

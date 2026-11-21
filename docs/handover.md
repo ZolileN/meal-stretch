@@ -34,7 +34,7 @@ The first start takes about 20 s while PGlite loads PostGIS and seeds. The data 
 | `pnpm bench:engine` | Engine benchmark, fails if p95 ≥ 300 ms |
 | `pnpm db:local` | The local DB on its own (Neon-compatible HTTP endpoint on :4444) |
 | `pnpm db:migrate` / `pnpm db:seed [--production]` | Against `DATABASE_URL` (Neon) |
-| `pnpm import:leaflet <file.pdf> --retailer <id>` | Leaflets of any size → review batches in /admin/leaflets (needs ANTHROPIC_API_KEY) |
+| `pnpm import:leaflet <file.pdf> --retailer <id> [--province GP]` | Leaflets of any size → review batches in /admin/leaflets (needs ANTHROPIC_API_KEY); province = where the prices apply |
 | `pnpm import:prices file.csv [--source manual\|catalogue\|leaflet] [--dry-run]` | CSV price import |
 | `pnpm import:osm --tiles ZA-GP ZA-KZN` (or `--tiles --all`) | OpenStreetMap stores + places per province, in ~55 km tiles; safe to repeat |
 | `pnpm harness:receipts [--record]` | Receipt extraction accuracy (calls the real API: opt-in) |
@@ -79,7 +79,7 @@ Without Docker, PostGIS isn't on the machine, so the DB tests use PGlite. With D
 
 `retailer_id, branch_id, product_name, brand, pack_qty, pack_unit, ingredient_id, price_cents, member_price_cents, special_price_cents, special_ends_on, observed_at`
 
-Money is whole cents. `pack_unit` is `g|ml|unit` (or `kg|l|each`, which are converted). An empty `branch_id` means chain-wide. Each row is validated with Zod, and rejected rows are reported with their line number and reasons. Products and aliases are created when missing, and importing the same file twice adds nothing.
+Money is whole cents. `pack_unit` is `g|ml|unit` (or `kg|l|each`, which are converted). An empty `branch_id` means chain-wide. An optional `province` column (EC, WC, GP, KZN, FS, MP, LP, NW, NC) limits a row to that province; leave it blank or out for national. A row can't have both a `branch_id` and a `province`. Each row is validated with Zod, and rejected rows are reported with their line number and reasons. Products and aliases are created when missing, and importing the same file twice adds nothing.
 
 ## Architecture
 

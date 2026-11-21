@@ -75,13 +75,14 @@ export async function importPriceRows(
     const endsOn = r.special_ends_on ? shiftDate(r.special_ends_on).slice(0, 10) : null;
     const ins = await query<{ id: string | number }>(
       db,
-      sql`insert into price_observations (product_id, branch_id, retailer_id, price_cents, member_price_cents, special_price_cents,
+      sql`insert into price_observations (product_id, branch_id, province, retailer_id, price_cents, member_price_cents, special_price_cents,
                                           special_ends_on, source, observed_at, ingest_batch_id)
-          select ${productId}, ${r.branch_id}, ${r.retailer_id}, ${r.price_cents}, ${r.member_price_cents}, ${r.special_price_cents},
+          select ${productId}, ${r.branch_id}, ${r.province}, ${r.retailer_id}, ${r.price_cents}, ${r.member_price_cents}, ${r.special_price_cents},
                  ${endsOn}::date, ${opts.source}, ${observedAt}::timestamptz, ${batchId}
           where not exists (
             select 1 from price_observations o
-            where o.product_id = ${productId} and o.branch_id is not distinct from ${r.branch_id}::bigint and o.source = ${opts.source}
+            where o.product_id = ${productId} and o.branch_id is not distinct from ${r.branch_id}::bigint
+              and o.province is not distinct from ${r.province}::text and o.source = ${opts.source}
               and o.observed_at = ${observedAt}::timestamptz and o.price_cents = ${r.price_cents}
               and o.member_price_cents is not distinct from ${r.member_price_cents}::int
               and o.special_price_cents is not distinct from ${r.special_price_cents}::int)

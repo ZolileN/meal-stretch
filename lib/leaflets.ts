@@ -10,6 +10,7 @@ import { EXTRACTION_TOOL, extractionSchema, validateLines, type ExtractedLine } 
 import { matchProduct, normaliseProductName, parseSize } from '@/lib/prices/match';
 import { productAlias, refreshCurrentPrices } from '@/lib/prices/import';
 import { isoDateInSA } from '@/lib/period';
+import type { ProvinceCode } from '@/lib/location/provinces';
 
 const SYSTEM = `You read South African supermarket specials leaflets. Call record_document exactly once.
 document_type "leaflet". Money in integer cents. price_cents is the advertised price; was_price_cents the normal
@@ -21,7 +22,8 @@ export interface ReviewLine extends ExtractedLine {
   suggestion: { productId: number; name: string; confidence: number } | null;
 }
 
-export async function extractLeaflet(db: Db, opts: { retailerId: string; uploadedBy: string | null; file: { base64: string; type: string } }) {
+/** `province`: where the leaflet's prices apply (null = national). Stored on the batch, copied onto its prices. */
+export async function extractLeaflet(db: Db, opts: { retailerId: string; uploadedBy: string | null; file: { base64: string; type: string }; province?: ProvinceCode | null }) {
   const isPdf = opts.file.type === 'application/pdf';
   const { output } = await claudeTool({
     db,
@@ -38,10 +40,10 @@ export async function extractLeaflet(db: Db, opts: { retailerId: string; uploade
       { type: 'text', text: 'Extract every product special in this leaflet.' },
     ],
   });
-  return createReviewBatch(db, opts.retailerId, opts.uploadedBy, output);
+  return createReviewBatch(db, opts.retailerId, opts.uploadedBy, output, opts.province ?? null);
 }
 
-export async function createReviewBatch(db: Db, retailerId: string, uploadedBy: string | null, raw: unknown): Promise<number> {
+export async function createReviewBatch(db: Db, retailerId: string, uploadedBy: string | null, raw: unknown, province: ProvinceCode | null = null): Promise<number> {
   const ex = extractionSchema.parse(raw);
   const { lines, rejected } = validateLines(ex.lines);
   const review: ReviewLine[] = [];
@@ -52,8 +54,8 @@ export async function createReviewBatch(db: Db, retailerId: string, uploadedBy: 
   }
   const [b] = await query<{ id: string | number }>(
     db,
-    sql`insert into ingest_batches (kind, retailer_id, uploaded_by, status, raw)
-        values ('leaflet', ${retailerId}, ${uploadedBy}::uuid, 'review',
+    sql`insert into ingest_batches (kind, retailer_id, province, uploaded_by, status, raw)
+        values ('leaflet', ${retailerId}, ${province}, ${uploadedBy}::uuid, 'review',
                 ${JSON.stringify({ date: ex.date, valid_until: ex.valid_until, lines: review, rejected })}::jsonb)
         returning id`,
   );
@@ -61,13 +63,13 @@ export async function createReviewBatch(db: Db, retailerId: string, uploadedBy: 
 }
 
 export async function reviewBatch(db: Db, batchId: number) {
-  const [b] = await query<{ id: number; retailer_id: string; status: string; raw: { date: string | null; valid_until: string | null; lines: ReviewLine[]; rejected: unknown[] } | string; created_at: string }>(
+  const [b] = await query<{ id: number; retailer_id: string; province: ProvinceCode | null; status: string; raw: { date: string | null; valid_until: string | null; lines: ReviewLine[]; rejected: unknown[] } | string; created_at: string }>(
     db,
-    sql`select id, retailer_id, status, raw, created_at from ingest_batches where id = ${batchId} and kind = 'leaflet'`,
+    sql`select id, retailer_id, province, status, raw, created_at from ingest_batches where id = ${batchId} and kind = 'leaflet'`,
   );
   if (!b) return null;
   const raw = typeof b.raw === 'string' ? JSON.parse(b.raw) : b.raw;
-  return { id: Number(b.id), retailerId: b.retailer_id, status: b.status, date: raw.date, validUntil: raw.valid_until, lines: raw.lines as ReviewLine[], rejected: raw.rejected };
+  return { id: Number(b.id), retailerId: b.retailer_id, province: b.province ?? null, status: b.status, date: raw.date, validUntil: raw.valid_until, lines: raw.lines as ReviewLine[], rejected: raw.rejected };
 }
 
 export const decisionSchema = z.object({
@@ -83,7 +85,7 @@ export const decisionSchema = z.object({
 });
 export type Decision = z.infer<typeof decisionSchema>;
 
-/** Publish approved lines as chain-wide leaflet observations; approved-but-unmapped lines go to the unmatched queue. */
+/** Publish approved lines as leaflet observations for the batch's scope (its province, or national); approved-but-unmapped lines go to the unmatched queue. */
 export async function publishBatch(db: Db, batchId: number, decisions: Decision[]) {
   const b = await reviewBatch(db, batchId);
   if (!b || b.status !== 'review') throw new Error('Batch is not awaiting review');
@@ -124,8 +126,8 @@ export async function publishBatch(db: Db, batchId: number, decisions: Decision[
     const special = shelf > price && !line.member_only ? price : null;
     const member = shelf > price && line.member_only ? price : null;
     await db.execute(
-      sql`insert into price_observations (product_id, branch_id, retailer_id, price_cents, member_price_cents, special_price_cents, special_ends_on, source, observed_at, ingest_batch_id)
-          values (${productId}, null, ${b.retailerId}, ${shelf}, ${member}, ${special}, ${b.validUntil}::date, 'leaflet', ${observedAt}::timestamptz, ${batchId})`,
+      sql`insert into price_observations (product_id, branch_id, province, retailer_id, price_cents, member_price_cents, special_price_cents, special_ends_on, source, observed_at, ingest_batch_id)
+          values (${productId}, null, ${b.province}, ${b.retailerId}, ${shelf}, ${member}, ${special}, ${b.validUntil}::date, 'leaflet', ${observedAt}::timestamptz, ${batchId})`,
     );
     published++;
   }
