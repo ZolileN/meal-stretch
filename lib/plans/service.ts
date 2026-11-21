@@ -174,6 +174,23 @@ export async function createPlan(db: Db, household: Household, input: PlanInput,
   return stored;
 }
 
+/** Run the engine on an explicit request and store it as the household's new active plan (tweaks). */
+export async function createPlanFromRequest(db: Db, householdId: string, req: PlanRequest, now = new Date()): Promise<StoredPlan> {
+  const today = isoDateInSA(now);
+  const result = engine.plan(req, await engineContext(db, req, today));
+  const rows = await query<Record<string, unknown>>(
+    db,
+    sql`with archived as (
+          update plans set status = 'archived', updated_at = now() where household_id = ${householdId}::uuid and status = 'active'
+        )
+        insert into plans (household_id, start_date, days, request, result, engine_version, seed, price_as_of, status, paid_cents, normal_cents, savings_cents)
+        values (${householdId}::uuid, ${today}::date, ${req.days}, ${JSON.stringify(req)}::jsonb, ${JSON.stringify(result)}::jsonb, ${result.engineVersion},
+                ${req.seed}, ${result.priceAsOf}::date, 'active', ${result.totals.paidCents}, ${result.totals.normalCents}, ${result.totals.savingsCents})
+        returning *`,
+  );
+  return mapPlan(rows[0]!);
+}
+
 /** Save an updated result for an existing plan (meal actions, pantry changes). */
 export async function saveResult(db: Db, plan: StoredPlan, request: PlanRequest, result: PlanResult): Promise<StoredPlan> {
   const rows = await query<Record<string, unknown>>(

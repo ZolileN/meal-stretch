@@ -1,10 +1,10 @@
 # Build progress
 
 ## Checkpoint
-- Last completed: Phase 6 (2026-11-21)
-- Next: Phase 7, step 7.1
-- Test status: 233 unit/db/engine, 12 e2e, all green
-- Open human-todo items: 13
+- Last completed: Phase 7 (2026-11-21)
+- Next: Phase 8, step 8.1
+- Test status: 265 unit/db/engine, 13 e2e, all green
+- Open human-todo items: 16
 
 ## Phase 0: Repo foundation
 - [x] 0.1 Next.js App Router + TS strict + Tailwind + pnpm in this repo
@@ -71,11 +71,12 @@ Gate: SAV-1 PASS (savings page, e2e) · SAV-2 PASS (savings.test: no double coun
 - [x] 6.6 Tests: quiet hours, caps, payday maths
 
 ## Phase 7: Claude features
-- [ ] 7.1 lib/claude.ts wrapper (tool use, Zod, cache, logs, caps, fixture mode)
-- [ ] 7.2 Receipts pipeline
-- [ ] 7.3 Admin leaflet flow
-- [ ] 7.4 POST /api/plans/:id/tweak
-- [ ] 7.5 Tests: Zod rejections, PII, matching, caps, extraction harness
+Gate: RCP-1 PASS (size/type/consent, compressImage) · RCP-2 PASS (claude.ts + extraction schema; fixture mode) · RCP-3 PASS (matching tests) · RCP-4 PASS (verified savings only matched + known normal) · RCP-5 PASS (branch receipt observations test) · RCP-6 PASS (PII tests, 30-day delete cron, consent) · ADM-2 PASS lib (leaflet test) / UI in 8.4 · ADM-3 PASS lib · PLN-13 PASS (tweak unit + e2e) · caps/cache PASS (claude.test) · 90% accuracy harness PARTIAL (needs real slips, human-todo).
+- [x] 7.1 lib/claude.ts wrapper (tool use, Zod, cache, logs, caps, fixture mode)
+- [x] 7.2 Receipts pipeline
+- [x] 7.3 Admin leaflet flow (library + tests; admin screens land with 8.4)
+- [x] 7.4 POST /api/plans/:id/tweak
+- [x] 7.5 Tests: Zod rejections, PII, matching, caps, extraction harness
 
 ## Phase 8: Accounts, sharing, admin, pilot readiness
 - [ ] 8.1 Auth.js (Google + email) + anonymous merge

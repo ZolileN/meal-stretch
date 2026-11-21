@@ -1,7 +1,7 @@
 /** Writes validated price rows: products (+ aliases) upserted, observations appended, current_prices refreshed. */
 import { sql } from 'drizzle-orm';
 import { query, type Db } from '@/lib/db';
-import { normName } from '@/lib/location/normalize';
+import { normaliseProductName } from '@/lib/prices/match';
 import type { PriceSource } from '@/db/schema';
 import type { CsvRow, RejectedRow } from './csv';
 
@@ -14,7 +14,8 @@ export interface ImportResult {
 }
 
 export function productAlias(name: string, brand: string | null): string {
-  return normName([brand, name].filter(Boolean).join(' '));
+  // Same normalisation the matcher uses (§10.3): sizes and brand noise stripped.
+  return normaliseProductName([brand, name].filter(Boolean).join(' '));
 }
 
 export async function importPriceRows(

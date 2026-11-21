@@ -23,11 +23,14 @@
     "db:local": "tsx scripts/local-db.ts",
     "import:prices": "tsx scripts/import-prices-csv.ts",
     "import:osm": "tsx scripts/import-osm.ts",
-    "bench:engine": "pnpm --filter @mealstretch/engine bench"
+    "bench:engine": "pnpm --filter @mealstretch/engine bench",
+    "harness:receipts": "tsx scripts/receipt-harness.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.12.0",
     "@mealstretch/engine": "workspace:*",
     "@neondatabase/serverless": "^1.2.1",
+    "@vercel/blob": "^2.9.0",
     "drizzle-orm": "^0.45.4",
     "next": "^16.4.6",
     "next-intl": "^4.15.3",

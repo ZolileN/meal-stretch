@@ -29,6 +29,8 @@ export const serverEnvSchema = z.object({
   ANTHROPIC_API_KEY: optionalString,
   CLAUDE_MODEL_VISION: z.preprocess(emptyToUndefined, z.string().default('claude-sonnet-5-5')),
   CLAUDE_MODEL_FAST: z.preprocess(emptyToUndefined, z.string().default('claude-haiku-5-5')),
+  /** Where recorded Claude fixtures live (fixture mode without a key). */
+  CLAUDE_FIXTURE_DIR: z.preprocess(emptyToUndefined, z.string().default('fixtures/claude')),
 
   /** Legal gate (PRD §10.2 / §18): retailer website importers must stay disabled. */
   ENABLE_WEB_IMPORTERS: z.preprocess(

@@ -53,3 +53,15 @@ test.describe('onboarding + plan screen (Phase 4)', () => {
     expect(n).toBe(plan!.result.unpriced.length);
   });
 });
+
+test('natural-language tweak re-plans without fish (fixture mode without an API key)', async ({ page, context }) => {
+  const { chooseShop, planSuppers } = await import('./helpers');
+  await chooseShop(page, context, /TEST Checkers Somerset West/);
+  await planSuppers(page, { people: 2, budget: 900 });
+  await page.getByLabel('Change something?').fill('No fish this week and quicker meals');
+  await page.getByRole('button', { name: 'Update plan' }).click();
+  await expect(page.getByLabel('Change something?')).toHaveValue('');
+  const plan = await page.evaluate(async () => (await (await fetch('/api/plans/latest')).json()) as { plan: { request: { exclusions: string[]; maxCookMinutes: number } } });
+  expect(plan.plan.request.exclusions).toContain('fish');
+  expect(plan.plan.request.maxCookMinutes).toBe(30);
+});

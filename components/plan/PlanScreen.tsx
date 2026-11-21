@@ -11,6 +11,7 @@ import type { PlanView } from '@/lib/plans/view';
 import { useShops } from '@/components/location/LocationProvider';
 import { MealActions } from './MealActions';
 import { PlanExtras } from './PlanExtras';
+import { TweakBox } from './TweakBox';
 
 export function PlanScreen({ view, shoppedPrompt = false }: { view: PlanView; shoppedPrompt?: boolean }) {
   const t = useTranslations('plan');
@@ -168,6 +169,7 @@ export function PlanScreen({ view, shoppedPrompt = false }: { view: PlanView; sh
         ))}
       </ul>
 
+      {editable && <TweakBox planId={view.planId} />}
       {view.steal && <StealCard steal={view.steal} />}
       <PlanExtras />
     </main>

@@ -248,5 +248,34 @@
     "installTitle": "TODO: Put {brand} on your home screen",
     "installBody": "TODO: Open your plan and list with one tap, even offline.",
     "install": "TODO: Install"
+  },
+  "receipts": {
+    "title": "TODO: Scan a receipt",
+    "intro": "TODO: Take a clear photo of your till slip. We'll check what you paid against the normal price.",
+    "consent": "TODO: I agree that {brand} reads my slip to confirm my savings and to improve prices for my shops. Card numbers and names are removed, and the photo is deleted after 30 days.",
+    "photo": "TODO: Take or choose a photo",
+    "upload": "TODO: Check my slip",
+    "uploading": "TODO: Uploading…",
+    "reading": "TODO: Reading your slip…",
+    "confirmed": "TODO: Confirmed: you paid {paid}. Normal price {normal}. Saved {saved}.",
+    "matched": "TODO: matched",
+    "notMatched": "TODO: not matched yet",
+    "unmatchedNote": "TODO: Lines we couldn't match are shown but don't count towards your savings.",
+    "needsReview": "TODO: The total on your slip didn't add up, so we couldn't confirm it. Try a clearer photo of the whole slip.",
+    "failed": "TODO: We couldn't read that slip. Try again with a flat, well-lit photo.",
+    "tooLarge": "TODO: That photo is too big even after shrinking it. Try again.",
+    "cap": "TODO: You can scan 5 slips a day. Try again tomorrow.",
+    "needConsent": "TODO: Please tick the box first.",
+    "another": "TODO: Scan another",
+    "toSavings": "TODO: See my savings"
+  },
+  "tweak": {
+    "label": "TODO: Change something?",
+    "placeholder": "TODO: e.g. No fish this week, quicker meals",
+    "submit": "TODO: Update plan",
+    "working": "TODO: Updating…",
+    "notUnderstood": "TODO: Sorry, we didn't understand that. Try 'no fish' or 'quicker meals'.",
+    "cap": "TODO: You can make 10 changes a day.",
+    "failed": "TODO: We couldn't change the plan right now."
   }
 }

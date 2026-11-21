@@ -248,5 +248,34 @@
     "installTitle": "Put {brand} on your home screen",
     "installBody": "Open your plan and list with one tap, even offline.",
     "install": "Install"
+  },
+  "receipts": {
+    "title": "Scan a receipt",
+    "intro": "Take a clear photo of your till slip. We'll check what you paid against the normal price.",
+    "consent": "I agree that {brand} reads my slip to confirm my savings and to improve prices for my shops. Card numbers and names are removed, and the photo is deleted after 30 days.",
+    "photo": "Take or choose a photo",
+    "upload": "Check my slip",
+    "uploading": "Uploading…",
+    "reading": "Reading your slip…",
+    "confirmed": "Confirmed: you paid {paid}. Normal price {normal}. Saved {saved}.",
+    "matched": "matched",
+    "notMatched": "not matched yet",
+    "unmatchedNote": "Lines we couldn't match are shown but don't count towards your savings.",
+    "needsReview": "The total on your slip didn't add up, so we couldn't confirm it. Try a clearer photo of the whole slip.",
+    "failed": "We couldn't read that slip. Try again with a flat, well-lit photo.",
+    "tooLarge": "That photo is too big even after shrinking it. Try again.",
+    "cap": "You can scan 5 slips a day. Try again tomorrow.",
+    "needConsent": "Please tick the box first.",
+    "another": "Scan another",
+    "toSavings": "See my savings"
+  },
+  "tweak": {
+    "label": "Change something?",
+    "placeholder": "e.g. No fish this week, quicker meals",
+    "submit": "Update plan",
+    "working": "Updating…",
+    "notUnderstood": "Sorry, we didn't understand that. Try 'no fish' or 'quicker meals'.",
+    "cap": "You can make 10 changes a day.",
+    "failed": "We couldn't change the plan right now."
   }
 }
