@@ -19,3 +19,5 @@ blob-report/
 # Source documents (converted to PRD.md and docs/BUILD.md)
 *.docx
 AGENTS.md
+.env.*
+!.env.example
