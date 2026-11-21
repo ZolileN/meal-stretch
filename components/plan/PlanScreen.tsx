@@ -10,6 +10,7 @@ import { distanceLabel } from '@/lib/location/geo';
 import type { PlanView } from '@/lib/plans/view';
 import { useShops } from '@/components/location/LocationProvider';
 import { MealActions } from './MealActions';
+import { PlanExtras } from './PlanExtras';
 
 export function PlanScreen({ view, shoppedPrompt = false }: { view: PlanView; shoppedPrompt?: boolean }) {
   const t = useTranslations('plan');
@@ -166,6 +167,27 @@ export function PlanScreen({ view, shoppedPrompt = false }: { view: PlanView; sh
           </li>
         ))}
       </ul>
+
+      {view.steal && <StealCard steal={view.steal} />}
+      <PlanExtras />
     </main>
+  );
+}
+
+function StealCard({ steal }: { steal: NonNullable<PlanView['steal']> }) {
+  const t = useTranslations('steal');
+  const locale = useLocale();
+  return (
+    <section className="rounded-2xl border-2 border-accent bg-amber-50 p-4" data-testid="steal">
+      <h2 className="text-sm font-bold uppercase tracking-wide">{t('title')}</h2>
+      <p className="mt-1 font-semibold">
+        {t('line', { product: steal.productName, pack: steal.pack, price: formatRandShort(steal.specialCents), store: steal.retailerName })}
+      </p>
+      <p className="text-sm text-gray-700">
+        {t('was', { amount: formatRandShort(steal.normalCents) })} (−{steal.pct}%)
+        {steal.lowestInWeeks && ` · ${t('lowest', { weeks: steal.lowestInWeeks })}`}
+        {steal.endsOn && ` · ${t('ends', { date: dayMonth(steal.endsOn, locale) })}`}
+      </p>
+    </section>
   );
 }

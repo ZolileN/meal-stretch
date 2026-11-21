@@ -6,6 +6,7 @@ import { pgArray } from '@/lib/location/queries';
 import { productDetails } from '@/lib/prices/snapshot';
 import { loadIngredients, recipeNames } from '@/lib/recipes/queries';
 import type { StoredPlan } from './service';
+import { stealOfTheWeek } from '@/lib/savings';
 
 export interface PlanView {
   planId: string;
@@ -34,6 +35,7 @@ export interface PlanView {
   }[];
   unpriced: { ingredientId: string; name: string; recipes: string[] }[];
   listItems: number;
+  steal: import('@/lib/savings').Steal | null;
 }
 
 const FRACTIONS: [number, string][] = [
@@ -133,6 +135,7 @@ export async function buildPlanView(db: Db, plan: StoredPlan, language = 'en'): 
       recipes: u.recipes.map(recipeName),
     })),
     listItems: r.totals.items,
+    steal: await stealOfTheWeek(db, { branchIds: [plan.request.shops.mainBranchId, ...(plan.request.shops.topUpBranchId ? [plan.request.shops.topUpBranchId] : [])], asOf: r.priceAsOf }).catch(() => null),
   };
 }
 

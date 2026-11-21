@@ -10,6 +10,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: { default: BRAND.storeTitle, template: `%s · ${BRAND.name}` },
     description: t('description'),
     applicationName: BRAND.name,
+    icons: { icon: '/icons/icon-192.png', apple: '/icons/apple-touch-icon.png' },
+    appleWebApp: { capable: true, title: BRAND.shortName, statusBarStyle: 'default' },
   };
 }
 

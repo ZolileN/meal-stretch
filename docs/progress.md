@@ -1,10 +1,10 @@
 # Build progress
 
 ## Checkpoint
-- Last completed: Phase 5 (2026-11-21)
-- Next: Phase 6, step 6.1
-- Test status: 213 unit/db/engine, 10 e2e, all green
-- Open human-todo items: 10
+- Last completed: Phase 6 (2026-11-21)
+- Next: Phase 7, step 7.1
+- Test status: 233 unit/db/engine, 12 e2e, all green
+- Open human-todo items: 13
 
 ## Phase 0: Repo foundation
 - [x] 0.1 Next.js App Router + TS strict + Tailwind + pnpm in this repo
@@ -62,12 +62,13 @@ Gate: PLN-6 PASS (actions.test swap, e2e swap Tue) · PLN-7 PASS (cheaper never 
 - [x] 5.5 Tests: swap → offline ticks → persist; totals reconcile
 
 ## Phase 6: Savings, PWA, notifications
-- [ ] 6.1 Savings screen (lifetime, breakdown, receipt CTA)
-- [ ] 6.2 Steal of the week
-- [ ] 6.3 PWA manifest, icons, install prompt after first plan
-- [ ] 6.4 Web push with explanation screen
-- [ ] 6.5 Scheduler (Vercel Cron): tonight, month_end, payday, specials_day
-- [ ] 6.6 Tests: quiet hours, caps, payday maths
+Gate: SAV-1 PASS (savings page, e2e) · SAV-2 PASS (savings.test: no double count, only up) · SAV-3 PASS (Phase 5) · SAV-4 PASS (steal test + e2e) · §14 rules PASS (notify.test quiet hours/caps/payday; db notify.test) · PWA manifest/icons/install prompt PASS (e2e manifest; install prompt after first plan) · Lighthouse PWA PARTIAL (human: real device + Lighthouse run, human-todo).
+- [x] 6.1 Savings screen (lifetime, breakdown, receipt CTA)
+- [x] 6.2 Steal of the week
+- [x] 6.3 PWA manifest, icons, install prompt after first plan
+- [x] 6.4 Web push with explanation screen
+- [x] 6.5 Scheduler (Vercel Cron): tonight, month_end, payday, specials_day
+- [x] 6.6 Tests: quiet hours, caps, payday maths
 
 ## Phase 7: Claude features
 - [ ] 7.1 lib/claude.ts wrapper (tool use, Zod, cache, logs, caps, fixture mode)

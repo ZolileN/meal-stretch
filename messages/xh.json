@@ -193,5 +193,60 @@
     "timerDone": "TODO: Time's up!",
     "staple": "TODO: from your cupboard",
     "minutes": "TODO: {count} min"
+  },
+  "savings": {
+    "title": "TODO: Your savings",
+    "lifetime": "TODO: You've saved {amount} with {brand}",
+    "nothingYet": "TODO: Mark a shop as done to start your savings total.",
+    "specials": "TODO: From specials",
+    "cards": "TODO: From card prices",
+    "verified": "TODO: Confirmed by your slips",
+    "packSharing": "TODO: Pack sharing also saved you {amount} (not counted above)",
+    "counts": "TODO: {plans, plural, one {# shop} other {# shops}} · {receipts, plural, =0 {no slips yet} one {# slip} other {# slips}}",
+    "scan": "TODO: Scan a receipt",
+    "howCounted": "TODO: We count savings against the normal shelf price of the same packs, with no specials or cards."
+  },
+  "steal": {
+    "title": "TODO: Steal of the week",
+    "line": "TODO: {product} {pack} {price} at {store}",
+    "was": "TODO: was {amount}",
+    "lowest": "TODO: lowest in {weeks} weeks",
+    "ends": "TODO: until {date}"
+  },
+  "nav": {
+    "plan": "TODO: Plan",
+    "list": "TODO: List",
+    "savings": "TODO: Savings",
+    "settings": "TODO: Settings",
+    "label": "TODO: Main menu"
+  },
+  "notify": {
+    "tonightTitle": "TODO: Tonight: {name}",
+    "tonightBody": "TODO: {minutes} min · {perPlate} a plate",
+    "monthEndTitle": "TODO: {days} days to payday",
+    "monthEndBody": "TODO: Your suppers are planned until payday. Check the list before you shop.",
+    "paydayTitle": "TODO: Payday",
+    "paydayBody": "TODO: Plan the next stretch in one tap.",
+    "specialsTitle": "TODO: New specials are in",
+    "specialsBody": "TODO: See what they do to this week's suppers at {store}.",
+    "receiptTitle": "TODO: Snap your slip",
+    "receiptBody": "TODO: Confirm what you saved."
+  },
+  "push": {
+    "cardTitle": "TODO: Want a reminder at 4pm?",
+    "cardBody": "TODO: We'll tell you what's for supper tonight.",
+    "more": "TODO: Tell me more",
+    "notNow": "TODO: Not now",
+    "explainTitle": "TODO: Reminders from {brand}",
+    "explain1": "TODO: Tonight's supper at 4pm on days you have a plan.",
+    "explain2": "TODO: Payday, new specials and a nudge before month-end.",
+    "explain3": "TODO: Never more than one a day (plus tonight's supper), and never between 8pm and 7am.",
+    "explain4": "TODO: Switch any of them off in Settings.",
+    "allow": "TODO: Allow reminders",
+    "allowed": "TODO: Reminders are on.",
+    "denied": "TODO: Reminders are blocked in your browser settings.",
+    "installTitle": "TODO: Put {brand} on your home screen",
+    "installBody": "TODO: Open your plan and list with one tap, even offline.",
+    "install": "TODO: Install"
   }
 }

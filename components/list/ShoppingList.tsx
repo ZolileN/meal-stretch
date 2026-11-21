@@ -85,7 +85,7 @@ export function ShoppingList({ view, shareText }: { view: ListView; shareText: s
   const allTicked = keys.length > 0 && tickedCount === keys.length;
 
   return (
-    <main className="px-4 pb-28 pt-4">
+    <main className="px-4 pb-40 pt-4">
       <h1 className="text-xl font-bold">{t('title')}</h1>
       {!online && (
         <p role="status" className="mt-2 rounded-lg bg-amber-100 p-2 text-sm">
@@ -198,7 +198,7 @@ export function ShoppingList({ view, shareText }: { view: ListView; shareText: s
         </div>
       )}
 
-      <footer className="fixed inset-x-0 bottom-0 z-30 border-t bg-white px-4 py-3">
+      <footer className="fixed inset-x-0 bottom-[52px] z-30 border-t bg-white px-4 py-3">
         <p className="mx-auto max-w-md text-center text-lg font-bold" data-testid="list-footer" aria-live="polite">
           {t('total', { amount: R(view.totalCents), ticked: tickedCount, count: keys.length })}
         </p>

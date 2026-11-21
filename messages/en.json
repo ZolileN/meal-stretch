@@ -193,5 +193,60 @@
     "timerDone": "Time's up!",
     "staple": "from your cupboard",
     "minutes": "{count} min"
+  },
+  "savings": {
+    "title": "Your savings",
+    "lifetime": "You've saved {amount} with {brand}",
+    "nothingYet": "Mark a shop as done to start your savings total.",
+    "specials": "From specials",
+    "cards": "From card prices",
+    "verified": "Confirmed by your slips",
+    "packSharing": "Pack sharing also saved you {amount} (not counted above)",
+    "counts": "{plans, plural, one {# shop} other {# shops}} · {receipts, plural, =0 {no slips yet} one {# slip} other {# slips}}",
+    "scan": "Scan a receipt",
+    "howCounted": "We count savings against the normal shelf price of the same packs, with no specials or cards."
+  },
+  "steal": {
+    "title": "Steal of the week",
+    "line": "{product} {pack} {price} at {store}",
+    "was": "was {amount}",
+    "lowest": "lowest in {weeks} weeks",
+    "ends": "until {date}"
+  },
+  "nav": {
+    "plan": "Plan",
+    "list": "List",
+    "savings": "Savings",
+    "settings": "Settings",
+    "label": "Main menu"
+  },
+  "notify": {
+    "tonightTitle": "Tonight: {name}",
+    "tonightBody": "{minutes} min · {perPlate} a plate",
+    "monthEndTitle": "{days} days to payday",
+    "monthEndBody": "Your suppers are planned until payday. Check the list before you shop.",
+    "paydayTitle": "Payday",
+    "paydayBody": "Plan the next stretch in one tap.",
+    "specialsTitle": "New specials are in",
+    "specialsBody": "See what they do to this week's suppers at {store}.",
+    "receiptTitle": "Snap your slip",
+    "receiptBody": "Confirm what you saved."
+  },
+  "push": {
+    "cardTitle": "Want a reminder at 4pm?",
+    "cardBody": "We'll tell you what's for supper tonight.",
+    "more": "Tell me more",
+    "notNow": "Not now",
+    "explainTitle": "Reminders from {brand}",
+    "explain1": "Tonight's supper at 4pm on days you have a plan.",
+    "explain2": "Payday, new specials and a nudge before month-end.",
+    "explain3": "Never more than one a day (plus tonight's supper), and never between 8pm and 7am.",
+    "explain4": "Switch any of them off in Settings.",
+    "allow": "Allow reminders",
+    "allowed": "Reminders are on.",
+    "denied": "Reminders are blocked in your browser settings.",
+    "installTitle": "Put {brand} on your home screen",
+    "installBody": "Open your plan and list with one tap, even offline.",
+    "install": "Install"
   }
 }
