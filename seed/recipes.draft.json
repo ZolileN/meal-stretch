@@ -1,0 +1,3230 @@
+{
+ "_comment": "DRAFTS written by Claude for human review. Every recipe must be reviewed and cook-tested before published = true (PRD §11.2).",
+ "recipes": [
+  {
+   "id": "chicken_livers_peri_peri_pap",
+   "name": "Chicken livers peri-peri & pap",
+   "description": "Peri-peri chicken livers in tomato sauce with pap.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:chicken_livers",
+    "starch:maize_meal",
+    "no_oven"
+   ],
+   "steps": [
+    "Cook the pap.",
+    "Fry onion and garlic, add the livers and brown quickly.",
+    "Add tomatoes and peri-peri spice; simmer 10 minutes.",
+    "Serve on pap."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_livers",
+     "qty": 125
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "peri_peri_spice",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "egg_potato_curry",
+   "name": "Egg & potato curry",
+   "description": "Boiled eggs and potatoes in a tomato curry, with rice.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:eggs",
+    "starch:rice",
+    "meat_free",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Boil the eggs 10 minutes and peel.",
+    "Fry onion, add curry powder, tomatoes and diced potatoes; simmer 20 minutes.",
+    "Add the halved eggs and warm through.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "eggs",
+     "qty": 2
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "turmeric",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "beef_stew_dumplings",
+   "name": "Beef stew & dumplings",
+   "description": "Slow beef stew with carrots, topped with steamed dumplings.",
+   "cookMinutes": 90,
+   "tags": [
+    "protein:beef_stewing",
+    "starch:cake_flour",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Brown the beef in oil, add onion, then water, stock and soup powder; simmer 1 hour.",
+    "Add carrots and potatoes.",
+    "Mix flour, baking powder, salt and water into a soft dough; drop spoonfuls on top.",
+    "Cover and steam 20 minutes without lifting the lid."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_stewing",
+     "qty": 150
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "cake_flour",
+     "qty": 50
+    },
+    {
+     "id": "baking_powder",
+     "qty": 2
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 10
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "lentil_curry_rice",
+   "name": "Lentil curry & rice",
+   "description": "Red lentil curry with tomato and spinach.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:red_lentils",
+    "starch:rice",
+    "meat_free",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Fry onion, garlic and curry powder.",
+    "Add lentils, tomatoes and water; simmer 20 minutes until soft.",
+    "Stir in the spinach for the last 3 minutes.",
+    "Serve on rice."
+   ],
+   "ingredients": [
+    {
+     "id": "red_lentils",
+     "qty": 60
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "spinach",
+     "qty": 50
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "tuna_pasta",
+   "name": "Tuna pasta",
+   "description": "Creamy tuna pasta with peas.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:tuna_tin",
+    "starch:pasta",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Cook the pasta, adding the peas for the last 3 minutes.",
+    "Drain, keeping a splash of water.",
+    "Stir through the tuna, mayonnaise and a little pasta water.",
+    "Season with pepper."
+   ],
+   "ingredients": [
+    {
+     "id": "tuna_tin",
+     "qty": 45
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 50
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 20
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "black_pepper",
+     "qty": 1
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_veg_pot",
+   "name": "Chicken & veg pot",
+   "description": "One-pot chicken with potatoes, carrots and cabbage.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:potatoes",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Brown the chicken with onion.",
+    "Add potatoes, carrots, stock and water; simmer 30 minutes.",
+    "Add the cabbage and cook 10 more minutes.",
+    "Season and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 180
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "cabbage",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "pap_wors_tomato_gravy",
+   "name": "Pap & wors with tomato gravy",
+   "description": "Boerewors and stiff pap with a quick tomato and onion gravy.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:boerewors",
+    "starch:maize_meal",
+    "no_oven"
+   ],
+   "steps": [
+    "Cook stiff pap.",
+    "Fry the wors until done.",
+    "Fry onion and tomato with a pinch of sugar until saucy.",
+    "Serve wors and gravy on pap."
+   ],
+   "ingredients": [
+    {
+     "id": "boerewors",
+     "qty": 125
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "tomato",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "sugar",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "spinach_pilchard_stew",
+   "name": "Spinach & pilchard stew",
+   "description": "Pilchards and spinach in tomato, served with pap.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:pilchards_tin",
+    "starch:maize_meal",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Cook the pap.",
+    "Fry onion, add the pilchards with their sauce and the tomato.",
+    "Add chopped spinach and simmer 10 minutes.",
+    "Serve with pap."
+   ],
+   "ingredients": [
+    {
+     "id": "pilchards_tin",
+     "qty": 100
+    },
+    {
+     "id": "spinach",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "pasta_mince_tomato",
+   "name": "Pasta with mince & tomato",
+   "description": "Everyday mince and tomato pasta.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:beef_mince",
+    "starch:pasta",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Brown the mince with onion and garlic.",
+    "Add tinned tomatoes, paste and herbs; simmer 15 minutes.",
+    "Cook the pasta.",
+    "Toss together and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "tomato_paste",
+     "qty": 10
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_feet_stew_pap",
+   "name": "Chicken feet stew & pap",
+   "description": "Slow-cooked chicken feet in a spicy tomato gravy.",
+   "cookMinutes": 60,
+   "tags": [
+    "protein:chicken_feet",
+    "starch:maize_meal",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Clean the feet and boil 20 minutes; drain.",
+    "Fry onion and curry powder, add tomatoes, stock and the feet.",
+    "Simmer 30 minutes until tender.",
+    "Serve with pap."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_feet",
+     "qty": 200
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_curry_rice",
+   "name": "Chicken curry & rice",
+   "description": "Mild chicken and potato curry.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:rice",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Fry onion, garlic and curry powder in oil.",
+    "Add the chicken and brown.",
+    "Add tomatoes, potatoes and water; simmer 30 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 180
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 4
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_mince_bolognaise",
+   "name": "Chicken mince bolognaise",
+   "description": "Lighter bolognaise made with chicken mince.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:chicken_mince",
+    "starch:pasta",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Brown the chicken mince with onion and carrot.",
+    "Add tomatoes, paste and herbs; simmer 15 minutes.",
+    "Cook the pasta.",
+    "Serve the sauce on the pasta."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_mince",
+     "qty": 110
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "tomato_paste",
+     "qty": 10
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "oven_drumsticks_potatoes",
+   "name": "Oven drumsticks & potatoes",
+   "description": "Spiced drumsticks roasted on a tray with potato wedges.",
+   "cookMinutes": 55,
+   "tags": [
+    "protein:chicken_drumsticks",
+    "starch:potatoes",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Heat the oven to 200 °C.",
+    "Toss drumsticks and potato wedges in oil and braai spice.",
+    "Roast 45 minutes, turning once.",
+    "Serve with a quick tomato and onion salad."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_drumsticks",
+     "qty": 200
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "braai_spice",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "polony_egg_fried_rice",
+   "name": "Polony & egg fried rice",
+   "description": "Fried rice with polony, egg and peas.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:polony",
+    "starch:rice",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Cook the rice (or use yesterday's).",
+    "Fry diced polony and onion.",
+    "Push aside, scramble the eggs, then add peas and rice.",
+    "Season and toss until hot."
+   ],
+   "ingredients": [
+    {
+     "id": "polony",
+     "qty": 60
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 50
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "viennas_beans_pap",
+   "name": "Viennas & beans on pap",
+   "description": "Viennas in baked beans with soft pap.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:viennas",
+    "starch:maize_meal",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Cook the pap.",
+    "Slice viennas and fry with onion.",
+    "Add baked beans and warm through.",
+    "Serve on pap."
+   ],
+   "ingredients": [
+    {
+     "id": "viennas",
+     "qty": 80
+    },
+    {
+     "id": "baked_beans",
+     "qty": 100
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "pork_chops_cabbage_mash",
+   "name": "Pork chops, cabbage & mash",
+   "description": "Pan-fried pork chops with mash and cabbage.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:pork_chops",
+    "starch:potatoes",
+    "no_oven"
+   ],
+   "steps": [
+    "Boil and mash the potatoes with margarine and milk.",
+    "Season and fry the chops 5 minutes a side.",
+    "Fry the cabbage with onion until soft.",
+    "Serve together."
+   ],
+   "ingredients": [
+    {
+     "id": "pork_chops",
+     "qty": 150
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "cabbage",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "margarine",
+     "qty": 10
+    },
+    {
+     "id": "milk",
+     "qty": 30
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "pork_sausage_potato_bake",
+   "name": "Sausage & potato bake",
+   "description": "Pork sausages baked with potatoes and onions.",
+   "cookMinutes": 55,
+   "tags": [
+    "protein:pork_sausages",
+    "starch:potatoes",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Heat the oven to 200 °C.",
+    "Toss sliced potatoes and onion in oil and herbs in a tray.",
+    "Add the sausages and bake 40 minutes.",
+    "Serve hot."
+   ],
+   "ingredients": [
+    {
+     "id": "pork_sausages",
+     "qty": 125
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "pan_fried_hake_wedges",
+   "name": "Pan-fried hake & potato wedges",
+   "description": "Crisp hake fillets with pan-fried wedges and peas.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:hake_fillets",
+    "starch:potatoes",
+    "no_oven"
+   ],
+   "steps": [
+    "Par-boil the potato wedges 8 minutes and drain.",
+    "Fry the wedges in oil until golden.",
+    "Dust the hake in seasoned flour and fry 3 minutes a side.",
+    "Serve with peas."
+   ],
+   "ingredients": [
+    {
+     "id": "hake_fillets",
+     "qty": 130
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "cake_flour",
+     "qty": 15
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 50
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "tuna_fried_rice",
+   "name": "Tuna fried rice",
+   "description": "Fried rice with tuna, egg and mixed veg.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:tuna_tin",
+    "starch:rice",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Cook the rice.",
+    "Fry onion and the mixed veg.",
+    "Add the rice and tuna, then scrambled egg.",
+    "Season and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "tuna_tin",
+     "qty": 45
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "mixed_veg_frozen",
+     "qty": 75
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "mince_cottage_pie",
+   "name": "Cottage pie",
+   "description": "Mince and veg topped with mash and baked.",
+   "cookMinutes": 60,
+   "tags": [
+    "protein:beef_mince",
+    "starch:potatoes",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Brown the mince with onion and carrots; add tomatoes and soup powder.",
+    "Boil and mash the potatoes with margarine and milk.",
+    "Spread the mince in a dish, top with mash.",
+    "Bake at 180 °C for 25 minutes."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 110
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 50
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 10
+    },
+    {
+     "id": "margarine",
+     "qty": 10
+    },
+    {
+     "id": "milk",
+     "qty": 30
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "samp_and_mince",
+   "name": "Samp & mince",
+   "description": "Soft samp with a savoury mince stew.",
+   "cookMinutes": 80,
+   "tags": [
+    "protein:beef_mince",
+    "starch:samp",
+    "no_oven"
+   ],
+   "steps": [
+    "Soak and boil the samp about 1 hour until soft.",
+    "Brown the mince with onion and carrot.",
+    "Add tomatoes and stock; simmer 15 minutes.",
+    "Serve the mince on the samp."
+   ],
+   "ingredients": [
+    {
+     "id": "samp",
+     "qty": 80
+    },
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "butternut_lentil_soup",
+   "name": "Butternut & lentil soup with bread",
+   "description": "Thick butternut and lentil soup with bread.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:red_lentils",
+    "starch:bread",
+    "meat_free",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Fry onion and curry powder.",
+    "Add diced butternut, lentils, stock and water; simmer 25 minutes.",
+    "Mash or blend until thick.",
+    "Serve with bread."
+   ],
+   "ingredients": [
+    {
+     "id": "butternut",
+     "qty": 200
+    },
+    {
+     "id": "red_lentils",
+     "qty": 40
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "bread",
+     "qty": 100
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "sugar_bean_curry_rice",
+   "name": "Sugar bean curry & rice",
+   "description": "Hearty sugar bean curry.",
+   "cookMinutes": 80,
+   "tags": [
+    "protein:sugar_beans",
+    "starch:rice",
+    "meat_free",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Soak the beans overnight, then boil 50 minutes until soft.",
+    "Fry onion, garlic and curry powder; add tomatoes.",
+    "Add the beans and simmer 15 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "sugar_beans",
+     "qty": 60
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "bean_potato_curry",
+   "name": "Bean & potato curry",
+   "description": "Butter beans and potatoes in a mild curry.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:butter_beans",
+    "starch:rice",
+    "meat_free",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Fry onion and curry powder.",
+    "Add potatoes, tomatoes and water; simmer 15 minutes.",
+    "Add the butter beans; simmer 5 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "butter_beans",
+     "qty": 100
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "rice",
+     "qty": 60
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "cheesy_macaroni",
+   "name": "Stovetop macaroni & cheese",
+   "description": "Creamy macaroni cheese made in one pot.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:cheddar_cheese",
+    "starch:pasta",
+    "meat_free",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Cook the macaroni.",
+    "Melt margarine, stir in flour, then whisk in milk until thick.",
+    "Stir in the grated cheese.",
+    "Mix with the pasta and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 40
+    },
+    {
+     "id": "milk",
+     "qty": 150
+    },
+    {
+     "id": "margarine",
+     "qty": 10
+    },
+    {
+     "id": "cake_flour",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "tomato_egg_stew_pap",
+   "name": "Tomato & egg stew with pap",
+   "description": "Eggs poached in a tomato and onion stew.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:eggs",
+    "starch:maize_meal",
+    "meat_free",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Cook the pap.",
+    "Fry onion and green pepper, add tomatoes and simmer 10 minutes.",
+    "Make hollows and crack in the eggs; cover until set.",
+    "Serve with pap."
+   ],
+   "ingredients": [
+    {
+     "id": "eggs",
+     "qty": 2
+    },
+    {
+     "id": "tomato",
+     "qty": 100
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 50
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "green_pepper",
+     "qty": 50
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_breyani",
+   "name": "Chicken breyani",
+   "description": "One-pot rice, chicken, lentils and potatoes.",
+   "cookMinutes": 70,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:rice",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Brown the chicken with onion and spices.",
+    "Add tomatoes and potatoes; simmer 15 minutes.",
+    "Add rice, lentils and water; cover and cook on low 30 minutes.",
+    "Fluff and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 170
+    },
+    {
+     "id": "rice",
+     "qty": 70
+    },
+    {
+     "id": "red_lentils",
+     "qty": 20
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 50
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "turmeric",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "mince_potato_curry_bread",
+   "name": "Mince & potato curry with bread",
+   "description": "Mince curry with potato, mopped up with bread.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:beef_mince",
+    "starch:bread",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Fry onion and curry powder, add mince and brown.",
+    "Add tomatoes and potatoes with water.",
+    "Simmer 20 minutes.",
+    "Serve with bread."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 110
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "bread",
+     "qty": 100
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chakalaka_beans_pap",
+   "name": "Chakalaka, beans & pap",
+   "description": "Chakalaka and baked beans warmed together with pap.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:baked_beans",
+    "starch:maize_meal",
+    "meat_free",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Cook the pap.",
+    "Fry onion, add chakalaka and baked beans.",
+    "Simmer 5 minutes.",
+    "Serve on pap."
+   ],
+   "ingredients": [
+    {
+     "id": "baked_beans",
+     "qty": 100
+    },
+    {
+     "id": "chakalaka",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "morogo_eggs_pap",
+   "name": "Spinach, eggs & pap",
+   "description": "Wilted spinach with onion and scrambled eggs, on pap.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:eggs",
+    "starch:maize_meal",
+    "meat_free",
+    "no_oven"
+   ],
+   "steps": [
+    "Cook the pap.",
+    "Fry onion and tomato, add chopped spinach until wilted.",
+    "Scramble the eggs separately.",
+    "Serve together."
+   ],
+   "ingredients": [
+    {
+     "id": "eggs",
+     "qty": 2
+    },
+    {
+     "id": "spinach",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_liver_curry_rice",
+   "name": "Chicken liver curry & rice",
+   "description": "Quick chicken liver curry.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:chicken_livers",
+    "starch:rice",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Fry onion, garlic and curry powder.",
+    "Add the livers and brown.",
+    "Add tomatoes; simmer 10 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_livers",
+     "qty": 125
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "pilchard_curry_rice",
+   "name": "Pilchard curry & rice",
+   "description": "Pilchards in a quick tomato curry.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:pilchards_tin",
+    "starch:rice",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Fry onion and curry powder.",
+    "Add tomatoes and simmer 5 minutes.",
+    "Add the pilchards and warm through gently.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "pilchards_tin",
+     "qty": 100
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 75
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "boerewors_rolls",
+   "name": "Boerewors rolls with tomato relish",
+   "description": "Wors rolls with a tomato and onion relish.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:boerewors",
+    "starch:bread",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Fry or braai the wors.",
+    "Cook onion and tomato with sugar until jammy.",
+    "Slice the bread or rolls.",
+    "Serve wors in bread with the relish."
+   ],
+   "ingredients": [
+    {
+     "id": "boerewors",
+     "qty": 125
+    },
+    {
+     "id": "bread",
+     "qty": 120
+    },
+    {
+     "id": "tomato",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "sugar",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "mince_vetkoek",
+   "name": "Vetkoek & curried mince",
+   "description": "Fried bread dough with curried mince.",
+   "cookMinutes": 60,
+   "tags": [
+    "protein:beef_mince",
+    "starch:cake_flour",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Mix flour, baking powder, salt and water into a dough; rest 20 minutes.",
+    "Cook curried mince with onion and tomato.",
+    "Fry spoonfuls of dough in hot oil until puffed and golden.",
+    "Split and fill with mince."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "cake_flour",
+     "qty": 100
+    },
+    {
+     "id": "baking_powder",
+     "qty": 2
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 50
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 40
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_a_la_king_rice",
+   "name": "Chicken à la king & rice",
+   "description": "Creamy chicken with peas and green pepper on rice.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:rice",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Fry diced chicken and onion.",
+    "Add green pepper, then flour, then milk; stir until thick.",
+    "Add the peas and simmer 5 minutes.",
+    "Serve on rice."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 130
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "milk",
+     "qty": 100
+    },
+    {
+     "id": "cake_flour",
+     "qty": 10
+    },
+    {
+     "id": "green_pepper",
+     "qty": 50
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 40
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_stir_fry_rice",
+   "name": "Chicken & veg stir-fry",
+   "description": "Quick chicken and mixed veg stir-fry on rice.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:rice",
+    "no_oven"
+   ],
+   "steps": [
+    "Cook the rice.",
+    "Fry strips of chicken in hot oil.",
+    "Add onion and mixed veg; stir-fry 5 minutes.",
+    "Season and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 130
+    },
+    {
+     "id": "mixed_veg_frozen",
+     "qty": 100
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "soya_mince_curry_rice",
+   "name": "Soya mince curry & rice",
+   "description": "Spiced soya mince with potatoes and peas.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:soya_mince",
+    "starch:rice",
+    "meat_free",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Fry onion and curry powder.",
+    "Add soya mince, tomatoes, potatoes and water.",
+    "Simmer 15 minutes, adding the peas at the end.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "soya_mince",
+     "qty": 30
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 50
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "cabbage_potato_curry",
+   "name": "Cabbage & potato curry",
+   "description": "Simple cabbage and potato curry with bread.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:cabbage",
+    "starch:bread",
+    "meat_free",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Fry onion, curry powder and turmeric.",
+    "Add potatoes and a little water; cook 10 minutes.",
+    "Add the cabbage and cook 10 minutes more.",
+    "Serve with bread."
+   ],
+   "ingredients": [
+    {
+     "id": "cabbage",
+     "qty": 200
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "bread",
+     "qty": 80
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "turmeric",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "lentil_cottage_pie",
+   "name": "Lentil cottage pie",
+   "description": "Lentils and veg under a mash topping, baked.",
+   "cookMinutes": 60,
+   "tags": [
+    "protein:red_lentils",
+    "starch:potatoes",
+    "meat_free",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Simmer lentils with onion, carrot, tomatoes and stock 20 minutes.",
+    "Boil and mash the potatoes with margarine.",
+    "Top the lentils with mash in a dish.",
+    "Bake at 180 °C for 25 minutes."
+   ],
+   "ingredients": [
+    {
+     "id": "red_lentils",
+     "qty": 60
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "margarine",
+     "qty": 10
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "beef_stew_samp",
+   "name": "Beef stew & samp",
+   "description": "Slow beef stew on soft samp.",
+   "cookMinutes": 100,
+   "tags": [
+    "protein:beef_stewing",
+    "starch:samp",
+    "no_oven"
+   ],
+   "steps": [
+    "Boil soaked samp about 1 hour.",
+    "Brown the beef with onion; add stock and soup powder.",
+    "Simmer 1 hour, adding carrots for the last 20 minutes.",
+    "Serve on samp."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_stewing",
+     "qty": 150
+    },
+    {
+     "id": "samp",
+     "qty": 80
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 10
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_soup_bread",
+   "name": "Chicken & vegetable soup with bread",
+   "description": "A thick chicken soup with veg and bread.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:bread",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Simmer the chicken in water with stock 25 minutes.",
+    "Remove bones, add carrots, potatoes, onion and cabbage.",
+    "Simmer 15 minutes.",
+    "Serve with bread."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 150
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "cabbage",
+     "qty": 75
+    },
+    {
+     "id": "bread",
+     "qty": 80
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "viennas_pasta",
+   "name": "Viennas & tomato pasta",
+   "description": "Kid-friendly pasta with viennas in tomato sauce.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:viennas",
+    "starch:pasta",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Cook the pasta.",
+    "Fry sliced viennas with onion.",
+    "Add tomatoes and paste; simmer 5 minutes.",
+    "Toss with the pasta."
+   ],
+   "ingredients": [
+    {
+     "id": "viennas",
+     "qty": 80
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "tomato_paste",
+     "qty": 10
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "egg_veg_fried_rice",
+   "name": "Egg & veg fried rice",
+   "description": "Meat-free fried rice with egg and mixed veg.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:eggs",
+    "starch:rice",
+    "meat_free",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Cook the rice.",
+    "Fry onion and mixed veg.",
+    "Add rice, then the beaten eggs, stirring.",
+    "Season and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "eggs",
+     "qty": 2
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "mixed_veg_frozen",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "one_pot_mince_rice",
+   "name": "One-pot mince rice",
+   "description": "Mince, tomato and rice cooked together jollof-style.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:beef_mince",
+    "starch:rice",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Brown mince with onion and green pepper.",
+    "Add paprika, tomatoes and the rice; stir.",
+    "Add water, cover and cook on low 20 minutes.",
+    "Fluff and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "green_pepper",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "paprika",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "peri_peri_drumsticks_rice",
+   "name": "Peri-peri drumsticks & rice",
+   "description": "Pan-cooked peri-peri drumsticks.",
+   "cookMinutes": 45,
+   "tags": [
+    "protein:chicken_drumsticks",
+    "starch:rice",
+    "no_oven"
+   ],
+   "steps": [
+    "Rub drumsticks with peri-peri spice and oil.",
+    "Brown in a covered pan, then cook on low 30 minutes, turning.",
+    "Cook the rice.",
+    "Serve with a tomato and onion salad."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_drumsticks",
+     "qty": 200
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "tomato",
+     "qty": 50
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "peri_peri_spice",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "hake_curry_rice",
+   "name": "Fish curry & rice",
+   "description": "Hake fillets in a tomato curry.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:hake_fillets",
+    "starch:rice",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Fry onion, garlic and curry powder.",
+    "Add tomatoes and simmer 10 minutes.",
+    "Add the hake in chunks; simmer gently 8 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "hake_fillets",
+     "qty": 130
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "tuna_potato_bake",
+   "name": "Tuna & potato bake",
+   "description": "Layered potato, tuna and cheese bake.",
+   "cookMinutes": 55,
+   "tags": [
+    "protein:tuna_tin",
+    "starch:potatoes",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Par-boil sliced potatoes 8 minutes.",
+    "Make a white sauce with margarine, flour and milk.",
+    "Layer potatoes, tuna and sauce; top with cheese.",
+    "Bake at 180 °C for 30 minutes."
+   ],
+   "ingredients": [
+    {
+     "id": "tuna_tin",
+     "qty": 45
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "milk",
+     "qty": 100
+    },
+    {
+     "id": "cake_flour",
+     "qty": 10
+    },
+    {
+     "id": "margarine",
+     "qty": 10
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 20
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "pap_mince_gravy",
+   "name": "Pap & mince gravy",
+   "description": "Stiff pap with a savoury mince gravy.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:beef_mince",
+    "starch:maize_meal",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Cook stiff pap.",
+    "Brown the mince with onion.",
+    "Add soup powder mixed with water and simmer until thick.",
+    "Serve on pap."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 15
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_frikkadels_mash",
+   "name": "Chicken frikkadels & mash",
+   "description": "Chicken mince meatballs with mash and peas.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:chicken_mince",
+    "starch:potatoes",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Mix the mince with grated onion, egg and bread.",
+    "Shape and fry the frikkadels until cooked.",
+    "Boil and mash the potatoes with margarine.",
+    "Serve with peas."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_mince",
+     "qty": 110
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "bread",
+     "qty": 25
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "margarine",
+     "qty": 10
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 50
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "mince_macaroni_bake",
+   "name": "Mince macaroni bake",
+   "description": "Macaroni and mince baked with cheese.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:beef_mince",
+    "starch:pasta",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Cook the macaroni.",
+    "Make a mince and tomato sauce.",
+    "Mix with the pasta in a dish and top with cheese.",
+    "Bake at 180 °C for 20 minutes."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "cheddar_cheese",
+     "qty": 25
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "spinach_potato_curry",
+   "name": "Spinach & potato curry",
+   "description": "Potatoes and spinach in a light curry, with rice.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:spinach",
+    "starch:rice",
+    "meat_free",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Fry onion, garlic and curry powder.",
+    "Add potatoes, tomatoes and water; simmer 15 minutes.",
+    "Add spinach and cook 5 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "spinach",
+     "qty": 100
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 75
+    },
+    {
+     "id": "rice",
+     "qty": 60
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_samp_stew",
+   "name": "Chicken & samp stew",
+   "description": "Chicken stewed with samp and veg.",
+   "cookMinutes": 90,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:samp",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Boil soaked samp about 1 hour.",
+    "Brown the chicken with onion; add stock and carrots.",
+    "Simmer 30 minutes.",
+    "Stir together and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 160
+    },
+    {
+     "id": "samp",
+     "qty": 80
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "butternut_mince_rice",
+   "name": "Butternut & mince with rice",
+   "description": "Mince with pan-cooked butternut.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:beef_mince",
+    "starch:rice",
+    "no_oven"
+   ],
+   "steps": [
+    "Cook the rice.",
+    "Fry cubed butternut in a covered pan until soft.",
+    "Brown mince with onion and add tomatoes.",
+    "Serve together."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 100
+    },
+    {
+     "id": "butternut",
+     "qty": 150
+    },
+    {
+     "id": "rice",
+     "qty": 60
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 50
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_tomato_bredie",
+   "name": "Chicken tomato bredie",
+   "description": "Cape-style tomato bredie with chicken and potatoes.",
+   "cookMinutes": 60,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:potatoes",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Brown the chicken with onion.",
+    "Add tomatoes, potatoes, a pinch of sugar and water.",
+    "Simmer 40 minutes until thick.",
+    "Season and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 170
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "tomato",
+     "qty": 100
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "sugar",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "beef_mince_chilli_rice",
+   "name": "Beef & bean chilli with rice",
+   "description": "Mince stretched with butter beans in a mild chilli.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:beef_mince",
+    "starch:rice",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Brown mince with onion and green pepper.",
+    "Add paprika, tomatoes and butter beans.",
+    "Simmer 15 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 80
+    },
+    {
+     "id": "butter_beans",
+     "qty": 75
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "green_pepper",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "paprika",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "polony_potato_hash",
+   "name": "Polony & potato hash",
+   "description": "Fried potatoes and polony with egg.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:polony",
+    "starch:potatoes",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Boil diced potatoes 8 minutes and drain.",
+    "Fry with onion until crisp.",
+    "Add diced polony and warm through.",
+    "Top each plate with a fried egg."
+   ],
+   "ingredients": [
+    {
+     "id": "polony",
+     "qty": 60
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "samp_chakalaka",
+   "name": "Samp with chakalaka",
+   "description": "Samp and beans topped with chakalaka.",
+   "cookMinutes": 80,
+   "tags": [
+    "protein:sugar_beans",
+    "starch:samp",
+    "meat_free",
+    "no_oven"
+   ],
+   "steps": [
+    "Boil soaked samp and beans until soft.",
+    "Season with stock.",
+    "Warm the chakalaka.",
+    "Serve chakalaka over the samp."
+   ],
+   "ingredients": [
+    {
+     "id": "samp",
+     "qty": 80
+    },
+    {
+     "id": "sugar_beans",
+     "qty": 30
+    },
+    {
+     "id": "chakalaka",
+     "qty": 100
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_livers_pasta",
+   "name": "Chicken livers & pasta",
+   "description": "Creamy chicken livers on pasta.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:chicken_livers",
+    "starch:pasta",
+    "no_oven"
+   ],
+   "steps": [
+    "Cook the pasta.",
+    "Fry onion and livers until browned.",
+    "Add a little milk and peri-peri spice; simmer 5 minutes.",
+    "Serve on pasta."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_livers",
+     "qty": 110
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "milk",
+     "qty": 50
+    },
+    {
+     "id": "peri_peri_spice",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "lentil_soup_egg_sandwiches",
+   "name": "Lentil soup & egg sandwiches",
+   "description": "Lentil and tomato soup with egg mayo sandwiches.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:red_lentils",
+    "starch:bread",
+    "meat_free",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Simmer lentils with onion, tomatoes and stock 20 minutes.",
+    "Boil, peel and mash the eggs with mayonnaise.",
+    "Make sandwiches.",
+    "Serve with the soup."
+   ],
+   "ingredients": [
+    {
+     "id": "red_lentils",
+     "qty": 40
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 15
+    },
+    {
+     "id": "bread",
+     "qty": 100
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "pork_chop_rice_peas",
+   "name": "Pork chops, rice & peas",
+   "description": "Pan-fried chops with rice and peas.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:pork_chops",
+    "starch:rice",
+    "no_oven"
+   ],
+   "steps": [
+    "Cook the rice.",
+    "Season and fry the chops.",
+    "Cook the peas.",
+    "Serve with gravy from the pan."
+   ],
+   "ingredients": [
+    {
+     "id": "pork_chops",
+     "qty": 150
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 60
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 10
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "hake_fishcakes_salad",
+   "name": "Hake fishcakes & salad",
+   "description": "Hake and potato fishcakes with tomato salad.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:hake_fillets",
+    "starch:potatoes",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Poach the hake and flake it.",
+    "Boil and mash the potatoes; mix with fish, egg and onion.",
+    "Shape and fry in oil.",
+    "Serve with tomato and onion salad."
+   ],
+   "ingredients": [
+    {
+     "id": "hake_fillets",
+     "qty": 100
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "tomato",
+     "qty": 75
+    },
+    {
+     "id": "cake_flour",
+     "qty": 15
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_feet_curry_rice",
+   "name": "Chicken feet curry & rice",
+   "description": "Spicy chicken feet curry.",
+   "cookMinutes": 60,
+   "tags": [
+    "protein:chicken_feet",
+    "starch:rice",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Clean and boil the feet 20 minutes; drain.",
+    "Fry onion, garlic and curry powder; add tomatoes.",
+    "Add feet and simmer 30 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_feet",
+     "qty": 200
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 4
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  }
+ ]
+}

@@ -11,7 +11,10 @@
 import { createServer } from 'node:http';
 import { rmSync, mkdirSync } from 'node:fs';
 import type { PGlite } from '@electric-sql/pglite';
+import { drizzle } from 'drizzle-orm/pglite';
 import { createMigratedPglite } from '../db/pglite';
+import * as schema from '../db/schema';
+import type { Db } from '../lib/db';
 import { seedAll } from './seed-lib';
 
 const port = Number(process.env.LOCAL_DB_PORT ?? 4444);
@@ -39,10 +42,11 @@ async function main() {
   mkdirSync(dir, { recursive: true });
   const t0 = performance.now();
   const db = await createMigratedPglite(dir, (m) => console.log(`[local-db] ${m}`));
-  (db as unknown as { parsers: unknown }).parsers = RAW;
   if (!process.env.LOCAL_DB_NO_SEED) {
-    await seedAll(db, { log: (m) => console.log(`[local-db] ${m}`) });
+    await seedAll(drizzle({ client: db, schema }) as unknown as Db, { log: (m) => console.log(`[local-db] ${m}`) });
   }
+  // From here on, serve raw text values (the Neon driver parses them itself).
+  (db as unknown as { parsers: unknown }).parsers = RAW;
 
   const server = createServer(async (req, res) => {
     if (req.method === 'GET' && req.url === '/health') {

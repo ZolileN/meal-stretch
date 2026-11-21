@@ -27,7 +27,7 @@ let seeded = false;
 export async function seededTestDb(opts?: SeedOptions) {
   const t = await testDb();
   if (!seeded) {
-    await seedAll(t.pg, opts);
+    await seedAll(t.db, opts);
     seeded = true;
   }
   return t;

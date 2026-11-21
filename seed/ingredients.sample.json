@@ -1,0 +1,533 @@
+[
+ {
+  "id": "chicken_portions_mixed",
+  "name": "Chicken portions (mixed)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "chicken_drumsticks",
+  "name": "Chicken drumsticks",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "chicken_breast_fillets",
+  "name": "Chicken breast fillets",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "chicken_livers",
+  "name": "Chicken livers",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "chicken_feet",
+  "name": "Chicken feet",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "chicken_mince",
+  "name": "Chicken mince",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "beef_mince",
+  "name": "Beef mince",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "beef_stewing",
+  "name": "Beef stewing meat",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "boerewors",
+  "name": "Boerewors",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "polony",
+  "name": "Polony",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "viennas",
+  "name": "Viennas",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "pork_chops",
+  "name": "Pork chops",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "pork_sausages",
+  "name": "Pork sausages",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "pilchards_tin",
+  "name": "Pilchards in tomato sauce (tin)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "tinned"
+ },
+ {
+  "id": "tuna_tin",
+  "name": "Tuna chunks (tin)",
+  "unit": "g",
+  "roundTo": 10,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "tinned"
+ },
+ {
+  "id": "hake_fillets",
+  "name": "Hake fillets (frozen)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "frozen"
+ },
+ {
+  "id": "eggs",
+  "name": "Eggs",
+  "unit": "unit",
+  "roundTo": 1,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "dairy"
+ },
+ {
+  "id": "milk",
+  "name": "Milk",
+  "unit": "ml",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "dairy"
+ },
+ {
+  "id": "cheddar_cheese",
+  "name": "Cheddar cheese",
+  "unit": "g",
+  "roundTo": 25,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "dairy"
+ },
+ {
+  "id": "margarine",
+  "name": "Margarine",
+  "unit": "g",
+  "roundTo": 10,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dairy"
+ },
+ {
+  "id": "maize_meal",
+  "name": "Maize meal",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dry"
+ },
+ {
+  "id": "rice",
+  "name": "Rice",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dry"
+ },
+ {
+  "id": "pasta",
+  "name": "Pasta (spaghetti or macaroni)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dry"
+ },
+ {
+  "id": "samp",
+  "name": "Samp",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dry"
+ },
+ {
+  "id": "sugar_beans",
+  "name": "Sugar beans (dry)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dry"
+ },
+ {
+  "id": "red_lentils",
+  "name": "Red lentils",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dry"
+ },
+ {
+  "id": "soya_mince",
+  "name": "Soya mince",
+  "unit": "g",
+  "roundTo": 10,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dry"
+ },
+ {
+  "id": "cake_flour",
+  "name": "Cake flour",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dry"
+ },
+ {
+  "id": "brown_onion_soup",
+  "name": "Brown onion soup powder",
+  "unit": "g",
+  "roundTo": 10,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dry"
+ },
+ {
+  "id": "tinned_tomatoes",
+  "name": "Chopped tomatoes (tin)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "tinned"
+ },
+ {
+  "id": "baked_beans",
+  "name": "Baked beans (tin)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "tinned"
+ },
+ {
+  "id": "butter_beans",
+  "name": "Butter beans (tin)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "tinned"
+ },
+ {
+  "id": "chakalaka",
+  "name": "Chakalaka (tin)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "tinned"
+ },
+ {
+  "id": "tomato_paste",
+  "name": "Tomato paste",
+  "unit": "g",
+  "roundTo": 10,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "tinned"
+ },
+ {
+  "id": "mixed_veg_frozen",
+  "name": "Mixed vegetables (frozen)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "frozen"
+ },
+ {
+  "id": "peas_frozen",
+  "name": "Peas (frozen)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "frozen"
+ },
+ {
+  "id": "onion",
+  "name": "Onions",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "tomato",
+  "name": "Tomatoes",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "potatoes",
+  "name": "Potatoes",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "carrots",
+  "name": "Carrots",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "cabbage",
+  "name": "Cabbage",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "spinach",
+  "name": "Spinach (morogo/imifino)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "butternut",
+  "name": "Butternut",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "green_pepper",
+  "name": "Green pepper",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "garlic",
+  "name": "Garlic",
+  "unit": "g",
+  "roundTo": 5,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "bread",
+  "name": "Bread (loaf)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "bakery"
+ },
+ {
+  "id": "mayonnaise",
+  "name": "Mayonnaise",
+  "unit": "g",
+  "roundTo": 10,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "sauces"
+ },
+ {
+  "id": "cooking_oil",
+  "name": "Cooking oil",
+  "unit": "ml",
+  "roundTo": 10,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "oils"
+ },
+ {
+  "id": "salt",
+  "name": "Salt",
+  "unit": "g",
+  "roundTo": 5,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
+ },
+ {
+  "id": "black_pepper",
+  "name": "Black pepper",
+  "unit": "g",
+  "roundTo": 1,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
+ },
+ {
+  "id": "curry_powder",
+  "name": "Curry powder",
+  "unit": "g",
+  "roundTo": 5,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
+ },
+ {
+  "id": "turmeric",
+  "name": "Turmeric",
+  "unit": "g",
+  "roundTo": 1,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
+ },
+ {
+  "id": "paprika",
+  "name": "Paprika",
+  "unit": "g",
+  "roundTo": 1,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
+ },
+ {
+  "id": "mixed_herbs",
+  "name": "Mixed herbs",
+  "unit": "g",
+  "roundTo": 1,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
+ },
+ {
+  "id": "braai_spice",
+  "name": "Braai spice",
+  "unit": "g",
+  "roundTo": 1,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
+ },
+ {
+  "id": "peri_peri_spice",
+  "name": "Peri-peri spice",
+  "unit": "g",
+  "roundTo": 1,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
+ },
+ {
+  "id": "stock_cubes",
+  "name": "Stock cubes",
+  "unit": "g",
+  "roundTo": 5,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
+ },
+ {
+  "id": "sugar",
+  "name": "Sugar",
+  "unit": "g",
+  "roundTo": 5,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "dry"
+ },
+ {
+  "id": "baking_powder",
+  "name": "Baking powder",
+  "unit": "g",
+  "roundTo": 1,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
+ }
+]

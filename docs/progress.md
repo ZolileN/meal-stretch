@@ -1,10 +1,10 @@
 # Build progress
 
 ## Checkpoint
-- Last completed: Phase 1 (2026-11-21)
-- Next: Phase 2, step 2.1
-- Test status: 101 unit/db/engine, 4 e2e, all green
-- Open human-todo items: 8
+- Last completed: Phase 2 (2026-11-21)
+- Next: Phase 3, step 3.1
+- Test status: 124 unit/db/engine, 4 e2e, all green
+- Open human-todo items: 10
 
 ## Phase 0: Repo foundation
 - [x] 0.1 Next.js App Router + TS strict + Tailwind + pnpm in this repo
@@ -27,13 +27,14 @@ Gate: LOC-1 PASS (ShopLocation.tsx getCurrentPosition low-accuracy/10 s, coarsen
 - [x] 1.7 Unit + Playwright tests (denied geo → search; mocked Somerset West)
 
 ## Phase 2: Catalogue, ingredients, recipes
-- [ ] 2.1 Drizzle schema + migration 0002 (core tables)
-- [ ] 2.2 current_prices materialised view + refresh_current_prices()
-- [ ] 2.3 scripts/seed.ts idempotent
-- [ ] 2.4 scripts/import-prices-csv.ts
-- [ ] 2.5 seed/prices.fixture.csv (fictional)
-- [ ] 2.6 54 draft recipes (60 total), unpublished drafts
-- [ ] 2.7 Tests: resolution rule, CSV validation, seed idempotency, recipe refs
+Gate: §10.1 resolution PASS (tests/db/prices.test.ts) · CSV import PASS (prices-csv.test.ts, prices.test.ts importer) · seed idempotent PASS (seed.test.ts) · recipe refs PASS (recipes-seed.test.ts) · DoD Shoprite+Checkers coverage PASS · I18N-3 table recipe_translations PASS (schema) · publishing of recipes PARTIAL (human cook-test, human-todo).
+- [x] 2.1 Drizzle schema + migration 0002 (core tables)
+- [x] 2.2 current_prices materialised view + refresh_current_prices()
+- [x] 2.3 scripts/seed.ts idempotent
+- [x] 2.4 scripts/import-prices-csv.ts
+- [x] 2.5 seed/prices.fixture.csv (fictional)
+- [x] 2.6 62 draft recipes (68 total), unpublished drafts
+- [x] 2.7 Tests: resolution rule, CSV validation, seed idempotency, recipe refs
 
 ## Phase 3: Planning engine
 - [ ] 3.1 Tests first (§9.10)

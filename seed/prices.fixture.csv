@@ -1,0 +1,361 @@
+# FICTIONAL PRICES for local development and automated tests only. These are NOT real retailer prices and must never be shown to users as real.
+# Dates are rebased on load so the newest row is 'yesterday' (scripts/seed-lib.ts).
+retailer_id,branch_id,product_name,brand,pack_qty,pack_unit,ingredient_id,price_cents,member_price_cents,special_price_cents,special_ends_on,observed_at
+shoprite,,Chicken Mixed Portions Value Pack,FIXTURE,2000,g,chicken_portions_mixed,11299,,9499,2026-11-25,2026-11-20
+shoprite,,Chicken Mixed Portions,FIXTURE,1000,g,chicken_portions_mixed,6099,,,,2026-11-20
+shoprite,,Chicken Drumsticks,FIXTURE,1000,g,chicken_drumsticks,6599,,,,2026-11-20
+shoprite,,Chicken Drumsticks Family Pack,FIXTURE,2000,g,chicken_drumsticks,12199,,,,2026-11-20
+shoprite,,Chicken Breast Fillets,FIXTURE,500,g,chicken_breast_fillets,5599,,,,2026-11-20
+shoprite,,Chicken Breast Fillets Bulk,FIXTURE,1000,g,chicken_breast_fillets,10299,,,,2026-11-20
+shoprite,,Chicken Livers,FIXTURE,500,g,chicken_livers,3099,,,,2026-11-20
+shoprite,,Chicken Livers Small,FIXTURE,250,g,chicken_livers,1799,,,,2026-11-20
+shoprite,,Chicken Feet,FIXTURE,1000,g,chicken_feet,3799,,,,2026-11-20
+shoprite,,Chicken Mince,FIXTURE,500,g,chicken_mince,4199,,,,2026-11-20
+shoprite,,Beef Mince,FIXTURE,500,g,beef_mince,5199,,,,2026-11-20
+shoprite,,Beef Mince Value Pack,FIXTURE,1000,g,beef_mince,9399,,,,2026-11-20
+shoprite,,Beef Stewing Meat,FIXTURE,1000,g,beef_stewing,13199,,,,2026-11-20
+shoprite,,Beef Stewing Meat Small,FIXTURE,500,g,beef_stewing,6999,,,,2026-11-20
+shoprite,,Traditional Boerewors,FIXTURE,1000,g,boerewors,9399,,,,2026-11-20
+shoprite,,Boerewors Small,FIXTURE,500,g,boerewors,5199,,,,2026-11-20
+shoprite,,Polony,FIXTURE,1000,g,polony,4699,,,,2026-11-20
+shoprite,,Polony Small,FIXTURE,500,g,polony,2599,,,,2026-11-20
+shoprite,,Viennas,FIXTURE,1000,g,viennas,6999,,,,2026-11-20
+shoprite,,Viennas Small,FIXTURE,500,g,viennas,3799,,,,2026-11-20
+shoprite,,Pork Loin Chops,FIXTURE,1000,g,pork_chops,10299,,,,2026-11-20
+shoprite,,Pork Chops Small,FIXTURE,500,g,pork_chops,5599,,,,2026-11-20
+shoprite,,Pork Sausages,FIXTURE,500,g,pork_sausages,5199,,,,2026-11-20
+shoprite,,Pilchards in Tomato Sauce,FIXTURE,400,g,pilchards_tin,2599,,,,2026-11-20
+shoprite,,Pilchards in Tomato Sauce Small,FIXTURE,155,g,pilchards_tin,1199,,,,2026-11-20
+shoprite,,Tuna Chunks in Brine,FIXTURE,170,g,tuna_tin,2499,,,,2026-11-20
+shoprite,,Hake Fillets Frozen,FIXTURE,800,g,hake_fillets,8499,,,,2026-11-20
+shoprite,,Hake Fillets Frozen Small,FIXTURE,400,g,hake_fillets,4699,,,,2026-11-20
+shoprite,,Large Eggs 6,FIXTURE,6,unit,eggs,2699,,,,2026-11-20
+shoprite,,Large Eggs 18,FIXTURE,18,unit,eggs,6999,,,,2026-11-20
+shoprite,,Large Eggs 30,FIXTURE,30,unit,eggs,11299,,9999,2026-11-25,2026-11-20
+shoprite,,Full Cream Milk 1 L,FIXTURE,1000,ml,milk,2099,,,,2026-11-20
+shoprite,,Full Cream Milk 2 L,FIXTURE,2000,ml,milk,3799,3499,,,2026-11-20
+shoprite,,Cheddar Cheese,FIXTURE,400,g,cheddar_cheese,6599,,,,2026-11-20
+shoprite,,Cheddar Cheese Large,FIXTURE,900,g,cheddar_cheese,13199,,,,2026-11-20
+shoprite,,Margarine Tub,FIXTURE,500,g,margarine,3299,,,,2026-11-20
+shoprite,,Margarine Tub Large,FIXTURE,1000,g,margarine,5599,,,,2026-11-20
+shoprite,,Super Maize Meal 2.5 kg,FIXTURE,2500,g,maize_meal,3799,,,,2026-11-20
+shoprite,,Super Maize Meal 5 kg,FIXTURE,5000,g,maize_meal,6599,,,,2026-11-20
+shoprite,,Super Maize Meal 10 kg,FIXTURE,10000,g,maize_meal,12199,,10999,2026-11-25,2026-11-20
+shoprite,,Long Grain Rice 2 kg,FIXTURE,2000,g,rice,4199,3999,,,2026-11-20
+shoprite,,Long Grain Rice 1 kg,FIXTURE,1000,g,rice,2299,,,,2026-11-20
+shoprite,,Spaghetti,FIXTURE,500,g,pasta,1899,,,,2026-11-20
+shoprite,,Macaroni,FIXTURE,500,g,pasta,1899,,,,2026-11-20
+shoprite,,Samp 1 kg,FIXTURE,1000,g,samp,2299,,,,2026-11-20
+shoprite,,Samp 2 kg,FIXTURE,2000,g,samp,3999,,,,2026-11-20
+shoprite,,Sugar Beans 500 g,FIXTURE,500,g,sugar_beans,2799,,,,2026-11-20
+shoprite,,Sugar Beans 1 kg,FIXTURE,1000,g,sugar_beans,5199,,,,2026-11-20
+shoprite,,Red Lentils,FIXTURE,500,g,red_lentils,2799,,,,2026-11-20
+shoprite,,Soya Mince Mild Curry,FIXTURE,200,g,soya_mince,1499,,,,2026-11-20
+shoprite,,Cake Flour 2.5 kg,FIXTURE,2500,g,cake_flour,4199,,,,2026-11-20
+shoprite,,Cake Flour 1 kg,FIXTURE,1000,g,cake_flour,2199,,,,2026-11-20
+shoprite,,Brown Onion Soup Powder,FIXTURE,50,g,brown_onion_soup,1199,,,,2026-11-20
+shoprite,,Chopped Tomatoes,FIXTURE,410,g,tinned_tomatoes,1499,,,,2026-11-20
+shoprite,,Baked Beans in Tomato Sauce,FIXTURE,410,g,baked_beans,1699,,1499,2026-11-25,2026-11-20
+shoprite,,Butter Beans,FIXTURE,410,g,butter_beans,1799,,,,2026-11-20
+shoprite,,Chakalaka Mild,FIXTURE,410,g,chakalaka,1699,,,,2026-11-20
+shoprite,,Tomato Paste,FIXTURE,115,g,tomato_paste,1099,,,,2026-11-20
+shoprite,,Tomato Paste Sachet,FIXTURE,50,g,tomato_paste,699,,,,2026-11-20
+shoprite,,Mixed Vegetables Frozen,FIXTURE,1000,g,mixed_veg_frozen,4199,,,,2026-11-20
+shoprite,,Garden Peas Frozen,FIXTURE,1000,g,peas_frozen,3799,,,,2026-11-20
+shoprite,,Onions 1 kg,FIXTURE,1000,g,onion,2299,,,,2026-11-20
+shoprite,,Onions 2 kg,FIXTURE,2000,g,onion,3799,,,,2026-11-20
+shoprite,,Onions Pocket 7 kg,FIXTURE,7000,g,onion,10299,,,,2026-11-20
+shoprite,,Tomatoes 1 kg,FIXTURE,1000,g,tomato,3099,,,,2026-11-20
+shoprite,,Potatoes 2 kg,FIXTURE,2000,g,potatoes,4699,,,,2026-11-20
+shoprite,,Potatoes Pocket 7 kg,FIXTURE,7000,g,potatoes,9399,,,,2026-11-20
+shoprite,,Carrots 1 kg,FIXTURE,1000,g,carrots,2199,,,,2026-11-20
+shoprite,,Cabbage each (approx 1.5 kg),FIXTURE,1500,g,cabbage,2299,,1999,2026-11-25,2026-11-20
+shoprite,,Spinach bunch (approx 300 g),FIXTURE,300,g,spinach,2099,,,,2026-11-20
+shoprite,,Butternut 1 kg,FIXTURE,1000,g,butternut,2299,,,,2026-11-20
+shoprite,,Green Peppers 3 pack (approx 450 g),FIXTURE,450,g,green_pepper,2199,,,,2026-11-20
+shoprite,,Garlic 4 pack (approx 200 g),FIXTURE,200,g,garlic,2199,,,,2026-11-20
+shoprite,,White Bread 700 g,FIXTURE,700,g,bread,1799,,,,2026-11-20
+shoprite,,Brown Bread 700 g,FIXTURE,700,g,bread,1599,,,,2026-11-20
+shoprite,,Mayonnaise 750 g,FIXTURE,750,g,mayonnaise,4699,,,,2026-11-20
+shoprite,,Mayonnaise 375 g,FIXTURE,375,g,mayonnaise,2799,,,,2026-11-20
+shoprite,,Sunflower Oil 750 ml,FIXTURE,750,ml,cooking_oil,3099,,,,2026-11-20
+shoprite,,Sunflower Oil 2 L,FIXTURE,2000,ml,cooking_oil,6999,,,,2026-11-20
+shoprite,,Table Salt 1 kg,FIXTURE,1000,g,salt,1199,,,,2026-11-20
+shoprite,,Black Pepper Ground,FIXTURE,100,g,black_pepper,2799,,,,2026-11-20
+shoprite,,Curry Powder Mild,FIXTURE,100,g,curry_powder,2299,,,,2026-11-20
+shoprite,,Turmeric,FIXTURE,50,g,turmeric,1899,,,,2026-11-20
+shoprite,,Paprika,FIXTURE,50,g,paprika,1899,,,,2026-11-20
+shoprite,,Mixed Herbs,FIXTURE,20,g,mixed_herbs,1899,,,,2026-11-20
+shoprite,,Braai Spice,FIXTURE,200,g,braai_spice,3299,,,,2026-11-20
+shoprite,,Peri-Peri Spice,FIXTURE,100,g,peri_peri_spice,2799,,,,2026-11-20
+shoprite,,Chicken Stock Cubes 12 pack,FIXTURE,120,g,stock_cubes,2299,,,,2026-11-20
+shoprite,,White Sugar 2.5 kg,FIXTURE,2500,g,sugar,5199,,,,2026-11-20
+shoprite,,Baking Powder,FIXTURE,100,g,baking_powder,1899,,,,2026-11-20
+checkers,,Chicken Mixed Portions Value Pack,FIXTURE,2000,g,chicken_portions_mixed,11999,,9999,2026-11-25,2026-11-20
+checkers,,Chicken Mixed Portions,FIXTURE,1000,g,chicken_portions_mixed,6499,,,,2026-11-20
+checkers,,Chicken Drumsticks,FIXTURE,1000,g,chicken_drumsticks,6999,,,,2026-11-20
+checkers,,Chicken Drumsticks Family Pack,FIXTURE,2000,g,chicken_drumsticks,12999,,,,2026-11-20
+checkers,,Chicken Breast Fillets,FIXTURE,500,g,chicken_breast_fillets,5999,,,,2026-11-20
+checkers,,Chicken Breast Fillets Bulk,FIXTURE,1000,g,chicken_breast_fillets,10999,,,,2026-11-20
+checkers,,Chicken Livers,FIXTURE,500,g,chicken_livers,3299,,,,2026-11-20
+checkers,,Chicken Livers Small,FIXTURE,250,g,chicken_livers,1899,,,,2026-11-20
+checkers,,Chicken Feet,FIXTURE,1000,g,chicken_feet,3999,,,,2026-11-20
+checkers,,Chicken Mince,FIXTURE,500,g,chicken_mince,4499,3999,,,2026-11-20
+checkers,,Beef Mince,FIXTURE,500,g,beef_mince,5499,,,,2026-11-20
+checkers,,Beef Mince Value Pack,FIXTURE,1000,g,beef_mince,9999,,8999,2026-11-25,2026-11-20
+checkers,,Beef Stewing Meat,FIXTURE,1000,g,beef_stewing,13999,,,,2026-11-20
+checkers,,Beef Stewing Meat Small,FIXTURE,500,g,beef_stewing,7499,,,,2026-11-20
+checkers,,Traditional Boerewors,FIXTURE,1000,g,boerewors,9999,,,,2026-11-20
+checkers,,Boerewors Small,FIXTURE,500,g,boerewors,5499,,,,2026-11-20
+checkers,,Polony,FIXTURE,1000,g,polony,4999,,,,2026-11-20
+checkers,,Polony Small,FIXTURE,500,g,polony,2799,,,,2026-11-20
+checkers,,Viennas,FIXTURE,1000,g,viennas,7499,,,,2026-11-20
+checkers,,Viennas Small,FIXTURE,500,g,viennas,3999,,,,2026-11-20
+checkers,,Pork Loin Chops,FIXTURE,1000,g,pork_chops,10999,,,,2026-11-20
+checkers,,Pork Chops Small,FIXTURE,500,g,pork_chops,5999,,,,2026-11-20
+checkers,,Pork Sausages,FIXTURE,500,g,pork_sausages,5499,,,,2026-11-20
+checkers,,Pilchards in Tomato Sauce,FIXTURE,400,g,pilchards_tin,2799,,2399,2026-11-25,2026-11-20
+checkers,,Pilchards in Tomato Sauce Small,FIXTURE,155,g,pilchards_tin,1299,,,,2026-11-20
+checkers,,Tuna Chunks in Brine,FIXTURE,170,g,tuna_tin,2699,,,,2026-11-20
+checkers,,Hake Fillets Frozen,FIXTURE,800,g,hake_fillets,8999,,,,2026-11-20
+checkers,,Hake Fillets Frozen Small,FIXTURE,400,g,hake_fillets,4999,,,,2026-11-20
+checkers,,Large Eggs 6,FIXTURE,6,unit,eggs,2899,,,,2026-11-20
+checkers,,Large Eggs 18,FIXTURE,18,unit,eggs,7499,,,,2026-11-20
+checkers,,Large Eggs 30,FIXTURE,30,unit,eggs,11999,,,,2026-11-20
+checkers,,Full Cream Milk 1 L,FIXTURE,1000,ml,milk,2199,,,,2026-11-20
+checkers,,Full Cream Milk 2 L,FIXTURE,2000,ml,milk,3999,,,,2026-11-20
+checkers,,Cheddar Cheese,FIXTURE,400,g,cheddar_cheese,6999,5999,,,2026-11-20
+checkers,,Cheddar Cheese Large,FIXTURE,900,g,cheddar_cheese,13999,,,,2026-11-20
+checkers,,Margarine Tub,FIXTURE,500,g,margarine,3499,,,,2026-11-20
+checkers,,Margarine Tub Large,FIXTURE,1000,g,margarine,5999,,,,2026-11-20
+checkers,,Super Maize Meal 2.5 kg,FIXTURE,2500,g,maize_meal,3999,,,,2026-11-20
+checkers,,Super Maize Meal 5 kg,FIXTURE,5000,g,maize_meal,6999,,,,2026-11-20
+checkers,,Super Maize Meal 10 kg,FIXTURE,10000,g,maize_meal,12999,,,,2026-11-20
+checkers,,Long Grain Rice 2 kg,FIXTURE,2000,g,rice,4499,,3999,2026-11-25,2026-11-20
+checkers,,Long Grain Rice 1 kg,FIXTURE,1000,g,rice,2499,,,,2026-11-20
+checkers,,Spaghetti,FIXTURE,500,g,pasta,1999,,,,2026-11-20
+checkers,,Macaroni,FIXTURE,500,g,pasta,1999,,,,2026-11-20
+checkers,,Samp 1 kg,FIXTURE,1000,g,samp,2499,,,,2026-11-20
+checkers,,Samp 2 kg,FIXTURE,2000,g,samp,4299,,,,2026-11-20
+checkers,,Sugar Beans 500 g,FIXTURE,500,g,sugar_beans,2999,2499,,,2026-11-20
+checkers,,Sugar Beans 1 kg,FIXTURE,1000,g,sugar_beans,5499,,,,2026-11-20
+checkers,,Red Lentils,FIXTURE,500,g,red_lentils,2999,,,,2026-11-20
+checkers,,Soya Mince Mild Curry,FIXTURE,200,g,soya_mince,1599,,,,2026-11-20
+checkers,,Cake Flour 2.5 kg,FIXTURE,2500,g,cake_flour,4499,,,,2026-11-20
+checkers,,Cake Flour 1 kg,FIXTURE,1000,g,cake_flour,2299,,,,2026-11-20
+checkers,,Brown Onion Soup Powder,FIXTURE,50,g,brown_onion_soup,1299,,,,2026-11-20
+checkers,,Chopped Tomatoes,FIXTURE,410,g,tinned_tomatoes,1599,,1299,2026-11-25,2026-11-20
+checkers,,Baked Beans in Tomato Sauce,FIXTURE,410,g,baked_beans,1799,,,,2026-11-20
+checkers,,Butter Beans,FIXTURE,410,g,butter_beans,1899,,,,2026-11-20
+checkers,,Chakalaka Mild,FIXTURE,410,g,chakalaka,1799,,,,2026-11-20
+checkers,,Tomato Paste,FIXTURE,115,g,tomato_paste,1199,,,,2026-11-20
+checkers,,Tomato Paste Sachet,FIXTURE,50,g,tomato_paste,699,,,,2026-11-20
+checkers,,Mixed Vegetables Frozen,FIXTURE,1000,g,mixed_veg_frozen,4499,,,,2026-11-20
+checkers,,Garden Peas Frozen,FIXTURE,1000,g,peas_frozen,3999,,,,2026-11-20
+checkers,,Onions 1 kg,FIXTURE,1000,g,onion,2499,,,,2026-11-20
+checkers,,Onions 2 kg,FIXTURE,2000,g,onion,3999,,,,2026-11-20
+checkers,,Onions Pocket 7 kg,FIXTURE,7000,g,onion,10999,,,,2026-11-20
+checkers,,Tomatoes 1 kg,FIXTURE,1000,g,tomato,3299,,,,2026-11-20
+checkers,,Potatoes 2 kg,FIXTURE,2000,g,potatoes,4999,,,,2026-11-20
+checkers,,Potatoes Pocket 7 kg,FIXTURE,7000,g,potatoes,9999,,7999,2026-11-25,2026-11-20
+checkers,,Carrots 1 kg,FIXTURE,1000,g,carrots,2299,,,,2026-11-20
+checkers,,Cabbage each (approx 1.5 kg),FIXTURE,1500,g,cabbage,2499,,,,2026-11-20
+checkers,,Spinach bunch (approx 300 g),FIXTURE,300,g,spinach,2199,,,,2026-11-20
+checkers,,Butternut 1 kg,FIXTURE,1000,g,butternut,2499,,,,2026-11-20
+checkers,,Green Peppers 3 pack (approx 450 g),FIXTURE,450,g,green_pepper,2299,,,,2026-11-20
+checkers,,Garlic 4 pack (approx 200 g),FIXTURE,200,g,garlic,2299,,,,2026-11-20
+checkers,,White Bread 700 g,FIXTURE,700,g,bread,1899,,,,2026-11-20
+checkers,,Brown Bread 700 g,FIXTURE,700,g,bread,1699,,,,2026-11-20
+checkers,,Mayonnaise 750 g,FIXTURE,750,g,mayonnaise,4999,,,,2026-11-20
+checkers,,Mayonnaise 375 g,FIXTURE,375,g,mayonnaise,2999,,,,2026-11-20
+checkers,,Sunflower Oil 750 ml,FIXTURE,750,ml,cooking_oil,3299,,,,2026-11-20
+checkers,,Sunflower Oil 2 L,FIXTURE,2000,ml,cooking_oil,7499,6499,,,2026-11-20
+checkers,,Table Salt 1 kg,FIXTURE,1000,g,salt,1299,,,,2026-11-20
+checkers,,Black Pepper Ground,FIXTURE,100,g,black_pepper,2999,,,,2026-11-20
+checkers,,Curry Powder Mild,FIXTURE,100,g,curry_powder,2499,,,,2026-11-20
+checkers,,Turmeric,FIXTURE,50,g,turmeric,1999,,,,2026-11-20
+checkers,,Paprika,FIXTURE,50,g,paprika,1999,,,,2026-11-20
+checkers,,Mixed Herbs,FIXTURE,20,g,mixed_herbs,1999,,,,2026-11-20
+checkers,,Braai Spice,FIXTURE,200,g,braai_spice,3499,,,,2026-11-20
+checkers,,Peri-Peri Spice,FIXTURE,100,g,peri_peri_spice,2999,,,,2026-11-20
+checkers,,Chicken Stock Cubes 12 pack,FIXTURE,120,g,stock_cubes,2499,,,,2026-11-20
+checkers,,White Sugar 2.5 kg,FIXTURE,2500,g,sugar,5499,,,,2026-11-20
+checkers,,Baking Powder,FIXTURE,100,g,baking_powder,1999,,,,2026-11-20
+pnp,,Chicken Mixed Portions Value Pack,FIXTURE,2000,g,chicken_portions_mixed,12499,,,,2026-11-20
+pnp,,Chicken Mixed Portions,FIXTURE,1000,g,chicken_portions_mixed,6799,,,,2026-11-20
+pnp,,Chicken Drumsticks,FIXTURE,1000,g,chicken_drumsticks,7299,,,,2026-11-20
+pnp,,Chicken Drumsticks Family Pack,FIXTURE,2000,g,chicken_drumsticks,13499,,10999,2026-11-25,2026-11-20
+pnp,,Chicken Breast Fillets,FIXTURE,500,g,chicken_breast_fillets,6199,,,,2026-11-20
+pnp,,Chicken Breast Fillets Bulk,FIXTURE,1000,g,chicken_breast_fillets,11399,,,,2026-11-20
+pnp,,Chicken Livers,FIXTURE,500,g,chicken_livers,3399,,,,2026-11-20
+pnp,,Chicken Livers Small,FIXTURE,250,g,chicken_livers,1999,,,,2026-11-20
+pnp,,Chicken Feet,FIXTURE,1000,g,chicken_feet,4199,,,,2026-11-20
+pnp,,Chicken Mince,FIXTURE,500,g,chicken_mince,4699,,,,2026-11-20
+pnp,,Beef Mince,FIXTURE,500,g,beef_mince,5699,,4499,2026-11-25,2026-11-20
+pnp,,Beef Mince Value Pack,FIXTURE,1000,g,beef_mince,10399,,,,2026-11-20
+pnp,,Beef Stewing Meat,FIXTURE,1000,g,beef_stewing,14599,,,,2026-11-20
+pnp,,Beef Stewing Meat Small,FIXTURE,500,g,beef_stewing,7799,,,,2026-11-20
+pnp,,Traditional Boerewors,FIXTURE,1000,g,boerewors,10399,,,,2026-11-20
+pnp,,Boerewors Small,FIXTURE,500,g,boerewors,5699,,,,2026-11-20
+pnp,,Polony,FIXTURE,1000,g,polony,5199,,,,2026-11-20
+pnp,,Polony Small,FIXTURE,500,g,polony,2899,,,,2026-11-20
+pnp,,Viennas,FIXTURE,1000,g,viennas,7799,6499,,,2026-11-20
+pnp,,Viennas Small,FIXTURE,500,g,viennas,4199,,,,2026-11-20
+pnp,,Pork Loin Chops,FIXTURE,1000,g,pork_chops,11399,,,,2026-11-20
+pnp,,Pork Chops Small,FIXTURE,500,g,pork_chops,6199,,,,2026-11-20
+pnp,,Pork Sausages,FIXTURE,500,g,pork_sausages,5699,,,,2026-11-20
+pnp,,Pilchards in Tomato Sauce,FIXTURE,400,g,pilchards_tin,2899,,,,2026-11-20
+pnp,,Pilchards in Tomato Sauce Small,FIXTURE,155,g,pilchards_tin,1399,,,,2026-11-20
+pnp,,Tuna Chunks in Brine,FIXTURE,170,g,tuna_tin,2799,,,,2026-11-20
+pnp,,Hake Fillets Frozen,FIXTURE,800,g,hake_fillets,9399,,,,2026-11-20
+pnp,,Hake Fillets Frozen Small,FIXTURE,400,g,hake_fillets,5199,,,,2026-11-20
+pnp,,Large Eggs 6,FIXTURE,6,unit,eggs,2999,,,,2026-11-20
+pnp,,Large Eggs 18,FIXTURE,18,unit,eggs,7799,,,,2026-11-20
+pnp,,Large Eggs 30,FIXTURE,30,unit,eggs,12499,,,,2026-11-20
+pnp,,Full Cream Milk 1 L,FIXTURE,1000,ml,milk,2299,,,,2026-11-20
+pnp,,Full Cream Milk 2 L,FIXTURE,2000,ml,milk,4199,,,,2026-11-20
+pnp,,Cheddar Cheese,FIXTURE,400,g,cheddar_cheese,7299,,,,2026-11-20
+pnp,,Cheddar Cheese Large,FIXTURE,900,g,cheddar_cheese,14599,,,,2026-11-20
+pnp,,Margarine Tub,FIXTURE,500,g,margarine,3599,,,,2026-11-20
+pnp,,Margarine Tub Large,FIXTURE,1000,g,margarine,6199,,,,2026-11-20
+pnp,,Super Maize Meal 2.5 kg,FIXTURE,2500,g,maize_meal,4199,,,,2026-11-20
+pnp,,Super Maize Meal 5 kg,FIXTURE,5000,g,maize_meal,7299,6299,,,2026-11-20
+pnp,,Super Maize Meal 10 kg,FIXTURE,10000,g,maize_meal,13499,,,,2026-11-20
+pnp,,Long Grain Rice 2 kg,FIXTURE,2000,g,rice,4699,,,,2026-11-20
+pnp,,Long Grain Rice 1 kg,FIXTURE,1000,g,rice,2599,,,,2026-11-20
+pnp,,Spaghetti,FIXTURE,500,g,pasta,2099,,1499,2026-11-25,2026-11-20
+pnp,,Macaroni,FIXTURE,500,g,pasta,2099,,,,2026-11-20
+pnp,,Samp 1 kg,FIXTURE,1000,g,samp,2599,,,,2026-11-20
+pnp,,Samp 2 kg,FIXTURE,2000,g,samp,4499,,,,2026-11-20
+pnp,,Sugar Beans 500 g,FIXTURE,500,g,sugar_beans,3099,,,,2026-11-20
+pnp,,Sugar Beans 1 kg,FIXTURE,1000,g,sugar_beans,5699,,,,2026-11-20
+pnp,,Red Lentils,FIXTURE,500,g,red_lentils,3099,,,,2026-11-20
+pnp,,Soya Mince Mild Curry,FIXTURE,200,g,soya_mince,1699,,,,2026-11-20
+pnp,,Cake Flour 2.5 kg,FIXTURE,2500,g,cake_flour,4699,,,,2026-11-20
+pnp,,Cake Flour 1 kg,FIXTURE,1000,g,cake_flour,2399,,,,2026-11-20
+pnp,,Brown Onion Soup Powder,FIXTURE,50,g,brown_onion_soup,1399,,,,2026-11-20
+pnp,,Chopped Tomatoes,FIXTURE,410,g,tinned_tomatoes,1699,,,,2026-11-20
+pnp,,Baked Beans in Tomato Sauce,FIXTURE,410,g,baked_beans,1899,,,,2026-11-20
+pnp,,Butter Beans,FIXTURE,410,g,butter_beans,1999,,,,2026-11-20
+pnp,,Chakalaka Mild,FIXTURE,410,g,chakalaka,1899,,,,2026-11-20
+pnp,,Tomato Paste,FIXTURE,115,g,tomato_paste,1199,,,,2026-11-20
+pnp,,Tomato Paste Sachet,FIXTURE,50,g,tomato_paste,699,,,,2026-11-20
+pnp,,Mixed Vegetables Frozen,FIXTURE,1000,g,mixed_veg_frozen,4699,,,,2026-11-20
+pnp,,Garden Peas Frozen,FIXTURE,1000,g,peas_frozen,4199,,,,2026-11-20
+pnp,,Onions 1 kg,FIXTURE,1000,g,onion,2599,,,,2026-11-20
+pnp,,Onions 2 kg,FIXTURE,2000,g,onion,4199,,2999,2026-11-25,2026-11-20
+pnp,,Onions Pocket 7 kg,FIXTURE,7000,g,onion,11399,,,,2026-11-20
+pnp,,Tomatoes 1 kg,FIXTURE,1000,g,tomato,3399,,,,2026-11-20
+pnp,,Potatoes 2 kg,FIXTURE,2000,g,potatoes,5199,,,,2026-11-20
+pnp,,Potatoes Pocket 7 kg,FIXTURE,7000,g,potatoes,10399,,,,2026-11-20
+pnp,,Carrots 1 kg,FIXTURE,1000,g,carrots,2399,,,,2026-11-20
+pnp,,Cabbage each (approx 1.5 kg),FIXTURE,1500,g,cabbage,2599,,,,2026-11-20
+pnp,,Spinach bunch (approx 300 g),FIXTURE,300,g,spinach,2299,,,,2026-11-20
+pnp,,Butternut 1 kg,FIXTURE,1000,g,butternut,2599,,,,2026-11-20
+pnp,,Green Peppers 3 pack (approx 450 g),FIXTURE,450,g,green_pepper,2399,,,,2026-11-20
+pnp,,Garlic 4 pack (approx 200 g),FIXTURE,200,g,garlic,2399,,,,2026-11-20
+pnp,,White Bread 700 g,FIXTURE,700,g,bread,1999,,,,2026-11-20
+pnp,,Brown Bread 700 g,FIXTURE,700,g,bread,1799,,,,2026-11-20
+pnp,,Mayonnaise 750 g,FIXTURE,750,g,mayonnaise,5199,,,,2026-11-20
+pnp,,Mayonnaise 375 g,FIXTURE,375,g,mayonnaise,3099,,,,2026-11-20
+pnp,,Sunflower Oil 750 ml,FIXTURE,750,ml,cooking_oil,3399,,,,2026-11-20
+pnp,,Sunflower Oil 2 L,FIXTURE,2000,ml,cooking_oil,7799,,,,2026-11-20
+pnp,,Table Salt 1 kg,FIXTURE,1000,g,salt,1399,,,,2026-11-20
+pnp,,Black Pepper Ground,FIXTURE,100,g,black_pepper,3099,,,,2026-11-20
+pnp,,Curry Powder Mild,FIXTURE,100,g,curry_powder,2599,,,,2026-11-20
+pnp,,Turmeric,FIXTURE,50,g,turmeric,2099,,,,2026-11-20
+pnp,,Paprika,FIXTURE,50,g,paprika,2099,,,,2026-11-20
+pnp,,Mixed Herbs,FIXTURE,20,g,mixed_herbs,2099,,,,2026-11-20
+pnp,,Braai Spice,FIXTURE,200,g,braai_spice,3599,,,,2026-11-20
+pnp,,Peri-Peri Spice,FIXTURE,100,g,peri_peri_spice,3099,,,,2026-11-20
+pnp,,Chicken Stock Cubes 12 pack,FIXTURE,120,g,stock_cubes,2599,,,,2026-11-20
+pnp,,White Sugar 2.5 kg,FIXTURE,2500,g,sugar,5699,,,,2026-11-20
+pnp,,Baking Powder,FIXTURE,100,g,baking_powder,2099,,,,2026-11-20
+spar,,Chicken Mixed Portions Value Pack,FIXTURE,2000,g,chicken_portions_mixed,13099,,,,2026-11-20
+spar,,Chicken Mixed Portions,FIXTURE,1000,g,chicken_portions_mixed,7099,,,,2026-11-20
+spar,,Chicken Drumsticks,FIXTURE,1000,g,chicken_drumsticks,7599,,,,2026-11-20
+spar,,Chicken Drumsticks Family Pack,FIXTURE,2000,g,chicken_drumsticks,14199,,,,2026-11-20
+spar,,Chicken Breast Fillets,FIXTURE,500,g,chicken_breast_fillets,6499,,,,2026-11-20
+spar,,Chicken Breast Fillets Bulk,FIXTURE,1000,g,chicken_breast_fillets,11999,,,,2026-11-20
+spar,,Chicken Livers,FIXTURE,500,g,chicken_livers,3599,,,,2026-11-20
+spar,,Chicken Livers Small,FIXTURE,250,g,chicken_livers,2099,,,,2026-11-20
+spar,,Chicken Feet,FIXTURE,1000,g,chicken_feet,4399,,,,2026-10-26
+spar,,Chicken Mince,FIXTURE,500,g,chicken_mince,4899,,,,2026-11-20
+spar,,Beef Mince,FIXTURE,500,g,beef_mince,5999,,,,2026-11-20
+spar,,Beef Mince Value Pack,FIXTURE,1000,g,beef_mince,10899,,,,2026-11-20
+spar,,Beef Stewing Meat,FIXTURE,1000,g,beef_stewing,15299,,,,2026-11-20
+spar,,Beef Stewing Meat Small,FIXTURE,500,g,beef_stewing,8199,,,,2026-11-20
+spar,,Traditional Boerewors,FIXTURE,1000,g,boerewors,10899,,8499,2026-11-25,2026-11-20
+spar,,Boerewors Small,FIXTURE,500,g,boerewors,5999,,,,2026-11-20
+spar,,Polony,FIXTURE,1000,g,polony,5399,,3999,2026-11-25,2026-11-20
+spar,,Polony Small,FIXTURE,500,g,polony,3099,,,,2026-11-20
+spar,,Viennas,FIXTURE,1000,g,viennas,8199,,,,2026-11-20
+spar,,Viennas Small,FIXTURE,500,g,viennas,4399,,,,2026-11-20
+spar,,Pork Loin Chops,FIXTURE,1000,g,pork_chops,11999,,,,2026-11-20
+spar,,Pork Chops Small,FIXTURE,500,g,pork_chops,6499,,,,2026-11-20
+spar,,Pork Sausages,FIXTURE,500,g,pork_sausages,5999,,,,2026-11-20
+spar,,Pilchards in Tomato Sauce,FIXTURE,400,g,pilchards_tin,3099,,,,2026-11-20
+spar,,Pilchards in Tomato Sauce Small,FIXTURE,155,g,pilchards_tin,1399,,,,2026-11-20
+spar,,Tuna Chunks in Brine,FIXTURE,170,g,tuna_tin,2899,,,,2026-11-20
+spar,,Hake Fillets Frozen,FIXTURE,800,g,hake_fillets,9799,,,,2026-11-20
+spar,,Hake Fillets Frozen Small,FIXTURE,400,g,hake_fillets,5399,,,,2026-11-20
+spar,,Large Eggs 6,FIXTURE,6,unit,eggs,3199,,,,2026-11-20
+spar,,Large Eggs 18,FIXTURE,18,unit,eggs,8199,6999,,,2026-11-20
+spar,,Large Eggs 30,FIXTURE,30,unit,eggs,13099,,,,2026-11-20
+spar,,Full Cream Milk 1 L,FIXTURE,1000,ml,milk,2399,,,,2026-11-20
+spar,,Full Cream Milk 2 L,FIXTURE,2000,ml,milk,4399,,,,2026-11-20
+spar,,Cheddar Cheese,FIXTURE,400,g,cheddar_cheese,7599,,,,2026-11-20
+spar,,Cheddar Cheese Large,FIXTURE,900,g,cheddar_cheese,15299,,,,2026-11-20
+spar,,Margarine Tub,FIXTURE,500,g,margarine,3799,,,,2026-11-20
+spar,,Margarine Tub Large,FIXTURE,1000,g,margarine,6499,,,,2026-11-20
+spar,,Super Maize Meal 2.5 kg,FIXTURE,2500,g,maize_meal,4399,,,,2026-11-20
+spar,,Super Maize Meal 5 kg,FIXTURE,5000,g,maize_meal,7599,,,,2026-11-20
+spar,,Super Maize Meal 10 kg,FIXTURE,10000,g,maize_meal,14199,,,,2026-11-20
+spar,,Long Grain Rice 2 kg,FIXTURE,2000,g,rice,4899,,,,2026-11-20
+spar,,Long Grain Rice 1 kg,FIXTURE,1000,g,rice,2699,,,,2026-11-20
+spar,,Spaghetti,FIXTURE,500,g,pasta,2199,,,,2026-11-20
+spar,,Macaroni,FIXTURE,500,g,pasta,2199,,,,2026-11-20
+spar,,Samp 1 kg,FIXTURE,1000,g,samp,2699,,,,2026-11-20
+spar,,Samp 2 kg,FIXTURE,2000,g,samp,4699,,,,2026-11-20
+spar,,Sugar Beans 500 g,FIXTURE,500,g,sugar_beans,3299,,,,2026-11-20
+spar,,Sugar Beans 1 kg,FIXTURE,1000,g,sugar_beans,5999,,,,2026-11-20
+spar,,Red Lentils,FIXTURE,500,g,red_lentils,3299,,,,2026-11-20
+spar,,Cake Flour 2.5 kg,FIXTURE,2500,g,cake_flour,4899,,,,2026-11-20
+spar,,Cake Flour 1 kg,FIXTURE,1000,g,cake_flour,2499,,,,2026-11-20
+spar,,Brown Onion Soup Powder,FIXTURE,50,g,brown_onion_soup,1399,,,,2026-11-20
+spar,,Chopped Tomatoes,FIXTURE,410,g,tinned_tomatoes,1699,,,,2026-11-20
+spar,,Baked Beans in Tomato Sauce,FIXTURE,410,g,baked_beans,1999,,,,2026-11-20
+spar,,Butter Beans,FIXTURE,410,g,butter_beans,2099,,,,2026-11-20
+spar,,Tomato Paste,FIXTURE,115,g,tomato_paste,1299,,,,2026-11-20
+spar,,Tomato Paste Sachet,FIXTURE,50,g,tomato_paste,799,,,,2026-11-20
+spar,,Mixed Vegetables Frozen,FIXTURE,1000,g,mixed_veg_frozen,4899,,,,2026-11-20
+spar,,Garden Peas Frozen,FIXTURE,1000,g,peas_frozen,4399,,,,2026-11-20
+spar,,Onions 1 kg,FIXTURE,1000,g,onion,2699,,,,2026-11-20
+spar,,Onions 2 kg,FIXTURE,2000,g,onion,4399,,,,2026-11-20
+spar,,Onions Pocket 7 kg,FIXTURE,7000,g,onion,11999,,,,2026-11-20
+spar,,Tomatoes 1 kg,FIXTURE,1000,g,tomato,3599,,,,2026-11-20
+spar,,Potatoes 2 kg,FIXTURE,2000,g,potatoes,5399,,,,2026-11-20
+spar,,Potatoes Pocket 7 kg,FIXTURE,7000,g,potatoes,10899,,,,2026-11-20
+spar,,Carrots 1 kg,FIXTURE,1000,g,carrots,2499,,,,2026-11-20
+spar,,Cabbage each (approx 1.5 kg),FIXTURE,1500,g,cabbage,2699,,,,2026-11-20
+spar,,Spinach bunch (approx 300 g),FIXTURE,300,g,spinach,2399,,,,2026-11-20
+spar,,Butternut 1 kg,FIXTURE,1000,g,butternut,2699,,,,2026-11-10
+spar,,Green Peppers 3 pack (approx 450 g),FIXTURE,450,g,green_pepper,2499,,,,2026-11-20
+spar,,Garlic 4 pack (approx 200 g),FIXTURE,200,g,garlic,2499,,,,2026-11-20
+spar,,White Bread 700 g,FIXTURE,700,g,bread,2099,,1599,2026-11-25,2026-11-20
+spar,,Brown Bread 700 g,FIXTURE,700,g,bread,1899,,,,2026-11-20
+spar,,Mayonnaise 750 g,FIXTURE,750,g,mayonnaise,5399,,,,2026-11-20
+spar,,Mayonnaise 375 g,FIXTURE,375,g,mayonnaise,3299,,,,2026-11-20
+spar,,Sunflower Oil 750 ml,FIXTURE,750,ml,cooking_oil,3599,,,,2026-11-20
+spar,,Sunflower Oil 2 L,FIXTURE,2000,ml,cooking_oil,8199,,,,2026-11-20
+spar,,Table Salt 1 kg,FIXTURE,1000,g,salt,1399,,,,2026-11-20
+spar,,Black Pepper Ground,FIXTURE,100,g,black_pepper,3299,,,,2026-11-20
+spar,,Curry Powder Mild,FIXTURE,100,g,curry_powder,2699,,,,2026-11-20
+spar,,Turmeric,FIXTURE,50,g,turmeric,2199,,,,2026-11-20
+spar,,Paprika,FIXTURE,50,g,paprika,2199,,,,2026-11-20
+spar,,Mixed Herbs,FIXTURE,20,g,mixed_herbs,2199,,,,2026-11-20
+spar,,Braai Spice,FIXTURE,200,g,braai_spice,3799,,,,2026-11-20
+spar,,Peri-Peri Spice,FIXTURE,100,g,peri_peri_spice,3299,,,,2026-11-20
+spar,,Chicken Stock Cubes 12 pack,FIXTURE,120,g,stock_cubes,2699,,,,2026-11-20
+spar,,White Sugar 2.5 kg,FIXTURE,2500,g,sugar,5999,,,,2026-11-20
+spar,,Baking Powder,FIXTURE,100,g,baking_powder,2199,,,,2026-11-20

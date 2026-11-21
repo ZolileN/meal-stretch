@@ -1,7 +1,10 @@
 /** SqlRunner for scripts: Neon HTTP (or the local PGlite shim via DATABASE_HTTP_ENDPOINT). */
 import { neon, neonConfig } from '@neondatabase/serverless';
 import { requireDatabaseUrl, env } from '../lib/env';
-import type { SqlRunner } from './seed-lib';
+
+export interface SqlRunner {
+  query<T = Record<string, unknown>>(sql: string, params?: unknown[]): Promise<{ rows: T[] }>;
+}
 
 export function scriptRunner(): SqlRunner {
   const endpoint = env().DATABASE_HTTP_ENDPOINT;

@@ -1,0 +1,330 @@
+{
+ "_comment": "Sample recipes. Unpublished until cooked at least once by a tester (PRD §11.2).",
+ "recipes": [
+  {
+   "id": "curry_mince_rice",
+   "name": "Curry mince & rice",
+   "description": "Mild mince curry with potatoes, on rice.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:beef_mince",
+    "starch:rice",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Brown the onion in oil, add the mince and cook until browned.",
+    "Stir in curry powder, then the tomatoes and diced potato.",
+    "Simmer 20 minutes until the potato is soft. Cook the rice meanwhile.",
+    "Season and serve on rice."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_mince",
+     "qty": 120
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "rice",
+     "qty": 75
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_stew_pap",
+   "name": "Chicken stew & pap",
+   "description": "Chicken portions stewed with carrots and potatoes, with soft pap.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:chicken_portions_mixed",
+    "starch:maize_meal",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Brown the chicken in oil, then add the onion.",
+    "Add carrots, potatoes, stock and water; simmer 35 minutes.",
+    "Cook the pap: boil water, stir in maize meal, cover and steam 20 minutes.",
+    "Serve the stew over the pap."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_portions_mixed",
+     "qty": 180
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 10
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "pilchard_fishcakes_chakalaka",
+   "name": "Pilchard fishcakes & chakalaka",
+   "description": "Crispy pilchard and potato fishcakes with warm chakalaka.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:pilchards_tin",
+    "starch:potatoes",
+    "no_oven"
+   ],
+   "steps": [
+    "Boil and mash the potatoes.",
+    "Mash the pilchards (bones and all) with the potato, onion, egg and flour.",
+    "Shape into cakes and fry in a little oil until golden.",
+    "Warm the chakalaka and serve on the side."
+   ],
+   "ingredients": [
+    {
+     "id": "pilchards_tin",
+     "qty": 100
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "onion",
+     "qty": 25
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "cake_flour",
+     "qty": 20
+    },
+    {
+     "id": "chakalaka",
+     "qty": 100
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "umngqusho",
+   "name": "Samp & beans (umngqusho)",
+   "description": "Classic samp and sugar beans, slow-simmered with onion and tomato.",
+   "cookMinutes": 90,
+   "tags": [
+    "protein:sugar_beans",
+    "starch:samp",
+    "meat_free",
+    "one_pot",
+    "no_oven"
+   ],
+   "steps": [
+    "Soak samp and beans overnight; rinse.",
+    "Boil together in fresh water for about 1 hour 15 minutes until soft.",
+    "Fry onion and tomato in oil and stir through with stock.",
+    "Season and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "samp",
+     "qty": 80
+    },
+    {
+     "id": "sugar_beans",
+     "qty": 40
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 75
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "soya_mince_bolognaise",
+   "name": "Soya mince bolognaise",
+   "description": "Budget bolognaise with soya mince and carrots on spaghetti.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:soya_mince",
+    "starch:pasta",
+    "meat_free",
+    "one_pot",
+    "no_oven",
+    "kid_friendly"
+   ],
+   "steps": [
+    "Fry onion, garlic and grated carrot in oil.",
+    "Add soya mince, tinned tomatoes, tomato paste and a little water; simmer 15 minutes.",
+    "Cook the pasta.",
+    "Season with herbs and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "soya_mince",
+     "qty": 30
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "tomato_paste",
+     "qty": 10
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "cabbage_boerewors",
+   "name": "Cabbage & boerewors",
+   "description": "Pan-fried boerewors with braised cabbage and potatoes.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:boerewors",
+    "starch:potatoes",
+    "no_oven"
+   ],
+   "steps": [
+    "Fry the boerewors in a pan until cooked; set aside.",
+    "In the same pan fry onion, then add shredded cabbage and diced potato with a splash of water.",
+    "Cover and cook 15 minutes until soft.",
+    "Slice the wors back in and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "boerewors",
+     "qty": 125
+    },
+    {
+     "id": "cabbage",
+     "qty": 150
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  }
+ ]
+}
