@@ -17,8 +17,8 @@ export default async function SettingsPage() {
     ? await query<{ id: string; name: string }>(db, sql`select id, name from ingredients where id = any(${pgArray(h.neverSwapProteins)}::text[])`)
     : [];
   return (
-    <main className="px-4 py-6">
-      <h1 className="mb-4 text-xl font-bold">{t('title')}</h1>
+    <main className="space-y-3 px-gutter pt-2 pb-4">
+      <h1 className="font-heading text-h1 font-extrabold text-primary">{t('title')}</h1>
       <SettingsForm
         data={{
           light: h?.light ?? 0,

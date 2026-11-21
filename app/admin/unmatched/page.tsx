@@ -25,7 +25,7 @@ export default async function Unmatched() {
           <input type="hidden" name="id" value={i.id} />
           <span className="flex-1">{i.raw_name} {i.size_text} · {i.retailer_id} · {i.price_cents ?? ''}</span>
           <input name="productId" placeholder={t('productId')} className="w-24 rounded border px-1" />
-          <button className="rounded bg-brand px-2 text-white">{t('resolve')}</button>
+          <button className="rounded bg-primary px-2 text-on-primary">{t('resolve')}</button>
           <button name="ignore" value="1" className="rounded border px-2">{t('ignore')}</button>
         </form>
       ))}

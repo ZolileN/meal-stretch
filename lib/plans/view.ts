@@ -32,6 +32,8 @@ export interface PlanView {
     perPlateCents: number;
     servings: number;
     share: { fraction: string; pack: string; ingredient: string } | null;
+    /** Optional decorative photo (≤ 40 KB WebP); null for most recipes. */
+    imageUrl: string | null;
   }[];
   unpriced: { ingredientId: string; name: string; recipes: string[] }[];
   listItems: number;
@@ -105,7 +107,7 @@ export async function buildPlanView(db: Db, plan: StoredPlan, language = 'en'): 
       }
     }
     const n = names.get(m.recipeId);
-    return { ...m, name: n?.name ?? m.recipeId, cookMinutes: n?.cookMinutes ?? 0, share };
+    return { ...m, name: n?.name ?? m.recipeId, cookMinutes: n?.cookMinutes ?? 0, imageUrl: n?.imageUrl ?? null, share };
   });
 
   const recipeName = (id: string) => names.get(id)?.name ?? id;

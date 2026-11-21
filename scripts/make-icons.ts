@@ -1,4 +1,4 @@
-/** Generates the PWA icons (public/icons/*.png) from BRAND colours: a plate on a teal tile. No deps. */
+/** Generates the PWA icons (public/icons/*.png) from BRAND colours: a plate with an amber savings ring on a green tile. No deps. */
 import { writeFileSync } from 'node:fs';
 import { deflateSync } from 'node:zlib';
 import { BRAND } from '../lib/brand';
@@ -25,8 +25,8 @@ const chunk = (type: string, data: Buffer) => {
 
 function png(size: number, maskable: boolean): Buffer {
   const bg = hex(BRAND.colors.primary);
-  const ring = hex(BRAND.colors.accent);
-  const white: [number, number, number] = [255, 255, 255];
+  const ring = hex(BRAND.colors.savings); // amber savings signature (THEME §6.2)
+  const white = hex(BRAND.colors.surface);
   const raw = Buffer.alloc((size * 3 + 1) * size);
   const c = size / 2;
   const scale = maskable ? 0.62 : 0.8; // maskable icons keep the art inside the safe zone

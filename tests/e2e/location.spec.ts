@@ -36,7 +36,8 @@ test.describe('location & stores (Phase 1)', () => {
     const sheet = page.getByRole('dialog');
     await expect(sheet.getByRole('heading', { name: 'Pick your shops' })).toBeVisible();
     await expect(sheet.getByRole('button', { name: /TEST Checkers Bluewater Bay/ })).toHaveAttribute('aria-pressed', 'true');
-    await expect(sheet.getByRole('button', { name: /Xtra Savings · I have this card ✓/ })).toBeVisible();
+    // The selected card chip shows a check icon; its state is aria-pressed (THEME §2.3 Chip).
+    await expect(sheet.getByRole('button', { name: /Xtra Savings · I have this card/ })).toHaveAttribute('aria-pressed', 'true');
   });
 
   test('geolocation mocked in Somerset West → label + stores shown', async ({ page, context }) => {

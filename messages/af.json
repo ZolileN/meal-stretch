@@ -6,7 +6,32 @@
     "headline": "TODO: Suppers that fit your budget",
     "intro": "TODO: Tell us how much you have and until when. We plan your suppers around this week's specials at the shops near you, and show you exactly what you'll save.",
     "start": "TODO: Get started",
-    "startPlan": "TODO: Plan my suppers"
+    "startPlan": "TODO: Plan my suppers",
+    "greeting": "TODO: {part, select, morning {Good morning} afternoon {Good afternoon} other {Good evening}}{name, select, none {} other {, {name}}} 👋",
+    "tonightEyebrow": "TODO: Tonight",
+    "upNextEyebrow": "TODO: Up next",
+    "startCooking": "TODO: Start cooking",
+    "comingUp": "TODO: Coming up",
+    "seeAll": "TODO: See all",
+    "shortcuts": "TODO: Quick changes",
+    "cheaperWeek": "TODO: Cheaper week",
+    "cheaperWeekSub": "TODO: Lowest cost suppers",
+    "cheaperWeekOn": "TODO: You already have the cheapest plan",
+    "cheaperWeekDone": "TODO: Done. This is now your cheapest plan.",
+    "useWhatIHave": "TODO: Use what I have",
+    "useWhatIHaveSub": "TODO: Tick off what is in the cupboard",
+    "quick": "TODO: Quick suppers",
+    "quickSub": "TODO: 30 minutes or less",
+    "quickDone": "TODO: Done. Every supper now takes 30 minutes or less.",
+    "pointBudget": "TODO: Your budget, your dates",
+    "pointBudgetText": "TODO: Say how much you have and until when. We plan suppers that fit.",
+    "pointSpecials": "TODO: Built on this week's specials",
+    "pointSpecialsText": "TODO: We check prices at the shops near you, including your card prices.",
+    "pointSavings": "TODO: See every rand you save",
+    "pointSavingsText": "TODO: Your savings add up each time you shop. Scan a slip to confirm them.",
+    "nothingTonight": "TODO: No supper planned for tonight",
+    "nothingTonightText": "TODO: This plan has ended. Make a new one for the days ahead.",
+    "newPlan": "TODO: Make a new plan"
   },
   "location": {
     "barNear": "TODO: Shopping near {place}",
@@ -49,7 +74,8 @@
     "reportSend": "TODO: Send",
     "reportThanks": "TODO: Thanks! We'll check and add it.",
     "reportFailed": "TODO: Couldn't send. Please try again.",
-    "plus": "TODO: {main} + {topUp}"
+    "plus": "TODO: {main} + {topUp}",
+    "step": "TODO: Step {n} of {total}"
   },
   "onboarding": {
     "title": "TODO: Who and how much?",
@@ -81,7 +107,9 @@
     "needShops": "TODO: Choose your shops first.",
     "needBudget": "TODO: Enter an amount in rands.",
     "failed": "TODO: Something went wrong. Please try again.",
-    "noRecipes": "TODO: No recipes are available yet. Please check back soon."
+    "noRecipes": "TODO: No recipes are available yet. Please check back soon.",
+    "step": "TODO: Step {n} of {total}",
+    "back": "TODO: Back"
   },
   "plan": {
     "suppersPerPlate": "TODO: {count, plural, one {# supper} other {# suppers}} · {perPlate} a plate",
@@ -117,7 +145,10 @@
     "newPlan": "TODO: New plan",
     "tooFewDays": "TODO: {budget} covers only {days, plural, one {# supper} other {# suppers}}. Plans need at least 3: try a bigger amount or another shop.",
     "shoppedPrompt": "TODO: Did you do this shop? Mark it as done to add what you saved.",
-    "actionsFor": "TODO: {name}: actions"
+    "actionsFor": "TODO: {name}: actions",
+    "total": "TODO: Plan total",
+    "savingsRing": "TODO: You save {pct}% on this plan",
+    "yourSuppers": "TODO: Your suppers"
   },
   "actions": {
     "swapTitle": "TODO: Swap {name}",
@@ -181,7 +212,10 @@
       "spices": "TODO: Spices",
       "oils": "TODO: Oil",
       "other": "TODO: Other"
-    }
+    },
+    "itemsCount": "TODO: {count, plural, one {# item} other {# items}}",
+    "wasLabel": "TODO: normal price",
+    "more": "TODO: More for {name}"
   },
   "recipe": {
     "back": "TODO: Back to plan",
@@ -204,21 +238,26 @@
     "packSharing": "TODO: Pack sharing also saved you {amount} (not counted above)",
     "counts": "TODO: {plans, plural, one {# shop} other {# shops}} · {receipts, plural, =0 {no slips yet} one {# slip} other {# slips}}",
     "scan": "TODO: Scan a receipt",
-    "howCounted": "TODO: We count savings against the normal shelf price of the same packs, with no specials or cards."
+    "howCounted": "TODO: We count savings against the normal shelf price of the same packs, with no specials or cards.",
+    "ringLabel": "TODO: Your shopped plans cost {pct}% less than normal shelf prices",
+    "nothingYetTitle": "TODO: Nothing saved yet"
   },
   "steal": {
     "title": "TODO: Steal of the week",
     "line": "TODO: {product} {pack} {price} at {store}",
     "was": "TODO: was {amount}",
     "lowest": "TODO: lowest in {weeks} weeks",
-    "ends": "TODO: until {date}"
+    "ends": "TODO: until {date}",
+    "wasLabel": "TODO: normal price"
   },
   "nav": {
     "plan": "TODO: Plan",
     "list": "TODO: List",
     "savings": "TODO: Savings",
     "settings": "TODO: Settings",
-    "label": "TODO: Main menu"
+    "label": "TODO: Main menu",
+    "home": "TODO: Home",
+    "tonight": "TODO: Tonight"
   },
   "notify": {
     "tonightTitle": "TODO: Tonight: {name}",
@@ -267,7 +306,8 @@
     "cap": "TODO: You can scan 5 slips a day. Try again tomorrow.",
     "needConsent": "TODO: Please tick the box first.",
     "another": "TODO: Scan another",
-    "toSavings": "TODO: See my savings"
+    "toSavings": "TODO: See my savings",
+    "back": "TODO: Back to savings"
   },
   "tweak": {
     "label": "TODO: Change something?",
@@ -330,7 +370,10 @@
     "delete": "TODO: Delete my data",
     "deleteConfirm": "TODO: This deletes your plans, pantry, savings and slips. It can't be undone. Delete?",
     "deleted": "TODO: Your data has been deleted.",
-    "privacyLink": "TODO: Read our privacy notice"
+    "privacyLink": "TODO: Read our privacy notice",
+    "photos": "TODO: Food photos",
+    "photosToggle": "TODO: Show food photos",
+    "photosHelp": "TODO: Photos use data. When off, we only show them on Wi-Fi."
   },
   "account": {
     "promptTitle": "TODO: Keep your savings total and plans on any phone.",
@@ -428,5 +471,15 @@
     "rights": "TODO: You can download or delete your data any time in Settings → Data & privacy.",
     "contact": "TODO: Questions about your data: contact us using the email in the app store listing.",
     "link": "TODO: Privacy"
+  },
+  "coach": {
+    "actionsTitle": "TODO: Make it yours",
+    "actionsText": "TODO: Swap a supper, pick a cheaper one, or remove it. The total updates straight away.",
+    "listTitle": "TODO: Then go shopping",
+    "listText": "TODO: Your list is grouped by shop and aisle, and works without data.",
+    "skip": "TODO: Skip",
+    "next": "TODO: Next",
+    "done": "TODO: Got it",
+    "step": "TODO: Tip {n} of {total}"
   }
 }

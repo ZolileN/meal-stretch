@@ -8,5 +8,5 @@ import { ShopLocation } from '@/components/ShopLocation';
 export function StartFlow() {
   const router = useRouter();
   useEffect(() => trackClient('onboarding_started'), []);
-  return <ShopLocation onDone={() => router.push('/start/household')} />;
+  return <ShopLocation onboarding onDone={() => router.push('/start/household')} />;
 }

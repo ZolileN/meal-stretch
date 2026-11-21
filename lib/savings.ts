@@ -4,6 +4,7 @@
  * total only goes up. Receipts not linked to a plan count on their own. unique(kind, ref_id) stops repeats.
  */
 import { sql } from 'drizzle-orm';
+import { percent } from '@/lib/money';
 import { query, type Db } from '@/lib/db';
 
 export interface Lifetime {
@@ -14,6 +15,8 @@ export interface Lifetime {
   packEfficiencyCents: number;
   shoppedPlans: number;
   verifiedReceipts: number;
+  /** Shopped plans: savings as a % of what the same basket costs at normal shelf prices. */
+  planRatePct: number;
 }
 
 export async function lifetimeSavings(db: Db, householdId: string): Promise<Lifetime> {
@@ -33,7 +36,10 @@ export async function lifetimeSavings(db: Db, householdId: string): Promise<Life
           (select coalesce(sum(savings_cents), 0) from ev where kind = 'receipt_verified') as verified,
           (select coalesce(sum(pack_efficiency_cents), 0) from ev where kind = 'plan_shopped') as pack,
           (select count(*) from ev where kind = 'plan_shopped') as plans,
-          (select count(*) from ev where kind = 'receipt_verified') as receipts`,
+          (select count(*) from ev where kind = 'receipt_verified') as receipts,
+          (select coalesce(sum(ev.savings_cents), 0) from ev where kind = 'plan_shopped') as plan_saved,
+          (select coalesce(sum((p.result->'totals'->>'normalCents')::bigint), 0)
+             from ev join plans p on p.id = ev.plan_id where ev.kind = 'plan_shopped') as plan_normal`,
   );
   const r = rows[0] ?? {};
   return {
@@ -44,6 +50,7 @@ export async function lifetimeSavings(db: Db, householdId: string): Promise<Life
     packEfficiencyCents: Number(r.pack ?? 0),
     shoppedPlans: Number(r.plans ?? 0),
     verifiedReceipts: Number(r.receipts ?? 0),
+    planRatePct: percent(Number(r.plan_saved ?? 0), Number(r.plan_normal ?? 0)),
   };
 }
 

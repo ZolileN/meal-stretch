@@ -6,7 +6,32 @@
     "headline": "Suppers that fit your budget",
     "intro": "Tell us how much you have and until when. We plan your suppers around this week's specials at the shops near you, and show you exactly what you'll save.",
     "start": "Get started",
-    "startPlan": "Plan my suppers"
+    "startPlan": "Plan my suppers",
+    "greeting": "{part, select, morning {Good morning} afternoon {Good afternoon} other {Good evening}}{name, select, none {} other {, {name}}} 👋",
+    "tonightEyebrow": "Tonight",
+    "upNextEyebrow": "Up next",
+    "startCooking": "Start cooking",
+    "comingUp": "Coming up",
+    "seeAll": "See all",
+    "shortcuts": "Quick changes",
+    "cheaperWeek": "Cheaper week",
+    "cheaperWeekSub": "Lowest cost suppers",
+    "cheaperWeekOn": "You already have the cheapest plan",
+    "cheaperWeekDone": "Done. This is now your cheapest plan.",
+    "useWhatIHave": "Use what I have",
+    "useWhatIHaveSub": "Tick off what is in the cupboard",
+    "quick": "Quick suppers",
+    "quickSub": "30 minutes or less",
+    "quickDone": "Done. Every supper now takes 30 minutes or less.",
+    "pointBudget": "Your budget, your dates",
+    "pointBudgetText": "Say how much you have and until when. We plan suppers that fit.",
+    "pointSpecials": "Built on this week's specials",
+    "pointSpecialsText": "We check prices at the shops near you, including your card prices.",
+    "pointSavings": "See every rand you save",
+    "pointSavingsText": "Your savings add up each time you shop. Scan a slip to confirm them.",
+    "nothingTonight": "No supper planned for tonight",
+    "nothingTonightText": "This plan has ended. Make a new one for the days ahead.",
+    "newPlan": "Make a new plan"
   },
   "location": {
     "barNear": "Shopping near {place}",
@@ -49,7 +74,8 @@
     "reportSend": "Send",
     "reportThanks": "Thanks! We'll check and add it.",
     "reportFailed": "Couldn't send. Please try again.",
-    "plus": "{main} + {topUp}"
+    "plus": "{main} + {topUp}",
+    "step": "Step {n} of {total}"
   },
   "onboarding": {
     "title": "Who and how much?",
@@ -81,7 +107,9 @@
     "needShops": "Choose your shops first.",
     "needBudget": "Enter an amount in rands.",
     "failed": "Something went wrong. Please try again.",
-    "noRecipes": "No recipes are available yet. Please check back soon."
+    "noRecipes": "No recipes are available yet. Please check back soon.",
+    "step": "Step {n} of {total}",
+    "back": "Back"
   },
   "plan": {
     "suppersPerPlate": "{count, plural, one {# supper} other {# suppers}} · {perPlate} a plate",
@@ -117,7 +145,10 @@
     "newPlan": "New plan",
     "tooFewDays": "{budget} covers only {days, plural, one {# supper} other {# suppers}}. Plans need at least 3: try a bigger amount or another shop.",
     "shoppedPrompt": "Did you do this shop? Mark it as done to add what you saved.",
-    "actionsFor": "{name}: actions"
+    "actionsFor": "{name}: actions",
+    "total": "Plan total",
+    "savingsRing": "You save {pct}% on this plan",
+    "yourSuppers": "Your suppers"
   },
   "actions": {
     "swapTitle": "Swap {name}",
@@ -181,7 +212,10 @@
       "spices": "Spices",
       "oils": "Oil",
       "other": "Other"
-    }
+    },
+    "itemsCount": "{count, plural, one {# item} other {# items}}",
+    "wasLabel": "normal price",
+    "more": "More for {name}"
   },
   "recipe": {
     "back": "Back to plan",
@@ -204,21 +238,26 @@
     "packSharing": "Pack sharing also saved you {amount} (not counted above)",
     "counts": "{plans, plural, one {# shop} other {# shops}} · {receipts, plural, =0 {no slips yet} one {# slip} other {# slips}}",
     "scan": "Scan a receipt",
-    "howCounted": "We count savings against the normal shelf price of the same packs, with no specials or cards."
+    "howCounted": "We count savings against the normal shelf price of the same packs, with no specials or cards.",
+    "ringLabel": "Your shopped plans cost {pct}% less than normal shelf prices",
+    "nothingYetTitle": "Nothing saved yet"
   },
   "steal": {
     "title": "Steal of the week",
     "line": "{product} {pack} {price} at {store}",
     "was": "was {amount}",
     "lowest": "lowest in {weeks} weeks",
-    "ends": "until {date}"
+    "ends": "until {date}",
+    "wasLabel": "normal price"
   },
   "nav": {
     "plan": "Plan",
     "list": "List",
     "savings": "Savings",
     "settings": "Settings",
-    "label": "Main menu"
+    "label": "Main menu",
+    "home": "Home",
+    "tonight": "Tonight"
   },
   "notify": {
     "tonightTitle": "Tonight: {name}",
@@ -267,7 +306,8 @@
     "cap": "You can scan 5 slips a day. Try again tomorrow.",
     "needConsent": "Please tick the box first.",
     "another": "Scan another",
-    "toSavings": "See my savings"
+    "toSavings": "See my savings",
+    "back": "Back to savings"
   },
   "tweak": {
     "label": "Change something?",
@@ -330,7 +370,10 @@
     "delete": "Delete my data",
     "deleteConfirm": "This deletes your plans, pantry, savings and slips. It can't be undone. Delete?",
     "deleted": "Your data has been deleted.",
-    "privacyLink": "Read our privacy notice"
+    "privacyLink": "Read our privacy notice",
+    "photos": "Food photos",
+    "photosToggle": "Show food photos",
+    "photosHelp": "Photos use data. When off, we only show them on Wi-Fi."
   },
   "account": {
     "promptTitle": "Keep your savings total and plans on any phone.",
@@ -428,5 +471,15 @@
     "rights": "You can download or delete your data any time in Settings → Data & privacy.",
     "contact": "Questions about your data: contact us using the email in the app store listing.",
     "link": "Privacy"
+  },
+  "coach": {
+    "actionsTitle": "Make it yours",
+    "actionsText": "Swap a supper, pick a cheaper one, or remove it. The total updates straight away.",
+    "listTitle": "Then go shopping",
+    "listText": "Your list is grouped by shop and aisle, and works without data.",
+    "skip": "Skip",
+    "next": "Next",
+    "done": "Got it",
+    "step": "Tip {n} of {total}"
   }
 }

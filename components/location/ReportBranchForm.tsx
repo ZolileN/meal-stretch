@@ -1,6 +1,9 @@
 'use client';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Button } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
+import { fieldClass, labelClass } from '@/components/ui/field';
 
 export function ReportBranchForm({
   point,
@@ -36,20 +39,20 @@ export function ReportBranchForm({
 
   if (state === 'sent')
     return (
-      <p role="status" className="text-sm text-brand">
-        {t('reportThanks')}{' '}
-        <button type="button" className="tap underline" onClick={onClose}>
+      <p role="status" className="flex flex-wrap items-center gap-2 text-small font-semibold text-success">
+        {t('reportThanks')}
+        <Button variant="ghost" onClick={onClose}>
           {t('close')}
-        </button>
+        </Button>
       </p>
     );
 
   return (
-    <form onSubmit={submit} className="space-y-3 rounded-xl border p-3" aria-label={t('reportTitle')}>
-      <h3 className="font-semibold">{t('reportTitle')}</h3>
-      <label className="block text-sm">
+    <Card as="form" onSubmit={submit} className="space-y-4 p-5" aria-label={t('reportTitle')}>
+      <h3 className="font-heading text-h3 font-bold text-primary">{t('reportTitle')}</h3>
+      <label className={labelClass}>
         {t('reportRetailer')}
-        <select value={retailerId} onChange={(e) => setRetailerId(e.target.value)} className="tap mt-1 w-full rounded-lg border px-3">
+        <select value={retailerId} onChange={(e) => setRetailerId(e.target.value)} className={`${fieldClass} mt-1.5 font-normal`}>
           {retailers.map((r) => (
             <option key={r.id} value={r.id}>
               {r.name}
@@ -59,24 +62,24 @@ export function ReportBranchForm({
         </select>
       </label>
       {retailerId === 'other' && (
-        <label className="block text-sm">
+        <label className={labelClass}>
           {t('reportOtherName')}
-          <input required maxLength={80} value={other} onChange={(e) => setOther(e.target.value)} className="tap mt-1 w-full rounded-lg border px-3" />
+          <input required maxLength={80} value={other} onChange={(e) => setOther(e.target.value)} className={`${fieldClass} mt-1.5 font-normal`} />
         </label>
       )}
-      <label className="block text-sm">
+      <label className={labelClass}>
         {t('reportNote')}
-        <textarea maxLength={500} value={note} onChange={(e) => setNote(e.target.value)} className="mt-1 w-full rounded-lg border px-3 py-2" rows={2} />
+        <textarea maxLength={500} value={note} onChange={(e) => setNote(e.target.value)} className={`${fieldClass} mt-1.5 font-normal`} rows={2} />
       </label>
-      {state === 'failed' && <p className="text-sm text-danger">{t('reportFailed')}</p>}
+      {state === 'failed' && <p className="text-small text-danger">{t('reportFailed')}</p>}
       <div className="flex gap-2">
-        <button type="submit" disabled={state === 'sending'} className="tap rounded-lg bg-brand px-4 font-semibold text-white">
+        <Button type="submit" loading={state === 'sending'}>
           {t('reportSend')}
-        </button>
-        <button type="button" onClick={onClose} className="tap rounded-lg border px-4">
+        </Button>
+        <Button variant="secondary" onClick={onClose}>
           {t('close')}
-        </button>
+        </Button>
       </div>
-    </form>
+    </Card>
   );
 }

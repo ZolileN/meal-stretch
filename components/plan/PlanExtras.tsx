@@ -2,7 +2,10 @@
 /** Shown only once a plan exists: install prompt (§6) and push permission with an explanation first (§14). */
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Bell, Download } from 'lucide-react';
 import { BRAND } from '@/lib/brand';
+import { Button } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
 
 type InstallEvent = Event & { prompt: () => Promise<void>; userChoice: Promise<{ outcome: string }> };
 declare global {
@@ -56,13 +59,11 @@ function InstallPrompt() {
   }, []);
   if (!evt) return null;
   return (
-    <section className="rounded-2xl border p-4" data-testid="install-prompt">
-      <h2 className="font-semibold">{t('installTitle', { brand: BRAND.name })}</h2>
-      <p className="text-sm text-gray-700">{t('installBody')}</p>
-      <div className="mt-2 flex gap-2">
-        <button
-          type="button"
-          className="tap rounded-xl bg-brand px-4 font-semibold text-white"
+    <Card className="p-5" data-testid="install-prompt">
+      <ExtraTitle icon={<Download className="size-5" />}>{t('installTitle', { brand: BRAND.name })}</ExtraTitle>
+      <p className="mt-1 text-small text-text-muted">{t('installBody')}</p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        <Button
           onClick={async () => {
             await evt.prompt();
             window.__msInstall = undefined;
@@ -70,12 +71,12 @@ function InstallPrompt() {
           }}
         >
           {t('install')}
-        </button>
-        <button type="button" className="tap rounded-xl border px-4" onClick={() => (write('ms_install_dismissed', '1'), setEvt(null))}>
+        </Button>
+        <Button variant="ghost" onClick={() => (write('ms_install_dismissed', '1'), setEvt(null))}>
           {t('notNow')}
-        </button>
+        </Button>
       </div>
-    </section>
+    </Card>
   );
 }
 
@@ -114,42 +115,49 @@ function PushPrompt() {
   if (stage === 'hidden') return null;
   if (stage === 'done' || stage === 'denied')
     return (
-      <p role="status" className="rounded-lg bg-teal-50 p-2 text-sm">
+      <p role="status" className="rounded-input bg-surface-muted px-4 py-3 text-small text-text">
         {stage === 'done' ? t('allowed') : t('denied')}
       </p>
     );
   if (stage === 'card')
     return (
-      <section className="rounded-2xl border p-4" data-testid="push-card">
-        <h2 className="font-semibold">{t('cardTitle')}</h2>
-        <p className="text-sm text-gray-700">{t('cardBody')}</p>
-        <div className="mt-2 flex gap-2">
-          <button type="button" className="tap rounded-xl bg-brand px-4 font-semibold text-white" onClick={() => setStage('explain')}>
-            {t('more')}
-          </button>
-          <button type="button" className="tap rounded-xl border px-4" onClick={() => (write('ms_push_dismissed', '1'), setStage('hidden'))}>
+      <Card className="p-5" data-testid="push-card">
+        <ExtraTitle icon={<Bell className="size-5" />}>{t('cardTitle')}</ExtraTitle>
+        <p className="mt-1 text-small text-text-muted">{t('cardBody')}</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          <Button onClick={() => setStage('explain')}>{t('more')}</Button>
+          <Button variant="ghost" onClick={() => (write('ms_push_dismissed', '1'), setStage('hidden'))}>
             {t('notNow')}
-          </button>
+          </Button>
         </div>
-      </section>
+      </Card>
     );
   return (
-    <section className="rounded-2xl border-2 border-brand p-4" data-testid="push-explain">
-      <h2 className="font-semibold">{t('explainTitle', { brand: BRAND.name })}</h2>
-      <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
+    <Card className="border-primary-soft p-5" data-testid="push-explain">
+      <ExtraTitle icon={<Bell className="size-5" />}>{t('explainTitle', { brand: BRAND.name })}</ExtraTitle>
+      <ul className="mt-2 list-disc space-y-1 pl-5 text-small">
         <li>{t('explain1')}</li>
         <li>{t('explain2')}</li>
         <li>{t('explain3')}</li>
         <li>{t('explain4')}</li>
       </ul>
-      <div className="mt-3 flex gap-2">
-        <button type="button" className="tap rounded-xl bg-brand px-4 font-semibold text-white" onClick={allow}>
-          {t('allow')}
-        </button>
-        <button type="button" className="tap rounded-xl border px-4" onClick={() => (write('ms_push_dismissed', '1'), setStage('hidden'))}>
+      <div className="mt-3 flex flex-wrap gap-2">
+        <Button onClick={allow}>{t('allow')}</Button>
+        <Button variant="ghost" onClick={() => (write('ms_push_dismissed', '1'), setStage('hidden'))}>
           {t('notNow')}
-        </button>
+        </Button>
       </div>
-    </section>
+    </Card>
+  );
+}
+
+function ExtraTitle({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
+  return (
+    <h2 className="flex items-center gap-2 font-heading text-h3 font-bold text-primary">
+      <span aria-hidden className="grid size-9 shrink-0 place-items-center rounded-full bg-surface-muted">
+        {icon}
+      </span>
+      {children}
+    </h2>
   );
 }

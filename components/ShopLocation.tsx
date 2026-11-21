@@ -10,6 +10,16 @@ import { pruneLoyalty, relevantPrograms, toggleShop, type BranchSummary, type Sa
 import { useShops } from './location/LocationProvider';
 import { ReportBranchForm } from './location/ReportBranchForm';
 import { trackClient } from '@/lib/track-client';
+import { Check, CirclePlus, CreditCard, LocateFixed, MapPin, Search, Store } from 'lucide-react';
+import { cn } from '@/lib/cn';
+import { Badge } from './ui/Badge';
+import { Button } from './ui/Button';
+import { Card } from './ui/Card';
+import { Chip } from './ui/Chip';
+import { EmptyState } from './ui/EmptyState';
+import { SectionHeader } from './ui/SectionHeader';
+import { Skeleton } from './ui/Skeleton';
+import { fieldClass, labelClass } from './ui/field';
 
 type Step = 'where' | 'shops';
 
@@ -35,7 +45,8 @@ function uuid() {
   return typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : '00000000-0000-4000-8000-000000000000';
 }
 
-export function ShopLocation({ initialStep, onDone }: { initialStep?: Step; onDone?: (s: SavedShops) => void }) {
+/** `surface` is what the picker sits on (cream page in onboarding, white inside the sheet). */
+export function ShopLocation({ initialStep, onDone, surface = 'bg', onboarding = false }: { initialStep?: Step; onDone?: (s: SavedShops) => void; surface?: 'bg' | 'surface'; onboarding?: boolean }) {
   const t = useTranslations('location');
   const { shops, save } = useShops();
   const [override, setStep] = useState<Step | null>(initialStep ?? null);
@@ -44,6 +55,7 @@ export function ShopLocation({ initialStep, onDone }: { initialStep?: Step; onDo
   if (step === 'where' || !shops.location) {
     return (
       <WhereStep
+        eyebrow={onboarding ? t('step', { n: 1, total: 3 }) : null}
         onPicked={(location) => {
           trackClient('location_set', { source: location.source });
           save({ location });
@@ -56,6 +68,8 @@ export function ShopLocation({ initialStep, onDone }: { initialStep?: Step; onDo
     <ShopsStep
       location={shops.location}
       onChangePlace={() => setStep('where')}
+      surface={surface}
+      eyebrow={onboarding ? t('step', { n: 2, total: 3 }) : null}
       onDone={(s) => {
         if (s.main) trackClient('shops_set', { main_retailer: s.main.retailerId, has_top_up: Boolean(s.topUp) });
         trackClient('cards_set', { count: s.loyalty.length });
@@ -67,7 +81,7 @@ export function ShopLocation({ initialStep, onDone }: { initialStep?: Step; onDo
   );
 }
 
-function WhereStep({ onPicked }: { onPicked: (l: NonNullable<SavedShops['location']>) => void }) {
+function WhereStep({ onPicked, eyebrow }: { onPicked: (l: NonNullable<SavedShops['location']>) => void; eyebrow: string | null }) {
   const t = useTranslations('location');
   const inputId = useId();
   const inputRef = useRef<HTMLInputElement>(null);
@@ -149,45 +163,54 @@ function WhereStep({ onPicked }: { onPicked: (l: NonNullable<SavedShops['locatio
   };
 
   return (
-    <section aria-labelledby={`${inputId}-h`} className="space-y-4">
-      <h2 id={`${inputId}-h`} className="text-xl font-bold">
+    <section aria-labelledby={`${inputId}-h`} className="space-y-5">
+      {eyebrow && <p className="-mb-4 text-caption font-bold tracking-wider text-accent uppercase">{eyebrow}</p>}
+      <h2 id={`${inputId}-h`} className="font-heading text-display font-extrabold text-primary">
         {t('whereTitle')}
       </h2>
-      <button type="button" onClick={useGps} disabled={busy} className="tap w-full rounded-xl bg-brand px-4 py-3 font-semibold text-white disabled:opacity-60">
-        {busy ? t('locating') : t('useMyLocation')}
-      </button>
-      <div>
-        <label htmlFor={inputId} className="block text-sm font-medium text-gray-700">
+      <Button size="lg" onClick={useGps} loading={busy} loadingLabel={t('locating')} icon={<LocateFixed aria-hidden className="size-5" />}>
+        {t('useMyLocation')}
+      </Button>
+      <div className="space-y-1.5">
+        <label htmlFor={inputId} className={labelClass}>
           {t('searchLabel')}
         </label>
-        <input
-          id={inputId}
-          ref={inputRef}
-          type="search"
-          autoComplete="off"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder={t('searchPlaceholder')}
-          className="tap mt-1 w-full rounded-xl border border-gray-300 px-4 py-3 text-base"
-        />
+        <div className="relative">
+          <Search aria-hidden className="pointer-events-none absolute top-1/2 left-4 size-5 -translate-y-1/2 text-text-muted" />
+          <input
+            id={inputId}
+            ref={inputRef}
+            type="search"
+            autoComplete="off"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder={t('searchPlaceholder')}
+            className={cn(fieldClass, 'pl-12')}
+          />
+        </div>
       </div>
       {msg && (
-        <p role="status" className="text-sm text-danger">
+        <p role="status" className="rounded-input bg-danger-soft px-4 py-3 text-small text-danger">
           {msg}
         </p>
       )}
       {results && q.trim().length >= 2 && (
-        <ul className="divide-y rounded-xl border" aria-label={t('searchLabel')}>
-          {results.length === 0 && <li className="p-3 text-sm text-gray-600">{t('noResults')}</li>}
-          {results.map((r) => (
-            <li key={r.id}>
-              <button type="button" onClick={() => pick(r)} className="tap w-full px-4 py-3 text-left">
-                <span className="font-medium">{r.name}</span>
-                {r.secondary && <span className="block text-sm text-gray-600">{r.secondary}</span>}
-              </button>
-            </li>
-          ))}
-        </ul>
+        <Card as="div" className="overflow-hidden">
+          <ul className="divide-y divide-border" aria-label={t('searchLabel')}>
+            {results.length === 0 && <li className="p-4 text-small text-text-muted">{t('noResults')}</li>}
+            {results.map((r) => (
+              <li key={r.id}>
+                <button type="button" onClick={() => pick(r)} className="press tap flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-surface-muted">
+                  <MapPin aria-hidden className="size-5 shrink-0 text-primary" />
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-medium">{r.name}</span>
+                    {r.secondary && <span className="block text-small text-text-muted">{r.secondary}</span>}
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </Card>
       )}
     </section>
   );
@@ -198,7 +221,11 @@ function ShopsStep({
   onChangePlace,
   onDone,
   t,
+  surface,
+  eyebrow,
 }: {
+  surface: 'bg' | 'surface';
+  eyebrow: string | null;
   location: NonNullable<SavedShops['location']>;
   onChangePlace: () => void;
   onDone: (s: Pick<SavedShops, 'main' | 'topUp' | 'loyalty'>) => void;
@@ -239,37 +266,65 @@ function ShopsStep({
         type="button"
         aria-pressed={r !== null}
         onClick={() => setSel((s) => toggleShop(s, summary(b)))}
-        className={`tap rounded-xl border px-3 py-2 text-left ${r ? 'border-brand bg-teal-50' : 'border-gray-300'} ${compact ? '' : 'w-full'}`}
+        className={cn(
+          'press tap flex items-center gap-3 border text-left',
+          compact ? 'rounded-pill px-4 py-2' : 'w-full rounded-card px-4 py-3 shadow-card',
+          r ? 'border-primary bg-surface-muted' : 'border-border bg-surface hover:border-primary-soft',
+        )}
       >
-        <span className="font-medium">{compact ? b.retailerName : b.branchName}</span>
-        <span className="block text-sm text-gray-600">
-          {b.distanceLabel}
-          {b.walkMinutes !== null && ` · ${t('walk', { minutes: b.walkMinutes })}`}
-          {!compact && !b.verified && ` · ${t('unverified')}`}
+        {!compact && (
+          <span aria-hidden className={cn('grid size-10 shrink-0 place-items-center rounded-full', r ? 'bg-primary text-on-primary' : 'bg-surface-muted text-primary')}>
+            {r ? <Check className="size-5" strokeWidth={2.5} /> : <Store className="size-5" />}
+          </span>
+        )}
+        <span className="min-w-0 flex-1">
+          <span className={cn('block font-semibold', r ? 'text-primary' : 'text-text', compact && 'text-small')}>{compact ? b.retailerName : b.branchName}</span>
+          <span className="block text-caption text-text-muted">
+            {b.distanceLabel}
+            {b.walkMinutes !== null && ` · ${t('walk', { minutes: b.walkMinutes })}`}
+            {!compact && !b.verified && ` · ${t('unverified')}`}
+          </span>
         </span>
-        {r && <span className="mt-1 inline-block rounded bg-brand px-2 text-xs font-semibold text-white">{r === 'main' ? t('mainBadge') : t('topUpBadge')}</span>}
+        {r && (
+          <Badge tone="active" className="shrink-0">
+            {r === 'main' ? t('mainBadge') : t('topUpBadge')}
+          </Badge>
+        )}
       </button>
     );
   };
 
   return (
-    <section className="space-y-4" aria-labelledby="shops-h">
+    <section className="space-y-5" aria-labelledby="shops-h">
       <div className="flex items-center justify-between gap-2">
-        <p className="text-sm text-gray-700">{t('near', { place: location.label ?? t('unknownPlace') })}</p>
-        <button type="button" onClick={onChangePlace} className="tap text-sm font-semibold text-brand underline">
+        <p className="inline-flex items-center gap-1.5 text-small font-medium text-text-muted">
+          <MapPin aria-hidden className="size-4 text-primary" />
+          {t('near', { place: location.label ?? t('unknownPlace') })}
+        </p>
+        <Button variant="ghost" onClick={onChangePlace} className="-mr-3">
           {t('changePlace')}
-        </button>
+        </Button>
       </div>
-      <h2 id="shops-h" className="text-xl font-bold">
-        {t('shopsTitle')}
-      </h2>
-      <p className="text-sm text-gray-600">{t('shopsHelp')}</p>
-      {!data && <p className="text-sm text-gray-600">{t('loading')}</p>}
-      {data && data.branches.length === 0 && <p className="text-sm">{t('noStores', { km: data.radiusKm })}</p>}
+      <div>
+        {eyebrow && <p className="mb-1 text-caption font-bold tracking-wider text-accent uppercase">{eyebrow}</p>}
+        <h2 id="shops-h" className="font-heading text-display font-extrabold text-primary">
+          {t('shopsTitle')}
+        </h2>
+        <p className="mt-1 text-small text-text-muted">{t('shopsHelp')}</p>
+      </div>
+      {!data && (
+        <div className="space-y-2" aria-busy="true">
+          <span className="sr-only">{t('loading')}</span>
+          <Skeleton className="h-16 rounded-card" />
+          <Skeleton className="h-16 rounded-card" />
+          <Skeleton className="h-16 rounded-card" />
+        </div>
+      )}
+      {data && data.branches.length === 0 && <EmptyState icon={<Store className="size-6" />} title={t('noStores', { km: data.radiusKm })} />}
       {chips.length > 0 && (
-        <div>
-          <h3 className="text-sm font-semibold text-gray-700">{t('nearestChains')}</h3>
-          <div className="mt-2 flex flex-wrap gap-2">
+        <div className="space-y-2">
+          <SectionHeader as="h3" title={t('nearestChains')} />
+          <div className="flex flex-wrap gap-2">
             {chips.map((b) => (
               <BranchButton key={b.branchId} b={b} compact />
             ))}
@@ -277,11 +332,9 @@ function ShopsStep({
         </div>
       )}
       {data && data.branches.length > 0 && (
-        <div>
-          <h3 className="text-sm font-semibold text-gray-700">
-            {t('allStores')} · {t('within', { km: data.radiusKm })}
-          </h3>
-          <ul className="mt-2 space-y-2">
+        <div className="space-y-2">
+          <SectionHeader as="h3" title={`${t('allStores')} · ${t('within', { km: data.radiusKm })}`} />
+          <ul className="space-y-2">
             {data.branches.map((b) => (
               <li key={b.branchId}>
                 <BranchButton b={b} />
@@ -291,44 +344,37 @@ function ShopsStep({
         </div>
       )}
       {programs.length > 0 && (
-        <div>
-          <h3 className="text-sm font-semibold text-gray-700">{t('cardsTitle')}</h3>
-          <div className="mt-2 flex flex-wrap gap-2">
+        <Card as="div" className="space-y-3 p-5">
+          <h3 className="inline-flex items-center gap-2 font-heading text-h3 font-bold text-primary">
+            <CreditCard aria-hidden className="size-5" />
+            {t('cardsTitle')}
+          </h3>
+          <div className="flex flex-wrap gap-2">
             {programs.map((p) => {
               const on = loyalty.includes(p.id);
               return (
-                <button
-                  key={p.id}
-                  type="button"
-                  aria-pressed={on}
-                  onClick={() => setLoyalty((l) => (on ? l.filter((x) => x !== p.id) : [...l, p.id]))}
-                  className={`tap rounded-full border px-4 py-2 text-sm ${on ? 'border-brand bg-brand text-white' : 'border-gray-300'}`}
-                >
+                <Chip key={p.id} selected={on} onClick={() => setLoyalty((l) => (on ? l.filter((x) => x !== p.id) : [...l, p.id]))}>
                   {p.name} · {t('cardHave')}
-                  {on && ' ✓'}
-                </button>
+                </Chip>
               );
             })}
           </div>
-        </div>
+        </Card>
       )}
-      <button
-        type="button"
-        disabled={!sel.main}
-        onClick={() => onDone({ ...sel, loyalty: pruneLoyalty(loyalty, programs) })}
-        className="tap w-full rounded-xl bg-brand px-4 py-3 font-semibold text-white disabled:opacity-50"
-      >
-        {t('continue')}
-      </button>
-      <div className="space-y-2 border-t pt-3 text-sm">
+      <div className="space-y-2 border-t border-border pt-4 text-small">
         {reporting ? (
           <ReportBranchForm point={location} retailers={data?.retailers ?? []} onClose={() => setReporting(false)} />
         ) : (
-          <button type="button" onClick={() => setReporting(true)} className="tap font-semibold text-brand underline">
+          <Button variant="ghost" onClick={() => setReporting(true)} className="-ml-3" icon={<CirclePlus aria-hidden className="size-4" />}>
             {t('reportLink')}
-          </button>
+          </Button>
         )}
-        <p className="text-xs text-gray-500">{t('osmAttribution')}</p>
+        <p className="text-caption text-text-muted">{t('osmAttribution')}</p>
+      </div>
+      <div className={cn('pb-safe sticky bottom-0 -mx-gutter bg-gradient-to-t px-gutter pt-4', surface === 'bg' ? 'from-bg via-bg to-bg/0' : 'from-surface via-surface to-surface/0')}>
+        <Button size="lg" disabled={!sel.main} onClick={() => onDone({ ...sel, loyalty: pruneLoyalty(loyalty, programs) })}>
+          {t('continue')}
+        </Button>
       </div>
     </section>
   );

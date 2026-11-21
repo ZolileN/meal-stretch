@@ -3,7 +3,13 @@
 import { useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { CalendarDays } from 'lucide-react';
 import { Stepper } from '@/components/Stepper';
+import { Button } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
+import { Chip } from '@/components/ui/Chip';
+import { TopBar } from '@/components/ui/TopBar';
+import { fieldClass } from '@/components/ui/field';
 import { useShops } from '@/components/location/LocationProvider';
 import { addDaysIso, DEFAULT_PAYDAY, isoDateInSA, periodDays, type PeriodChoice } from '@/lib/period';
 
@@ -63,36 +69,44 @@ export function HouseholdForm({ paydayDom = DEFAULT_PAYDAY }: { paydayDom?: numb
   };
 
   return (
-    <form onSubmit={submit} className="space-y-6" noValidate>
-      <h1 className="text-xl font-bold">{t('title')}</h1>
+    <form onSubmit={submit} className="space-y-3" noValidate>
+      <TopBar backHref="/start" backLabel={t('back')} />
+      <div className="pt-2 pb-1">
+        <p className="text-caption font-bold tracking-wider text-accent uppercase">{t('step', { n: 3, total: 3 })}</p>
+        <h1 className="mt-1 font-heading text-display font-extrabold text-primary">{t('title')}</h1>
+      </div>
 
-      <section className="space-y-2">
-        <h2 className="font-semibold">{t('people')}</h2>
-        <Stepper value={people} min={1} max={12} onChange={setPeople} label={t('people')} decLabel={t('fewer')} incLabel={t('more')} />
-        <button type="button" className="tap text-sm font-semibold text-brand underline" aria-expanded={split !== null} onClick={() => setSplit(split ? null : { light: 0, big: 0 })}>
+      <Card className="space-y-3 p-5">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 className="font-heading text-h3 font-bold text-primary">{t('people')}</h2>
+          <Stepper value={people} min={1} max={12} onChange={setPeople} label={t('people')} decLabel={t('fewer')} incLabel={t('more')} />
+        </div>
+        <Button variant="ghost" className="-ml-3" aria-expanded={split !== null} onClick={() => setSplit(split ? null : { light: 0, big: 0 })}>
           {t('someEatMore')}
-        </button>
+        </Button>
         {split && (
-          <div className="space-y-2 rounded-xl border p-3">
+          <div className="space-y-2 rounded-input bg-surface-muted p-4">
             <Row label={t('light')}>
               <Stepper value={light} min={0} max={people - big} onChange={(v) => setSplit({ light: v, big })} label={t('light')} decLabel={t('fewer')} incLabel={t('more')} />
             </Row>
             <Row label={t('average')}>
-              <output className="text-2xl font-bold">{average}</output>
+              <output className="money min-w-8 text-center font-heading text-h1 font-extrabold text-primary">{average}</output>
             </Row>
             <Row label={t('big')}>
               <Stepper value={big} min={0} max={people - light} onChange={(v) => setSplit({ light, big: v })} label={t('big')} decLabel={t('fewer')} incLabel={t('more')} />
             </Row>
           </div>
         )}
-      </section>
+      </Card>
 
-      <section className="space-y-2">
-        <label htmlFor="budget" className="block font-semibold">
+      <Card className="space-y-2 p-5">
+        <label htmlFor="budget" className="block font-heading text-h3 font-bold text-primary">
           {t('budget')}
         </label>
-        <div className="flex items-center rounded-xl border px-3">
-          <span aria-hidden className="text-xl font-bold">R</span>
+        <div className="flex items-center rounded-input border border-border bg-surface px-4 focus-within:border-primary-soft focus-within:outline-2 focus-within:outline-primary-soft">
+          <span aria-hidden className="font-heading text-h1 font-extrabold text-primary">
+            R
+          </span>
           <input
             id="budget"
             inputMode="numeric"
@@ -100,24 +114,24 @@ export function HouseholdForm({ paydayDom = DEFAULT_PAYDAY }: { paydayDom?: numb
             autoComplete="off"
             value={budget}
             onChange={(e) => setBudget(e.target.value.replace(/\D/g, '').slice(0, 6))}
-            className="tap w-full px-2 py-3 text-xl font-bold outline-none"
+            className="tap money w-full bg-transparent px-2 py-3 font-heading text-h1 font-extrabold text-text outline-none"
             aria-describedby="budget-help"
           />
         </div>
-        <p id="budget-help" className="text-sm text-gray-600">
+        <p id="budget-help" className="text-small text-text-muted">
           {t('budgetHelp')}
         </p>
-      </section>
+      </Card>
 
-      <section className="space-y-2">
-        <h2 className="font-semibold">{t('until')}</h2>
+      <Card className="space-y-3 p-5">
+        <h2 className="font-heading text-h3 font-bold text-primary">{t('until')}</h2>
         <div className="flex flex-wrap gap-2">
           {options.map((o) => (
-            <Chip key={o.key} on={choice.kind === o.key} onClick={() => setChoice(o.choice)}>
+            <Chip key={o.key} selected={choice.kind === o.key} onClick={() => setChoice(o.choice)}>
               {o.label}
             </Chip>
           ))}
-          <Chip on={choice.kind === 'date'} onClick={() => setChoice({ kind: 'date', date })}>
+          <Chip selected={choice.kind === 'date'} onClick={() => setChoice({ kind: 'date', date })}>
             {t('pickDate')}
           </Chip>
         </div>
@@ -129,50 +143,45 @@ export function HouseholdForm({ paydayDom = DEFAULT_PAYDAY }: { paydayDom?: numb
             max={addDaysIso(today, 13)}
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="tap rounded-xl border px-3"
+            className={fieldClass}
           />
         )}
-        <p className="text-sm text-gray-700" aria-live="polite">
+        <p className="flex items-center gap-2 text-small font-medium text-text" aria-live="polite">
+          <CalendarDays aria-hidden className="size-4 text-primary" />
           {t('daysCount', { count: days })}
         </p>
-      </section>
+      </Card>
 
-      <section className="space-y-2">
-        <h2 className="font-semibold">{t('avoid')}</h2>
+      <Card className="space-y-3 p-5">
+        <h2 className="font-heading text-h3 font-bold text-primary">{t('avoid')}</h2>
         <div className="flex flex-wrap gap-2">
           {AVOID.map((a) => (
-            <Chip key={a} on={avoid.includes(a)} onClick={() => setAvoid((x) => (x.includes(a) ? x.filter((y) => y !== a) : [...x, a]))}>
+            <Chip key={a} selected={avoid.includes(a)} onClick={() => setAvoid((x) => (x.includes(a) ? x.filter((y) => y !== a) : [...x, a]))}>
               {t(avoidKey[a])}
             </Chip>
           ))}
         </div>
-      </section>
+      </Card>
 
       {state.error && (
-        <p role="alert" className="text-danger">
+        <p role="alert" className="rounded-input bg-danger-soft px-4 py-3 text-small font-semibold text-danger">
           {state.error}
         </p>
       )}
-      <button type="submit" disabled={state.busy} className="tap w-full rounded-xl bg-brand px-4 py-3 text-lg font-semibold text-white disabled:opacity-60">
-        {state.busy ? t('planning') : t('cta')}
-      </button>
+      <div className="pb-safe sticky bottom-0 -mx-gutter bg-gradient-to-t from-bg via-bg to-bg/0 px-gutter pt-4">
+        <Button type="submit" size="lg" loading={state.busy} loadingLabel={t('planning')}>
+          {t('cta')}
+        </Button>
+      </div>
     </form>
   );
 }
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="flex items-center justify-between">
-      <span>{label}</span>
+    <div className="flex flex-wrap items-center justify-between gap-2">
+      <span className="font-medium">{label}</span>
       {children}
     </div>
-  );
-}
-
-function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; children: React.ReactNode }) {
-  return (
-    <button type="button" aria-pressed={on} onClick={onClick} className={`tap rounded-full border px-4 py-2 text-sm ${on ? 'border-brand bg-brand text-white' : 'border-gray-300'}`}>
-      {children}
-    </button>
   );
 }

@@ -1,7 +1,12 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Clock } from 'lucide-react';
 import { formatRandShort } from '@/lib/money';
+import { Button } from '@/components/ui/Button';
+import { SavingsChip } from '@/components/ui/SavingsChip';
+import { Sheet } from '@/components/ui/Sheet';
+import { Skeleton } from '@/components/ui/Skeleton';
 
 interface SwapData {
   current: { recipeId: string; protein: { id: string; name: string } | null } | null;
@@ -14,7 +19,6 @@ export function SwapSheet({ planId, day, name, onClose, onDone }: { planId: stri
   const [data, setData] = useState<SwapData | null>(null);
   const [never, setNever] = useState(false);
   const [busy, setBusy] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
   const R = (c: number) => formatRandShort(c);
 
   const load = async () => {
@@ -25,10 +29,6 @@ export function SwapSheet({ planId, day, name, onClose, onDone }: { planId: stri
     // Data fetch: state is set after the request resolves, not synchronously.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     void load();
-    ref.current?.focus();
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -52,45 +52,53 @@ export function SwapSheet({ planId, day, name, onClose, onDone }: { planId: stri
     }
   };
 
-  const delta = (c: number) => (c < 0 ? t('deltaCheaper', { amount: R(-c) }) : c > 0 ? t('deltaMore', { amount: R(c) }) : t('deltaSame'));
   const protein = data?.current?.protein;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end bg-black/40" onClick={onClose}>
-      <div ref={ref} role="dialog" aria-modal="true" aria-label={t('swapTitle', { name })} tabIndex={-1} onClick={(e) => e.stopPropagation()} className="max-h-[85dvh] w-full overflow-y-auto rounded-t-2xl bg-white p-4 outline-none">
-        <div className="flex items-center justify-between">
-          <h2 className="text-lg font-bold">{t('swapTitle', { name })}</h2>
-          <button type="button" onClick={onClose} className="tap text-sm font-semibold">
-            {t('close')}
-          </button>
+    <Sheet title={t('swapTitle', { name })} closeLabel={t('close')} onClose={onClose}>
+      {!data && (
+        <div className="space-y-2 pb-4" aria-busy="true">
+          <span className="sr-only">{t('loadingOptions')}</span>
+          <Skeleton className="h-20 rounded-card" />
+          <Skeleton className="h-20 rounded-card" />
+          <Skeleton className="h-20 rounded-card" />
         </div>
-        {!data && <p className="py-4 text-sm text-gray-600">{t('loadingOptions')}</p>}
-        {data && data.options.length === 0 && <p className="py-4 text-sm">{t('noOptions')}</p>}
-        {data && data.options.length > 0 && (
-          <ul className="mt-2 space-y-2">
-            {data.options.map((o) => (
-              <li key={o.recipeId} className="flex items-center justify-between gap-2 rounded-xl border p-3" data-testid="swap-option">
-                <span>
-                  <span className="font-semibold">{o.name}</span>
-                  <span className="block text-sm text-gray-600">
-                    {tp('perPlate', { amount: R(o.perPlateCents) })} · {tp('minutes', { count: o.cookMinutes })}
+      )}
+      {data && data.options.length === 0 && <p className="pb-4 text-small text-text-muted">{t('noOptions')}</p>}
+      {data && data.options.length > 0 && (
+        <ul className="space-y-2">
+          {data.options.map((o) => (
+            <li key={o.recipeId} className="flex items-center justify-between gap-3 rounded-card border border-border bg-surface p-4" data-testid="swap-option">
+              <span className="min-w-0 flex-1 space-y-1">
+                <span className="block font-semibold text-primary">{o.name}</span>
+                <span className="flex flex-wrap items-center gap-x-3 text-small text-text-muted">
+                  <span className="money font-semibold text-text">{tp('perPlate', { amount: R(o.perPlateCents) })}</span>
+                  <span className="inline-flex items-center gap-1">
+                    <Clock aria-hidden className="size-4" />
+                    {tp('minutes', { count: o.cookMinutes })}
                   </span>
-                  <span className={`block text-sm font-semibold ${o.deltaCents < 0 ? 'text-brand' : o.deltaCents > 0 ? 'text-danger' : ''}`}>{delta(o.deltaCents)}</span>
                 </span>
-                <button type="button" disabled={busy} onClick={() => choose(o.recipeId)} className="tap rounded-lg bg-brand px-3 font-semibold text-white">
-                  {t('choose')}
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-        {protein && (
-          <label className="tap mt-3 flex items-center gap-2 text-sm">
-            <input type="checkbox" className="size-5" checked={never} disabled={never} onChange={neverSwap} />
-            {never ? t('neverSwapOn', { protein: protein.name.toLowerCase() }) : t('neverSwap', { protein: protein.name.toLowerCase() })}
-          </label>
-        )}
-      </div>
-    </div>
+                {o.deltaCents < 0 ? (
+                  <SavingsChip>{t('deltaCheaper', { amount: R(-o.deltaCents) })}</SavingsChip>
+                ) : (
+                  <span className={`money block text-small font-semibold ${o.deltaCents > 0 ? 'text-danger' : 'text-text-muted'}`}>
+                    {o.deltaCents > 0 ? t('deltaMore', { amount: R(o.deltaCents) }) : t('deltaSame')}
+                  </span>
+                )}
+              </span>
+              <Button disabled={busy} onClick={() => choose(o.recipeId)}>
+                {t('choose')}
+              </Button>
+            </li>
+          ))}
+        </ul>
+      )}
+      {protein && (
+        <label className="tap mt-3 mb-2 flex items-center gap-3 text-small">
+          <input type="checkbox" className="size-5 accent-primary" checked={never} disabled={never} onChange={neverSwap} />
+          {never ? t('neverSwapOn', { protein: protein.name.toLowerCase() }) : t('neverSwap', { protein: protein.name.toLowerCase() })}
+        </label>
+      )}
+    </Sheet>
   );
 }

@@ -1,17 +1,66 @@
 @import "tailwindcss";
+/* Design tokens (colours, radii, shadows, fonts) live in lib/brand.ts → tailwind.config.ts. docs/THEME.md */
+@config "../tailwind.config.ts";
 
-@theme {
-  --color-brand: #0f766e;
-  --color-brand-dark: #115e59;
-  --color-accent: #f59e0b;
-  --color-danger: #b91c1c;
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+:root {
+  color-scheme: light; /* light only for the MVP; dark = override the --ms-* variables */
+  /* Floating bottom nav: 64 px bar + 16 px gap, above the iOS safe area (THEME §2.7, §5). */
+  --nav-h: 0px; /* no nav (shared list, admin, onboarding) */
+  --nav-gap: 0px;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --nav-clear: calc(var(--nav-h) + var(--nav-gap) * 2 + var(--safe-b));
+}
+/* The nav publishes its measured height as an inline --nav-h; this is the pre-hydration default. */
+:root:has([data-bottom-nav]) { --nav-h: 64px; --nav-gap: 16px; }
+
+@layer base {
+  /* Tailwind 4 defaults borders to currentColor: use the warm border token everywhere. */
+  *, ::after, ::before, ::backdrop, ::file-selector-button { border-color: var(--ms-border); }
 }
 
 html { -webkit-text-size-adjust: 100%; }
-body { background: #ffffff; color: #111827; }
+body {
+  background: var(--ms-bg);
+  color: var(--ms-text);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+h1, h2, h3, .font-heading { font-family: var(--font-heading), var(--font-body), system-ui, sans-serif; }
 
 /* Touch targets ≥ 44 px (PRD §15) */
 .tap { min-height: 44px; min-width: 44px; }
 
-:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+/* Rands line up in lists */
+.money { font-variant-numeric: tabular-nums; }
+
+/* Page content never sits under the floating nav (THEME §5). */
+.pb-nav { padding-bottom: var(--nav-clear); }
+/* Sticky footers sit above the floating nav. */
+.bottom-above-nav { bottom: calc(var(--nav-h) + var(--nav-gap) + var(--safe-b) + 8px); }
+.bottom-above-footer { bottom: calc(var(--nav-h) + var(--nav-gap) + var(--safe-b) + 96px); }
+.pb-safe { padding-bottom: calc(16px + var(--safe-b)); }
+
+:focus-visible { outline: 2px solid var(--ms-primary-soft); outline-offset: 2px; }
+
+.press { transition: transform 150ms ease-out, background-color 150ms ease-out, color 150ms ease-out, border-color 150ms ease-out; }
+.press:active:not(:disabled) { transform: scale(0.98); }
+
+@keyframes ms-shimmer { from { background-position: -200px 0; } to { background-position: calc(200px + 100%) 0; } }
+.skeleton {
+  background: linear-gradient(90deg, var(--ms-surface-muted) 0, var(--ms-bg) 50%, var(--ms-surface-muted) 100%);
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  background-color: var(--ms-surface-muted);
+  animation: ms-shimmer 1.2s ease-out infinite;
+}
+@keyframes ms-sheet-in { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.sheet-in { animation: ms-sheet-in 180ms ease-out; }
+@keyframes ms-fade-in { from { opacity: 0; } to { opacity: 1; } }
+.fade-in { animation: ms-fade-in 150ms ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

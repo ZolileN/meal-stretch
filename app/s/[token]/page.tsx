@@ -6,6 +6,7 @@ import { latestPlan } from '@/lib/plans/service';
 import { buildListView, whatsappText } from '@/lib/plans/list';
 import { formatRand } from '@/lib/money';
 import { ShoppingList } from '@/components/list/ShoppingList';
+import { Wordmark } from '@/components/ui/Wordmark';
 
 export const dynamic = 'force-dynamic';
 
@@ -17,15 +18,19 @@ export default async function SharedList({ params }: { params: Promise<{ token: 
   const plan = hid ? await latestPlan(db, hid) : null;
   if (!plan)
     return (
-      <main className="mx-auto max-w-md px-4 py-10">
-        <p>{t('inactive')}</p>
+      <main className="mx-auto max-w-md space-y-6 px-gutter py-10">
+        <Wordmark />
+        <p className="rounded-card border border-border bg-surface p-5 shadow-card">{t('inactive')}</p>
       </main>
     );
   const view = await buildListView(db, plan);
   const share = whatsappText(view, { header: tl('shareHeader', { count: view.count }), at: (s) => tl('at', { store: s }), total: tl('shareTotal', { amount: formatRand(view.totalCents) }) });
   return (
     <div className="mx-auto max-w-md">
-      <p className="px-4 pt-4 text-sm text-gray-600">{t('readOnly')}</p>
+      <div className="space-y-2 px-gutter pt-4 pb-2">
+        <Wordmark />
+        <p className="text-small text-text-muted">{t('readOnly')}</p>
+      </div>
       <ShoppingList view={view} shareText={share} shareToken={token} />
     </div>
   );

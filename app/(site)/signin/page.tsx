@@ -6,6 +6,11 @@ import { z } from 'zod';
 import { signIn } from '@/auth';
 import { features } from '@/lib/env';
 import { sessionUser } from '@/lib/auth/session';
+import { Mail } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
+import { TopBar } from '@/components/ui/TopBar';
+import { fieldClass, labelClass } from '@/components/ui/field';
 
 export const dynamic = 'force-dynamic';
 
@@ -30,31 +35,38 @@ export default async function SignIn({ searchParams }: { searchParams: Promise<{
   }
 
   return (
-    <main className="space-y-5 px-4 py-8">
-      <h1 className="text-xl font-bold">{t('title')}</h1>
+    <main className="space-y-4 px-gutter pt-2 pb-8">
+      <TopBar backHref={next} backLabel={t('skip')} />
+      <h1 className="font-heading text-display font-extrabold text-primary">{t('title')}</h1>
       {sp.sent && (
-        <p role="status" className="rounded-xl bg-teal-50 p-3">
+        <p role="status" className="rounded-input bg-surface-muted px-4 py-3 text-small font-semibold text-success">
           {t('sent')}
         </p>
       )}
       {sp.error && (
-        <p role="alert" className="rounded-xl bg-red-50 p-3">
+        <p role="alert" className="rounded-input bg-danger-soft px-4 py-3 text-small font-semibold text-danger">
           {t('error')}
         </p>
       )}
-      {features.googleAuth() && (
-        <form action={google}>
-          <button className="tap w-full rounded-xl border-2 px-4 py-3 font-semibold">{t('google')}</button>
+      <Card className="space-y-4 p-5">
+        {features.googleAuth() && (
+          <form action={google}>
+            <Button type="submit" variant="secondary" size="lg">
+              {t('google')}
+            </Button>
+          </form>
+        )}
+        <form action={email} className="space-y-3">
+          <label htmlFor="email" className={labelClass}>
+            {t('emailLabel')}
+          </label>
+          <input id="email" name="email" type="email" required autoComplete="email" className={fieldClass} />
+          <Button type="submit" size="lg" icon={<Mail aria-hidden className="size-5" />}>
+            {t('emailButtonSend')}
+          </Button>
         </form>
-      )}
-      <form action={email} className="space-y-2">
-        <label htmlFor="email" className="block font-semibold">
-          {t('emailLabel')}
-        </label>
-        <input id="email" name="email" type="email" required autoComplete="email" className="tap w-full rounded-xl border px-3" />
-        <button className="tap w-full rounded-xl bg-brand px-4 py-3 font-semibold text-white">{t('emailButtonSend')}</button>
-      </form>
-      <Link href={next} className="tap inline-flex items-center text-sm text-gray-600 underline">
+      </Card>
+      <Link href={next} className="tap inline-flex items-center text-small font-semibold text-text-muted underline">
         {t('skip')}
       </Link>
     </main>

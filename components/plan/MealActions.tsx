@@ -1,16 +1,17 @@
 'use client';
-/** §7.3 meal actions: Cook, Swap (3 options with deltas + never-swap), Cheaper, Remove. */
-import Link from 'next/link';
+/** §7.3 meal actions: Swap (3 options with deltas + never-swap), Cheaper, Remove. */
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { Repeat, Trash2, TrendingDown } from 'lucide-react';
 import { formatRandShort } from '@/lib/money';
 
 const SwapSheet = dynamic(() => import('./SwapSheet').then((m) => m.SwapSheet), { ssr: false });
 
+const btn = 'press tap inline-flex min-w-0 items-center justify-center gap-1.5 rounded-pill px-2 text-small font-semibold text-primary hover:bg-surface-muted disabled:opacity-50';
 
-export function MealActions({ planId, day, recipeId, name, onNotice }: { planId: string; day: number; recipeId: string; name: string; onNotice: (m: string) => void }) {
+export function MealActions({ planId, day, name, onNotice }: { planId: string; day: number; name: string; onNotice: (m: string) => void }) {
   const t = useTranslations('actions');
   const tp = useTranslations('plan');
   const router = useRouter();
@@ -39,17 +40,17 @@ export function MealActions({ planId, day, recipeId, name, onNotice }: { planId:
   };
 
   return (
-    <div className="mt-3 flex flex-wrap gap-2">
-      <Link href={`/recipe/${recipeId}`} className="tap flex items-center rounded-lg border px-3 text-sm font-semibold">
-        {tp('cook')}
-      </Link>
-      <button type="button" disabled={busy} onClick={() => setSheet(true)} className="tap rounded-lg border px-3 text-sm font-semibold">
+    <div className="-mx-2 mt-2 grid grid-cols-3 border-t border-border pt-2" role="group" aria-label={t('actionsFor', { name })}>
+      <button type="button" disabled={busy} onClick={() => setSheet(true)} className={btn}>
+        <Repeat aria-hidden className="size-4" />
         {tp('swap')}
       </button>
-      <button type="button" disabled={busy} onClick={cheaper} className="tap rounded-lg border px-3 text-sm font-semibold">
+      <button type="button" disabled={busy} onClick={cheaper} className={btn}>
+        <TrendingDown aria-hidden className="size-4" />
         {tp('cheaper')}
       </button>
-      <button type="button" disabled={busy} onClick={remove} className="tap rounded-lg border px-3 text-sm font-semibold text-danger">
+      <button type="button" disabled={busy} onClick={remove} className={btn}>
+        <Trash2 aria-hidden className="size-4" />
         {tp('remove')}
       </button>
       {sheet && (
@@ -68,4 +69,3 @@ export function MealActions({ planId, day, recipeId, name, onNotice }: { planId:
     </div>
   );
 }
-

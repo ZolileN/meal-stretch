@@ -1,10 +1,10 @@
 # Build progress
 
 ## Checkpoint
-- Last completed: MVP complete, Phases 0–8 + final audit (2026-11-21)
+- Last completed: UI theme (docs/THEME.md): MealStretch design system applied to every screen (2026-11-21)
 - Next: human-only work (docs/handover.md → "Human to-do, in priority order")
-- Test status: 307 unit/db/engine (1 skipped until real receipt photos exist), 17 e2e, all green; bench p95 166 ms
-- Open human-todo items: 20
+- Test status: 443 unit/db/engine (1 skipped until real receipt photos exist), 35 e2e (incl. 7 screenshots, overlap and 200% text checks), all green
+- Open human-todo items: 22
 
 ## Phase 0: Repo foundation
 - [x] 0.1 Next.js App Router + TS strict + Tailwind + pnpm in this repo
@@ -90,3 +90,10 @@ Gate: ACC-1 PASS · ACC-2 PASS (phase8.test merge; e2e anonymous → sign in →
 
 ## Final
 - [x] Full audit, docs/handover.md, `chore: MVP complete`
+
+## UI theme (docs/THEME.md)
+- [x] T.1 Tokens in lib/brand.ts → tailwind.config.ts (CSS variables), contrast unit test, no-raw-colour guard test
+- [x] T.2 Plus Jakarta Sans + Inter via next/font (self-hosted, Latin)
+- [x] T.3 components/ui: Button, Card, Chip, Badge, SavingsChip, MoneyText, BottomNav, TopBar, HeroCard, ShortcutTile, StatRing, Sheet, ListRow, SectionHeader, CoachMark, EmptyState, Skeleton, Toast (+ Wordmark); /dev/ui demo
+- [x] T.4 ShopLocation and every built screen restyled (home, plan, tonight/cook, list, savings, receipts, onboarding O1–O3, settings, sign-in, privacy, shared list, admin)
+- [x] T.5 Screenshot tests at 360 × 780, nav-overlap and 200% text e2e checks

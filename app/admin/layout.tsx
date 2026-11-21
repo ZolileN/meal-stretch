@@ -17,7 +17,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <nav className="mb-4 flex flex-wrap gap-3 border-b pb-2 text-sm font-semibold">
         <Link href="/admin">{t('title')}</Link>
         {links.map(([h, l]) => (
-          <Link key={h} href={h} className="text-brand underline">
+          <Link key={h} href={h} className="text-primary underline">
             {l}
           </Link>
         ))}

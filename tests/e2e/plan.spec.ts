@@ -17,9 +17,10 @@ test.describe('onboarding + plan screen (Phase 4)', () => {
     await expect(page.getByText(/^Tonight · /)).toBeVisible();
     for (let d = 1; d <= 7; d++) await expect(page.getByTestId(`meal-${d}`)).toBeVisible();
 
-    // The plan is the home screen now, and the location bar is on it (LOC-6).
+    // Home is the plan at a glance now (THEME §3): summary card + Tonight hero, and the location bar (LOC-6).
     await page.goto('/');
-    await expect(page).toHaveURL(/\/plan$/);
+    await expect(page.getByTestId('plan-header')).toBeVisible();
+    await expect(page.getByTestId('tonight-hero')).toContainText(/R[\d,.]+\/plate/);
     await expect(page.getByTestId('location-bar')).toContainText('Shopping near Somerset West');
   });
 

@@ -43,6 +43,13 @@ These rules are non-negotiable. `PRD.md` is the product spec; `docs/BUILD.md` is
 - **No hard-coded user-facing copy** in components: every string goes through next-intl. xh/af files mirror en with `TODO:` markers until a human reviews them.
 - The product name appears only in `lib/brand.ts` and `messages/*.json`. Components use `BRAND`.
 
+## UI
+
+- Follow `docs/THEME.md`. Build screens from `components/ui/*` and the Tailwind tokens (`bg-surface`, `text-primary`, `text-savings-text`, `rounded-card`, `shadow-card`, …).
+- Never hard-code a hex value or a raw Tailwind palette class (`gray-*`, `white`, …) in `app/` or `components/`; `tests/unit/theme.test.ts` enforces this. New colours go in `lib/brand.ts` with a contrast pair in `TEXT_PAIRS`.
+- Bright `savings` amber is for fills, rings and icons only; savings text uses `text-savings-text`.
+- Pages clear the floating nav (`pb-nav` is applied by the site layout); sticky footers use `bottom-above-nav`.
+
 ## Code hygiene
 
 - No leftover `console.log` (use `lib/log.ts` structured logger).

@@ -9,7 +9,7 @@ test.describe('meal actions, list, pantry (Phase 5)', () => {
     // Swap Tuesday's supper
     const tue = page.locator('[data-testid^="meal-"]').filter({ hasText: /^Tue|Tue/ }).first();
     const before = await tue.textContent();
-    await tue.getByRole('button').first().click();
+    // Meal actions are always visible on the card now (THEME §3 meal card).
     await tue.getByRole('button', { name: 'Swap' }).click();
     const sheet = page.getByRole('dialog');
     await expect(sheet.getByTestId('swap-option')).toHaveCount(3);
@@ -55,6 +55,8 @@ test.describe('meal actions, list, pantry (Phase 5)', () => {
 
     const footer = page.getByTestId('list-footer');
     const count = Number(/\/(\d+) ticked/.exec((await footer.textContent()) ?? '')![1]);
+    // "Already have it" sits behind the row's chevron (THEME §2.13 ListRow).
+    await page.getByTestId('list-line').first().getByRole('button', { name: /^More for / }).click();
     await page.getByRole('button', { name: 'Already have it' }).first().click();
     await expect(page.getByRole('status')).toContainText('Moved to your pantry');
     await expect(footer).toContainText(new RegExp(`/${count - 1} ticked`));

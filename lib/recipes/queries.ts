@@ -32,13 +32,13 @@ export async function loadPublishedRecipes(db: Db): Promise<EngineRecipe[]> {
   return [...byId.values()];
 }
 
-export async function recipeNames(db: Db, ids: string[], language = 'en'): Promise<Map<string, { name: string; cookMinutes: number }>> {
+export async function recipeNames(db: Db, ids: string[], language = 'en'): Promise<Map<string, { name: string; cookMinutes: number; imageUrl: string | null }>> {
   if (ids.length === 0) return new Map();
-  const rows = await query<{ id: string; name: string; cook_minutes: number }>(
+  const rows = await query<{ id: string; name: string; cook_minutes: number; image_url: string | null }>(
     db,
-    sql`select r.id, coalesce(t.name, r.name) as name, r.cook_minutes
+    sql`select r.id, coalesce(t.name, r.name) as name, r.cook_minutes, r.image_url
         from recipes r left join recipe_translations t on t.recipe_id = r.id and t.language = ${language} and t.reviewed
         where r.id in (${sql.join(ids.map((i) => sql`${i}`), sql`, `)})`,
   );
-  return new Map(rows.map((r) => [r.id, { name: r.name, cookMinutes: Number(r.cook_minutes) }]));
+  return new Map(rows.map((r) => [r.id, { name: r.name, cookMinutes: Number(r.cook_minutes), imageUrl: r.image_url ?? null }]));
 }

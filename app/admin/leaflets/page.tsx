@@ -32,11 +32,11 @@ export default async function Leaflets({ searchParams }: { searchParams: Promise
   return (
     <main className="space-y-4">
       <h1 className="text-2xl font-bold">{t('leaflets')}</h1>
-      {sp.error && <p className="rounded bg-red-50 p-2">{sp.error}</p>}
+      {sp.error && <p className="rounded bg-danger-soft p-2">{sp.error}</p>}
       <form action={upload} className="flex flex-wrap items-end gap-2 rounded border p-3">
         <label>{t('retailer')}<select name="retailer" className="block rounded border px-2 py-1">{retailers.map((r) => <option key={r.id} value={r.id}>{r.name}</option>)}</select></label>
         <label>{t('upload')}<input type="file" name="file" accept="application/pdf,image/*" required className="block" /></label>
-        <button className="rounded bg-brand px-3 py-2 text-white">{t('extract')}</button>
+        <button className="rounded bg-primary px-3 py-2 text-on-primary">{t('extract')}</button>
       </form>
       <ul className="text-sm">
         {batches.map((b) => (

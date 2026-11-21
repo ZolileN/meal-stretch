@@ -7,6 +7,14 @@ import { formatRandShort } from '@/lib/money';
 import { dayMonth } from '@/lib/dates';
 import { localTicks, mergeTicks, saveTick, syncTicks } from '@/lib/offline/ticks';
 import type { ListView } from '@/lib/plans/list';
+import { CircleCheck, ListChecks, MessageCircle, PackageCheck, ShoppingBasket, Store, WifiOff } from 'lucide-react';
+import { Badge } from '@/components/ui/Badge';
+import { Button, buttonClass } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
+import { EmptyState } from '@/components/ui/EmptyState';
+import { ListRow } from '@/components/ui/ListRow';
+import { MoneyText } from '@/components/ui/MoneyText';
+import { Toast } from '@/components/ui/Toast';
 
 const sourceKey = { receipt: 'sourceReceipt', leaflet: 'sourceLeaflet', catalogue: 'sourceCatalogue', manual: 'sourceManual' } as const;
 
@@ -21,6 +29,8 @@ export function ShoppingList({ view, shareText, shareToken }: { view: ListView; 
   const [showStaples, setShowStaples] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [open, setOpen] = useState<string | null>(null);
+  const clear = useCallback(() => setMsg(null), []);
   const R = (c: number) => formatRandShort(c);
 
   const refreshLocal = useCallback(async () => {
@@ -87,124 +97,155 @@ export function ShoppingList({ view, shareText, shareToken }: { view: ListView; 
   const allTicked = keys.length > 0 && tickedCount === keys.length;
 
   return (
-    <main className="px-4 pb-40 pt-4">
-      <h1 className="text-xl font-bold">{t('title')}</h1>
+    <main className="space-y-4 px-gutter pt-2 pb-32">
+      <div className="flex items-center justify-between gap-3">
+        <h1 className="font-heading text-h1 font-extrabold text-primary">{t('title')}</h1>
+        {view.count > 0 && <Badge tone="count" aria-label={t('itemsCount', { count: view.count })}>{view.count}</Badge>}
+      </div>
       {!online && (
-        <p role="status" className="mt-2 rounded-lg bg-amber-100 p-2 text-sm">
+        <p role="status" className="flex items-center gap-2 rounded-input bg-savings-soft px-4 py-3 text-small text-text">
+          <WifiOff aria-hidden className="size-5 shrink-0 text-savings-text" />
           {t('offline')}
         </p>
       )}
-      {msg && (
-        <p role="status" className="mt-2 rounded-lg bg-teal-50 p-2 text-sm">
-          {msg}
-        </p>
-      )}
-      {view.count === 0 && <p className="mt-4">{t('empty')}</p>}
+      <Toast message={msg} onDone={clear} above="footer" />
+      {view.count === 0 && <EmptyState icon={<ShoppingBasket className="size-6" />} title={t('empty')} />}
 
       {view.stores.map((s) => (
-        <section key={s.branchId} className="mt-4" aria-label={t('at', { store: s.retailerName })}>
-          <div className="flex items-baseline justify-between">
-            <h2 className="text-lg font-bold">{t('at', { store: s.retailerName })}</h2>
-            <span className="text-sm text-gray-600">{t('subtotal', { amount: R(s.subtotalCents) })}</span>
+        <section key={s.branchId} className="space-y-3" aria-label={t('at', { store: s.retailerName })}>
+          <div className="flex items-baseline justify-between gap-3 pt-1">
+            <h2 className="flex items-center gap-2 font-heading text-h2 font-bold text-primary">
+              <Store aria-hidden className="size-5" />
+              {t('at', { store: s.retailerName })}
+            </h2>
+            <span className="money text-small font-semibold text-text-muted">{t('subtotal', { amount: R(s.subtotalCents) })}</span>
           </div>
-          {s.aisles.map((a) => (
-            <div key={a.category} className="mt-2">
-              <h3 className="text-xs font-bold uppercase tracking-wide text-gray-500">{t(`aisle.${a.category}` as 'aisle.other')}</h3>
-              <ul className="divide-y rounded-xl border">
-                {a.lines.map((l) => (
-                  <li key={l.key} className="flex items-start gap-3 px-3 py-2" data-testid="list-line">
-                    <input
-                      type="checkbox"
-                      className="mt-1 size-6 shrink-0 accent-teal-700"
+          {s.aisles.map((a) => {
+            const aisle = t(`aisle.${a.category}` as 'aisle.other');
+            const sub = a.lines.reduce((n, l) => n + l.totalCents, 0);
+            return (
+              <Card key={a.category} className="overflow-hidden">
+                <div className="flex items-center gap-2 border-b border-border bg-surface-muted/50 px-4 py-2.5">
+                  <h3 className="flex-1 text-caption font-bold tracking-wider text-text-muted uppercase">{aisle}</h3>
+                  <span className="money text-small font-semibold text-text">{R(sub)}</span>
+                  <Badge tone="count" aria-label={t('itemsCount', { count: a.lines.length })}>
+                    {a.lines.length}
+                  </Badge>
+                </div>
+                <ul className="divide-y divide-border">
+                  {a.lines.map((l) => (
+                    <ListRow
+                      key={l.key}
+                      data-testid="list-line"
                       checked={Boolean(ticked[l.key])}
-                      onChange={() => toggle(l.key)}
-                      aria-label={t('tick', { name: l.productName })}
-                    />
-                    <div className="flex-1">
-                      <p className={`font-medium ${ticked[l.key] ? 'text-gray-400 line-through' : ''}`}>{l.productName}</p>
-                      <p className="text-sm text-gray-600">{t('packs', { count: l.packs, pack: l.pack })}</p>
-                      <p className="flex flex-wrap gap-1 text-xs">
-                        {l.tags.includes('special') && <span className="rounded bg-amber-400 px-1 font-bold text-black">{t('special')}</span>}
-                        {l.tags.includes('member') && <span className="rounded bg-teal-700 px-1 font-bold text-white">{t('member')}</span>}
-                        {l.tags.includes('stale') && <span className="rounded bg-gray-200 px-1">{t('stale')}</span>}
-                        {l.source && l.observedAt && (
-                          <span className="text-gray-500">{t('priceSource', { source: t(sourceKey[l.source]), date: dayMonth(l.observedAt, locale) })}</span>
-                        )}
-                      </p>
-                      {owner && <button type="button" disabled={busy} onClick={() => have(l.ingredientId)} className="tap -ml-1 px-1 text-left text-sm font-semibold text-brand underline">
-                        {t('alreadyHave')}
-                      </button>}
-                    </div>
-                    <div className="text-right">
-                      <p className="font-semibold">{R(l.totalCents)}</p>
-                      {l.unitCents < l.normalUnitCents && <p className="text-xs text-gray-500 line-through">{R(l.packs * l.normalUnitCents)}</p>}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                      onToggle={() => toggle(l.key)}
+                      checkLabel={t('tick', { name: l.productName })}
+                      name={l.productName}
+                      detail={
+                        <>
+                          {t('packs', { count: l.packs, pack: l.pack })}
+                          {l.source && l.observedAt && (
+                            <span className="block text-caption">{t('priceSource', { source: t(sourceKey[l.source]), date: dayMonth(l.observedAt, locale) })}</span>
+                          )}
+                        </>
+                      }
+                      tags={
+                        (l.tags.includes('special') || l.tags.includes('member') || l.tags.includes('stale')) && (
+                          <>
+                            {l.tags.includes('special') && <Badge tone="special">{t('special')}</Badge>}
+                            {l.tags.includes('member') && <Badge tone="member">{t('member')}</Badge>}
+                            {l.tags.includes('stale') && <Badge tone="stale">{t('stale')}</Badge>}
+                          </>
+                        )
+                      }
+                      price={
+                        <>
+                          <MoneyText cents={l.totalCents} className="block font-semibold" />
+                          {l.unitCents < l.normalUnitCents && <MoneyText cents={l.packs * l.normalUnitCents} strike strikeLabel={t('wasLabel')} className="block text-caption" />}
+                        </>
+                      }
+                      expanded={open === l.key}
+                      onExpand={owner ? () => setOpen(open === l.key ? null : l.key) : undefined}
+                      moreLabel={t('more', { name: l.productName })}
+                    >
+                      {owner && (
+                        <Button variant="secondary" disabled={busy} onClick={() => have(l.ingredientId)} icon={<PackageCheck aria-hidden className="size-4" />}>
+                          {t('alreadyHave')}
+                        </Button>
+                      )}
+                    </ListRow>
+                  ))}
+                </ul>
+              </Card>
+            );
+          })}
         </section>
       ))}
 
       {view.unpriced.length > 0 && (
-        <section className="mt-4 rounded-xl border border-dashed p-3 text-sm">
-          <h2 className="font-semibold">{t('unpricedTitle')}</h2>
-          <p className="text-gray-600">{t('unpricedHelp')}</p>
-          <ul className="mt-1 list-disc pl-5">
+        <Card as="section" className="border-dashed p-5 text-small">
+          <h2 className="font-heading text-h3 font-bold text-primary">{t('unpricedTitle')}</h2>
+          <p className="mt-1 text-text-muted">{t('unpricedHelp')}</p>
+          <ul className="mt-2 list-disc space-y-0.5 pl-5">
             {view.unpriced.map((u) => (
               <li key={u.ingredientId}>{u.name}</li>
             ))}
           </ul>
-        </section>
+        </Card>
       )}
 
       {view.staples.length > 0 && (
-        <section className="mt-4">
-          <label className="tap flex items-center gap-2 font-semibold">
-            <input type="checkbox" className="size-5" checked={showStaples} onChange={(e) => setShowStaples(e.target.checked)} />
+        <Card as="section" className="p-5">
+          <label className="tap flex cursor-pointer items-center gap-3 font-semibold text-primary">
+            <input type="checkbox" className="size-5 accent-primary" checked={showStaples} onChange={(e) => setShowStaples(e.target.checked)} />
             {t('staplesToggle')}
           </label>
           {showStaples && (
-            <div className="rounded-xl border p-3 text-sm" data-testid="staples">
-              <p className="text-gray-600">{t('staplesHelp')}</p>
-              <ul className="mt-2 space-y-1">
+            <div className="mt-2 text-small" data-testid="staples">
+              <p className="text-text-muted">{t('staplesHelp')}</p>
+              <ul className="mt-2 divide-y divide-border">
                 {view.staples.map((s) => (
-                  <li key={s.ingredientId} className="flex justify-between">
+                  <li key={s.ingredientId} className="flex justify-between gap-3 py-2">
                     <span>{s.name}</span>
-                    <span>{s.costCents === null ? t('cantPrice') : R(s.costCents)}</span>
+                    <span className="money">{s.costCents === null ? t('cantPrice') : R(s.costCents)}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-2 font-semibold">{t('staplesSubtotal', { amount: R(view.staplesSubtotalCents) })}</p>
+              <p className="money mt-2 font-semibold">{t('staplesSubtotal', { amount: R(view.staplesSubtotalCents) })}</p>
             </div>
           )}
-        </section>
+        </Card>
       )}
 
       <a
         href={`https://wa.me/?text=${encodeURIComponent(shareText)}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="tap mt-4 flex items-center justify-center rounded-xl border-2 border-brand px-4 py-2 font-semibold text-brand"
+        className={buttonClass('secondary', 'lg')}
       >
+        <MessageCircle aria-hidden className="size-5" />
         {t('share')}
       </a>
 
       {owner && view.status === 'active' && allTicked && (
-        <div className="mt-4 rounded-xl bg-teal-50 p-3" data-testid="shopped-prompt">
-          <p>{t('shoppedPrompt')}</p>
-          <button type="button" disabled={busy} onClick={shopped} className="tap mt-2 rounded-xl bg-brand px-4 py-2 font-semibold text-white">
+        <Card tone="savings" bordered={false} className="space-y-3 p-5" data-testid="shopped-prompt">
+          <p className="text-text">{t('shoppedPrompt')}</p>
+          <Button loading={busy} onClick={shopped} icon={<CircleCheck aria-hidden className="size-5" />}>
             {t('markShopped')}
-          </button>
-        </div>
+          </Button>
+        </Card>
       )}
 
-      <footer className="fixed inset-x-0 bottom-[52px] z-30 border-t bg-white px-4 py-3">
-        <p className="mx-auto max-w-md text-center text-lg font-bold" data-testid="list-footer" aria-live="polite">
-          {t('total', { amount: R(view.totalCents), ticked: tickedCount, count: keys.length })}
-        </p>
-      </footer>
+      <div className="bottom-above-nav pointer-events-none fixed inset-x-0 z-30 px-4" data-floating>
+        <div className="pointer-events-auto mx-auto flex max-w-md items-center justify-between gap-3 rounded-card border border-border bg-surface px-5 py-3 shadow-float">
+          <p className="money font-heading text-h3 font-extrabold text-primary" data-testid="list-footer" aria-live="polite">
+            {t('total', { amount: R(view.totalCents), ticked: tickedCount, count: keys.length })}
+          </p>
+          <span aria-hidden className="grid size-9 shrink-0 place-items-center rounded-full bg-surface-muted text-success">
+            <ListChecks className="size-5" />
+          </span>
+        </div>
+      </div>
     </main>
   );
 }

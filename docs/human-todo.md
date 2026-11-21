@@ -22,3 +22,5 @@ Format: `- [ ] (Phase N) task: why / exact steps`.
 - [ ] (Phase 8) Work through `docs/pilot-checklist.md` before inviting pilot households.
 - [ ] (Phase 8) Get isiXhosa (and Afrikaans) speakers to review `messages/xh.json` / `messages/af.json`, removing every `TODO:` marker; untranslated strings fall back to English until then.
 - [ ] (Phase 8) Register the domain and connect it to Vercel; set `APP_URL` (used in share links).
+- [ ] (UI theme) Visual sign-off: look through `/dev/ui` and the screens in `tests/e2e/theme.spec.ts-snapshots/` (or run `pnpm dev` and open `/dev/ui`), and confirm the look is clearly MealStretch's own and can't be mistaken for Meal Hack (THEME §6). Ideally a designer replaces the placeholder app icon and text wordmark with a proper logo.
+- [ ] (UI theme) Food photos are optional: if you want them, add your own or properly licensed photos (≤ 40 KB WebP each), upload to Blob/CDN and set `recipes.image_url`. Never use Meal Hack's images.

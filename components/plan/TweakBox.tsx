@@ -3,6 +3,10 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { Sparkles } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
+import { fieldClass } from '@/components/ui/field';
 
 export function TweakBox({ planId }: { planId: string }) {
   const t = useTranslations('tweak');
@@ -25,17 +29,20 @@ export function TweakBox({ planId }: { planId: string }) {
     setMsg(res?.status === 422 ? t('notUnderstood') : res?.status === 429 ? t('cap') : t('failed'));
   };
   return (
-    <form onSubmit={submit} className="space-y-2 rounded-2xl border p-4">
-      <label htmlFor="tweak" className="font-semibold">
+    <Card as="form" onSubmit={submit} className="space-y-3 p-5" id="tweak-box">
+      <label htmlFor="tweak" className="flex items-center gap-2 font-heading text-h3 font-bold text-primary">
+        <Sparkles aria-hidden className="size-5 stroke-savings" />
         {t('label')}
       </label>
-      <div className="flex gap-2">
-        <input id="tweak" value={text} maxLength={500} onChange={(e) => setText(e.target.value)} placeholder={t('placeholder')} className="tap flex-1 rounded-xl border px-3" />
-        <button type="submit" disabled={busy} className="tap rounded-xl bg-brand px-3 font-semibold text-white">
-          {busy ? t('working') : t('submit')}
-        </button>
-      </div>
-      {msg && <p role="status" className="text-sm text-danger">{msg}</p>}
-    </form>
+      <input id="tweak" value={text} maxLength={500} onChange={(e) => setText(e.target.value)} placeholder={t('placeholder')} className={fieldClass} />
+      <Button type="submit" loading={busy} loadingLabel={t('working')} className="w-full">
+        {t('submit')}
+      </Button>
+      {msg && (
+        <p role="status" className="text-small text-danger">
+          {msg}
+        </p>
+      )}
+    </Card>
   );
 }

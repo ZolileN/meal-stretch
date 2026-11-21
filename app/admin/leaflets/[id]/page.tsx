@@ -40,7 +40,7 @@ export default async function Review({ params, searchParams }: { params: Promise
   return (
     <main className="space-y-3">
       <h1 className="text-2xl font-bold">{t('review')} #{b.id} · {b.retailerId} · {b.status}</h1>
-      {sp.published && <p className="rounded bg-teal-50 p-2">{t('published_n', { published: Number(sp.published), queued: Number(sp.queued ?? 0) })}</p>}
+      {sp.published && <p className="rounded bg-surface-muted p-2">{t('published_n', { published: Number(sp.published), queued: Number(sp.queued ?? 0) })}</p>}
       <form action={publish}>
         <table className="w-full text-sm">
           <thead><tr className="text-left"><th>{t('approve')}</th><th>{t('rawName')}</th><th>{t('size')}</th><th>{t('price')}</th><th>{t('was')}</th><th>{t('member')}</th><th>{t('suggestion')}</th><th>{t('productId')}</th></tr></thead>
@@ -50,7 +50,7 @@ export default async function Review({ params, searchParams }: { params: Promise
                 <td><input type="checkbox" name={`approve_${l.index}`} defaultChecked={Boolean(l.suggestion)} disabled={b.status !== 'review'} /></td>
                 <td>{l.raw_name}</td>
                 <td>{l.size_text}</td>
-                <td><input name={`price_${l.index}`} defaultValue={l.price_cents} className="w-20 rounded border px-1" /> <span className="text-gray-500">{formatRandShort(l.price_cents)}</span></td>
+                <td><input name={`price_${l.index}`} defaultValue={l.price_cents} className="w-20 rounded border px-1" /> <span className="text-text-muted">{formatRandShort(l.price_cents)}</span></td>
                 <td><input name={`was_${l.index}`} defaultValue={l.was_price_cents ?? ''} className="w-20 rounded border px-1" /></td>
                 <td>{l.member_only ? '✓' : ''}</td>
                 <td>{l.suggestion ? `${l.suggestion.name} (${Math.round(l.suggestion.confidence * 100)}%)` : '—'}</td>
@@ -59,7 +59,7 @@ export default async function Review({ params, searchParams }: { params: Promise
             ))}
           </tbody>
         </table>
-        {b.status === 'review' && <button className="mt-3 rounded bg-brand px-3 py-2 text-white">{t('publish')}</button>}
+        {b.status === 'review' && <button className="mt-3 rounded bg-primary px-3 py-2 text-on-primary">{t('publish')}</button>}
       </form>
       {b.status === 'review' && <form action={reject}><button className="rounded border px-3 py-2">{t('rejectBatch')}</button></form>}
     </main>

@@ -34,7 +34,7 @@ export default async function Reports() {
               <input type="hidden" name="id" value={r.id} />
               {r.kind === 'missing' && <input name="name" placeholder={t('branchName')} required className="rounded border px-2" />}
               {r.kind === 'missing' && !r.retailer_id && <input name="retailer" placeholder={t('retailer')} required className="w-28 rounded border px-2" />}
-              <button className="rounded bg-brand px-3 py-1 text-white">{t('accept')}</button>
+              <button className="rounded bg-primary px-3 py-1 text-on-primary">{t('accept')}</button>
             </form>
             <form action={reject}>
               <input type="hidden" name="id" value={r.id} />

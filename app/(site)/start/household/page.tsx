@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 export default async function HouseholdStep() {
   const h = await currentHousehold(getDb()).catch(() => null);
   return (
-    <main className="px-4 py-6">
+    <main className="px-gutter pt-2">
       <HouseholdForm paydayDom={h?.paydayDom ?? undefined} />
     </main>
   );

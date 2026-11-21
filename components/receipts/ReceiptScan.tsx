@@ -1,11 +1,14 @@
 'use client';
 /** R1 receipt scan (§7.6): consent first time → compress → upload → poll → verified savings. */
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { BRAND } from '@/lib/brand';
 import { formatRandShort } from '@/lib/money';
 import { compressImage } from '@/lib/offline/compress';
+import { Camera, CircleCheck, CircleHelp, LoaderCircle } from 'lucide-react';
+import { Button, ButtonLink } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
+import { MoneyText } from '@/components/ui/MoneyText';
 
 interface View {
   status: string;
@@ -66,61 +69,79 @@ export function ReceiptScan({ needsConsent }: { needsConsent: boolean }) {
     }
   };
 
-  if (id && !view) return <p role="status" className="py-8 text-center text-lg">{t('reading')}</p>;
+  if (id && !view)
+    return (
+      <Card as="div" className="flex flex-col items-center gap-3 p-8 text-center">
+        <LoaderCircle aria-hidden className="size-8 animate-spin text-primary" />
+        <p role="status" className="font-heading text-h3 font-bold text-primary">
+          {t('reading')}
+        </p>
+      </Card>
+    );
   if (view)
     return (
       <section className="space-y-3" data-testid="receipt-result">
         {view.status === 'verified' && view.verified && (
-          <p className="rounded-xl bg-teal-50 p-3 text-lg font-semibold">
-            {t('confirmed', { paid: formatRandShort(view.verified.paidCents), normal: formatRandShort(view.verified.normalCents), saved: formatRandShort(view.verified.savedCents) })}
-          </p>
+          <Card tone="savings" bordered={false} as="div" className="p-5">
+            <p className="money font-semibold text-savings-text">
+              {t('confirmed', { paid: formatRandShort(view.verified.paidCents), normal: formatRandShort(view.verified.normalCents), saved: formatRandShort(view.verified.savedCents) })}
+            </p>
+          </Card>
         )}
-        {view.status === 'needs_review' && <p className="rounded-xl bg-amber-50 p-3">{t('needsReview')}</p>}
-        {view.status === 'failed' && <p className="rounded-xl bg-red-50 p-3">{t('failed')}</p>}
+        {view.status === 'needs_review' && <p className="rounded-input bg-surface-muted px-4 py-3 text-small">{t('needsReview')}</p>}
+        {view.status === 'failed' && <p className="rounded-input bg-danger-soft px-4 py-3 text-small text-danger">{t('failed')}</p>}
         {view.lines.length > 0 && (
           <>
-            <ul className="divide-y rounded-xl border text-sm">
-              {view.lines.map((l, i) => (
-                <li key={i} className="flex justify-between px-3 py-2">
-                  <span>
-                    <span aria-hidden>{l.matched ? '✓ ' : '? '}</span>
-                    {l.rawName} <span className="sr-only">{l.matched ? t('matched') : t('notMatched')}</span>
-                  </span>
-                  <span>{formatRandShort(l.priceCents)}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="text-xs text-gray-600">{t('unmatchedNote')}</p>
+            <Card as="div" className="overflow-hidden">
+              <ul className="divide-y divide-border text-small">
+                {view.lines.map((l, i) => (
+                  <li key={i} className="flex items-center justify-between gap-3 px-4 py-2.5">
+                    <span className="flex min-w-0 items-center gap-2">
+                      {l.matched ? <CircleCheck aria-hidden className="size-4 shrink-0 text-success" /> : <CircleHelp aria-hidden className="size-4 shrink-0 text-text-muted" />}
+                      <span className="min-w-0 break-words">{l.rawName}</span>
+                      <span className="sr-only">{l.matched ? t('matched') : t('notMatched')}</span>
+                    </span>
+                    <MoneyText cents={l.priceCents} className="shrink-0" />
+                  </li>
+                ))}
+              </ul>
+            </Card>
+            <p className="text-caption text-text-muted">{t('unmatchedNote')}</p>
           </>
         )}
-        <div className="flex gap-2">
-          <button type="button" className="tap rounded-xl border px-4" onClick={() => (setId(null), setView(null), setFile(null))}>
+        <div className="flex flex-wrap gap-2">
+          <Button variant="secondary" onClick={() => (setId(null), setView(null), setFile(null))}>
             {t('another')}
-          </button>
-          <Link href="/savings" className="tap flex items-center rounded-xl bg-brand px-4 font-semibold text-white">
-            {t('toSavings')}
-          </Link>
+          </Button>
+          <ButtonLink href="/savings">{t('toSavings')}</ButtonLink>
         </div>
       </section>
     );
 
   return (
     <form onSubmit={submit} className="space-y-4">
-      <p>{t('intro')}</p>
-      <label className="tap flex cursor-pointer items-center justify-center rounded-xl border-2 border-dashed p-6 font-semibold">
+      <p className="text-text-muted">{t('intro')}</p>
+      <label className="press tap flex cursor-pointer flex-col items-center justify-center gap-2 rounded-card border-2 border-dashed border-border bg-surface p-8 text-center font-semibold text-primary hover:border-primary-soft">
+        <span aria-hidden className="grid size-14 place-items-center rounded-full bg-savings-soft text-savings-text">
+          <Camera className="size-6" />
+        </span>
         <input type="file" accept="image/*" capture="environment" className="sr-only" onChange={(e) => setFile(e.target.files?.[0] ?? null)} />
-        {file ? file.name : t('photo')}
+        <span className="break-all">{file ? file.name : t('photo')}</span>
       </label>
       {needsConsent && (
-        <label className="flex items-start gap-2 text-sm">
-          <input type="checkbox" className="mt-1 size-5" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
+        <label className="flex cursor-pointer items-start gap-3 text-small">
+          <input type="checkbox" className="mt-0.5 size-5 shrink-0 accent-primary" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
           {t('consent', { brand: BRAND.name })}
         </label>
       )}
-      {error && <p role="alert" className="text-danger">{error}</p>}
-      <button type="submit" disabled={!file || busy} className="tap w-full rounded-xl bg-brand px-4 py-3 font-semibold text-white disabled:opacity-50">
-        {busy ? t('uploading') : t('upload')}
-      </button>
+      {error && (
+        <p role="alert" className="rounded-input bg-danger-soft px-4 py-3 text-small font-semibold text-danger">
+          {error}
+        </p>
+      )}
+      <Button type="submit" size="lg" disabled={!file} loading={busy} loadingLabel={t('uploading')}>
+        {t('upload')}
+      </Button>
     </form>
   );
 }

@@ -53,8 +53,8 @@ export default async function EditRecipe({ params, searchParams }: { params: Pro
   return (
     <main className="space-y-4">
       <h1 className="text-2xl font-bold">{recipe?.name ?? t('newRecipe')}</h1>
-      {sp.saved && <p className="rounded bg-teal-50 p-2">{t('saved')}</p>}
-      {sp.error && <p className="rounded bg-red-50 p-2">{sp.error}</p>}
+      {sp.saved && <p className="rounded bg-surface-muted p-2">{t('saved')}</p>}
+      {sp.error && <p className="rounded bg-danger-soft p-2">{sp.error}</p>}
       <form action={save} className="grid gap-2">
         <label>{t('id')}<input name="id" defaultValue={recipe?.id ?? ''} readOnly={Boolean(recipe)} className="block w-full rounded border px-2 py-1" /></label>
         <label>{t('name')}<input name="name" defaultValue={recipe?.name ?? ''} className="block w-full rounded border px-2 py-1" /></label>
@@ -63,8 +63,8 @@ export default async function EditRecipe({ params, searchParams }: { params: Pro
         <label>{t('tags')}<input name="tags" defaultValue={recipe?.tags.join(', ') ?? ''} className="block w-full rounded border px-2 py-1" /></label>
         <label>{t('steps')}<textarea name="steps" rows={6} defaultValue={recipe?.steps.join('\n') ?? ''} className="block w-full rounded border px-2 py-1" /></label>
         <label>{t('ingredientsHelp')}<textarea name="ingredients" rows={8} defaultValue={recipe?.ingredients.map((i) => `${i.ingredientId} ${i.qtyPerServing}${i.optional ? ' optional' : ''}`).join('\n') ?? ''} className="block w-full rounded border px-2 py-1 font-mono" /></label>
-        <label className="flex items-center gap-2"><input type="checkbox" name="published" defaultChecked={recipe?.published ?? false} /> {t('published')} <span className="text-sm text-gray-500">{t('publishHelp')}</span></label>
-        <button className="w-32 rounded bg-brand px-3 py-2 font-semibold text-white">{t('save')}</button>
+        <label className="flex items-center gap-2"><input type="checkbox" name="published" defaultChecked={recipe?.published ?? false} /> {t('published')} <span className="text-sm text-text-muted">{t('publishHelp')}</span></label>
+        <button className="w-32 rounded bg-primary px-3 py-2 font-semibold text-on-primary">{t('save')}</button>
       </form>
       {recipe && (
         <section className="space-y-2 rounded border p-3">

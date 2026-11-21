@@ -10,7 +10,7 @@ function Bars({ rows }: { rows: { label: string; n: number }[] }) {
       {rows.map((r) => (
         <li key={r.label} className="flex items-center gap-2">
           <span className="w-16 shrink-0">{r.label}</span>
-          <span className="h-4 bg-brand" style={{ width: `${(r.n / max) * 70}%` }} />
+          <span className="h-4 bg-primary" style={{ width: `${(r.n / max) * 70}%` }} />
           <span>{r.n}</span>
         </li>
       ))}
@@ -64,7 +64,7 @@ export default async function Pilot() {
 function Tile({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded border p-3">
-      <p className="text-xs text-gray-600">{label}</p>
+      <p className="text-xs text-text-muted">{label}</p>
       <p className="text-2xl font-bold">{value}</p>
     </div>
   );

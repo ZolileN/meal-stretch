@@ -1,12 +1,19 @@
 'use client';
 /** Settings (§7.8). */
 import Link from 'next/link';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Stepper } from '@/components/Stepper';
 import { useShops } from '@/components/location/LocationProvider';
 import { AccountPrompt } from '@/components/account/AccountPrompt';
+import { Download, Link2, LogOut, MapPin, Trash2, X } from 'lucide-react';
+import { Button, ButtonLink, buttonClass } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
+import { Chip } from '@/components/ui/Chip';
+import { Toast } from '@/components/ui/Toast';
+import { usePhotosSetting, writePhotosSetting } from '@/components/ui/useImagesAllowed';
+import { fieldClass } from '@/components/ui/field';
 
 const AVOID = ['pork', 'beef', 'fish', 'nuts', 'dairy', 'gluten'] as const;
 const KINDS = ['specials_day', 'tonight', 'month_end', 'payday', 'receipt_nudge'] as const;
@@ -36,6 +43,8 @@ export function SettingsForm({ data }: { data: SettingsData }) {
   const [msg, setMsg] = useState<string | null>(null);
   const [sharePrompt, setSharePrompt] = useState(false);
   const [copied, setCopied] = useState<string | null>(null);
+  const photos = usePhotosSetting();
+  const clear = useCallback(() => setMsg(null), []);
 
   const put = async (body: Record<string, unknown>) => {
     const res = await fetch('/api/household', { method: 'PUT', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
@@ -52,34 +61,30 @@ export function SettingsForm({ data }: { data: SettingsData }) {
   };
 
   return (
-    <div className="space-y-6">
-      {msg && (
-        <p role="status" className="rounded-lg bg-teal-50 p-2 text-sm">
-          {msg}
-        </p>
-      )}
+    <div className="space-y-3">
+      <Toast message={msg} onDone={clear} />
       <Section title={t('shops')}>
-        <button type="button" className="tap rounded-xl border px-4 font-semibold" onClick={() => openSheet('shops')}>
+        <Button variant="secondary" onClick={() => openSheet('shops')} icon={<MapPin aria-hidden className="size-4" />}>
           {t('changeShops')}
-        </button>
+        </Button>
       </Section>
 
       <Section title={t('household')}>
         {(['light', 'average', 'big'] as const).map((k) => (
-          <div key={k} className="flex items-center justify-between">
-            <span>{to(k)}</span>
+          <div key={k} className="flex flex-wrap items-center justify-between gap-2">
+            <span className="font-medium">{to(k)}</span>
             <Stepper value={h[k]} min={0} max={12} onChange={(v) => setH({ ...h, [k]: v })} label={to(k)} decLabel={to('fewer')} incLabel={to('more')} />
           </div>
         ))}
-        <button type="button" disabled={people < 1 || people > 12} className="tap rounded-xl bg-brand px-4 font-semibold text-white disabled:opacity-50" onClick={() => put(h)}>
+        <Button disabled={people < 1 || people > 12} onClick={() => put(h)}>
           {t('save')}
-        </button>
+        </Button>
       </Section>
 
       <Section title={t('avoid')}>
         <div className="flex flex-wrap gap-2">
           {AVOID.map((a) => (
-            <Chip key={a} on={data.exclusions.includes(a)} onClick={() => put({ exclusions: toggle(data.exclusions, a) })}>
+            <Chip key={a} selected={data.exclusions.includes(a)} onClick={() => put({ exclusions: toggle(data.exclusions, a) })}>
               {to(avoidKey[a])}
             </Chip>
           ))}
@@ -87,13 +92,13 @@ export function SettingsForm({ data }: { data: SettingsData }) {
       </Section>
 
       <Section title={t('neverSwap')}>
-        {data.neverSwap.length === 0 && <p className="text-sm text-gray-600">{t('noneNeverSwap')}</p>}
-        <ul className="space-y-1">
+        {data.neverSwap.length === 0 && <p className="text-small text-text-muted">{t('noneNeverSwap')}</p>}
+        <ul className="divide-y divide-border">
           {data.neverSwap.map((p) => (
-            <li key={p.id} className="flex items-center justify-between">
+            <li key={p.id} className="flex items-center justify-between py-1">
               <span>{p.name}</span>
-              <button type="button" className="tap text-sm text-danger underline" aria-label={t('removeItem', { name: p.name })} onClick={() => put({ neverSwapProteins: data.neverSwap.filter((x) => x.id !== p.id).map((x) => x.id) })}>
-                ✕
+              <button type="button" className="press tap grid place-items-center rounded-full text-danger hover:bg-danger-soft" aria-label={t('removeItem', { name: p.name })} onClick={() => put({ neverSwapProteins: data.neverSwap.filter((x) => x.id !== p.id).map((x) => x.id) })}>
+                <X aria-hidden className="size-5" />
               </button>
             </li>
           ))}
@@ -101,9 +106,9 @@ export function SettingsForm({ data }: { data: SettingsData }) {
       </Section>
 
       <Section title={t('payday')}>
-        <label className="block text-sm text-gray-600">
+        <label className="block text-small text-text-muted">
           {t('paydayHelp')}
-          <select className="tap mt-1 block rounded-xl border px-3" value={data.paydayDom ?? 25} onChange={(e) => put({ paydayDom: Number(e.target.value) })}>
+          <select className={`${fieldClass} mt-1.5 max-w-32`} value={data.paydayDom ?? 25} onChange={(e) => put({ paydayDom: Number(e.target.value) })}>
             {Array.from({ length: 31 }, (_, i) => i + 1).map((d) => (
               <option key={d} value={d}>
                 {d}
@@ -115,11 +120,26 @@ export function SettingsForm({ data }: { data: SettingsData }) {
 
       <Section title={t('notifications')}>
         {KINDS.map((k) => (
-          <label key={k} className="tap flex items-center justify-between">
+          <label key={k} className="tap flex cursor-pointer items-center justify-between gap-3">
             <span>{t(`kind_${k}`)}</span>
-            <input type="checkbox" className="size-5" checked={!data.optOut.includes(k)} onChange={() => put({ notificationOptOut: toggle(data.optOut, k) })} />
+            <input type="checkbox" className="size-5 accent-primary" checked={!data.optOut.includes(k)} onChange={() => put({ notificationOptOut: toggle(data.optOut, k) })} />
           </label>
         ))}
+      </Section>
+
+      <Section title={t('photos')}>
+        <label className="tap flex cursor-pointer items-center justify-between gap-3">
+          <span>
+            <span className="block">{t('photosToggle')}</span>
+            <span className="block text-small text-text-muted">{t('photosHelp')}</span>
+          </span>
+          <input
+            type="checkbox"
+            className="size-5 shrink-0 accent-primary"
+            checked={photos}
+            onChange={(e) => writePhotosSetting(e.target.checked)}
+          />
+        </label>
       </Section>
 
       <Section title={t('language')}>
@@ -127,7 +147,7 @@ export function SettingsForm({ data }: { data: SettingsData }) {
           {LANGS.map((l) => (
             <Chip
               key={l}
-              on={data.language === l}
+              selected={data.language === l}
               onClick={async () => {
                 await fetch('/api/language', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ language: l }) });
                 router.refresh();
@@ -140,33 +160,33 @@ export function SettingsForm({ data }: { data: SettingsData }) {
       </Section>
 
       <Section title={t('share')}>
-        <p className="text-sm text-gray-600">{t('shareHelp')}</p>
+        <p className="text-small text-text-muted">{t('shareHelp')}</p>
         {sharePrompt ? (
           <AccountPrompt signedIn={Boolean(data.user)} force onSkip={createShare} />
         ) : (
-          <button type="button" className="tap rounded-xl border px-4 font-semibold" onClick={() => (data.user ? createShare() : setSharePrompt(true))}>
+          <Button variant="secondary" onClick={() => (data.user ? createShare() : setSharePrompt(true))} icon={<Link2 aria-hidden className="size-4" />}>
             {t('shareCreate')}
-          </button>
+          </Button>
         )}
         <ul className="space-y-2" data-testid="share-links">
           {data.shareLinks.map((l) => {
             const url = `${data.appUrl}/s/${l.token}`;
             return (
-              <li key={l.token} className="flex items-center gap-2 text-sm">
-                <code className="flex-1 truncate rounded bg-gray-100 px-2 py-1">{url}</code>
-                <button type="button" className="tap rounded-lg border px-2" onClick={() => (void navigator.clipboard?.writeText(url), setCopied(l.token))}>
+              <li key={l.token} className="flex flex-wrap items-center gap-2 text-small">
+                <code className="min-w-0 flex-1 truncate rounded-input bg-surface-muted px-3 py-2">{url}</code>
+                <Button variant="secondary" onClick={() => (void navigator.clipboard?.writeText(url), setCopied(l.token))}>
                   {copied === l.token ? t('shareCopied') : t('shareCopy')}
-                </button>
-                <button
-                  type="button"
-                  className="tap rounded-lg border px-2 text-danger"
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="text-danger"
                   onClick={async () => {
                     await fetch('/api/share', { method: 'DELETE', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ token: l.token }) });
                     router.refresh();
                   }}
                 >
                   {t('shareRevoke')}
-                </button>
+                </Button>
               </li>
             );
           })}
@@ -174,20 +194,23 @@ export function SettingsForm({ data }: { data: SettingsData }) {
       </Section>
 
       <Section title={t('account')}>
-        {data.user ? <AccountStatus email={data.user.email} /> : <Link href="/signin" className="tap inline-flex items-center font-semibold text-brand underline">{t('signIn')}</Link>}
+        {data.user ? <AccountStatus email={data.user.email} /> : <ButtonLink href="/signin">{t('signIn')}</ButtonLink>}
       </Section>
 
       <Section title={t('privacy')}>
-        <p className="text-sm text-gray-600">{t('privacyNote')}</p>
-        <Link href="/privacy" className="tap inline-flex items-center text-sm text-brand underline">
+        <p className="text-small text-text-muted">{t('privacyNote')}</p>
+        <Link href="/privacy" className="tap inline-flex items-center text-small font-semibold text-primary underline">
           {t('privacyLink')}
         </Link>
-        <a href="/api/account/export" className="tap inline-flex items-center rounded-xl border px-4 font-semibold">
+        <div className="flex flex-wrap gap-2">
+        <a href="/api/account/export" className={buttonClass('secondary')}>
+          <Download aria-hidden className="size-4" />
           {t('export')}
         </a>
-        <button
-          type="button"
-          className="tap block rounded-xl border border-danger px-4 font-semibold text-danger"
+        <Button
+          variant="ghost"
+          className="text-danger hover:bg-danger-soft"
+          icon={<Trash2 aria-hidden className="size-4" />}
           onClick={async () => {
             if (!window.confirm(t('deleteConfirm'))) return;
             const res = await fetch('/api/account', { method: 'DELETE' });
@@ -204,7 +227,8 @@ export function SettingsForm({ data }: { data: SettingsData }) {
           }}
         >
           {t('delete')}
-        </button>
+        </Button>
+        </div>
       </Section>
     </div>
   );
@@ -214,7 +238,7 @@ function AccountStatus({ email }: { email: string | null }) {
   const t = useTranslations('auth');
   return (
     <div className="space-y-2">
-      <p>{t('signedInAs', { email: email ?? '' })}</p>
+      <p className="text-small">{t('signedInAs', { email: email ?? '' })}</p>
       <SignOutButton label={t('signOut')} />
     </div>
   );
@@ -223,9 +247,9 @@ function AccountStatus({ email }: { email: string | null }) {
 function SignOutButton({ label }: { label: string }) {
   const router = useRouter();
   return (
-    <button
-      type="button"
-      className="tap rounded-xl border px-4"
+    <Button
+      variant="secondary"
+      icon={<LogOut aria-hidden className="size-4" />}
       onClick={async () => {
         const { csrfToken } = (await (await fetch('/api/auth/csrf')).json()) as { csrfToken: string };
         await fetch('/api/auth/signout', { method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ csrfToken, callbackUrl: '/' }) });
@@ -234,23 +258,16 @@ function SignOutButton({ label }: { label: string }) {
       }}
     >
       {label}
-    </button>
+    </Button>
   );
 }
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="space-y-2">
-      <h2 className="text-lg font-bold">{title}</h2>
+    <Card className="space-y-3 p-5">
+      <h2 className="font-heading text-h3 font-bold text-primary">{title}</h2>
       {children}
-    </section>
+    </Card>
   );
 }
 
-function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; children: React.ReactNode }) {
-  return (
-    <button type="button" aria-pressed={on} onClick={onClick} className={`tap rounded-full border px-4 py-2 text-sm ${on ? 'border-brand bg-brand text-white' : 'border-gray-300'}`}>
-      {children}
-    </button>
-  );
-}
