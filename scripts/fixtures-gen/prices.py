@@ -71,6 +71,22 @@ P = {
  "mushrooms":[("Button Mushrooms 250 g",250,2799)],
  "sweet_potatoes":[("Sweet Potatoes 1 kg",1000,2499)],
  "peanut_butter":[("Smooth Peanut Butter 400 g",400,3999)],
+ "tortilla_wraps":[("Tortilla Wraps 6 pack",6,3499)],
+ "bread_rolls":[("Hot Dog Rolls 6 pack",6,2299),("Burger Buns 6 pack",6,2499)],
+ "egg_noodles":[("Egg Noodles 250 g",250,2499)],
+ "chickpeas_tin":[("Chickpeas 400 g",400,1799)],
+ "kidney_beans_tin":[("Red Kidney Beans 410 g",410,1799)],
+ "coconut_milk":[("Coconut Milk 400 ml",400,2999)],
+ "feta_cheese":[("Feta Cheese 200 g",200,4499)],
+ "ginger":[("Fresh Ginger approx 100 g",100,1499)],
+ "lemons":[("Lemons 1 kg",1000,2999)],
+ "cucumber":[("Cucumber each (approx 350 g)",350,1599)],
+ "fruit_chutney":[("Fruit Chutney 470 g",470,3299)],
+ "soy_sauce":[("Soy Sauce 250 ml",250,2999)],
+ "brown_vinegar":[("Brown Vinegar 750 ml",750,1999)],
+ "ground_cumin":[("Ground Cumin",50,1999)],
+ "chilli_powder":[("Chilli Powder",50,1999)],
+ "ground_cinnamon":[("Ground Cinnamon",50,1999)],
 }
 ing={i['id']:i for i in json.load(open('seed/ingredients.sample.json'))}
 assert set(P)==set(ing), set(ing)^set(P)

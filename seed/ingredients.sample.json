@@ -637,5 +637,149 @@
   "perishable": false,
   "pantryStaple": false,
   "category": "dry"
+ },
+ {
+  "id": "tortilla_wraps",
+  "name": "Tortilla wraps",
+  "unit": "unit",
+  "roundTo": 1,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "bakery"
+ },
+ {
+  "id": "bread_rolls",
+  "name": "Bread rolls",
+  "unit": "unit",
+  "roundTo": 1,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "bakery"
+ },
+ {
+  "id": "egg_noodles",
+  "name": "Egg noodles",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dry"
+ },
+ {
+  "id": "chickpeas_tin",
+  "name": "Chickpeas (tin)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "tinned"
+ },
+ {
+  "id": "kidney_beans_tin",
+  "name": "Red kidney beans (tin)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "tinned"
+ },
+ {
+  "id": "coconut_milk",
+  "name": "Coconut milk",
+  "unit": "ml",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "tinned"
+ },
+ {
+  "id": "feta_cheese",
+  "name": "Feta cheese",
+  "unit": "g",
+  "roundTo": 25,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "dairy"
+ },
+ {
+  "id": "ginger",
+  "name": "Fresh ginger",
+  "unit": "g",
+  "roundTo": 5,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "lemons",
+  "name": "Lemons",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "cucumber",
+  "name": "Cucumber",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
+ },
+ {
+  "id": "fruit_chutney",
+  "name": "Fruit chutney",
+  "unit": "g",
+  "roundTo": 10,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "sauces"
+ },
+ {
+  "id": "soy_sauce",
+  "name": "Soy sauce",
+  "unit": "ml",
+  "roundTo": 5,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "sauces"
+ },
+ {
+  "id": "brown_vinegar",
+  "name": "Brown vinegar",
+  "unit": "ml",
+  "roundTo": 5,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "sauces"
+ },
+ {
+  "id": "ground_cumin",
+  "name": "Ground cumin",
+  "unit": "g",
+  "roundTo": 1,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
+ },
+ {
+  "id": "chilli_powder",
+  "name": "Chilli powder",
+  "unit": "g",
+  "roundTo": 1,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
+ },
+ {
+  "id": "ground_cinnamon",
+  "name": "Ground cinnamon",
+  "unit": "g",
+  "roundTo": 1,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "spices"
  }
 ]

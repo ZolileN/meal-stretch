@@ -105,7 +105,7 @@ localStorage shops                  lib/prices/snapshot ◀── current_prices
 2. **Edge runtime isn't used** (deprecated in Next 16). The routes stay edge-compatible.
 3. **Rate limits are per server instance (in memory).** Claude caps are DB-backed and global.
 4. **Local DB is PGlite + PostGIS, not Neon.** The same SQL runs on both, but run `pnpm db:migrate` against a Neon branch before go-live (human-todo).
-5. **All 142 recipes are unpublished drafts written by Claude, and all fixture prices and `TEST` branches are fictional.** None of it is production data.
+5. **All 206 recipes are unpublished drafts written by Claude, and all fixture prices and `TEST` branches are fictional.** None of it is production data.
 6. Seeded places are approximate centre points until the OSM import runs.
 7. "Lowest in 8 weeks" (steal of the week) needs 8 weeks of price history before it appears.
 8. Notification copy is generic: the cron doesn't re-run the engine, so "here are 6 suppers for R410" figures aren't included.
@@ -120,7 +120,7 @@ localStorage shops                  lib/prices/snapshot ◀── current_prices
 1. **Confirm the reconstructed rules and four money defaults.** Review `CLAUDE.md` and `PRD.md` (rebuilt from the .docx files). Confirm the 2026-11-21 defaults in `docs/decisions.md`: per plate = per serving, the savings split, no double counting between slips and plans, and "until the 25th" = up to the day before.
 2. **Production infrastructure.** Neon project, Vercel project and every secret in the env table: `AUTH_SECRET`, `CRON_SECRET`, VAPID keys, `ANTHROPIC_API_KEY`, `BLOB_READ_WRITE_TOKEN`, Resend + verified domain, Google OAuth, `ADMIN_EMAILS`, `APP_URL`. Never set `E2E`.
 3. **Stores.** `pnpm import:osm ZA-EC ZA-WC`, verify every branch within 15 km of both pilot areas, then delete `TEST` branches and seed places.
-4. **Recipes.** Review and cook-test the 142 drafts and publish at least 60 in `/admin/recipes`.
+4. **Recipes.** Review and cook-test the 206 drafts and publish at least 60 in `/admin/recipes`.
 5. **Prices.** Load real prices for every pilot chain (weekly leaflets via `/admin/leaflets`, or CSV), then reach ≥ 90% coverage in `/admin/prices`.
 6. **Receipt accuracy.** Add 10 real receipt photos with `.expected.json` and run `pnpm harness:receipts --record` (target ≥ 90%).
 7. **Translations.** isiXhosa and Afrikaans review of `messages/xh.json` and `af.json`, including the privacy notice.

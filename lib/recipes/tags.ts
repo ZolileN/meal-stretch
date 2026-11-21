@@ -27,6 +27,11 @@ export const INGREDIENT_CONTAINS: Record<string, ExclusionTag[]> = {
   bread: ['gluten'],
   brown_onion_soup: ['gluten'],
   stock_cubes: ['gluten'],
+  tortilla_wraps: ['gluten'],
+  bread_rolls: ['gluten'],
+  egg_noodles: ['gluten'],
+  soy_sauce: ['gluten'],
+  feta_cheese: ['dairy'],
 };
 
 const MEAT_OR_FISH_CATEGORIES = new Set(['meat', 'fish']);
