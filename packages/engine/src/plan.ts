@@ -608,7 +608,8 @@ export function replace(req: PlanRequest, current: PlanResult, day: number, reci
   const cur = st.slots[d] ?? null;
   let next: Prep | undefined;
   if (recipeId === 'cheapest') {
-    let best = Infinity;
+    // PLN-7: only replace when an alternative is strictly cheaper than what's planned now.
+    let best = cur ? finalize(P, slotsOf(st)).totals.paidCents : Infinity;
     for (const c of alternatives(P, st, d, cur)) {
       st.slots[d] = c;
       const paid = finalize(P, slotsOf(st)).totals.paidCents;
@@ -639,4 +640,10 @@ export function remove(req: PlanRequest, current: PlanResult, day: number, ctx: 
 export function objectiveOf(req: PlanRequest, current: PlanResult, ctx: EngineContext): number {
   const P = prepare(req, ctx);
   return objective(P, stateFrom(P, current));
+}
+
+/** Re-price the same meals with the request's current pantry/prices (LST-4 "Already have it"). */
+export function reprice(req: PlanRequest, current: PlanResult, ctx: EngineContext): PlanResult {
+  const P = prepare(req, ctx);
+  return finalize(P, slotsOf(stateFrom(P, current)));
 }

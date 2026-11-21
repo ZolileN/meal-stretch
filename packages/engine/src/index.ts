@@ -1,5 +1,5 @@
 export * from './types';
-export { ENGINE_VERSION, WEIGHTS, assignShops, varietyLimits, objectiveOf } from './plan';
+export { ENGINE_VERSION, WEIGHTS, assignShops, varietyLimits, objectiveOf, reprice } from './plan';
 export { selectPacks, type PackSelection } from './packs';
 export { packPrice, ageDays, isStale, isUsable } from './price';
 export { servings, servingsHundredths, scaleQty } from './portions';

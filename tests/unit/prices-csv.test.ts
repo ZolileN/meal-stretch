@@ -61,7 +61,7 @@ describe('CSV validation (Zod per row)', () => {
     const { rows, rejected } = validateCsv(text, new Date('2100-01-01'));
     expect(rejected).toEqual([]);
     expect(rows.length).toBeGreaterThan(300);
-    expect(new Set(rows.map((r) => r.retailer_id))).toEqual(new Set(['checkers', 'shoprite', 'pnp', 'spar']));
+    expect(new Set(rows.map((r) => r.retailer_id))).toEqual(new Set(['checkers', 'shoprite', 'pnp', 'spar', 'usave']));
     expect(rows.some((r) => r.special_price_cents !== null)).toBe(true);
     expect(rows.some((r) => r.member_price_cents !== null)).toBe(true);
     expect(rows.every((r) => r.brand === 'FIXTURE')).toBe(true);

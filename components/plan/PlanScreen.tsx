@@ -9,13 +9,17 @@ import { formatRandShort } from '@/lib/money';
 import { distanceLabel } from '@/lib/location/geo';
 import type { PlanView } from '@/lib/plans/view';
 import { useShops } from '@/components/location/LocationProvider';
+import { MealActions } from './MealActions';
 
-export function PlanScreen({ view, children }: { view: PlanView; children?: React.ReactNode }) {
+export function PlanScreen({ view, shoppedPrompt = false }: { view: PlanView; shoppedPrompt?: boolean }) {
   const t = useTranslations('plan');
   const locale = useLocale();
   const router = useRouter();
   const { shops } = useShops();
   const [busy, setBusy] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
+  const [open, setOpen] = useState<number | null>(null);
+  const editable = view.status === 'active';
   const R = (c: number) => formatRandShort(c);
 
   const rerun = async (key: string, body: Record<string, unknown>) => {
@@ -38,6 +42,19 @@ export function PlanScreen({ view, children }: { view: PlanView; children?: Reac
 
   return (
     <main className="space-y-4 px-4 py-4">
+      {notice && (
+        <p role="status" className="rounded-lg bg-teal-50 p-2 text-sm" data-testid="notice">
+          {notice}
+        </p>
+      )}
+      {shoppedPrompt && editable && (
+        <div className="rounded-xl bg-amber-50 p-3 text-sm">
+          <p>{t('shoppedPrompt')}</p>
+          <Link href="/list" className="tap mt-1 inline-flex items-center font-semibold text-brand underline">
+            {t('seeList', { count: view.listItems })}
+          </Link>
+        </div>
+      )}
       <section aria-labelledby="plan-total" className="space-y-1 rounded-2xl border p-4" data-testid="plan-header">
         <h1 id="plan-total" className="text-xl font-bold">
           {t('suppersPerPlate', { count: view.meals.length, perPlate: R(view.totals.perPlateCents) })}
@@ -117,22 +134,35 @@ export function PlanScreen({ view, children }: { view: PlanView; children?: Reac
             {t('minutes', { count: tonight.cookMinutes })}
             {tonight.share && ` · ${t('shareHint', tonight.share)}`}
           </p>
-          {children}
+          {editable && <MealActions planId={view.planId} day={tonight.day} recipeId={tonight.recipeId} name={tonight.name} onNotice={setNotice} />}
         </section>
       )}
 
       <ul className="divide-y rounded-2xl border">
         {rest.map((m) => (
-          <li key={m.day} className="flex items-baseline justify-between gap-2 px-4 py-3" data-testid={`meal-${m.day}`}>
-            <span className="w-10 shrink-0 text-sm font-semibold text-gray-600">{weekdayShort(m.date, locale)}</span>
-            <span className="flex-1">
-              <span className="font-medium">{m.name}</span>
-              <span className="block text-xs text-gray-600">
-                {t('minutes', { count: m.cookMinutes })}
-                {m.share && ` · ${t('shareHint', m.share)}`}
+          <li key={m.day} data-testid={`meal-${m.day}`}>
+            <button
+              type="button"
+              className="tap flex w-full items-baseline justify-between gap-2 px-4 py-3 text-left"
+              aria-expanded={open === m.day}
+              aria-label={t('actionsFor', { name: m.name })}
+              onClick={() => setOpen(open === m.day ? null : m.day)}
+            >
+              <span className="w-10 shrink-0 text-sm font-semibold text-gray-600">{weekdayShort(m.date, locale)}</span>
+              <span className="flex-1">
+                <span className="font-medium">{m.name}</span>
+                <span className="block text-xs text-gray-600">
+                  {t('minutes', { count: m.cookMinutes })}
+                  {m.share && ` · ${t('shareHint', m.share)}`}
+                </span>
               </span>
-            </span>
-            <span className="whitespace-nowrap text-sm font-semibold">{t('perPlate', { amount: R(m.perPlateCents) })}</span>
+              <span className="whitespace-nowrap text-sm font-semibold">{t('perPlate', { amount: R(m.perPlateCents) })}</span>
+            </button>
+            {open === m.day && editable && (
+              <div className="px-4 pb-3">
+                <MealActions planId={view.planId} day={m.day} recipeId={m.recipeId} name={m.name} onNotice={setNotice} />
+              </div>
+            )}
           </li>
         ))}
       </ul>

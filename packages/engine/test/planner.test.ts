@@ -247,6 +247,13 @@ describe('meal actions (PLN-6…9)', () => {
     for (const o of opts) expect(tag(o.recipeId, 'protein')).toBe(`protein:${protein}`);
   });
 
+  it('cheaper never costs more: keeps the meal when it is already the cheapest (PLN-7)', () => {
+    for (const day of [1, 2, 3, 4, 5, 6, 7]) {
+      const r = engine.replace(req, base, day, 'cheapest', ctx);
+      expect(r.totals.paidCents).toBeLessThanOrEqual(base.totals.paidCents);
+    }
+  });
+
   it('replace cheapest ≤ every swap option', () => {
     const cheapest = engine.replace(req, base, 2, 'cheapest', ctx);
     const opts = engine.swapOptions(req, base, 2, ctx);
@@ -294,5 +301,22 @@ describe('unpriced avoidance with narrow choices', () => {
     const req = households.noPorkNoFish;
     const r = engine.plan(req, householdContext(req));
     expect(r.unpriced).toEqual([]);
+  });
+});
+
+import { reprice } from '../src/index';
+describe('reprice after "Already have it" (LST-4, PLN-11)', () => {
+  it('same meals, pantry consumed first, totals reconcile', () => {
+    const req = households.familyBigEater;
+    const ctx = householdContext(req);
+    const base = engine.plan(req, ctx);
+    const line = base.basket.find((l) => l.packs * l.unitCents > 2000)!;
+    const need = base.basket.filter((l) => l.ingredientId === line.ingredientId).reduce((s, l) => s + l.packs * l.packQty - l.leftoverQty, 0);
+    const r = reprice({ ...req, pantry: [{ ingredientId: line.ingredientId, qty: need }] }, base, ctx);
+    expect(r.meals.map((m) => m.recipeId)).toEqual(base.meals.map((m) => m.recipeId));
+    expect(r.basket.some((l) => l.ingredientId === line.ingredientId)).toBe(false);
+    expect(r.totals.paidCents).toBeLessThan(base.totals.paidCents);
+    expect(r.basket.reduce((s, l) => s + l.packs * l.unitCents, 0)).toBe(r.totals.paidCents);
+    expect(r.meals.reduce((s, m) => s + m.costCents, 0)).toBe(r.totals.paidCents);
   });
 });

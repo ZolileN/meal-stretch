@@ -1,9 +1,9 @@
 # Build progress
 
 ## Checkpoint
-- Last completed: Phase 4 (2026-11-21)
-- Next: Phase 5, step 5.1
-- Test status: 212 unit/db/engine, 7 e2e, all green
+- Last completed: Phase 5 (2026-11-21)
+- Next: Phase 6, step 6.1
+- Test status: 213 unit/db/engine, 10 e2e, all green
 - Open human-todo items: 10
 
 ## Phase 0: Repo foundation
@@ -54,11 +54,12 @@ Gate: ONB-1 PASS (lib/household.ts device cookie; plans.test) · ONB-3 PASS (Hou
 - [x] 4.5 Playwright: first run, over-budget, unpriced
 
 ## Phase 5: Meal actions, list, pantry
-- [ ] 5.1 Swap sheet, Cheaper, Remove, never-swap toggle
-- [ ] 5.2 Shopping list (grouping, tags, sticky total, already-have-it, staples, WhatsApp)
-- [ ] 5.3 Offline ticks (IndexedDB + PUT ticks) + service worker
-- [ ] 5.4 Mark as shopped → savings_event + leftovers into pantry, idempotent
-- [ ] 5.5 Tests: swap → offline ticks → persist; totals reconcile
+Gate: PLN-6 PASS (actions.test swap, e2e swap Tue) · PLN-7 PASS (cheaper never costs more, engine + db) · PLN-8 PASS (remove savedCents) · PLN-9 PASS (never-swap db test) · PLN-11 PASS (pantry + reprice) · LST-1 PASS (pack lines) · LST-2 PASS (store → aisle grouping) · LST-3 PASS (IndexedDB + PUT ticks, e2e offline) · LST-4 PASS (already-have e2e + db) · LST-5 PASS (staples section e2e) · LST-6 PASS (WhatsApp link e2e) · SAV-3 PASS (markShopped idempotent db test; 48 h prompt) · §15 offline PASS (offline.spec).
+- [x] 5.1 Swap sheet, Cheaper, Remove, never-swap toggle
+- [x] 5.2 Shopping list (grouping, tags, sticky total, already-have-it, staples, WhatsApp)
+- [x] 5.3 Offline ticks (IndexedDB + PUT ticks) + service worker
+- [x] 5.4 Mark as shopped → savings_event + leftovers into pantry, idempotent
+- [x] 5.5 Tests: swap → offline ticks → persist; totals reconcile
 
 ## Phase 6: Savings, PWA, notifications
 - [ ] 6.1 Savings screen (lifetime, breakdown, receipt CTA)
