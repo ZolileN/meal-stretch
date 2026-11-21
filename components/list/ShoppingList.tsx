@@ -16,7 +16,7 @@ import { ListRow } from '@/components/ui/ListRow';
 import { MoneyText } from '@/components/ui/MoneyText';
 import { Toast } from '@/components/ui/Toast';
 
-const sourceKey = { receipt: 'sourceReceipt', leaflet: 'sourceLeaflet', catalogue: 'sourceCatalogue', manual: 'sourceManual' } as const;
+const sourceKey = { receipt: 'sourceReceipt', leaflet: 'sourceLeaflet', catalogue: 'sourceCatalogue', manual: 'sourceManual', guide: 'sourceGuide' } as const;
 
 export function ShoppingList({ view, shareText, shareToken }: { view: ListView; shareText: string; shareToken?: string }) {
   const ticksUrl = shareToken ? `/api/share/${shareToken}/ticks` : `/api/plans/${view.planId}/ticks`;
@@ -144,8 +144,23 @@ export function ShoppingList({ view, shareText, shareToken }: { view: ListView; 
                       detail={
                         <>
                           {t('packs', { count: l.packs, pack: l.pack })}
-                          {l.source && l.observedAt && (
-                            <span className="block text-caption">{t('priceSource', { source: t(sourceKey[l.source]), date: dayMonth(l.observedAt, locale) })}</span>
+                          {l.source === 'guide' && l.observedAt ? (
+                            <span className="block text-caption">
+                              {l.guideRetailer
+                                ? t('guideFrom', { retailer: l.guideRetailer, date: dayMonth(l.observedAt, locale) })
+                                : t('guideSame', { date: dayMonth(l.observedAt, locale) })}
+                              {l.sourceUrl && (
+                                <>
+                                  {' · '}
+                                  <a href={l.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" className="underline">
+                                    {t('guideLink')}
+                                  </a>
+                                </>
+                              )}
+                            </span>
+                          ) : (
+                            l.source &&
+                            l.observedAt && <span className="block text-caption">{t('priceSource', { source: t(sourceKey[l.source]), date: dayMonth(l.observedAt, locale) })}</span>
                           )}
                         </>
                       }

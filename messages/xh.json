@@ -220,7 +220,11 @@
     "more": "TODO: More for {name}",
     "needed": "TODO: {amount} needed",
     "noPrice": "TODO: No price yet",
-    "shareNoPrice": "TODO: {name} ({needed} needed) · no price yet"
+    "shareNoPrice": "TODO: {name} ({needed} needed) · no price yet",
+    "sourceGuide": "TODO: Guide price",
+    "guideFrom": "TODO: Guide price from {retailer}, looked up {date}",
+    "guideSame": "TODO: Guide price, looked up {date}",
+    "guideLink": "TODO: where we found it"
   },
   "recipe": {
     "back": "TODO: Back to plan",

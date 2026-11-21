@@ -76,9 +76,9 @@ export async function importPriceRows(
     const ins = await query<{ id: string | number }>(
       db,
       sql`insert into price_observations (product_id, branch_id, province, retailer_id, price_cents, member_price_cents, special_price_cents,
-                                          special_ends_on, source, observed_at, ingest_batch_id)
+                                          special_ends_on, source, source_url, observed_at, ingest_batch_id)
           select ${productId}, ${r.branch_id}, ${r.province}, ${r.retailer_id}, ${r.price_cents}, ${r.member_price_cents}, ${r.special_price_cents},
-                 ${endsOn}::date, ${opts.source}, ${observedAt}::timestamptz, ${batchId}
+                 ${endsOn}::date, ${opts.source}, ${r.source_url}, ${observedAt}::timestamptz, ${batchId}
           where not exists (
             select 1 from price_observations o
             where o.product_id = ${productId} and o.branch_id is not distinct from ${r.branch_id}::bigint

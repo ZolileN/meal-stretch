@@ -35,7 +35,7 @@ The first start takes about 20 s while PGlite loads PostGIS and seeds. The data 
 | `pnpm db:local` | The local DB on its own (Neon-compatible HTTP endpoint on :4444) |
 | `pnpm db:migrate` / `pnpm db:seed [--production]` | Against `DATABASE_URL` (Neon) |
 | `pnpm import:leaflet <file.pdf> --retailer <id> [--province GP]` | Leaflets of any size → review batches in /admin/leaflets (needs ANTHROPIC_API_KEY); province = where the prices apply |
-| `pnpm import:prices file.csv [--source manual\|catalogue\|leaflet] [--dry-run]` | CSV price import |
+| `pnpm import:prices file.csv [--source manual\|catalogue\|leaflet\|guide] [--dry-run]` | CSV price import (`seed/prices.guide.csv` = web-search guide prices) |
 | `pnpm import:osm --tiles ZA-GP ZA-KZN` (or `--tiles --all`) | OpenStreetMap stores + places per province, in ~55 km tiles; safe to repeat |
 | `pnpm harness:receipts [--record]` | Receipt extraction accuracy (calls the real API: opt-in) |
 | `pnpm tsx scripts/sync-messages.ts` | After editing `messages/en.json` (also runs before `pnpm build`) |

@@ -1,5 +1,5 @@
 /**
- * `pnpm import:prices <file.csv> [--source manual|catalogue|leaflet] [--dry-run]`
+ * `pnpm import:prices <file.csv> [--source manual|catalogue|leaflet|guide] [--dry-run]`
  * Validates every row with Zod, reports rejected rows with reasons, creates missing products + aliases,
  * appends price observations and refreshes current_prices.
  */
@@ -11,12 +11,12 @@ loadEnvFile();
 const args = process.argv.slice(2);
 const file = args.find((a) => !a.startsWith('--') && args[args.indexOf(a) - 1] !== '--source');
 if (!file) {
-  console.error('usage: pnpm import:prices <file.csv> [--source manual|catalogue|leaflet] [--dry-run]');
+  console.error('usage: pnpm import:prices <file.csv> [--source manual|catalogue|leaflet|guide] [--dry-run]');
   process.exit(2);
 }
 const srcIdx = args.indexOf('--source');
-const source = (srcIdx >= 0 ? args[srcIdx + 1] : 'manual') as 'manual' | 'catalogue' | 'leaflet';
-if (!['manual', 'catalogue', 'leaflet'].includes(source)) {
+const source = (srcIdx >= 0 ? args[srcIdx + 1] : 'manual') as 'manual' | 'catalogue' | 'leaflet' | 'guide';
+if (!['manual', 'catalogue', 'leaflet', 'guide'].includes(source)) {
   console.error('--source must be manual, catalogue or leaflet (receipts come from the receipt pipeline)');
   process.exit(2);
 }

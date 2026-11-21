@@ -4,6 +4,8 @@ import type { Cents, Offer } from './types';
 export const DAY_MS = 86_400_000;
 export const STALE_DAYS = 7;
 export const MAX_AGE_DAYS = 21;
+/** Guide prices (looked up online) stay usable longer so items always have a price; they're always flagged. */
+export const GUIDE_MAX_AGE_DAYS = 90;
 
 /** Whole days between observedAt and asOf (asOf is an ISO date; both treated as UTC). */
 export function ageDays(observedAt: string, asOf: string): number {
@@ -13,10 +15,10 @@ export function ageDays(observedAt: string, asOf: string): number {
 }
 
 export function isUsable(o: Offer, asOf: string): boolean {
-  return ageDays(o.observedAt, asOf) <= MAX_AGE_DAYS;
+  return ageDays(o.observedAt, asOf) <= (o.source === 'guide' ? GUIDE_MAX_AGE_DAYS : MAX_AGE_DAYS);
 }
 export function isStale(o: Offer, asOf: string): boolean {
-  return ageDays(o.observedAt, asOf) > STALE_DAYS;
+  return o.source === 'guide' || ageDays(o.observedAt, asOf) > STALE_DAYS;
 }
 
 export interface PackPrice {
