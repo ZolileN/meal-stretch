@@ -98,7 +98,9 @@ function anthropic(): Anthropic {
 }
 
 export function fixturePath(purpose: Purpose, hash: string) {
-  return join(resolve(process.cwd(), env().CLAUDE_FIXTURE_DIR), purpose, `${hash}.json`);
+  // Fixtures are a dev/test aid (no API key). Don't let the bundler trace the whole project into the
+  // server function because of this dynamic path; on Vercel the deterministic fallbacks apply instead.
+  return join(resolve(/*turbopackIgnore: true*/ process.cwd(), env().CLAUDE_FIXTURE_DIR), purpose, `${hash}.json`);
 }
 
 async function logCall(db: Db, row: { householdId: string | null; purpose: Purpose; hash: string; model: string; inTok?: number; outTok?: number; ms?: number; output?: unknown; ok: boolean }) {
