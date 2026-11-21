@@ -191,8 +191,8 @@
     "staplesHelp": "Not in your total. Add them only if you've run out.",
     "staplesSubtotal": "Staples subtotal {amount}",
     "cantPrice": "can't price yet",
-    "unpricedTitle": "Not on the list yet",
-    "unpricedHelp": "We can't price these at your shops yet, so they're not in the total.",
+    "unpricedTitle": "No price yet",
+    "unpricedHelp": "You still need these for your suppers. We can't price them at your shops yet, so they're not in the total.",
     "share": "Send list on WhatsApp",
     "shareHeader": "Shopping list ({count} items)",
     "shareTotal": "Total: {amount}",
@@ -217,7 +217,10 @@
     },
     "itemsCount": "{count, plural, one {# item} other {# items}}",
     "wasLabel": "normal price",
-    "more": "More for {name}"
+    "more": "More for {name}",
+    "needed": "{amount} needed",
+    "noPrice": "No price yet",
+    "shareNoPrice": "{name} ({needed} needed) · no price yet"
   },
   "recipe": {
     "back": "Back to plan",

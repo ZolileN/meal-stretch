@@ -5,7 +5,7 @@ import { pgArray } from '@/lib/location/queries';
 import { productDetails } from '@/lib/prices/snapshot';
 import { loadIngredients } from '@/lib/recipes/queries';
 import { formatRand } from '@/lib/money';
-import { getTicks, lineKey } from './actions';
+import { getTicks, lineKey, unpricedKey } from './actions';
 import type { StoredPlan } from './service';
 import { branchNames, packLabel } from './view';
 
@@ -30,7 +30,8 @@ export interface ListView {
   stores: { branchId: number; name: string; retailerName: string; subtotalCents: number; aisles: { category: string; lines: ListLine[] }[] }[];
   staples: { ingredientId: string; name: string; costCents: number | null }[];
   staplesSubtotalCents: number;
-  unpriced: { ingredientId: string; name: string }[];
+  /** Needed for the suppers but no current price at these shops: tickable, never in totals. */
+  unpriced: { key: string; ingredientId: string; name: string; needed: string; category: string }[];
   ticks: Record<string, { ticked: boolean; at: string }>;
 }
 
@@ -102,21 +103,33 @@ export async function buildListView(db: Db, plan: StoredPlan): Promise<ListView>
     planId: plan.id,
     status: plan.status,
     totalCents: r.totals.paidCents,
-    count: r.basket.length,
+    count: r.basket.length + r.unpriced.length,
     stores: storeList,
     staples: r.pantryStaples.map((s) => ({ ingredientId: s.ingredientId, name: name(s.ingredientId), costCents: s.costCents })),
     staplesSubtotalCents: r.pantryStaples.reduce((s, x) => s + (x.costCents ?? 0), 0),
-    unpriced: r.unpriced.map((u) => ({ ingredientId: u.ingredientId, name: name(u.ingredientId) })),
+    unpriced: r.unpriced
+      .map((u) => ({
+        key: unpricedKey(u.ingredientId),
+        ingredientId: u.ingredientId,
+        name: name(u.ingredientId),
+        needed: packLabel(u.neededQty, ingredients[u.ingredientId]?.unit ?? 'unit'),
+        category: ingredients[u.ingredientId]?.category ?? 'other',
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name)),
     ticks: Object.fromEntries(ticks.map((t) => [t.line_key, { ticked: Boolean(t.ticked), at: new Date(t.updated_at).toISOString() }])),
   };
 }
 
 /** LST-6: plain-text list for https://wa.me/?text= (labels passed in already translated). */
-export function whatsappText(v: ListView, labels: { header: string; at: (store: string) => string; total: string }): string {
+export function whatsappText(v: ListView, labels: { header: string; at: (store: string) => string; total: string; noPrice?: (name: string, needed: string) => string }): string {
   const lines = [labels.header];
   for (const s of v.stores) {
     lines.push('', labels.at(s.retailerName));
     for (const a of s.aisles) for (const l of a.lines) lines.push(`- ${l.packs} × ${l.productName} (${l.pack}) ${formatRand(l.totalCents)}`);
+  }
+  if (v.unpriced.length && labels.noPrice) {
+    lines.push('');
+    for (const u of v.unpriced) lines.push(`- ${labels.noPrice(u.name, u.needed)}`);
   }
   lines.push('', labels.total);
   return lines.join('\n');

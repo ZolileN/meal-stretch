@@ -21,6 +21,7 @@ export default async function ListPage() {
     header: t('shareHeader', { count: view.count }),
     at: (store) => t('at', { store }),
     total: t('shareTotal', { amount: formatRand(view.totalCents) }),
+    noPrice: (name, needed) => t('shareNoPrice', { name, needed }),
   });
   return <ShoppingList view={view} shareText={share} />;
 }

@@ -92,7 +92,7 @@ export function ShoppingList({ view, shareText, shareToken }: { view: ListView; 
     }
   };
 
-  const keys = view.stores.flatMap((s) => s.aisles.flatMap((a) => a.lines.map((l) => l.key)));
+  const keys = [...view.stores.flatMap((s) => s.aisles.flatMap((a) => a.lines.map((l) => l.key))), ...view.unpriced.map((u) => u.key)];
   const tickedCount = keys.filter((k) => ticked[k]).length;
   const allTicked = keys.length > 0 && tickedCount === keys.length;
 
@@ -183,12 +183,28 @@ export function ShoppingList({ view, shareText, shareToken }: { view: ListView; 
       ))}
 
       {view.unpriced.length > 0 && (
-        <Card as="section" className="border-dashed p-5 text-small">
-          <h2 className="font-heading text-h3 font-bold text-primary">{t('unpricedTitle')}</h2>
-          <p className="mt-1 text-text-muted">{t('unpricedHelp')}</p>
-          <ul className="mt-2 list-disc space-y-0.5 pl-5">
+        <Card as="section" className="overflow-hidden" aria-label={t('unpricedTitle')} data-testid="unpriced-lines">
+          <div className="border-b border-border bg-surface-muted/50 px-4 py-2.5">
+            <div className="flex items-center gap-2">
+              <h2 className="flex-1 text-caption font-bold tracking-wider text-text-muted uppercase">{t('unpricedTitle')}</h2>
+              <Badge tone="count" aria-label={t('itemsCount', { count: view.unpriced.length })}>
+                {view.unpriced.length}
+              </Badge>
+            </div>
+            <p className="mt-1 text-caption text-text-muted">{t('unpricedHelp')}</p>
+          </div>
+          <ul className="divide-y divide-border">
             {view.unpriced.map((u) => (
-              <li key={u.ingredientId}>{u.name}</li>
+              <ListRow
+                key={u.key}
+                data-testid="list-line-unpriced"
+                checked={Boolean(ticked[u.key])}
+                onToggle={() => toggle(u.key)}
+                checkLabel={t('tick', { name: u.name })}
+                name={u.name}
+                detail={t('needed', { amount: u.needed })}
+                price={<span className="text-caption text-text-muted">{t('noPrice')}</span>}
+              />
             ))}
           </ul>
         </Card>

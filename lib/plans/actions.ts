@@ -140,6 +140,9 @@ export async function setPantry(db: Db, h: Household, items: { ingredientId: str
 }
 
 export const lineKey = (l: { ingredientId: string; productId: number }) => `${l.ingredientId}:${l.productId}`;
+/** List lines for ingredients we can't price yet are tickable too (they're still needed for the suppers). */
+export const unpricedKey = (ingredientId: string) => `unpriced:${ingredientId}`;
+export const listKeys = (plan: StoredPlan) => [...plan.result.basket.map(lineKey), ...plan.result.unpriced.map((u) => unpricedKey(u.ingredientId))];
 
 export async function getTicks(db: Db, planId: string) {
   return query<{ line_key: string; ticked: boolean; updated_at: string }>(
@@ -150,7 +153,7 @@ export async function getTicks(db: Db, planId: string) {
 
 /** LST-3: batch tick updates, last write wins by client timestamp. */
 export async function putTicks(db: Db, h: Household, plan: StoredPlan, lines: { key: string; ticked: boolean; at?: string }[]) {
-  const valid = new Set(plan.result.basket.map(lineKey));
+  const valid = new Set(listKeys(plan));
   let applied = 0;
   for (const l of lines) {
     if (!valid.has(l.key)) continue;

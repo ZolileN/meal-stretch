@@ -136,7 +136,7 @@ export async function buildPlanView(db: Db, plan: StoredPlan, language = 'en'): 
       name: (ingredients[u.ingredientId] as { name?: string } | undefined)?.name ?? u.ingredientId,
       recipes: u.recipes.map(recipeName),
     })),
-    listItems: r.totals.items,
+    listItems: r.totals.items + r.unpriced.length, // unpriced ingredients are still on the list
     steal: await stealOfTheWeek(db, { branchIds: [plan.request.shops.mainBranchId, ...(plan.request.shops.topUpBranchId ? [plan.request.shops.topUpBranchId] : [])], asOf: r.priceAsOf }).catch(() => null),
   };
 }
