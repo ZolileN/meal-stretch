@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { matchRetailer, overpassAroundQuery, overpassQuery, toBranch, toPlace } from '@/lib/location/osm';
+import { matchRetailer, overpassAroundQuery, overpassQuery, overpassTileQuery, PROVINCE_BBOX, provinceTiles, toBranch, toPlace } from '@/lib/location/osm';
 
 describe('OSM mapping', () => {
   it.each([
@@ -36,5 +36,30 @@ describe('OSM mapping', () => {
     expect(overpassAroundQuery(-33.857, 25.632, 25_000)).toContain('around:25000,-33.857,25.632');
     expect(() => overpassAroundQuery(Number.NaN, 25, 1000)).toThrow();
     expect(() => overpassAroundQuery(-33, 25, 500_000)).toThrow();
+  });
+});
+
+describe('province tiles', () => {
+  it('cover every province box without gaps, in tiles of at most 0.5°', () => {
+    for (const iso of Object.keys(PROVINCE_BBOX)) {
+      const [s, w, n, e] = PROVINCE_BBOX[iso]!;
+      const tiles = provinceTiles(iso);
+      expect(tiles.length).toBeGreaterThan(0);
+      for (const [ts, tw, tn, te] of tiles) {
+        expect(tn - ts).toBeLessThanOrEqual(0.5 + 1e-9);
+        expect(te - tw).toBeLessThanOrEqual(0.5 + 1e-9);
+      }
+      const area = tiles.reduce((a, [ts, tw, tn, te]) => a + (tn - ts) * (te - tw), 0);
+      expect(area).toBeCloseTo((n - s) * (e - w), 3);
+    }
+    expect(Object.keys(PROVINCE_BBOX)).toEqual(expect.arrayContaining(['ZA-GP', 'ZA-KZN']));
+  });
+  it('tile queries are limited to the province and the tile', () => {
+    const q = overpassTileQuery('ZA-GP', [-26.5, 27.6, -26, 28.1]);
+    expect(q).toContain('area["ISO3166-2"="ZA-GP"]');
+    expect(q).toContain('(area.a)(-26.5,27.6,-26,28.1)');
+    expect(() => overpassTileQuery('ZA-GP"];out;', [-26.5, 27.6, -26, 28.1])).toThrow();
+    expect(() => overpassTileQuery('ZA-GP', [-26, 27.6, -26.5, 28.1])).toThrow();
+    expect(() => provinceTiles('ZA-XX')).toThrow();
   });
 });

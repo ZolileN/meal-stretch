@@ -36,7 +36,7 @@ The first start takes about 20 s while PGlite loads PostGIS and seeds. The data 
 | `pnpm db:migrate` / `pnpm db:seed [--production]` | Against `DATABASE_URL` (Neon) |
 | `pnpm import:leaflet <file.pdf> --retailer <id>` | Leaflets of any size → review batches in /admin/leaflets (needs ANTHROPIC_API_KEY) |
 | `pnpm import:prices file.csv [--source manual\|catalogue\|leaflet] [--dry-run]` | CSV price import |
-| `pnpm import:osm [ZA-EC ZA-WC]` | OpenStreetMap stores + places |
+| `pnpm import:osm --tiles ZA-GP ZA-KZN` (or `--tiles --all`) | OpenStreetMap stores + places per province, in ~55 km tiles; safe to repeat |
 | `pnpm harness:receipts [--record]` | Receipt extraction accuracy (calls the real API: opt-in) |
 | `pnpm tsx scripts/sync-messages.ts` | After editing `messages/en.json` (also runs before `pnpm build`) |
 | `pnpm tsx scripts/build-engine-fixtures.ts` | After changing seed recipes or fixture prices |
@@ -47,7 +47,7 @@ Without Docker, PostGIS isn't on the machine, so the DB tests use PGlite. With D
 
 1. **Neon:** create a project (region close to South Africa, e.g. `aws-eu-central-1`). Use the pooled connection string as `DATABASE_URL`. Leave `DATABASE_HTTP_ENDPOINT` empty.
 2. **Schema and data** (from your machine, with `DATABASE_URL` in `.env.local`):
-   `pnpm db:migrate && pnpm db:seed --production && pnpm import:osm ZA-EC ZA-WC`.
+   `pnpm db:migrate && pnpm db:seed --production && pnpm import:osm --tiles --all`.
    The migrations create the `postgis` and `pg_trgm` extensions, and both are available on Neon. `--production` loads no fictional data and publishes no recipes.
 3. **Vercel:** import the repo (framework: Next.js, install `pnpm install`, build `pnpm build`) and set the environment variables below for Production. `vercel.json` registers the crons.
 4. **Domain:** attach it and set `APP_URL`. Add `https://<domain>/api/auth/callback/google` to the Google OAuth client, and verify the `EMAIL_FROM` domain in Resend.
@@ -120,7 +120,7 @@ localStorage shops                  lib/prices/snapshot ◀── current_prices
 
 1. **Confirm the reconstructed rules and four money defaults.** Review `CLAUDE.md` and `PRD.md` (rebuilt from the .docx files). Confirm the 2026-11-21 defaults in `docs/decisions.md`: per plate = per serving, the savings split, no double counting between slips and plans, and "until the 25th" = up to the day before.
 2. **Production infrastructure.** Neon project, Vercel project and every secret in the env table: `AUTH_SECRET`, `CRON_SECRET`, VAPID keys, `ANTHROPIC_API_KEY`, `BLOB_READ_WRITE_TOKEN`, Resend + verified domain, Google OAuth, `ADMIN_EMAILS`, `APP_URL`. Never set `E2E`.
-3. **Stores.** `pnpm import:osm ZA-EC ZA-WC`, verify every branch within 15 km of both pilot areas, then delete `TEST` branches and seed places.
+3. **Stores.** `pnpm import:osm --tiles --all` (GP and KZN were loaded on 2026-11-21; EC and WC around the pilot areas), verify every branch within 15 km of both pilot areas, then delete `TEST` branches and seed places.
 4. **Recipes.** Review and cook-test the 206 drafts and publish at least 60 in `/admin/recipes`.
 5. **Prices.** Load real prices for every pilot chain (weekly leaflets via `/admin/leaflets`, or CSV), then reach ≥ 90% coverage in `/admin/prices`.
 6. **Receipt accuracy.** Add 10 real receipt photos with `.expected.json` and run `pnpm harness:receipts --record` (target ≥ 90%).
