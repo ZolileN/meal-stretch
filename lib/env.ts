@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { BRAND } from './brand';
 
 /**
  * Environment validation (Zod, fail fast with clear messages).
@@ -40,7 +41,7 @@ export const serverEnvSchema = z.object({
   AUTH_GOOGLE_ID: optionalString,
   AUTH_GOOGLE_SECRET: optionalString,
   RESEND_API_KEY: optionalString,
-  EMAIL_FROM: z.preprocess(emptyToUndefined, z.string().default('MealStretch <hello@example.com>')),
+  EMAIL_FROM: z.preprocess(emptyToUndefined, z.string().default(`${BRAND.name} <hello@example.com>`)),
   ADMIN_EMAILS: z.preprocess(emptyToUndefined, z.string().default('')),
 
   // Receipts

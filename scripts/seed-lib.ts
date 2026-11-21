@@ -4,6 +4,7 @@
  */
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { normName } from '../lib/location/normalize';
 
 export interface SqlRunner {
   query<T = Record<string, unknown>>(sql: string, params?: unknown[]): Promise<{ rows: T[] }>;
@@ -20,15 +21,7 @@ export interface SeedOptions {
 const root = process.cwd();
 const readJson = <T>(rel: string): T => JSON.parse(readFileSync(join(root, rel), 'utf8')) as T;
 
-export function normName(s: string): string {
-  return s
-    .normalize('NFKD')
-    .replace(/[̀-ͯ]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9 ]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
+export { normName };
 
 export async function seedRetailers(db: SqlRunner) {
   const rows = readJson<{ id: string; name: string; loyaltyProgramId: string | null; loyaltyProgramName: string | null }[]>(

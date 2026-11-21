@@ -1,10 +1,10 @@
 # Build progress
 
 ## Checkpoint
-- Last completed: Phase 0 (2026-11-21)
-- Next: Phase 1, step 1.1
-- Test status: 40 unit/db/engine, 1 e2e, all green
-- Open human-todo items: see docs/human-todo.md
+- Last completed: Phase 1 (2026-11-21)
+- Next: Phase 2, step 2.1
+- Test status: 101 unit/db/engine, 4 e2e, all green
+- Open human-todo items: 8
 
 ## Phase 0: Repo foundation
 - [x] 0.1 Next.js App Router + TS strict + Tailwind + pnpm in this repo
@@ -17,13 +17,14 @@
 - [x] 0.8 package.json scripts; placeholder home page with BRAND + translated string
 
 ## Phase 1: Location & stores
-- [ ] 1.1 ShopLocation in app layout (location bar on every user-facing page)
-- [ ] 1.2 /api/location + /api/stores/nearby on Edge; pure radius-widening function
-- [ ] 1.3 Loyalty chips in shops step, persisted with shops
-- [ ] 1.4 POST /api/reports/branch + "My shop isn't listed" form
-- [ ] 1.5 OSM attribution in store picker
-- [ ] 1.6 OSM import in human-todo; fictional TEST branches seeded
-- [ ] 1.7 Unit + Playwright tests (denied geo → search; mocked Somerset West)
+Gate: LOC-1 PASS (ShopLocation.tsx getCurrentPosition low-accuracy/10 s, coarsen before fetch; reverseLabel test) · LOC-2 PASS (250 ms debounce, local first, shouldUseGoogle tests, session tokens) · LOC-3 PASS (widenRadius tests, location.test.ts nearby) · LOC-4 PARTIAL (local persistence done + e2e reload; user_shops sync on sign-up in Phase 8) · LOC-5 PASS (reports.test.ts, e2e report) · LOC-6 PASS (LocationBar in (site) layout; e2e opens sheet at shops step) · ONB-2 PASS (relevantPrograms tests, e2e chip wording); stored on household in Phase 4.
+- [x] 1.1 ShopLocation in app layout (location bar on every user-facing page)
+- [x] 1.2 /api/location + /api/stores/nearby on Edge; pure radius-widening function
+- [x] 1.3 Loyalty chips in shops step, persisted with shops
+- [x] 1.4 POST /api/reports/branch + "My shop isn't listed" form
+- [x] 1.5 OSM attribution in store picker
+- [x] 1.6 OSM import in human-todo; fictional TEST branches seeded
+- [x] 1.7 Unit + Playwright tests (denied geo → search; mocked Somerset West)
 
 ## Phase 2: Catalogue, ingredients, recipes
 - [ ] 2.1 Drizzle schema + migration 0002 (core tables)
