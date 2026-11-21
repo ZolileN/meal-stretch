@@ -4,7 +4,7 @@ import { BRAND } from '@/lib/brand';
 import { getDb } from '@/lib/db';
 import { currentHousehold } from '@/lib/household';
 import { isoDateInSA } from '@/lib/period';
-import { latestPlan } from '@/lib/plans/service';
+import { latestPlanFresh } from '@/lib/plans/service';
 import { buildPlanView } from '@/lib/plans/view';
 import { HomeScreen } from '@/components/plan/HomeScreen';
 import { ButtonLink } from '@/components/ui/Button';
@@ -17,7 +17,7 @@ export default async function Home() {
   // Once a plan exists, Home is the plan at a glance (§7.2, THEME §3).
   const db = getDb();
   const h = await currentHousehold(db).catch(() => null);
-  const plan = h ? await latestPlan(db, h.id) : null;
+  const plan = h ? await latestPlanFresh(db, h.id) : null;
   if (plan) return <HomeScreen view={await buildPlanView(db, plan, await getLocale())} today={isoDateInSA(new Date())} />;
 
   const points = [
