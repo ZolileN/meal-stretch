@@ -31,7 +31,9 @@
     "pointSavingsText": "TODO: Your savings add up each time you shop. Scan a slip to confirm them.",
     "nothingTonight": "TODO: No supper planned for tonight",
     "nothingTonightText": "TODO: This plan has ended. Make a new one for the days ahead.",
-    "newPlan": "TODO: Make a new plan"
+    "newPlan": "TODO: Make a new plan",
+    "ideas": "TODO: Meal ideas",
+    "ideasSub": "TODO: Tell us what you feel like"
   },
   "location": {
     "barNear": "TODO: Shopping near {place}",
@@ -458,7 +460,19 @@
     "listSize": "TODO: List size (items per plan)",
     "medianList": "TODO: Median list size, 7 suppers for 4: {items}",
     "matchRate": "TODO: Receipt match rate",
-    "na": "TODO: n/a"
+    "na": "TODO: n/a",
+    "draftTitle": "TODO: Draft recipes with Claude",
+    "draftHelp": "TODO: Describe what you need. Drafts use only our ingredients and are saved unpublished: review, cook-test and publish them yourself.",
+    "draftNoKey": "TODO: ANTHROPIC_API_KEY is not set, so drafting is unavailable.",
+    "draftBriefLabel": "TODO: Brief",
+    "draftPlaceholder": "TODO: e.g. quick Greek suppers under 30 minutes",
+    "draftCount": "TODO: How many",
+    "draftSubmit": "TODO: Draft recipes",
+    "drafted": "TODO: {count, plural, one {# draft saved} other {# drafts saved}} (highlighted below).{rejected, plural, =0 {} one { # failed validation.} other { # failed validation.}}",
+    "draftBrief": "TODO: Write a brief of at least 5 characters.",
+    "draftFailed": "TODO: Claude couldn't draft recipes right now. Try again.",
+    "recipeCounts": "TODO: {total} recipes · {published} published",
+    "minutesShort": "TODO: {count} min"
   },
   "privacy": {
     "title": "TODO: Privacy",
@@ -481,5 +495,40 @@
     "next": "TODO: Next",
     "done": "TODO: Got it",
     "step": "TODO: Tip {n} of {total}"
+  },
+  "ideas": {
+    "title": "TODO: Ask for ideas",
+    "label": "TODO: What do you feel like?",
+    "placeholder": "TODO: e.g. something Italian in 15 minutes",
+    "submit": "TODO: Find ideas",
+    "working": "TODO: Finding ideas…",
+    "results": "TODO: Ideas from our recipes",
+    "none": "TODO: Nothing in our recipes matches that yet. Try other words or a chip below.",
+    "cap": "TODO: You've asked for lots of ideas today. Try again tomorrow.",
+    "failed": "TODO: Ideas aren't available right now. Please try again.",
+    "unpriced": "TODO: {count, plural, one {# ingredient we can't price yet} other {# ingredients we can't price yet}}",
+    "footnote": "TODO: Ideas come from our tested recipes and are priced at your shops.",
+    "chip15": "TODO: 15 minutes",
+    "chipMeatFree": "TODO: Meat-free",
+    "chipItalian": "TODO: Italian",
+    "chipCurry": "TODO: Curry",
+    "chipChinese": "TODO: Chinese",
+    "chipKids": "TODO: Kids will love it",
+    "cuisine": {
+      "south_african": "TODO: South African",
+      "afrikaans": "TODO: Afrikaans",
+      "cape_malay": "TODO: Cape Malay",
+      "indian": "TODO: Indian",
+      "portuguese": "TODO: Portuguese",
+      "italian": "TODO: Italian",
+      "chinese": "TODO: Chinese",
+      "mexican": "TODO: Mexican",
+      "american": "TODO: American",
+      "british": "TODO: British",
+      "greek": "TODO: Greek",
+      "middle_eastern": "TODO: Middle Eastern",
+      "thai": "TODO: Thai",
+      "spanish": "TODO: Spanish"
+    }
   }
 }

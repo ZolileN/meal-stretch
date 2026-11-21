@@ -307,7 +307,7 @@ export const events = pgTable('events', {
 export const llmCalls = pgTable('llm_calls', {
   id: bigserial('id', { mode: 'number' }).primaryKey(),
   householdId: uuid('household_id'),
-  purpose: text('purpose', { enum: ['tweak', 'receipt', 'leaflet', 'recipe_draft', 'translation'] }).notNull(),
+  purpose: text('purpose', { enum: ['tweak', 'receipt', 'leaflet', 'recipe_draft', 'translation', 'ideas'] }).notNull(),
   contentHash: text('content_hash').notNull(),
   model: text('model').notNull(),
   inputTokens: integer('input_tokens'),

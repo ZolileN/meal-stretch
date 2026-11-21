@@ -9,7 +9,7 @@ export const EVENT_NAMES = [
   'onboarding_started', 'location_set', 'shops_set', 'cards_set', 'budget_set', 'plan_generated', 'plan_over_budget',
   'fit_budget_tapped', 'meal_swapped', 'meal_cheaper', 'meal_removed', 'tweak_submitted', 'list_opened', 'list_item_ticked',
   'list_completed', 'plan_marked_shopped', 'receipt_uploaded', 'receipt_verified', 'push_permission', 'notification_opened',
-  'account_created', 'share_link_created',
+  'account_created', 'share_link_created', 'ideas_requested', 'recipe_drafted',
 ] as const;
 export type EventName = (typeof EVENT_NAMES)[number];
 
