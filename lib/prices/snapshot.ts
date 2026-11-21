@@ -28,7 +28,7 @@ const isoDate = (d: string | Date) => (d instanceof Date ? d.toISOString().slice
 
 export async function loadPriceSnapshot(
   db: Db,
-  opts: { branchIds: number[]; loyalty: string[]; asOf: string },
+  opts: { branchIds: number[]; loyalty: string[]; asOf: string; guideFallback?: boolean },
 ): Promise<PriceSnapshot> {
   const ids = [...new Set(opts.branchIds)].filter(Number.isSafeInteger);
   const offers: Record<string, Offer[]> = {};
@@ -44,7 +44,7 @@ export async function loadPriceSnapshot(
              and (cp.branch_id = b.id or (cp.branch_id is null and (cp.province is null or cp.province = b.province)))
         where b.id = any(${pgArray(ids)}::bigint[]) and cp.ingredient_id is not null
         order by b.id, cp.product_id, cp.is_fresh desc, (case when cp.is_fresh then cp.trust else 0 end) desc,
-                 cp.observed_at desc, cp.observation_id desc`,
+                 (cp.source = 'guide') asc, cp.observed_at desc, cp.observation_id desc`,
   );
   const cards = new Set(opts.loyalty);
   for (const r of rows) {
@@ -63,8 +63,46 @@ export async function loadPriceSnapshot(
     };
     (offers[r.ingredient_id] ??= []).push(offer);
   }
+  // Guide prices only fill gaps: where a shop has a real price for an ingredient, its guide prices are dropped.
+  for (const [ing, list] of Object.entries(offers)) {
+    const real = new Set(list.filter((o) => o.source !== 'guide').map((o) => o.branchId));
+    offers[ing] = list.filter((o) => o.source !== 'guide' || !real.has(o.branchId));
+  }
+  if (opts.guideFallback !== false) await addGuideFallback(db, offers, ids[0]!);
   for (const list of Object.values(offers)) list.sort((a, b) => a.branchId - b.branchId || a.productId - b.productId);
   return { asOf: opts.asOf, offers };
+}
+
+/**
+ * MVP owner decision (docs/decisions.md, 2026-11-21): no supper ingredient may be left unpriced. When none of
+ * the household's shops has any price for an ingredient, use a guide price (looked up online) found at another
+ * retailer, attributed to the main shop and marked source 'guide' (always flagged; the list names the retailer).
+ * Of several guide prices, the highest per unit is used so plans don't promise savings the shop may not have.
+ */
+async function addGuideFallback(db: Db, offers: Record<string, Offer[]>, mainBranchId: number) {
+  const rows = await query<{ product_id: string | number; ingredient_id: string; pack_qty: number; price_cents: number; observed_at: string | Date }>(
+    db,
+    sql`select distinct on (cp.ingredient_id) cp.product_id, cp.ingredient_id, cp.pack_qty, cp.price_cents, cp.observed_at
+        from current_prices cp
+        where cp.source = 'guide' and cp.ingredient_id is not null and cp.branch_id is null and cp.province is null
+        order by cp.ingredient_id, (cp.price_cents::numeric / cp.pack_qty) desc, cp.observed_at desc, cp.observation_id desc`,
+  );
+  for (const r of rows) {
+    if (offers[r.ingredient_id]?.length) continue;
+    offers[r.ingredient_id] = [
+      {
+        productId: Number(r.product_id),
+        branchId: mainBranchId,
+        packQty: Number(r.pack_qty),
+        priceCents: Number(r.price_cents),
+        memberPriceCents: null,
+        specialPriceCents: null,
+        specialEndsOn: null,
+        observedAt: iso(r.observed_at),
+        source: 'guide',
+      },
+    ];
+  }
 }
 
 export async function productDetails(db: Db, productIds: number[]) {

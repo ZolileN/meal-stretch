@@ -220,7 +220,11 @@
     "more": "More for {name}",
     "needed": "{amount} needed",
     "noPrice": "No price yet",
-    "shareNoPrice": "{name} ({needed} needed) · no price yet"
+    "shareNoPrice": "{name} ({needed} needed) · no price yet",
+    "sourceGuide": "Guide price",
+    "guideFrom": "Guide price from {retailer}, looked up {date}",
+    "guideSame": "Guide price, looked up {date}",
+    "guideLink": "where we found it"
   },
   "recipe": {
     "back": "Back to plan",

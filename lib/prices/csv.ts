@@ -66,6 +66,8 @@ export const csvRowSchema = z
     member_price_cents: optCents,
     special_price_cents: optCents,
     special_ends_on: z.preprocess(blankToNull, isoDate.nullable()),
+    /** Optional column: the page the price was found on (guide prices). */
+    source_url: z.preprocess((v) => (typeof v === 'string' ? (v.trim() === '' ? null : v.trim()) : v ?? null), z.string().regex(/^https?:\/\/\S+$/, 'must be an http(s) URL').max(1000).nullable()),
     observed_at: z.string().regex(/^\d{4}-\d{2}-\d{2}([T ][\d:.]+(Z|[+-]\d{2}:?\d{2})?)?$/, 'must be an ISO date or datetime'),
   })
   .transform((r, ctx) => {

@@ -92,3 +92,16 @@ describe('price age (§9.2)', () => {
     expect([ageDays(o22.observedAt, AS_OF), isUsable(o22, AS_OF)]).toEqual([22, false]);
   });
 });
+
+describe('guide prices (looked up online)', () => {
+  it('stay usable for 90 days (others 21) and are always flagged stale', () => {
+    const at = (days: number) => new Date(Date.parse(`${AS_OF}T08:00:00Z`) - days * 86_400_000).toISOString();
+    const guide = (d: number) => offer(1000, 2999, { source: 'guide', observedAt: at(d) });
+    expect(isUsable(guide(30), AS_OF)).toBe(true);
+    expect(isUsable(guide(90), AS_OF)).toBe(true);
+    expect(isUsable(guide(91), AS_OF)).toBe(false);
+    expect(isUsable(offer(1000, 2999, { observedAt: at(30) }), AS_OF)).toBe(false);
+    expect(isStale(guide(0), AS_OF)).toBe(true);
+    expect(isStale(offer(1000, 2999, { observedAt: at(0) }), AS_OF)).toBe(false);
+  });
+});

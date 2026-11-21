@@ -16,7 +16,7 @@ These rules are non-negotiable. `PRD.md` is the product spec; `docs/BUILD.md` is
 ## Money
 
 1. All money is **integer cents** (`Cents = number`, asserted with `assertCents`). Never floats, never `parseFloat` on money, never `toFixed` for maths. Format only at the edge with `formatRand()` from `lib/money.ts`.
-2. **Never estimate a price.** No offer → the item is *unpriced*, listed as "can't price yet" and excluded from totals with an explicit note.
+2. **Never invent a price.** Every price comes from an observation with a source and date. Owner decision (2026-11-21, MVP): no supper ingredient may be left unpriced, so *guide prices* (`source = 'guide'`, looked up online with web search, with `source_url`) fill gaps: lowest trust, usable 90 days, always flagged "may have changed", and when a shop has no price at all a guide price from another retailer may be used, labelled with that retailer. Only if no guide price exists either is an item *unpriced* (listed, excluded from totals). Receipt-verified savings never use guide prices.
 3. **Every price shown has a source and a date** (`source`, `observedAt`). Prices older than 7 days are flagged stale; older than 21 days are excluded.
 4. **Savings** are always against the defined baseline (PRD §9.7): normal = shelf price of the same packs, no special, no card. Pack efficiency is shown separately and never added into savings.
 5. **Claude never outputs prices, totals or recipes shown to users.** Anything an LLM returns that would change money is re-computed by the engine.

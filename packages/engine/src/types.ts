@@ -43,7 +43,8 @@ export interface Offer {
   specialPriceCents: Cents | null; // non-member promo
   specialEndsOn: string | null;
   observedAt: string;
-  source: 'catalogue' | 'leaflet' | 'receipt' | 'manual';
+  /** 'guide' = looked up online (search), possibly at another retailer: lowest trust, always flagged stale. */
+  source: 'catalogue' | 'leaflet' | 'receipt' | 'manual' | 'guide';
 }
 
 // ── §9.9 Output ────────────────────────────────────────────────────────────────

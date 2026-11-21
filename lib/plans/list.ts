@@ -19,8 +19,11 @@ export interface ListLine {
   normalUnitCents: number;
   totalCents: number;
   tags: ('special' | 'member' | 'stale')[];
-  source: 'catalogue' | 'leaflet' | 'receipt' | 'manual' | null;
+  source: 'catalogue' | 'leaflet' | 'receipt' | 'manual' | 'guide' | null;
   observedAt: string | null;
+  /** Guide prices: the retailer the price was looked up at (null = this shop's own retailer) and the page. */
+  guideRetailer?: string | null;
+  sourceUrl?: string | null;
 }
 export interface ListView {
   planId: string;
@@ -46,9 +49,24 @@ export async function lineSources(db: Db, lines: { productId: number; branchId: 
           and (cp.branch_id = b.id or (cp.branch_id is null and (cp.province is null or cp.province = b.province)))
         where b.id = any(${pgArray([...new Set(lines.map((l) => l.branchId))])}::bigint[])
           and cp.product_id = any(${pgArray([...new Set(lines.map((l) => l.productId))])}::bigint[])
-        order by b.id, cp.product_id, cp.is_fresh desc, (case when cp.is_fresh then cp.trust else 0 end) desc, cp.observed_at desc, cp.observation_id desc`,
+        order by b.id, cp.product_id, cp.is_fresh desc, (case when cp.is_fresh then cp.trust else 0 end) desc, (cp.source = 'guide') asc, cp.observed_at desc, cp.observation_id desc`,
   );
   for (const r of rows) out.set(`${Number(r.branch_id)}:${Number(r.product_id)}`, { source: r.source, observedAt: new Date(r.observed_at).toISOString().slice(0, 10) });
+  return out;
+}
+
+/** Guide prices used for a shop of another retailer (lib/prices/snapshot.ts fallback): where they were looked up. */
+export async function guideSources(db: Db, productIds: number[]) {
+  const out = new Map<number, { retailerName: string; observedAt: string; sourceUrl: string | null }>();
+  if (!productIds.length) return out;
+  const rows = await query<{ product_id: string | number; retailer_name: string; observed_at: string | Date; source_url: string | null }>(
+    db,
+    sql`select distinct on (cp.product_id) cp.product_id, r.name as retailer_name, cp.observed_at, cp.source_url
+        from current_prices cp join retailers r on r.id = cp.retailer_id
+        where cp.source = 'guide' and cp.product_id = any(${pgArray([...new Set(productIds)])}::bigint[])
+        order by cp.product_id, cp.observed_at desc, cp.observation_id desc`,
+  );
+  for (const r of rows) out.set(Number(r.product_id), { retailerName: r.retailer_name, observedAt: new Date(r.observed_at).toISOString().slice(0, 10), sourceUrl: r.source_url });
   return out;
 }
 
@@ -61,11 +79,13 @@ export async function buildListView(db: Db, plan: StoredPlan): Promise<ListView>
     lineSources(db, r.basket),
     getTicks(db, plan.id),
   ]);
+  const guides = await guideSources(db, r.basket.map((l) => l.productId));
   const stores = new Map<number, ListView['stores'][number]>();
   for (const l of r.basket) {
     const p = products.get(l.productId);
     const ing = ingredients[l.ingredientId];
     const src = sources.get(`${l.branchId}:${l.productId}`);
+    const guide = !src || src.source === 'guide' ? guides.get(l.productId) : undefined;
     const line: ListLine = {
       key: lineKey(l),
       ingredientId: l.ingredientId,
@@ -76,8 +96,10 @@ export async function buildListView(db: Db, plan: StoredPlan): Promise<ListView>
       normalUnitCents: l.normalUnitCents,
       totalCents: l.packs * l.unitCents,
       tags: l.tags,
-      source: src?.source ?? null,
-      observedAt: src?.observedAt ?? null,
+      source: src?.source ?? (guide ? 'guide' : null),
+      observedAt: src?.observedAt ?? guide?.observedAt ?? null,
+      guideRetailer: guide && guide.retailerName !== branches.get(l.branchId)?.retailerName ? guide.retailerName : null,
+      sourceUrl: guide?.sourceUrl ?? null,
     };
     let store = stores.get(l.branchId);
     if (!store) {

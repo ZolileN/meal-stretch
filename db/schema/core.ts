@@ -107,7 +107,7 @@ export const ingestBatches = pgTable('ingest_batches', {
   createdAt: ts('created_at').notNull().defaultNow(),
 });
 
-export const priceSources = ['catalogue', 'leaflet', 'receipt', 'manual'] as const;
+export const priceSources = ['catalogue', 'leaflet', 'receipt', 'manual', 'guide'] as const;
 export type PriceSource = (typeof priceSources)[number];
 
 export const priceObservations = pgTable('price_observations', {
@@ -122,6 +122,8 @@ export const priceObservations = pgTable('price_observations', {
   specialPriceCents: integer('special_price_cents'),
   specialEndsOn: date('special_ends_on'),
   source: text('source', { enum: priceSources }).notNull(),
+  /** 0006: where the price was found (guide prices: the page a web search led to). */
+  sourceUrl: text('source_url'),
   observedAt: ts('observed_at').notNull(),
   ingestBatchId: bigint('ingest_batch_id', { mode: 'number' }).references(() => ingestBatches.id),
   householdId: uuid('household_id').references(() => households.id, { onDelete: 'set null' }),
@@ -154,6 +156,7 @@ export const currentPrices = pgMaterializedView('current_prices', {
   specialPriceCents: integer('special_price_cents'),
   specialEndsOn: date('special_ends_on'),
   source: text('source', { enum: priceSources }).notNull(),
+  sourceUrl: text('source_url'),
   observedAt: ts('observed_at').notNull(),
   isFresh: boolean('is_fresh').notNull(),
   trust: integer('trust').notNull(),
