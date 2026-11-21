@@ -40,7 +40,7 @@ export default defineConfig({
     {
       command: process.env.E2E_DEV ? `pnpm dev:next -p ${PORT}` : `pnpm build && pnpm start -p ${PORT}`,
       url: baseURL,
-      env: { ...dbEnv, E2E: '1', NEXT_TELEMETRY_DISABLED: '1' },
+      env: { ...dbEnv, E2E: '1', AUTH_SECRET: 'e2e-only-secret-0123456789abcdef0123456789', ADMIN_EMAILS: 'admin@e2e.test', NEXT_TELEMETRY_DISABLED: '1' },
       timeout: 300_000,
       reuseExistingServer: false,
       stdout: 'pipe',

@@ -18,3 +18,7 @@ Format: `- [ ] (Phase N) task: why / exact steps`.
 - [ ] (Phase 7) Set `ANTHROPIC_API_KEY` in Vercel (receipts, leaflets, tweaks). Without it the app runs in fixture mode: tweaks use a keyword parser, receipts/leaflets report "not available". Models default to `claude-sonnet-5-5` (vision) and `claude-haiku-5-5` (tweaks) per PRD §10.4; change via `CLAUDE_MODEL_VISION` / `CLAUDE_MODEL_FAST`.
 - [ ] (Phase 7) Add 10 real receipt photos to `fixtures/receipts/` (name.jpg + name.expected.json with `{ "total_cents", "lines": [{ "raw_name", "price_cents" }] }`), blur card numbers/names first, then run `pnpm harness:receipts --record` (spends a few cents of API credit) and check ≥ 90% line accuracy (PRD Phase 7 DoD).
 - [ ] (Phase 7) Create a private Vercel Blob store and set `BLOB_READ_WRITE_TOKEN`. Without it receipt photos are processed but never stored. Images auto-delete after 30 days (`/api/cron/cleanup`).
+- [ ] (Phase 8) Set `AUTH_SECRET` (`openssl rand -base64 32`), Google OAuth (`AUTH_GOOGLE_ID/SECRET`, redirect URI `https://<domain>/api/auth/callback/google`), `RESEND_API_KEY` + a verified `EMAIL_FROM` domain, and `ADMIN_EMAILS` in Vercel. Never set `E2E` in production.
+- [ ] (Phase 8) Work through `docs/pilot-checklist.md` before inviting pilot households.
+- [ ] (Phase 8) Get isiXhosa (and Afrikaans) speakers to review `messages/xh.json` / `messages/af.json`, removing every `TODO:` marker; untranslated strings fall back to English until then.
+- [ ] (Phase 8) Register the domain and connect it to Vercel; set `APP_URL` (used in share links).

@@ -57,6 +57,9 @@ export const serverEnvSchema = z.object({
   // Cron
   CRON_SECRET: optionalString,
 
+  /** Playwright only: enables the dev mailbox in a production build. NEVER set on Vercel. */
+  E2E: optionalString,
+
   // Observability
   SENTRY_DSN: optionalString,
 });

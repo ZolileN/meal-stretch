@@ -9,6 +9,7 @@ import { coarsen } from '@/lib/location/geo';
 import { pruneLoyalty, relevantPrograms, toggleShop, type BranchSummary, type SavedShops } from '@/lib/location/store';
 import { useShops } from './location/LocationProvider';
 import { ReportBranchForm } from './location/ReportBranchForm';
+import { trackClient } from '@/lib/track-client';
 
 type Step = 'where' | 'shops';
 
@@ -44,6 +45,7 @@ export function ShopLocation({ initialStep, onDone }: { initialStep?: Step; onDo
     return (
       <WhereStep
         onPicked={(location) => {
+          trackClient('location_set', { source: location.source });
           save({ location });
           setStep('shops');
         }}
@@ -55,6 +57,8 @@ export function ShopLocation({ initialStep, onDone }: { initialStep?: Step; onDo
       location={shops.location}
       onChangePlace={() => setStep('where')}
       onDone={(s) => {
+        if (s.main) trackClient('shops_set', { main_retailer: s.main.retailerId, has_top_up: Boolean(s.topUp) });
+        trackClient('cards_set', { count: s.loyalty.length });
         save(s);
         onDone?.({ ...shops, ...s });
       }}

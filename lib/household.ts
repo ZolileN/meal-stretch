@@ -75,22 +75,25 @@ export async function createHousehold(db: Db, deviceId: string): Promise<Househo
   return mapHousehold(rows[0]!);
 }
 
-/** Resolver hook so Phase 8 can resolve signed-in households first. */
-type Resolver = (db: Db) => Promise<Household | null>;
-const resolvers: Resolver[] = [];
-export function registerHouseholdResolver(r: Resolver) {
-  resolvers.push(r);
+export async function householdByUser(db: Db, userId: string): Promise<Household | null> {
+  const rows = await query<Row>(db, sql`select * from households where user_id = ${userId}::uuid and merged_into is null order by created_at limit 1`);
+  return rows[0] ? mapHousehold(rows[0]) : null;
 }
 
-/** Household for this request (server components / route handlers). Never creates one. */
+/** Household for this request: the signed-in account's first, else the device cookie's. Never creates one. */
 export async function currentHousehold(db: Db): Promise<Household | null> {
-  for (const r of resolvers) {
-    const h = await r(db);
+  const { sessionUser } = await import('@/lib/auth/session');
+  const user = await sessionUser();
+  if (user) {
+    const h = await householdByUser(db, user.id);
     if (h) return h;
   }
   const store = await cookies();
   const id = store.get(DEVICE_COOKIE)?.value;
-  return id ? householdByDevice(db, id) : null;
+  const h = id ? await householdByDevice(db, id) : null;
+  // Never hand a household that belongs to someone else to a different signed-in user.
+  if (h && user && h.userId && h.userId !== user.id) return null;
+  return h && (!h.userId || h.userId === user?.id) ? h : null;
 }
 
 /** Route handlers only: get or create the anonymous household and set the device cookie. */
@@ -99,7 +102,7 @@ export async function ensureHousehold(db: Db): Promise<Household> {
   if (existing) return existing;
   const store = await cookies();
   let id = store.get(DEVICE_COOKIE)?.value;
-  if (!id || !UUID.test(id)) id = crypto.randomUUID();
+  if (!id || !UUID.test(id) || (await householdByDevice(db, id))) id = crypto.randomUUID();
   store.set(DEVICE_COOKIE, id, {
     httpOnly: true,
     sameSite: 'lax',
@@ -107,7 +110,12 @@ export async function ensureHousehold(db: Db): Promise<Household> {
     path: '/',
     maxAge: 365 * 24 * 3600,
   });
-  return createHousehold(db, id);
+  const created = await createHousehold(db, id);
+  const { sessionUser } = await import('@/lib/auth/session');
+  const user = await sessionUser();
+  if (!user) return created;
+  const rows = await query<Row>(db, sql`update households set user_id = ${user.id}::uuid where id = ${created.id}::uuid returning *`);
+  return mapHousehold(rows[0]!);
 }
 
 export interface HouseholdPatch {

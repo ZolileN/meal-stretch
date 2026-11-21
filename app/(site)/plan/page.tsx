@@ -6,6 +6,7 @@ import { latestPlan } from '@/lib/plans/service';
 import { buildPlanView } from '@/lib/plans/view';
 import { PlanScreen } from '@/components/plan/PlanScreen';
 import { shouldPromptShopped } from '@/lib/plans/actions';
+import { sessionUser } from '@/lib/auth/session';
 
 export const dynamic = 'force-dynamic';
 
@@ -15,5 +16,6 @@ export default async function PlanPage() {
   const plan = h ? await latestPlan(db, h.id) : null;
   if (!plan) redirect('/start');
   const view = await buildPlanView(db, plan, await getLocale());
-  return <PlanScreen view={view} shoppedPrompt={shouldPromptShopped(plan, false, new Date())} />;
+  const user = await sessionUser();
+  return <PlanScreen view={view} shoppedPrompt={shouldPromptShopped(plan, false, new Date())} signedIn={Boolean(user)} />;
 }

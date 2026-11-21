@@ -12,8 +12,9 @@ import { useShops } from '@/components/location/LocationProvider';
 import { MealActions } from './MealActions';
 import { PlanExtras } from './PlanExtras';
 import { TweakBox } from './TweakBox';
+import { AccountPrompt } from '@/components/account/AccountPrompt';
 
-export function PlanScreen({ view, shoppedPrompt = false }: { view: PlanView; shoppedPrompt?: boolean }) {
+export function PlanScreen({ view, shoppedPrompt = false, signedIn = false }: { view: PlanView; shoppedPrompt?: boolean; signedIn?: boolean }) {
   const t = useTranslations('plan');
   const locale = useLocale();
   const router = useRouter();
@@ -172,6 +173,7 @@ export function PlanScreen({ view, shoppedPrompt = false }: { view: PlanView; sh
       {editable && <TweakBox planId={view.planId} />}
       {view.steal && <StealCard steal={view.steal} />}
       <PlanExtras />
+      <AccountPrompt signedIn={signedIn} />
     </main>
   );
 }

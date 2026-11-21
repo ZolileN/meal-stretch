@@ -50,11 +50,11 @@ export async function markSynced(ticks: LocalTick[]) {
 }
 
 /** Push unsynced ticks; returns true if everything is synced. */
-export async function syncTicks(planId: string): Promise<boolean> {
+export async function syncTicks(planId: string, url = `/api/plans/${planId}/ticks`): Promise<boolean> {
   const pending = (await localTicks(planId)).filter((t) => !t.synced);
   if (!pending.length) return true;
   try {
-    const res = await fetch(`/api/plans/${planId}/ticks`, {
+    const res = await fetch(url, {
       method: 'PUT',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ lines: pending.map((t) => ({ key: t.key, ticked: t.ticked, at: t.at })) }),

@@ -10,7 +10,9 @@ import type { ListView } from '@/lib/plans/list';
 
 const sourceKey = { receipt: 'sourceReceipt', leaflet: 'sourceLeaflet', catalogue: 'sourceCatalogue', manual: 'sourceManual' } as const;
 
-export function ShoppingList({ view, shareText }: { view: ListView; shareText: string }) {
+export function ShoppingList({ view, shareText, shareToken }: { view: ListView; shareText: string; shareToken?: string }) {
+  const ticksUrl = shareToken ? `/api/share/${shareToken}/ticks` : `/api/plans/${view.planId}/ticks`;
+  const owner = !shareToken;
   const t = useTranslations('list');
   const locale = useLocale();
   const router = useRouter();
@@ -25,11 +27,11 @@ export function ShoppingList({ view, shareText }: { view: ListView; shareText: s
     try {
       const local = await localTicks(view.planId);
       setTicked(mergeTicks(view.ticks, local));
-      if (navigator.onLine) await syncTicks(view.planId);
+      if (navigator.onLine) await syncTicks(view.planId, ticksUrl);
     } catch {
       /* IndexedDB unavailable: server ticks only */
     }
-  }, [view.planId, view.ticks]);
+  }, [view.planId, view.ticks, ticksUrl]);
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -37,7 +39,7 @@ export function ShoppingList({ view, shareText }: { view: ListView; shareText: s
     void refreshLocal();
     const on = () => {
       setOnline(true);
-      void syncTicks(view.planId);
+      void syncTicks(view.planId, ticksUrl);
     };
     const off = () => setOnline(false);
     window.addEventListener('online', on);
@@ -46,14 +48,14 @@ export function ShoppingList({ view, shareText }: { view: ListView; shareText: s
       window.removeEventListener('online', on);
       window.removeEventListener('offline', off);
     };
-  }, [refreshLocal, view.planId]);
+  }, [refreshLocal, view.planId, ticksUrl]);
 
   const toggle = async (key: string) => {
     const next = !ticked[key];
     setTicked((s) => ({ ...s, [key]: next }));
     try {
       await saveTick(view.planId, key, next);
-      if (navigator.onLine) await syncTicks(view.planId);
+      if (navigator.onLine) await syncTicks(view.planId, ticksUrl);
     } catch {
       /* stays local */
     }
@@ -129,9 +131,9 @@ export function ShoppingList({ view, shareText }: { view: ListView; shareText: s
                           <span className="text-gray-500">{t('priceSource', { source: t(sourceKey[l.source]), date: dayMonth(l.observedAt, locale) })}</span>
                         )}
                       </p>
-                      <button type="button" disabled={busy} onClick={() => have(l.ingredientId)} className="tap -ml-1 px-1 text-left text-sm font-semibold text-brand underline">
+                      {owner && <button type="button" disabled={busy} onClick={() => have(l.ingredientId)} className="tap -ml-1 px-1 text-left text-sm font-semibold text-brand underline">
                         {t('alreadyHave')}
-                      </button>
+                      </button>}
                     </div>
                     <div className="text-right">
                       <p className="font-semibold">{R(l.totalCents)}</p>
@@ -189,7 +191,7 @@ export function ShoppingList({ view, shareText }: { view: ListView; shareText: s
         {t('share')}
       </a>
 
-      {view.status === 'active' && allTicked && (
+      {owner && view.status === 'active' && allTicked && (
         <div className="mt-4 rounded-xl bg-teal-50 p-3" data-testid="shopped-prompt">
           <p>{t('shoppedPrompt')}</p>
           <button type="button" disabled={busy} onClick={shopped} className="tap mt-2 rounded-xl bg-brand px-4 py-2 font-semibold text-white">

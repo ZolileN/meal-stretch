@@ -1,10 +1,10 @@
 # Build progress
 
 ## Checkpoint
-- Last completed: Phase 7 (2026-11-21)
-- Next: Phase 8, step 8.1
-- Test status: 265 unit/db/engine, 13 e2e, all green
-- Open human-todo items: 16
+- Last completed: Phase 8 (2026-11-21)
+- Next: Final audit + docs/handover.md
+- Test status: 300 unit/db/engine, 17 e2e, all green
+- Open human-todo items: 20
 
 ## Phase 0: Repo foundation
 - [x] 0.1 Next.js App Router + TS strict + Tailwind + pnpm in this repo
@@ -79,13 +79,14 @@ Gate: RCP-1 PASS (size/type/consent, compressImage) · RCP-2 PASS (claude.ts + e
 - [x] 7.5 Tests: Zod rejections, PII, matching, caps, extraction harness
 
 ## Phase 8: Accounts, sharing, admin, pilot readiness
-- [ ] 8.1 Auth.js (Google + email) + anonymous merge
-- [ ] 8.2 Revocable share links
-- [ ] 8.3 Settings: export + delete
-- [ ] 8.4 Admin: recipe editor, branch reports, price health
-- [ ] 8.5 events tracking + pilot dashboard
-- [ ] 8.6 docs/pilot-checklist.md
-- [ ] 8.7 Playwright: anonymous → sign in → merged
+Gate: ACC-1 PASS · ACC-2 PASS (phase8.test merge; e2e anonymous → sign in → merged, second phone) · ACC-3 PASS (share test + e2e read/tick/revoke) · ACC-4 PASS (export/delete db test + e2e) · ADM-1 PASS (e2e 404 for non-admin) · ADM-2/3 PASS (UI + lib) · ADM-4 PASS (recipe editor + cost preview e2e) · ADM-5 PASS · ADM-6 PASS · I18N-1 PASS (messages test) · I18N-2/4 PARTIAL (human review) · I18N-3 PASS (recipe_translations used when reviewed) · §16 events PASS (events-coverage test) · pilot dashboard PASS.
+- [x] 8.1 Auth.js (Google + email) + anonymous merge
+- [x] 8.2 Revocable share links
+- [x] 8.3 Settings: export + delete
+- [x] 8.4 Admin: recipe editor, branch reports, price health
+- [x] 8.5 events tracking + pilot dashboard
+- [x] 8.6 docs/pilot-checklist.md
+- [x] 8.7 Playwright: anonymous → sign in → merged
 
 ## Final
 - [ ] Full audit, docs/handover.md, `chore: MVP complete`

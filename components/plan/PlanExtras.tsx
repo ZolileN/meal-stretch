@@ -100,6 +100,7 @@ function PushPrompt() {
   const allow = async () => {
     const perm = await Notification.requestPermission();
     if (perm !== 'granted') {
+      void fetch('/api/events', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: 'push_permission', props: { granted: false } }) }).catch(() => undefined);
       setStage('denied');
       return;
     }
