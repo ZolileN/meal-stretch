@@ -3,7 +3,8 @@
  * mulberry32(req.seed). No I/O, no clock.
  *
  *   prune → greedy (marginal J; leftovers of bought packs cost 0) → local search (replace + swap,
- *   ≤ 400 iterations) → exact re-price with the §9.4 DP → shop assignment (PLN-12) → totals.
+ *   ≤ 400 iterations) → budget upgrades (balanced mode only) → exact re-price with the §9.4 DP →
+ *   shop assignment (PLN-12) → totals.
  */
 import type {
   BasketTag, Cents, EngineContext, EngineIngredient, EngineRecipe, Offer, PlanRequest, PlanResult, Qty, SwapOption,
@@ -13,7 +14,7 @@ import { scaleQty, servingsHundredths } from './portions';
 import { isStale, isUsable, packPrice } from './price';
 import { selectPacks, type PackSelection } from './packs';
 
-export const ENGINE_VERSION = '1.0.0';
+export const ENGINE_VERSION = '1.1.0';
 
 export const WEIGHTS = {
   balanced: { waste: 0.5, variety: 1500, pref: 800 },
@@ -24,6 +25,17 @@ export const UNPRICED_PENALTY = 50_000;
 export const SHELF_STABLE_WASTE_FACTOR = 0.2;
 export const MAX_LS_ITERATIONS = 400;
 export const PRUNE_TOP = 60;
+
+/**
+ * Budget upgrades (owner decision 2026-11-22, docs/decisions.md): in balanced mode, money the budget leaves
+ * unused buys "treat" suppers (steak, chops, shanks, ribs, oxtail, seafood) instead of only the cheapest meals.
+ * Spare money is spread evenly over the suppers that can still be upgraded, so a bigger budget gets more and
+ * pricier treats, and the plan never goes above UPGRADE_BUDGET_SHARE of the budget (room for price changes).
+ * Cheapest mode never upgrades.
+ */
+export const TREAT_TAG = 'treat';
+export const UPGRADE_BUDGET_SHARE = 0.9;
+const UPGRADE_TRIES_PER_ROUND = 12;
 const EPS = 1e-9;
 
 /** PLN-4 limits, pro rata per 7 days (rounded up); meat-free minimum in cheapest mode. */
@@ -366,6 +378,52 @@ function optimise(P: Prepared, rand: () => number): State {
   return st;
 }
 
+// ── Budget upgrades ────────────────────────────────────────────────────────────
+
+/** Ceiling for upgrades, or null when they don't apply (cheapest mode, no budget). */
+export function upgradeCeiling(req: PlanRequest): Cents | null {
+  if (req.mode !== 'balanced' || req.budgetCents === null) return null;
+  return Math.floor(req.budgetCents * UPGRADE_BUDGET_SHARE);
+}
+
+/**
+ * Each round upgrades one more supper. The money left under the ceiling is shared evenly over the suppers that
+ * could still be upgraded; a treat that fits in that share is picked at random (seeded), so bigger budgets reach
+ * the pricier treats and plans vary. When none fits the share, the cheapest upgrades are tried.
+ */
+function upgradeTreats(P: Prepared, st: State, rand: () => number): void {
+  const ceiling = upgradeCeiling(P.req);
+  if (ceiling === null) return;
+  const treats = P.valid.filter((p) => p.r.tags.includes(TREAT_TAG) && p.unpriced === 0);
+  if (treats.length === 0) return;
+  const paid = () => finalize(P, slotsOf(st)).totals.paidCents;
+  let current = paid();
+  if (current >= ceiling) return;
+  for (let round = 0; round < P.days; round++) {
+    const open = [...Array(P.days).keys()].filter((d) => !st.pinned[d] && !st.slots[d]?.r.tags.includes(TREAT_TAG));
+    if (open.length === 0) return;
+    const options: { d: number; c: Prep; delta: number }[] = [];
+    for (const d of open) for (const c of treats) if (!st.used.has(c.r.id) && canPlace(P, st, d, c)) options.push({ d, c, delta: deltaReplace(P, st, d, c) });
+    options.sort((a, b) => a.delta - b.delta || a.d - b.d || (a.c.r.id < b.c.r.id ? -1 : 1));
+    const share = (ceiling - current) / open.length;
+    const inShare = options.filter((o) => o.delta <= share);
+    const order = inShare.length > 0 ? [...shuffle(inShare, rand), ...options.filter((o) => o.delta > share)] : options;
+    let accepted = false;
+    for (const o of order.slice(0, UPGRADE_TRIES_PER_ROUND)) {
+      const prev = st.slots[o.d] ?? null;
+      apply(st, o.d, o.c);
+      const next = paid();
+      if (next <= ceiling) {
+        current = next;
+        accepted = true;
+        break;
+      }
+      apply(st, o.d, prev);
+    }
+    if (!accepted) return;
+  }
+}
+
 // ── Exact pricing ──────────────────────────────────────────────────────────────
 
 function addDays(iso: string, n: number): string {
@@ -531,7 +589,10 @@ const slotsOf = (st: State) => st.slots.flatMap((p, d) => (p ? [{ day: d + 1, p 
 
 function runPlan(req: PlanRequest, ctx: EngineContext): { P: Prepared; st: State } {
   const P = prepare(req, ctx);
-  return { P, st: optimise(P, mulberry32(req.seed)) };
+  const rand = mulberry32(req.seed);
+  const st = optimise(P, rand);
+  upgradeTreats(P, st, rand);
+  return { P, st };
 }
 
 /** §9.6: max days whose cheapest plan fits the budget (binary search), 0 if none. */

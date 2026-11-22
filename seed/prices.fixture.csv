@@ -122,6 +122,35 @@ shoprite,,Brown Vinegar 750 ml,FIXTURE,750,ml,brown_vinegar,1899,,,,2026-11-20
 shoprite,,Ground Cumin,FIXTURE,50,g,ground_cumin,1899,,,,2026-11-20
 shoprite,,Chilli Powder,FIXTURE,50,g,chilli_powder,1899,,,,2026-11-20
 shoprite,,Ground Cinnamon,FIXTURE,50,g,ground_cinnamon,1899,,,,2026-11-20
+shoprite,,Chicken Thighs,FIXTURE,1000,g,chicken_thighs,7499,,,,2026-11-20
+shoprite,,Chicken Thighs Value Pack,FIXTURE,2000,g,chicken_thighs,14099,,,,2026-11-20
+shoprite,,Beef Shin,FIXTURE,1000,g,beef_shin,14099,,,,2026-11-20
+shoprite,,Beef Oxtail,FIXTURE,1000,g,oxtail,13199,,,,2026-11-20
+shoprite,,Ribeye Steak,FIXTURE,1000,g,beef_ribeye,35699,,,,2026-11-20
+shoprite,,Ribeye Steak 2 pack,FIXTURE,500,g,beef_ribeye,18799,,,,2026-11-20
+shoprite,,Rump Steak,FIXTURE,1000,g,beef_rump,18799,,,,2026-11-20
+shoprite,,Rump Steak 2 pack,FIXTURE,500,g,beef_rump,10299,,,,2026-11-20
+shoprite,,Stewing Mutton,FIXTURE,1000,g,mutton_stewing,10299,,,,2026-11-20
+shoprite,,Lamb Loin Chops,FIXTURE,1000,g,lamb_loin_chops,20699,,,,2026-11-20
+shoprite,,Lamb Loin Chops Small,FIXTURE,500,g,lamb_loin_chops,10799,,,,2026-11-20
+shoprite,,Lamb Shanks,FIXTURE,1000,g,lamb_shank,17899,,,,2026-11-20
+shoprite,,Leg of Lamb,FIXTURE,2000,g,lamb_leg,37599,,,,2026-11-20
+shoprite,,Lamb Riblets,FIXTURE,1000,g,lamb_riblets,15999,,,,2026-11-20
+shoprite,,Marinated Pork Spare Ribs,FIXTURE,1000,g,pork_ribs,12199,,,,2026-11-20
+shoprite,,Pork Belly,FIXTURE,1000,g,pork_belly,9399,,,,2026-11-20
+shoprite,,Prawn Meat Frozen,FIXTURE,800,g,prawns,17899,,,,2026-11-20
+shoprite,,Calamari Rings Frozen,FIXTURE,500,g,calamari,11299,,,,2026-11-20
+shoprite,,Half-Shell Mussels Frozen,FIXTURE,400,g,mussels,9399,,,,2026-11-20
+shoprite,,Braai Snoek Frozen,FIXTURE,1000,g,snoek,14999,,,,2026-11-20
+shoprite,,Smoked Snoek,FIXTURE,200,g,snoek_smoked,6599,,,,2026-11-20
+shoprite,,Kingklip Fillets Frozen,FIXTURE,500,g,kingklip,15999,,,,2026-11-20
+shoprite,,Salmon Portions Frozen,FIXTURE,500,g,salmon,30999,,,,2026-11-20
+shoprite,,Salted Butter,FIXTURE,500,g,butter,7999,,,,2026-11-20
+shoprite,,Fresh Cream 250 ml,FIXTURE,250,ml,fresh_cream,3099,,,,2026-11-20
+shoprite,,Smooth Apricot Jam 450 g,FIXTURE,450,g,apricot_jam,2799,,,,2026-11-20
+shoprite,,Worcestershire Sauce 250 ml,FIXTURE,250,ml,worcestershire_sauce,2499,,,,2026-11-20
+shoprite,,Barbecue Sauce 750 ml,FIXTURE,750,ml,bbq_sauce,3999,,,,2026-11-20
+shoprite,,Sweetcorn 4 pack,FIXTURE,4,unit,mielies,2399,,,,2026-11-20
 checkers,,Chicken Mixed Portions Value Pack,FIXTURE,2000,g,chicken_portions_mixed,11999,,9999,2026-11-25,2026-11-20
 checkers,,Chicken Mixed Portions,FIXTURE,1000,g,chicken_portions_mixed,6499,,,,2026-11-20
 checkers,,Chicken Drumsticks,FIXTURE,1000,g,chicken_drumsticks,6999,,,,2026-11-20
@@ -243,6 +272,35 @@ checkers,,Brown Vinegar 750 ml,FIXTURE,750,ml,brown_vinegar,1999,,,,2026-11-20
 checkers,,Ground Cumin,FIXTURE,50,g,ground_cumin,1999,,,,2026-11-20
 checkers,,Chilli Powder,FIXTURE,50,g,chilli_powder,1999,,,,2026-11-20
 checkers,,Ground Cinnamon,FIXTURE,50,g,ground_cinnamon,1999,,,,2026-11-20
+checkers,,Chicken Thighs,FIXTURE,1000,g,chicken_thighs,7999,,,,2026-11-20
+checkers,,Chicken Thighs Value Pack,FIXTURE,2000,g,chicken_thighs,14999,,,,2026-11-20
+checkers,,Beef Shin,FIXTURE,1000,g,beef_shin,14999,,,,2026-11-20
+checkers,,Beef Oxtail,FIXTURE,1000,g,oxtail,13999,,,,2026-11-20
+checkers,,Ribeye Steak,FIXTURE,1000,g,beef_ribeye,37999,,,,2026-11-20
+checkers,,Ribeye Steak 2 pack,FIXTURE,500,g,beef_ribeye,19999,,,,2026-11-20
+checkers,,Rump Steak,FIXTURE,1000,g,beef_rump,19999,,,,2026-11-20
+checkers,,Rump Steak 2 pack,FIXTURE,500,g,beef_rump,10999,,,,2026-11-20
+checkers,,Stewing Mutton,FIXTURE,1000,g,mutton_stewing,10999,,,,2026-11-20
+checkers,,Lamb Loin Chops,FIXTURE,1000,g,lamb_loin_chops,21999,,,,2026-11-20
+checkers,,Lamb Loin Chops Small,FIXTURE,500,g,lamb_loin_chops,11499,,,,2026-11-20
+checkers,,Lamb Shanks,FIXTURE,1000,g,lamb_shank,18999,,,,2026-11-20
+checkers,,Leg of Lamb,FIXTURE,2000,g,lamb_leg,39999,,,,2026-11-20
+checkers,,Lamb Riblets,FIXTURE,1000,g,lamb_riblets,16999,,,,2026-11-20
+checkers,,Marinated Pork Spare Ribs,FIXTURE,1000,g,pork_ribs,12999,,,,2026-11-20
+checkers,,Pork Belly,FIXTURE,1000,g,pork_belly,9999,,,,2026-11-20
+checkers,,Prawn Meat Frozen,FIXTURE,800,g,prawns,18999,,,,2026-11-20
+checkers,,Calamari Rings Frozen,FIXTURE,500,g,calamari,11999,,,,2026-11-20
+checkers,,Half-Shell Mussels Frozen,FIXTURE,400,g,mussels,9999,,,,2026-11-20
+checkers,,Braai Snoek Frozen,FIXTURE,1000,g,snoek,15999,,,,2026-11-20
+checkers,,Smoked Snoek,FIXTURE,200,g,snoek_smoked,6999,,,,2026-11-20
+checkers,,Kingklip Fillets Frozen,FIXTURE,500,g,kingklip,16999,,,,2026-11-20
+checkers,,Salmon Portions Frozen,FIXTURE,500,g,salmon,32999,,,,2026-11-20
+checkers,,Salted Butter,FIXTURE,500,g,butter,8499,,,,2026-11-20
+checkers,,Fresh Cream 250 ml,FIXTURE,250,ml,fresh_cream,3299,,,,2026-11-20
+checkers,,Smooth Apricot Jam 450 g,FIXTURE,450,g,apricot_jam,2999,,,,2026-11-20
+checkers,,Worcestershire Sauce 250 ml,FIXTURE,250,ml,worcestershire_sauce,2699,,,,2026-11-20
+checkers,,Barbecue Sauce 750 ml,FIXTURE,750,ml,bbq_sauce,4299,,,,2026-11-20
+checkers,,Sweetcorn 4 pack,FIXTURE,4,unit,mielies,2599,,,,2026-11-20
 pnp,,Chicken Mixed Portions Value Pack,FIXTURE,2000,g,chicken_portions_mixed,12499,,,,2026-11-20
 pnp,,Chicken Mixed Portions,FIXTURE,1000,g,chicken_portions_mixed,6799,,,,2026-11-20
 pnp,,Chicken Drumsticks,FIXTURE,1000,g,chicken_drumsticks,7299,,,,2026-11-20
@@ -364,6 +422,35 @@ pnp,,Brown Vinegar 750 ml,FIXTURE,750,ml,brown_vinegar,2099,,,,2026-11-20
 pnp,,Ground Cumin,FIXTURE,50,g,ground_cumin,2099,,,,2026-11-20
 pnp,,Chilli Powder,FIXTURE,50,g,chilli_powder,2099,,,,2026-11-20
 pnp,,Ground Cinnamon,FIXTURE,50,g,ground_cinnamon,2099,,,,2026-11-20
+pnp,,Chicken Thighs,FIXTURE,1000,g,chicken_thighs,8299,,,,2026-11-20
+pnp,,Chicken Thighs Value Pack,FIXTURE,2000,g,chicken_thighs,15599,,,,2026-11-20
+pnp,,Beef Shin,FIXTURE,1000,g,beef_shin,15599,,,,2026-11-20
+pnp,,Beef Oxtail,FIXTURE,1000,g,oxtail,14599,,,,2026-11-20
+pnp,,Ribeye Steak,FIXTURE,1000,g,beef_ribeye,39499,,,,2026-11-20
+pnp,,Ribeye Steak 2 pack,FIXTURE,500,g,beef_ribeye,20799,,,,2026-11-20
+pnp,,Rump Steak,FIXTURE,1000,g,beef_rump,20799,,,,2026-11-20
+pnp,,Rump Steak 2 pack,FIXTURE,500,g,beef_rump,11399,,,,2026-11-20
+pnp,,Stewing Mutton,FIXTURE,1000,g,mutton_stewing,11399,,,,2026-11-20
+pnp,,Lamb Loin Chops,FIXTURE,1000,g,lamb_loin_chops,22899,,,,2026-11-20
+pnp,,Lamb Loin Chops Small,FIXTURE,500,g,lamb_loin_chops,11999,,,,2026-11-20
+pnp,,Lamb Shanks,FIXTURE,1000,g,lamb_shank,19799,,,,2026-11-20
+pnp,,Leg of Lamb,FIXTURE,2000,g,lamb_leg,41599,,,,2026-11-20
+pnp,,Lamb Riblets,FIXTURE,1000,g,lamb_riblets,17699,,,,2026-11-20
+pnp,,Marinated Pork Spare Ribs,FIXTURE,1000,g,pork_ribs,13499,,,,2026-11-20
+pnp,,Pork Belly,FIXTURE,1000,g,pork_belly,10399,,,,2026-11-20
+pnp,,Prawn Meat Frozen,FIXTURE,800,g,prawns,19799,,,,2026-11-20
+pnp,,Calamari Rings Frozen,FIXTURE,500,g,calamari,12499,,,,2026-11-20
+pnp,,Half-Shell Mussels Frozen,FIXTURE,400,g,mussels,10399,,,,2026-11-20
+pnp,,Braai Snoek Frozen,FIXTURE,1000,g,snoek,16599,,,,2026-11-20
+pnp,,Smoked Snoek,FIXTURE,200,g,snoek_smoked,7299,,,,2026-11-20
+pnp,,Kingklip Fillets Frozen,FIXTURE,500,g,kingklip,17699,,,,2026-11-20
+pnp,,Salmon Portions Frozen,FIXTURE,500,g,salmon,34299,,,,2026-11-20
+pnp,,Salted Butter,FIXTURE,500,g,butter,8799,,,,2026-11-20
+pnp,,Fresh Cream 250 ml,FIXTURE,250,ml,fresh_cream,3399,,,,2026-11-20
+pnp,,Smooth Apricot Jam 450 g,FIXTURE,450,g,apricot_jam,3099,,,,2026-11-20
+pnp,,Worcestershire Sauce 250 ml,FIXTURE,250,ml,worcestershire_sauce,2799,,,,2026-11-20
+pnp,,Barbecue Sauce 750 ml,FIXTURE,750,ml,bbq_sauce,4499,,,,2026-11-20
+pnp,,Sweetcorn 4 pack,FIXTURE,4,unit,mielies,2699,,,,2026-11-20
 spar,,Chicken Mixed Portions Value Pack,FIXTURE,2000,g,chicken_portions_mixed,13099,,,,2026-11-20
 spar,,Chicken Mixed Portions,FIXTURE,1000,g,chicken_portions_mixed,7099,,,,2026-11-20
 spar,,Chicken Drumsticks,FIXTURE,1000,g,chicken_drumsticks,7599,,,,2026-11-20
@@ -483,6 +570,35 @@ spar,,Brown Vinegar 750 ml,FIXTURE,750,ml,brown_vinegar,2199,,,,2026-11-20
 spar,,Ground Cumin,FIXTURE,50,g,ground_cumin,2199,,,,2026-11-20
 spar,,Chilli Powder,FIXTURE,50,g,chilli_powder,2199,,,,2026-11-20
 spar,,Ground Cinnamon,FIXTURE,50,g,ground_cinnamon,2199,,,,2026-11-20
+spar,,Chicken Thighs,FIXTURE,1000,g,chicken_thighs,8699,,,,2026-11-20
+spar,,Chicken Thighs Value Pack,FIXTURE,2000,g,chicken_thighs,16299,,,,2026-11-20
+spar,,Beef Shin,FIXTURE,1000,g,beef_shin,16299,,,,2026-11-20
+spar,,Beef Oxtail,FIXTURE,1000,g,oxtail,15299,,,,2026-11-20
+spar,,Ribeye Steak,FIXTURE,1000,g,beef_ribeye,41399,,,,2026-11-20
+spar,,Ribeye Steak 2 pack,FIXTURE,500,g,beef_ribeye,21799,,,,2026-11-20
+spar,,Rump Steak,FIXTURE,1000,g,beef_rump,21799,,,,2026-11-20
+spar,,Rump Steak 2 pack,FIXTURE,500,g,beef_rump,11999,,,,2026-11-20
+spar,,Stewing Mutton,FIXTURE,1000,g,mutton_stewing,11999,,,,2026-11-20
+spar,,Lamb Loin Chops,FIXTURE,1000,g,lamb_loin_chops,23999,,,,2026-11-20
+spar,,Lamb Loin Chops Small,FIXTURE,500,g,lamb_loin_chops,12499,,,,2026-11-20
+spar,,Lamb Shanks,FIXTURE,1000,g,lamb_shank,20699,,,,2026-11-20
+spar,,Leg of Lamb,FIXTURE,2000,g,lamb_leg,43599,,,,2026-11-20
+spar,,Lamb Riblets,FIXTURE,1000,g,lamb_riblets,18499,,,,2026-11-20
+spar,,Marinated Pork Spare Ribs,FIXTURE,1000,g,pork_ribs,14199,,,,2026-11-20
+spar,,Pork Belly,FIXTURE,1000,g,pork_belly,10899,,,,2026-11-20
+spar,,Prawn Meat Frozen,FIXTURE,800,g,prawns,20699,,,,2026-11-20
+spar,,Calamari Rings Frozen,FIXTURE,500,g,calamari,13099,,,,2026-11-20
+spar,,Half-Shell Mussels Frozen,FIXTURE,400,g,mussels,10899,,,,2026-11-20
+spar,,Braai Snoek Frozen,FIXTURE,1000,g,snoek,17399,,,,2026-11-20
+spar,,Smoked Snoek,FIXTURE,200,g,snoek_smoked,7599,,,,2026-11-20
+spar,,Kingklip Fillets Frozen,FIXTURE,500,g,kingklip,18499,,,,2026-11-20
+spar,,Salmon Portions Frozen,FIXTURE,500,g,salmon,35999,,,,2026-11-20
+spar,,Salted Butter,FIXTURE,500,g,butter,9299,,,,2026-11-20
+spar,,Fresh Cream 250 ml,FIXTURE,250,ml,fresh_cream,3599,,,,2026-11-20
+spar,,Smooth Apricot Jam 450 g,FIXTURE,450,g,apricot_jam,3299,,,,2026-11-20
+spar,,Worcestershire Sauce 250 ml,FIXTURE,250,ml,worcestershire_sauce,2899,,,,2026-11-20
+spar,,Barbecue Sauce 750 ml,FIXTURE,750,ml,bbq_sauce,4699,,,,2026-11-20
+spar,,Sweetcorn 4 pack,FIXTURE,4,unit,mielies,2799,,,,2026-11-20
 usave,,Pilchards in Tomato Sauce,FIXTURE,400,g,pilchards_tin,2499,,,,2026-11-20
 usave,,Pilchards in Tomato Sauce Small,FIXTURE,155,g,pilchards_tin,1199,,,,2026-11-20
 usave,,Large Eggs 6,FIXTURE,6,unit,eggs,2599,,,,2026-11-20

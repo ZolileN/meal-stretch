@@ -16,10 +16,10 @@ import { usePhotosSetting, writePhotosSetting } from '@/components/ui/useImagesA
 import { fieldClass } from '@/components/ui/field';
 import type { SignInMethods } from '@/lib/auth/methods';
 
-const AVOID = ['pork', 'beef', 'fish', 'nuts', 'dairy', 'gluten'] as const;
+const AVOID = ['pork', 'beef', 'fish', 'shellfish', 'nuts', 'dairy', 'gluten'] as const;
 const KINDS = ['specials_day', 'tonight', 'month_end', 'payday', 'receipt_nudge'] as const;
 const LANGS = ['en', 'xh', 'af'] as const;
-const avoidKey = { pork: 'avoidPork', beef: 'avoidBeef', fish: 'avoidFish', nuts: 'avoidNuts', dairy: 'avoidDairy', gluten: 'avoidGluten' } as const;
+const avoidKey = { pork: 'avoidPork', beef: 'avoidBeef', fish: 'avoidFish', shellfish: 'avoidShellfish', nuts: 'avoidNuts', dairy: 'avoidDairy', gluten: 'avoidGluten' } as const;
 
 export interface SettingsData {
   light: number;

@@ -29,8 +29,8 @@ export const TWEAK_TOOL: ToolSpec = {
 export const tweakSchema = z
   .object({
     understood: z.boolean(),
-    add_exclusions: z.array(z.enum(EXCLUSION_TAGS)).max(6).optional().default([]),
-    remove_exclusions: z.array(z.enum(EXCLUSION_TAGS)).max(6).optional().default([]),
+    add_exclusions: z.array(z.enum(EXCLUSION_TAGS)).max(EXCLUSION_TAGS.length).optional().default([]),
+    remove_exclusions: z.array(z.enum(EXCLUSION_TAGS)).max(EXCLUSION_TAGS.length).optional().default([]),
     max_cook_minutes: z.number().int().min(10).max(240).nullable().optional().default(null),
     clear_max_cook: z.boolean().optional().default(false),
     mode: z.enum(['balanced', 'cheapest']).nullable().optional().default(null),

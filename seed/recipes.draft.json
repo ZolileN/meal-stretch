@@ -11119,6 +11119,2825 @@
     }
    ],
    "published": false
+  },
+  {
+   "id": "braai_chicken_thighs_pap_chakalaka",
+   "name": "Braaied chicken thighs, pap & chakalaka",
+   "description": "Braai-spiced chicken thighs off the coals with pap and chakalaka.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:chicken_thighs",
+    "starch:maize_meal",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Rub the thighs with oil, braai spice and salt.",
+    "Braai or grill 30-35 minutes, turning often, until cooked through.",
+    "Meanwhile cook the pap.",
+    "Warm the chakalaka and serve with the chicken and pap."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_thighs",
+     "qty": 220
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "chakalaka",
+     "qty": 100
+    },
+    {
+     "id": "braai_spice",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 5
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_thigh_potato_curry_rice",
+   "name": "Chicken thigh & potato curry with rice",
+   "description": "A hearty Durban-style chicken and potato curry.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:chicken_thighs",
+    "starch:rice",
+    "no_oven",
+    "cuisine:indian"
+   ],
+   "steps": [
+    "Fry the onion in oil until soft, add garlic, ginger and curry powder for 1 minute.",
+    "Add the chicken thighs and brown on all sides.",
+    "Add tomatoes, potatoes and a cup of water; simmer 30 minutes until the chicken is tender.",
+    "Cook the rice and serve with the curry."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_thighs",
+     "qty": 200
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 80
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "curry_powder",
+     "qty": 6
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "sticky_apricot_chicken_thighs_rice",
+   "name": "Sticky apricot chicken thighs & rice",
+   "description": "Oven-baked thighs glazed with apricot jam and soy, with rice and green beans.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:chicken_thighs",
+    "starch:rice",
+    "kid_friendly",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Heat the oven to 200 °C.",
+    "Mix apricot jam, soy sauce and garlic; coat the thighs and bake 40 minutes, basting halfway.",
+    "Cook the rice; boil the green beans for 5 minutes.",
+    "Serve the sticky chicken with rice and beans."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_thighs",
+     "qty": 220
+    },
+    {
+     "id": "apricot_jam",
+     "qty": 25
+    },
+    {
+     "id": "soy_sauce",
+     "qty": 10
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "green_beans",
+     "qty": 60
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_thigh_potjie",
+   "name": "Chicken potjie with potatoes & carrots",
+   "description": "Layered chicken potjie, slow-cooked in one pot.",
+   "cookMinutes": 80,
+   "tags": [
+    "protein:chicken_thighs",
+    "starch:potatoes",
+    "no_oven",
+    "one_pot",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Brown the chicken in oil in a heavy pot; add the onion.",
+    "Layer carrots, butternut and potatoes on top - do not stir.",
+    "Mix the soup powder and stock with 2 cups of water and pour over.",
+    "Cover and simmer gently for 60 minutes until everything is tender."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_thighs",
+     "qty": 220
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "carrots",
+     "qty": 60
+    },
+    {
+     "id": "butternut",
+     "qty": 80
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 8
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "peri_peri_chicken_thighs_chips",
+   "name": "Peri-peri chicken thighs & oven chips",
+   "description": "Lemon and peri-peri chicken thighs with crispy oven chips.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:chicken_thighs",
+    "starch:potatoes",
+    "kid_friendly",
+    "cuisine:portuguese"
+   ],
+   "steps": [
+    "Heat the oven to 220 °C.",
+    "Rub the thighs with peri-peri, garlic, lemon juice and a little oil.",
+    "Cut potatoes into chips, toss with oil and salt.",
+    "Roast chicken and chips together for 40 minutes, turning the chips once."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_thighs",
+     "qty": 220
+    },
+    {
+     "id": "peri_peri_spice",
+     "qty": 3
+    },
+    {
+     "id": "lemons",
+     "qty": 15
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 15
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "chicken_apricot_sosaties_yellow_rice",
+   "name": "Chicken & apricot sosaties with yellow rice",
+   "description": "Cape Malay curry-apricot chicken skewers with yellow rice.",
+   "cookMinutes": 45,
+   "tags": [
+    "protein:chicken_breast_fillets",
+    "starch:rice",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:cape_malay"
+   ],
+   "steps": [
+    "Cut the chicken into cubes; mix with apricot jam, curry powder and a little oil and leave 15 minutes.",
+    "Thread chicken, onion and green pepper onto skewers.",
+    "Cook the rice with turmeric, sugar and salt.",
+    "Braai or grill the sosaties 12-15 minutes, turning, until cooked through."
+   ],
+   "ingredients": [
+    {
+     "id": "chicken_breast_fillets",
+     "qty": 170
+    },
+    {
+     "id": "apricot_jam",
+     "qty": 20
+    },
+    {
+     "id": "curry_powder",
+     "qty": 3
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "green_pepper",
+     "qty": 50
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "turmeric",
+     "qty": 1
+    },
+    {
+     "id": "sugar",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 5
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "beef_shin_stew_samp",
+   "name": "Slow beef shin stew & samp",
+   "description": "Fall-apart beef shin in rich gravy, with samp.",
+   "cookMinutes": 180,
+   "tags": [
+    "protein:beef_shin",
+    "starch:samp",
+    "no_oven",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Soak the samp overnight, then boil 2-3 hours until soft.",
+    "Brown the shin in oil, add the onion and carrots.",
+    "Add tomato paste, soup powder, stock and 3 cups of water; simmer covered 2.5 hours.",
+    "Serve the stew over the samp."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_shin",
+     "qty": 250
+    },
+    {
+     "id": "samp",
+     "qty": 80
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 60
+    },
+    {
+     "id": "tomato_paste",
+     "qty": 15
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 8
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "beef_shin_curry_rice",
+   "name": "Beef shin curry & rice",
+   "description": "Slow-cooked beef shin curry with potatoes.",
+   "cookMinutes": 150,
+   "tags": [
+    "protein:beef_shin",
+    "starch:rice",
+    "no_oven",
+    "cuisine:indian"
+   ],
+   "steps": [
+    "Fry the onion, then add garlic, ginger, curry powder and cumin for 1 minute.",
+    "Add the shin and brown; add tomatoes and 3 cups of water.",
+    "Simmer covered 2 hours; add the potatoes for the last 30 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_shin",
+     "qty": 230
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 80
+    },
+    {
+     "id": "curry_powder",
+     "qty": 6
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "mutton_curry_rice",
+   "name": "Mutton curry & rice",
+   "description": "Classic mutton and potato curry.",
+   "cookMinutes": 120,
+   "tags": [
+    "protein:mutton_stewing",
+    "starch:rice",
+    "no_oven",
+    "cuisine:indian"
+   ],
+   "steps": [
+    "Fry the onion until golden; add garlic, ginger, curry powder, cumin and cinnamon.",
+    "Add the mutton and brown well.",
+    "Add chopped tomato and 2 cups of water; simmer covered 75 minutes, then add potatoes for 25 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "mutton_stewing",
+     "qty": 220
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 80
+    },
+    {
+     "id": "curry_powder",
+     "qty": 7
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "ground_cinnamon",
+     "qty": 1
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "mutton_bunny_chow",
+   "name": "Mutton bunny chow",
+   "description": "Durban mutton curry served in a hollowed-out quarter loaf.",
+   "cookMinutes": 120,
+   "tags": [
+    "protein:mutton_stewing",
+    "starch:bread",
+    "no_oven",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Make the curry: fry onion, garlic, ginger and curry powder, then brown the mutton.",
+    "Add tomatoes and 2 cups of water; simmer 75 minutes, add potatoes and cook 25 minutes more.",
+    "Cut the bread into quarter loaves and hollow them out.",
+    "Fill each with curry and serve with the bread plug on the side."
+   ],
+   "ingredients": [
+    {
+     "id": "mutton_stewing",
+     "qty": 200
+    },
+    {
+     "id": "potatoes",
+     "qty": 120
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 80
+    },
+    {
+     "id": "curry_powder",
+     "qty": 7
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "bread",
+     "qty": 175
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "tamatiebredie_rice",
+   "name": "Tamatiebredie (mutton & tomato stew) with rice",
+   "description": "Slow mutton and tomato bredie, gently spiced with cinnamon.",
+   "cookMinutes": 120,
+   "tags": [
+    "protein:mutton_stewing",
+    "starch:rice",
+    "no_oven",
+    "cuisine:cape_malay"
+   ],
+   "steps": [
+    "Brown the mutton in oil; add the onion and garlic.",
+    "Add tomatoes, sugar, cinnamon and 1 cup of water; simmer covered 75 minutes.",
+    "Add the potatoes and cook 30 minutes more until thick.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "mutton_stewing",
+     "qty": 220
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 120
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 60
+    },
+    {
+     "id": "sugar",
+     "qty": 5
+    },
+    {
+     "id": "ground_cinnamon",
+     "qty": 1
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "rice",
+     "qty": 70
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "mutton_cabbage_bredie",
+   "name": "Mutton & cabbage bredie",
+   "description": "Old-fashioned mutton and cabbage stew in one pot.",
+   "cookMinutes": 110,
+   "tags": [
+    "protein:mutton_stewing",
+    "starch:potatoes",
+    "no_oven",
+    "one_pot",
+    "cuisine:afrikaans"
+   ],
+   "steps": [
+    "Brown the mutton in oil with the onion.",
+    "Add stock and 2 cups of water; simmer covered 60 minutes.",
+    "Add the potatoes and shredded cabbage; cook 30 minutes until soft.",
+    "Season with pepper and salt and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "mutton_stewing",
+     "qty": 220
+    },
+    {
+     "id": "cabbage",
+     "qty": 150
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "black_pepper",
+     "qty": 1
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "mutton_potjie",
+   "name": "Mutton potjie with butternut & potatoes",
+   "description": "A weekend mutton potjie, slow-cooked over coals or on the stove.",
+   "cookMinutes": 180,
+   "tags": [
+    "protein:mutton_stewing",
+    "starch:potatoes",
+    "no_oven",
+    "one_pot",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Brown the mutton in oil in a potjie or heavy pot; add the onion.",
+    "Add 2 cups of water with the stock and simmer 90 minutes.",
+    "Layer carrots, butternut and potatoes on top; sprinkle over the soup powder mixed with water.",
+    "Cover and cook 60 minutes more without stirring."
+   ],
+   "ingredients": [
+    {
+     "id": "mutton_stewing",
+     "qty": 250
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "butternut",
+     "qty": 100
+    },
+    {
+     "id": "carrots",
+     "qty": 60
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 8
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "umngqusho_with_mutton",
+   "name": "Umngqusho (samp & beans) with mutton",
+   "description": "Samp and beans cooked with mutton until creamy.",
+   "cookMinutes": 180,
+   "tags": [
+    "protein:mutton_stewing",
+    "starch:samp",
+    "no_oven",
+    "one_pot",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Soak the samp and beans overnight, then boil together about 2 hours.",
+    "Brown the mutton with the onion, then add tomato, curry powder and stock.",
+    "Add the mutton to the samp and beans with a little water.",
+    "Simmer 45 minutes, stirring now and then, until creamy and the meat is tender."
+   ],
+   "ingredients": [
+    {
+     "id": "samp",
+     "qty": 70
+    },
+    {
+     "id": "sugar_beans",
+     "qty": 30
+    },
+    {
+     "id": "mutton_stewing",
+     "qty": 160
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 60
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 3
+    },
+    {
+     "id": "curry_powder",
+     "qty": 2
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "mutton_breyani",
+   "name": "Mutton breyani",
+   "description": "Layered Durban mutton breyani with lentils and potatoes.",
+   "cookMinutes": 120,
+   "tags": [
+    "protein:mutton_stewing",
+    "starch:rice",
+    "no_oven",
+    "one_pot",
+    "cuisine:indian"
+   ],
+   "steps": [
+    "Fry the onion until golden; add garlic, ginger, curry powder, turmeric and cinnamon.",
+    "Add the mutton and tomatoes; simmer covered 60 minutes.",
+    "Par-boil the rice and lentils; fry the potatoes until golden.",
+    "Layer rice, lentils and potatoes over the mutton, add half a cup of water, cover tightly and steam 30 minutes."
+   ],
+   "ingredients": [
+    {
+     "id": "mutton_stewing",
+     "qty": 200
+    },
+    {
+     "id": "rice",
+     "qty": 90
+    },
+    {
+     "id": "red_lentils",
+     "qty": 20
+    },
+    {
+     "id": "potatoes",
+     "qty": 80
+    },
+    {
+     "id": "onion",
+     "qty": 60
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 60
+    },
+    {
+     "id": "curry_powder",
+     "qty": 6
+    },
+    {
+     "id": "turmeric",
+     "qty": 1
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "ground_cinnamon",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 15
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "roast_pork_belly_mash_cabbage",
+   "name": "Roast pork belly, mash & buttered cabbage",
+   "description": "Crispy roast pork belly with mash and cabbage.",
+   "cookMinutes": 130,
+   "tags": [
+    "protein:pork_belly",
+    "starch:potatoes",
+    "cuisine:british"
+   ],
+   "steps": [
+    "Heat the oven to 160 °C. Rub the pork skin with salt and roast 90 minutes.",
+    "Turn the oven to 230 °C for 20 minutes to crisp the crackling.",
+    "Boil the potatoes and mash with butter and milk.",
+    "Fry the shredded cabbage in a little butter with pepper; slice the pork and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "pork_belly",
+     "qty": 220
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "cabbage",
+     "qty": 120
+    },
+    {
+     "id": "butter",
+     "qty": 10
+    },
+    {
+     "id": "milk",
+     "qty": 40
+    },
+    {
+     "id": "salt",
+     "qty": 3
+    },
+    {
+     "id": "black_pepper",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "sticky_soy_pork_belly_fried_rice",
+   "name": "Sticky soy pork belly & egg-fried rice",
+   "description": "Pan-fried pork belly bites in a soy glaze with egg-fried rice.",
+   "cookMinutes": 60,
+   "tags": [
+    "protein:pork_belly",
+    "starch:rice",
+    "no_oven",
+    "cuisine:chinese"
+   ],
+   "steps": [
+    "Cook the rice and let it cool.",
+    "Cut the pork belly into bite-size pieces and fry slowly until golden, about 25 minutes.",
+    "Add soy sauce, sugar, ginger and garlic; cook until sticky.",
+    "Fry the rice with the peas and beaten egg, then serve with the pork."
+   ],
+   "ingredients": [
+    {
+     "id": "pork_belly",
+     "qty": 180
+    },
+    {
+     "id": "soy_sauce",
+     "qty": 15
+    },
+    {
+     "id": "sugar",
+     "qty": 10
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 50
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "sticky_bbq_pork_ribs_wedges",
+   "name": "Sticky BBQ pork ribs & potato wedges",
+   "description": "Oven-roasted sticky ribs with paprika wedges.",
+   "cookMinutes": 60,
+   "tags": [
+    "protein:pork_ribs",
+    "starch:potatoes",
+    "kid_friendly",
+    "treat",
+    "cuisine:american"
+   ],
+   "steps": [
+    "Heat the oven to 200 °C.",
+    "Cut potatoes into wedges, toss with oil, paprika and salt.",
+    "Roast ribs and wedges 45 minutes, brushing the ribs with barbecue sauce twice.",
+    "Rest the ribs 5 minutes, cut and serve with the wedges."
+   ],
+   "ingredients": [
+    {
+     "id": "pork_ribs",
+     "qty": 400
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "bbq_sauce",
+     "qty": 30
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "paprika",
+     "qty": 2
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "braai_pork_ribs_mielies_garlic_rolls",
+   "name": "Braaied pork ribs, mielies & garlic rolls",
+   "description": "Ribs off the braai with buttery mielies and garlic rolls.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:pork_ribs",
+    "starch:bread_rolls",
+    "no_oven",
+    "kid_friendly",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Braai the ribs over medium coals 30-40 minutes, turning often so they do not burn.",
+    "Boil or braai the mielies until tender.",
+    "Mix butter with crushed garlic, spread inside the rolls and toast on the grid.",
+    "Serve ribs with buttered mielies and garlic rolls."
+   ],
+   "ingredients": [
+    {
+     "id": "pork_ribs",
+     "qty": 400
+    },
+    {
+     "id": "mielies",
+     "qty": 1
+    },
+    {
+     "id": "bread_rolls",
+     "qty": 1
+    },
+    {
+     "id": "butter",
+     "qty": 15
+    },
+    {
+     "id": "garlic",
+     "qty": 4
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "braai_lamb_riblets_pap_sous",
+   "name": "Braaied lamb riblets, pap & tomato sous",
+   "description": "Crispy lamb riblets with stywe pap and tomato-onion sous.",
+   "cookMinutes": 45,
+   "tags": [
+    "protein:lamb_riblets",
+    "starch:maize_meal",
+    "no_oven",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Season the riblets with braai spice and salt.",
+    "Braai over medium coals 25-30 minutes until crispy, turning often.",
+    "Cook stywe pap.",
+    "Fry the onion, add tomatoes and sugar and simmer 10 minutes for the sous; serve together."
+   ],
+   "ingredients": [
+    {
+     "id": "lamb_riblets",
+     "qty": 280
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 80
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "braai_spice",
+     "qty": 3
+    },
+    {
+     "id": "sugar",
+     "qty": 3
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 5
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "sticky_lamb_riblets_sweet_potato",
+   "name": "Sticky lamb riblets & roast sweet potato",
+   "description": "Apricot-glazed lamb riblets with roast sweet potato.",
+   "cookMinutes": 70,
+   "tags": [
+    "protein:lamb_riblets",
+    "starch:sweet_potatoes",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Heat the oven to 200 °C.",
+    "Mix apricot jam, Worcestershire sauce and garlic; coat the riblets.",
+    "Roast riblets and sweet potato chunks 50 minutes, turning once.",
+    "Serve hot."
+   ],
+   "ingredients": [
+    {
+     "id": "lamb_riblets",
+     "qty": 280
+    },
+    {
+     "id": "apricot_jam",
+     "qty": 20
+    },
+    {
+     "id": "worcestershire_sauce",
+     "qty": 10
+    },
+    {
+     "id": "sweet_potatoes",
+     "qty": 200
+    },
+    {
+     "id": "garlic",
+     "qty": 4
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "braai_lamb_chops_mielies_potato_salad",
+   "name": "Braaied lamb chops, mielies & potato salad",
+   "description": "A proper Sunday braai: lamb chops, mielies and creamy potato salad.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:lamb_loin_chops",
+    "starch:potatoes",
+    "no_oven",
+    "kid_friendly",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Boil the potatoes and eggs; cool, chop and mix with mayonnaise and salt.",
+    "Season the chops with braai spice.",
+    "Braai the chops 10-12 minutes over hot coals, turning once.",
+    "Braai or boil the mielies and serve everything together."
+   ],
+   "ingredients": [
+    {
+     "id": "lamb_loin_chops",
+     "qty": 230
+    },
+    {
+     "id": "mielies",
+     "qty": 1
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 20
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "braai_spice",
+     "qty": 3
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "lamb_chops_mash_peas",
+   "name": "Pan-fried lamb chops, mash & peas",
+   "description": "Garlic-and-herb lamb chops with buttery mash and peas.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:lamb_loin_chops",
+    "starch:potatoes",
+    "no_oven",
+    "kid_friendly",
+    "treat",
+    "cuisine:british"
+   ],
+   "steps": [
+    "Boil the potatoes and mash with butter and milk.",
+    "Rub the chops with garlic, herbs and salt.",
+    "Fry in a hot pan 4-5 minutes a side.",
+    "Cook the peas and serve with the chops and mash."
+   ],
+   "ingredients": [
+    {
+     "id": "lamb_loin_chops",
+     "qty": 230
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "butter",
+     "qty": 10
+    },
+    {
+     "id": "milk",
+     "qty": 40
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 70
+    },
+    {
+     "id": "garlic",
+     "qty": 4
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 1
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "greek_lamb_chops_lemon_potatoes",
+   "name": "Greek lamb chops with lemon potatoes",
+   "description": "Lemon-oregano lamb chops, roast potatoes and a feta salad.",
+   "cookMinutes": 55,
+   "tags": [
+    "protein:lamb_loin_chops",
+    "starch:potatoes",
+    "treat",
+    "cuisine:greek"
+   ],
+   "steps": [
+    "Heat the oven to 220 °C. Toss potato wedges with oil, lemon juice, garlic, herbs and salt; roast 40 minutes.",
+    "Marinate the chops in lemon, garlic and herbs while the potatoes roast.",
+    "Grill or pan-fry the chops 4-5 minutes a side.",
+    "Serve with a salad of tomato, cucumber and crumbled feta."
+   ],
+   "ingredients": [
+    {
+     "id": "lamb_loin_chops",
+     "qty": 230
+    },
+    {
+     "id": "potatoes",
+     "qty": 220
+    },
+    {
+     "id": "lemons",
+     "qty": 25
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 2
+    },
+    {
+     "id": "feta_cheese",
+     "qty": 20
+    },
+    {
+     "id": "cucumber",
+     "qty": 60
+    },
+    {
+     "id": "tomato",
+     "qty": 60
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 15
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "braised_lamb_shanks_mash",
+   "name": "Slow-braised lamb shanks & mash",
+   "description": "Lamb shanks braised until falling off the bone, with creamy mash.",
+   "cookMinutes": 180,
+   "tags": [
+    "protein:lamb_shank",
+    "starch:potatoes",
+    "no_oven",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Brown the shanks well in oil; remove. Fry the onion, carrots and garlic.",
+    "Add tomato paste, stock, herbs and 3 cups of water; return the shanks.",
+    "Cover and simmer gently 2.5 hours, turning now and then, until very tender.",
+    "Boil and mash the potatoes with butter and milk; serve with the shanks and gravy."
+   ],
+   "ingredients": [
+    {
+     "id": "lamb_shank",
+     "qty": 400
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "carrots",
+     "qty": 60
+    },
+    {
+     "id": "onion",
+     "qty": 60
+    },
+    {
+     "id": "tomato_paste",
+     "qty": 15
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 3
+    },
+    {
+     "id": "butter",
+     "qty": 10
+    },
+    {
+     "id": "milk",
+     "qty": 40
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "lamb_shank_curry_rice",
+   "name": "Lamb shank curry & rice",
+   "description": "Slow-cooked lamb shank curry with potatoes.",
+   "cookMinutes": 180,
+   "tags": [
+    "protein:lamb_shank",
+    "starch:rice",
+    "no_oven",
+    "treat",
+    "cuisine:indian"
+   ],
+   "steps": [
+    "Brown the shanks; set aside. Fry onion, garlic, ginger, curry powder and cumin.",
+    "Return the shanks with tomatoes and 3 cups of water.",
+    "Simmer covered 2.5 hours; add potatoes for the last 30 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "lamb_shank",
+     "qty": 400
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 60
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "curry_powder",
+     "qty": 7
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "roast_leg_of_lamb_potatoes_butternut",
+   "name": "Sunday roast leg of lamb, potatoes & butternut",
+   "description": "Garlic-and-herb roast leg of lamb with roast potatoes, butternut and gravy.",
+   "cookMinutes": 150,
+   "tags": [
+    "protein:lamb_leg",
+    "starch:potatoes",
+    "kid_friendly",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Heat the oven to 180 °C. Make small cuts in the lamb and push in garlic; rub with oil, herbs and salt.",
+    "Roast about 2 hours (25 minutes per 500 g), adding potatoes and butternut for the last hour.",
+    "Rest the lamb 15 minutes.",
+    "Make gravy from the pan juices with the soup powder and a cup of water; carve and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "lamb_leg",
+     "qty": 280
+    },
+    {
+     "id": "potatoes",
+     "qty": 220
+    },
+    {
+     "id": "butternut",
+     "qty": 150
+    },
+    {
+     "id": "garlic",
+     "qty": 6
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 2
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 6
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 15
+    },
+    {
+     "id": "salt",
+     "qty": 3
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "ribeye_chips_mushroom_sauce",
+   "name": "Ribeye steak, chips & creamy mushroom sauce",
+   "description": "Steakhouse night at home: ribeye, chips and mushroom sauce.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:beef_ribeye",
+    "starch:potatoes",
+    "no_oven",
+    "treat",
+    "cuisine:american"
+   ],
+   "steps": [
+    "Cut potatoes into chips and fry in oil until golden.",
+    "Season the steaks and fry in a very hot pan 3-4 minutes a side; rest 5 minutes.",
+    "In the same pan fry the mushrooms and garlic, add cream and pepper and simmer 2 minutes.",
+    "Serve the steak with chips and sauce."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_ribeye",
+     "qty": 250
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "mushrooms",
+     "qty": 60
+    },
+    {
+     "id": "fresh_cream",
+     "qty": 40
+    },
+    {
+     "id": "garlic",
+     "qty": 3
+    },
+    {
+     "id": "black_pepper",
+     "qty": 1
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 20
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "braai_ribeye_pap_chakalaka",
+   "name": "Braaied ribeye, pap & chakalaka",
+   "description": "Ribeye on the coals with pap and chakalaka.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:beef_ribeye",
+    "starch:maize_meal",
+    "no_oven",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Cook the pap.",
+    "Season the steaks with braai spice and salt.",
+    "Braai over very hot coals 3-4 minutes a side; finish with a little butter and rest 5 minutes.",
+    "Warm the chakalaka and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_ribeye",
+     "qty": 250
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "chakalaka",
+     "qty": 100
+    },
+    {
+     "id": "braai_spice",
+     "qty": 3
+    },
+    {
+     "id": "butter",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "rump_steak_egg_chips",
+   "name": "Rump steak, egg & chips",
+   "description": "The classic: rump steak, fried egg and chips.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:beef_rump",
+    "starch:potatoes",
+    "no_oven",
+    "kid_friendly",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Cut the potatoes into chips and fry until golden.",
+    "Season the steak with salt and pepper; fry in a hot pan 3-4 minutes a side and rest.",
+    "Fry the eggs.",
+    "Serve steak topped with an egg, with chips."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_rump",
+     "qty": 220
+    },
+    {
+     "id": "eggs",
+     "qty": 1
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 20
+    },
+    {
+     "id": "black_pepper",
+     "qty": 1
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "rump_pepper_sauce_mash_beans",
+   "name": "Rump steak with pepper sauce, mash & green beans",
+   "description": "Rump steak in a creamy black-pepper sauce with mash and beans.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:beef_rump",
+    "starch:potatoes",
+    "no_oven",
+    "treat",
+    "cuisine:british"
+   ],
+   "steps": [
+    "Boil the potatoes and mash with butter and milk.",
+    "Fry the steak in a hot pan 3-4 minutes a side; rest.",
+    "Add cream and cracked black pepper to the pan and simmer until thick.",
+    "Boil the beans 5 minutes and serve everything with the sauce."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_rump",
+     "qty": 220
+    },
+    {
+     "id": "fresh_cream",
+     "qty": 50
+    },
+    {
+     "id": "black_pepper",
+     "qty": 2
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "butter",
+     "qty": 10
+    },
+    {
+     "id": "milk",
+     "qty": 30
+    },
+    {
+     "id": "green_beans",
+     "qty": 80
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "steak_strip_stir_fry_noodles",
+   "name": "Steak strip stir-fry with noodles",
+   "description": "Quick rump strips with peppers and carrots in soy-ginger, on noodles.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:beef_rump",
+    "starch:egg_noodles",
+    "no_oven",
+    "cuisine:chinese"
+   ],
+   "steps": [
+    "Cook the noodles and drain.",
+    "Slice the steak thinly; stir-fry in a very hot pan 2 minutes and remove.",
+    "Stir-fry the pepper and carrot with garlic and ginger 3 minutes.",
+    "Return the steak, add soy sauce and noodles and toss together."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_rump",
+     "qty": 160
+    },
+    {
+     "id": "egg_noodles",
+     "qty": 70
+    },
+    {
+     "id": "green_pepper",
+     "qty": 50
+    },
+    {
+     "id": "carrots",
+     "qty": 50
+    },
+    {
+     "id": "soy_sauce",
+     "qty": 15
+    },
+    {
+     "id": "ginger",
+     "qty": 4
+    },
+    {
+     "id": "garlic",
+     "qty": 4
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "prego_steak_rolls_chips",
+   "name": "Prego steak rolls & chips",
+   "description": "Garlicky peri-peri steak in buttered rolls, with chips.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:beef_rump",
+    "starch:bread_rolls",
+    "no_oven",
+    "kid_friendly",
+    "cuisine:portuguese"
+   ],
+   "steps": [
+    "Cut potatoes into chips and fry until golden.",
+    "Bash the steak thin and rub with garlic and peri-peri.",
+    "Fry 1-2 minutes a side in a hot pan with a little butter.",
+    "Butter and toast the rolls, fill with the steak and pan juices, and serve with chips."
+   ],
+   "ingredients": [
+    {
+     "id": "beef_rump",
+     "qty": 150
+    },
+    {
+     "id": "bread_rolls",
+     "qty": 1
+    },
+    {
+     "id": "garlic",
+     "qty": 4
+    },
+    {
+     "id": "peri_peri_spice",
+     "qty": 2
+    },
+    {
+     "id": "butter",
+     "qty": 10
+    },
+    {
+     "id": "potatoes",
+     "qty": 150
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 15
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "oxtail_stew_pap",
+   "name": "Oxtail stew & pap",
+   "description": "Rich, slow-cooked oxtail in gravy with pap.",
+   "cookMinutes": 210,
+   "tags": [
+    "protein:oxtail",
+    "starch:maize_meal",
+    "no_oven",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Brown the oxtail well in oil; add onion, carrots and garlic.",
+    "Add tomato paste, soup powder, stock and 4 cups of water.",
+    "Simmer covered about 3 hours until the meat falls off the bone, topping up water if needed.",
+    "Cook the pap and serve with the oxtail and gravy."
+   ],
+   "ingredients": [
+    {
+     "id": "oxtail",
+     "qty": 350
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 60
+    },
+    {
+     "id": "carrots",
+     "qty": 70
+    },
+    {
+     "id": "tomato_paste",
+     "qty": 15
+    },
+    {
+     "id": "brown_onion_soup",
+     "qty": 8
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 3
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "oxtail_potjie_butter_beans_rice",
+   "name": "Oxtail potjie with butter beans & rice",
+   "description": "Weekend oxtail potjie with butter beans, served on rice.",
+   "cookMinutes": 210,
+   "tags": [
+    "protein:oxtail",
+    "starch:rice",
+    "no_oven",
+    "treat",
+    "cuisine:afrikaans"
+   ],
+   "steps": [
+    "Brown the oxtail in a potjie or heavy pot with the onion.",
+    "Add tomatoes, Worcestershire sauce, stock and 4 cups of water; simmer covered 2.5 hours.",
+    "Add carrots and potatoes; cook 30 minutes, then stir in the butter beans to heat through.",
+    "Serve on rice."
+   ],
+   "ingredients": [
+    {
+     "id": "oxtail",
+     "qty": 350
+    },
+    {
+     "id": "butter_beans",
+     "qty": 80
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "carrots",
+     "qty": 60
+    },
+    {
+     "id": "onion",
+     "qty": 60
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 80
+    },
+    {
+     "id": "worcestershire_sauce",
+     "qty": 10
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 3
+    },
+    {
+     "id": "rice",
+     "qty": 70
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "braai_platter_wors_chops_pap",
+   "name": "Braai platter: wors, lamb chops, pap & chakalaka",
+   "description": "The full braai: boerewors and lamb chops with pap and chakalaka.",
+   "cookMinutes": 60,
+   "tags": [
+    "protein:lamb_loin_chops",
+    "starch:maize_meal",
+    "no_oven",
+    "kid_friendly",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Light the fire and cook the pap.",
+    "Season the chops with braai spice.",
+    "Braai the boerewors 15-20 minutes and the chops 10-12 minutes, turning.",
+    "Warm the chakalaka and serve the platter."
+   ],
+   "ingredients": [
+    {
+     "id": "boerewors",
+     "qty": 120
+    },
+    {
+     "id": "lamb_loin_chops",
+     "qty": 150
+    },
+    {
+     "id": "maize_meal",
+     "qty": 100
+    },
+    {
+     "id": "chakalaka",
+     "qty": 80
+    },
+    {
+     "id": "braai_spice",
+     "qty": 2
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "garlic_butter_prawns_rice",
+   "name": "Garlic butter prawns & rice",
+   "description": "Quick prawns in garlic, lemon and peri-peri butter on rice.",
+   "cookMinutes": 20,
+   "tags": [
+    "protein:prawns",
+    "starch:rice",
+    "no_oven",
+    "treat",
+    "cuisine:portuguese"
+   ],
+   "steps": [
+    "Cook the rice.",
+    "Thaw and pat the prawns dry.",
+    "Melt butter, add garlic and peri-peri, then fry the prawns 3-4 minutes until pink.",
+    "Squeeze over lemon and serve on the rice."
+   ],
+   "ingredients": [
+    {
+     "id": "prawns",
+     "qty": 130
+    },
+    {
+     "id": "butter",
+     "qty": 20
+    },
+    {
+     "id": "garlic",
+     "qty": 8
+    },
+    {
+     "id": "lemons",
+     "qty": 20
+    },
+    {
+     "id": "peri_peri_spice",
+     "qty": 1
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "durban_prawn_curry_rice",
+   "name": "Durban prawn curry & rice",
+   "description": "A fragrant tomato-based prawn curry.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:prawns",
+    "starch:rice",
+    "no_oven",
+    "treat",
+    "cuisine:indian"
+   ],
+   "steps": [
+    "Fry the onion; add garlic, ginger, curry powder and cumin for 1 minute.",
+    "Add the tomatoes and simmer 15 minutes until thick.",
+    "Add the prawns and cook 4-5 minutes until just pink.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "prawns",
+     "qty": 130
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "curry_powder",
+     "qty": 6
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "creamy_garlic_prawn_pasta",
+   "name": "Creamy garlic prawn pasta",
+   "description": "Prawns in a creamy garlic-tomato sauce with pasta.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:prawns",
+    "starch:pasta",
+    "no_oven",
+    "treat",
+    "cuisine:italian"
+   ],
+   "steps": [
+    "Cook the pasta.",
+    "Fry the garlic gently, add tomato paste and cream and simmer 3 minutes.",
+    "Add the prawns and cook 3-4 minutes; season with lemon, pepper and salt.",
+    "Toss with the pasta and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "prawns",
+     "qty": 110
+    },
+    {
+     "id": "pasta",
+     "qty": 90
+    },
+    {
+     "id": "fresh_cream",
+     "qty": 60
+    },
+    {
+     "id": "garlic",
+     "qty": 6
+    },
+    {
+     "id": "tomato_paste",
+     "qty": 10
+    },
+    {
+     "id": "lemons",
+     "qty": 10
+    },
+    {
+     "id": "black_pepper",
+     "qty": 1
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "pan_fried_calamari_chips",
+   "name": "Pan-fried calamari & chips with lemon",
+   "description": "Lightly floured calamari with chips, lemon and mayo.",
+   "cookMinutes": 35,
+   "tags": [
+    "protein:calamari",
+    "starch:potatoes",
+    "no_oven",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Cut potatoes into chips and fry until golden.",
+    "Toss the thawed calamari in seasoned flour.",
+    "Fry in hot oil 2 minutes until just cooked (longer makes it tough).",
+    "Serve with chips, lemon wedges and mayonnaise."
+   ],
+   "ingredients": [
+    {
+     "id": "calamari",
+     "qty": 160
+    },
+    {
+     "id": "cake_flour",
+     "qty": 15
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "lemons",
+     "qty": 20
+    },
+    {
+     "id": "mayonnaise",
+     "qty": 15
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 25
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "peri_peri_calamari_rice",
+   "name": "Peri-peri calamari & rice",
+   "description": "Calamari in garlic peri-peri butter with tomato rice.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:calamari",
+    "starch:rice",
+    "no_oven",
+    "treat",
+    "cuisine:portuguese"
+   ],
+   "steps": [
+    "Cook the rice and stir in the chopped tomato.",
+    "Melt butter with garlic and peri-peri.",
+    "Fry the calamari 2 minutes on high heat.",
+    "Add lemon juice and serve on the rice."
+   ],
+   "ingredients": [
+    {
+     "id": "calamari",
+     "qty": 160
+    },
+    {
+     "id": "butter",
+     "qty": 15
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "peri_peri_spice",
+     "qty": 2
+    },
+    {
+     "id": "lemons",
+     "qty": 15
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "tomato",
+     "qty": 60
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "mussels_garlic_cream_bread",
+   "name": "Mussels in garlic cream with bread",
+   "description": "Half-shell mussels in a garlic-cream sauce, with bread for dipping.",
+   "cookMinutes": 25,
+   "tags": [
+    "protein:mussels",
+    "starch:bread",
+    "no_oven",
+    "treat",
+    "cuisine:portuguese"
+   ],
+   "steps": [
+    "Fry the onion and garlic in butter until soft.",
+    "Add the cream and bring to a simmer.",
+    "Add the mussels, cover and cook 5-6 minutes until hot through; season with pepper.",
+    "Serve in bowls with bread."
+   ],
+   "ingredients": [
+    {
+     "id": "mussels",
+     "qty": 300
+    },
+    {
+     "id": "fresh_cream",
+     "qty": 60
+    },
+    {
+     "id": "garlic",
+     "qty": 6
+    },
+    {
+     "id": "onion",
+     "qty": 40
+    },
+    {
+     "id": "butter",
+     "qty": 10
+    },
+    {
+     "id": "bread",
+     "qty": 100
+    },
+    {
+     "id": "black_pepper",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "seafood_paella",
+   "name": "Seafood paella",
+   "description": "One-pan rice with prawns, mussels and calamari.",
+   "cookMinutes": 50,
+   "tags": [
+    "protein:mussels",
+    "starch:rice",
+    "no_oven",
+    "one_pot",
+    "treat",
+    "cuisine:spanish"
+   ],
+   "steps": [
+    "Fry the onion, garlic and tomato in a wide pan; add paprika and turmeric.",
+    "Stir in the rice, then add stock made with 2.5 cups of water; simmer 15 minutes without stirring.",
+    "Push the prawns, calamari, mussels and peas into the rice; cover and cook 8 minutes.",
+    "Rest 5 minutes and serve with lemon."
+   ],
+   "ingredients": [
+    {
+     "id": "prawns",
+     "qty": 60
+    },
+    {
+     "id": "mussels",
+     "qty": 150
+    },
+    {
+     "id": "calamari",
+     "qty": 60
+    },
+    {
+     "id": "rice",
+     "qty": 90
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tomato",
+     "qty": 60
+    },
+    {
+     "id": "garlic",
+     "qty": 5
+    },
+    {
+     "id": "paprika",
+     "qty": 2
+    },
+    {
+     "id": "turmeric",
+     "qty": 1
+    },
+    {
+     "id": "peas_frozen",
+     "qty": 40
+    },
+    {
+     "id": "stock_cubes",
+     "qty": 3
+    },
+    {
+     "id": "lemons",
+     "qty": 15
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 15
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "braai_snoek_apricot_sweet_potato",
+   "name": "Braaied snoek with apricot glaze & sweet potatoes",
+   "description": "Cape-style braaied snoek basted with apricot-garlic butter.",
+   "cookMinutes": 45,
+   "tags": [
+    "protein:snoek",
+    "starch:sweet_potatoes",
+    "no_oven",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Wrap the sweet potatoes in foil and cook in the coals 40 minutes (or boil them).",
+    "Melt butter with apricot jam, garlic and lemon juice.",
+    "Braai the snoek skin-side down over medium coals 15-20 minutes, basting often.",
+    "Serve with the sweet potatoes."
+   ],
+   "ingredients": [
+    {
+     "id": "snoek",
+     "qty": 300
+    },
+    {
+     "id": "apricot_jam",
+     "qty": 25
+    },
+    {
+     "id": "butter",
+     "qty": 15
+    },
+    {
+     "id": "lemons",
+     "qty": 15
+    },
+    {
+     "id": "garlic",
+     "qty": 4
+    },
+    {
+     "id": "sweet_potatoes",
+     "qty": 180
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "smoorsnoek_rice",
+   "name": "Smoorsnoek (braised smoked snoek) with rice",
+   "description": "Flaked smoked snoek braised with onion, tomato and potato.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:snoek_smoked",
+    "starch:rice",
+    "no_oven",
+    "cuisine:cape_malay"
+   ],
+   "steps": [
+    "Cook the rice.",
+    "Fry the onion and garlic until soft, add diced potato and a splash of water and cook 10 minutes.",
+    "Add the tomato and chilli, then the flaked snoek; cook 5 minutes.",
+    "Serve on rice with chutney."
+   ],
+   "ingredients": [
+    {
+     "id": "snoek_smoked",
+     "qty": 90
+    },
+    {
+     "id": "potatoes",
+     "qty": 100
+    },
+    {
+     "id": "onion",
+     "qty": 60
+    },
+    {
+     "id": "tomato",
+     "qty": 80
+    },
+    {
+     "id": "chilli_powder",
+     "qty": 1
+    },
+    {
+     "id": "garlic",
+     "qty": 4
+    },
+    {
+     "id": "rice",
+     "qty": 70
+    },
+    {
+     "id": "fruit_chutney",
+     "qty": 15
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "kingklip_lemon_butter_chips",
+   "name": "Pan-fried kingklip with lemon butter, chips & green beans",
+   "description": "Kingklip fried in lemon butter, with chips and green beans.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:kingklip",
+    "starch:potatoes",
+    "no_oven",
+    "treat",
+    "cuisine:south_african"
+   ],
+   "steps": [
+    "Cut the potatoes into chips and fry until golden.",
+    "Season the kingklip and fry in a little oil 3-4 minutes a side.",
+    "Add butter and lemon juice to the pan and spoon over the fish.",
+    "Boil the beans 5 minutes and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "kingklip",
+     "qty": 180
+    },
+    {
+     "id": "butter",
+     "qty": 15
+    },
+    {
+     "id": "lemons",
+     "qty": 20
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "green_beans",
+     "qty": 80
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 20
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "cape_malay_kingklip_curry",
+   "name": "Cape Malay kingklip curry & rice",
+   "description": "Mild, fragrant fish curry with coconut and tomato.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:kingklip",
+    "starch:rice",
+    "no_oven",
+    "treat",
+    "cuisine:cape_malay"
+   ],
+   "steps": [
+    "Fry the onion; add garlic, ginger, curry powder, turmeric and cumin.",
+    "Add tomatoes and coconut milk and simmer 15 minutes.",
+    "Add the kingklip pieces and simmer gently 6-8 minutes.",
+    "Serve with rice."
+   ],
+   "ingredients": [
+    {
+     "id": "kingklip",
+     "qty": 160
+    },
+    {
+     "id": "onion",
+     "qty": 50
+    },
+    {
+     "id": "tinned_tomatoes",
+     "qty": 80
+    },
+    {
+     "id": "coconut_milk",
+     "qty": 60
+    },
+    {
+     "id": "curry_powder",
+     "qty": 5
+    },
+    {
+     "id": "turmeric",
+     "qty": 1
+    },
+    {
+     "id": "ground_cumin",
+     "qty": 1
+    },
+    {
+     "id": "garlic",
+     "qty": 4
+    },
+    {
+     "id": "ginger",
+     "qty": 4
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "baked_salmon_potatoes_green_beans",
+   "name": "Oven-baked salmon, potatoes & green beans",
+   "description": "Lemon-garlic butter salmon with roast potatoes and beans.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:salmon",
+    "starch:potatoes",
+    "treat",
+    "cuisine:british"
+   ],
+   "steps": [
+    "Heat the oven to 200 °C; roast the potatoes 25 minutes.",
+    "Put the salmon on the tray, top with butter, garlic, lemon and herbs.",
+    "Bake 12-15 minutes more.",
+    "Boil the beans 5 minutes and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "salmon",
+     "qty": 125
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "green_beans",
+     "qty": 80
+    },
+    {
+     "id": "lemons",
+     "qty": 15
+    },
+    {
+     "id": "butter",
+     "qty": 10
+    },
+    {
+     "id": "garlic",
+     "qty": 4
+    },
+    {
+     "id": "mixed_herbs",
+     "qty": 1
+    },
+    {
+     "id": "salt",
+     "qty": 1
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "soy_ginger_salmon_rice_cabbage",
+   "name": "Soy-ginger salmon, rice & cabbage",
+   "description": "Pan-glazed soy-ginger salmon with rice and stir-fried cabbage.",
+   "cookMinutes": 30,
+   "tags": [
+    "protein:salmon",
+    "starch:rice",
+    "no_oven",
+    "treat",
+    "cuisine:chinese"
+   ],
+   "steps": [
+    "Cook the rice.",
+    "Mix soy sauce, ginger, garlic and sugar.",
+    "Fry the salmon 3 minutes a side, then add the sauce and let it bubble until glossy.",
+    "Stir-fry the shredded cabbage 3 minutes and serve."
+   ],
+   "ingredients": [
+    {
+     "id": "salmon",
+     "qty": 125
+    },
+    {
+     "id": "soy_sauce",
+     "qty": 15
+    },
+    {
+     "id": "ginger",
+     "qty": 5
+    },
+    {
+     "id": "garlic",
+     "qty": 4
+    },
+    {
+     "id": "sugar",
+     "qty": 4
+    },
+    {
+     "id": "rice",
+     "qty": 80
+    },
+    {
+     "id": "cabbage",
+     "qty": 80
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 10
+    }
+   ],
+   "published": false
+  },
+  {
+   "id": "lm_prawn_calamari_platter_chips",
+   "name": "LM prawn & calamari platter with chips",
+   "description": "Mozambican-style garlic peri-peri prawns and calamari with chips.",
+   "cookMinutes": 40,
+   "tags": [
+    "protein:prawns",
+    "starch:potatoes",
+    "no_oven",
+    "treat",
+    "cuisine:portuguese"
+   ],
+   "steps": [
+    "Cut the potatoes into chips and fry until golden.",
+    "Melt butter with garlic and peri-peri.",
+    "Fry the prawns 3 minutes and the calamari 2 minutes in the butter.",
+    "Squeeze over lemon and serve with chips."
+   ],
+   "ingredients": [
+    {
+     "id": "prawns",
+     "qty": 100
+    },
+    {
+     "id": "calamari",
+     "qty": 100
+    },
+    {
+     "id": "butter",
+     "qty": 20
+    },
+    {
+     "id": "garlic",
+     "qty": 6
+    },
+    {
+     "id": "peri_peri_spice",
+     "qty": 2
+    },
+    {
+     "id": "lemons",
+     "qty": 20
+    },
+    {
+     "id": "potatoes",
+     "qty": 200
+    },
+    {
+     "id": "cooking_oil",
+     "qty": 20
+    },
+    {
+     "id": "salt",
+     "qty": 2
+    }
+   ],
+   "published": false
   }
  ]
 }
