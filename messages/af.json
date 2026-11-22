@@ -340,6 +340,7 @@
     "signedInAs": "TODO: Signed in as {email}",
     "signOut": "TODO: Sign out",
     "error": "TODO: Sign-in didn't work. Please try again.",
+    "unavailable": "TODO: Signing in isn't switched on yet. Everything still works without an account.",
     "or": "TODO: or"
   },
   "settings": {

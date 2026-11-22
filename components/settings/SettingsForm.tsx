@@ -14,6 +14,7 @@ import { Chip } from '@/components/ui/Chip';
 import { Toast } from '@/components/ui/Toast';
 import { usePhotosSetting, writePhotosSetting } from '@/components/ui/useImagesAllowed';
 import { fieldClass } from '@/components/ui/field';
+import type { SignInMethods } from '@/lib/auth/methods';
 
 const AVOID = ['pork', 'beef', 'fish', 'nuts', 'dairy', 'gluten'] as const;
 const KINDS = ['specials_day', 'tonight', 'month_end', 'payday', 'receipt_nudge'] as const;
@@ -31,12 +32,15 @@ export interface SettingsData {
   language: 'en' | 'xh' | 'af';
   shareLinks: { token: string }[];
   user: { email: string | null } | null;
+  signInMethods: SignInMethods;
   appUrl: string;
 }
 
 export function SettingsForm({ data }: { data: SettingsData }) {
   const t = useTranslations('settings');
   const to = useTranslations('onboarding');
+  const tAuth = useTranslations('auth');
+  const canSignIn = data.signInMethods.google || data.signInMethods.email;
   const router = useRouter();
   const { openSheet } = useShops();
   const [h, setH] = useState({ light: data.light, average: data.average, big: data.big });
@@ -162,9 +166,9 @@ export function SettingsForm({ data }: { data: SettingsData }) {
       <Section title={t('share')}>
         <p className="text-small text-text-muted">{t('shareHelp')}</p>
         {sharePrompt ? (
-          <AccountPrompt signedIn={Boolean(data.user)} force onSkip={createShare} />
+          <AccountPrompt signedIn={Boolean(data.user)} methods={data.signInMethods} force onSkip={createShare} />
         ) : (
-          <Button variant="secondary" onClick={() => (data.user ? createShare() : setSharePrompt(true))} icon={<Link2 aria-hidden className="size-4" />}>
+          <Button variant="secondary" onClick={() => (data.user || !canSignIn ? createShare() : setSharePrompt(true))} icon={<Link2 aria-hidden className="size-4" />}>
             {t('shareCreate')}
           </Button>
         )}
@@ -194,7 +198,7 @@ export function SettingsForm({ data }: { data: SettingsData }) {
       </Section>
 
       <Section title={t('account')}>
-        {data.user ? <AccountStatus email={data.user.email} /> : <ButtonLink href="/signin">{t('signIn')}</ButtonLink>}
+        {data.user ? <AccountStatus email={data.user.email} /> : canSignIn ? <ButtonLink href="/signin">{t('signIn')}</ButtonLink> : <p className="text-small text-text-muted">{tAuth('unavailable')}</p>}
       </Section>
 
       <Section title={t('privacy')}>

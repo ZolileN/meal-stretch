@@ -34,3 +34,11 @@ Format: `- [ ] (Phase N) task: why / exact steps`.
 - [ ] (Prices) Refresh the guide prices about once a month (they stay usable for 90 days): repeat the web lookups in `scripts/fixtures-gen/guide_rows.py` (update prices and `DATE`), run `python3 scripts/fixtures-gen/guide_rows.py`, then `set -a; . ./.env.neon; set +a; DATABASE_HTTP_ENDPOINT= pnpm import:prices seed/prices.guide.csv --source guide`. Real prices (leaflets, receipts, CSV) always win over guide prices.
 
 - [ ] (Analytics) Turn on the two Vercel features, or nothing is collected: Vercel dashboard → your project → **Analytics** → Enable, then **Speed Insights** → Enable. Redeploy after merging this branch. Results appear in those two tabs after the first visits (the Hobby plan has a monthly event limit; check the usage page if traffic grows).
+- [ ] (Accounts) Google sign-in, free (step by step):
+  1. https://console.cloud.google.com → project picker → **New project** ("MealStretch"). No billing account needed.
+  2. **Google Auth Platform → Branding**: app name, your support email, developer contact email. Leave the logo out (a logo needs Google's brand check first). Authorised domain: `vercel.app` is shared, so add your own domain here when you have one.
+  3. **Audience**: User type **External** → then **Publish app** (while it says "Testing", only test users you list can sign in).
+  4. **Data access**: keep just `openid`, `.../auth/userinfo.email`, `.../auth/userinfo.profile` (no review needed for these).
+  5. **Clients → Create client** → Web application. Authorised JavaScript origin `https://meal-stretch.vercel.app`; authorised redirect URI `https://meal-stretch.vercel.app/api/auth/callback/google`. For local testing also add `http://localhost:3000` and `http://localhost:3000/api/auth/callback/google`. Copy the client ID and secret (the secret is shown once).
+  6. Vercel → project → Settings → Environment Variables (Production): `AUTH_GOOGLE_ID`, `AUTH_GOOGLE_SECRET`, and `AUTH_SECRET` if not set yet (`openssl rand -base64 32`). Then redeploy.
+  7. Check: open /signin on the live site → "Continue with Google" → you land back on your plan, and Settings shows "Signed in as …".

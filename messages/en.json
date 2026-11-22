@@ -340,6 +340,7 @@
     "signedInAs": "Signed in as {email}",
     "signOut": "Sign out",
     "error": "Sign-in didn't work. Please try again.",
+    "unavailable": "Signing in isn't switched on yet. Everything still works without an account.",
     "or": "or"
   },
   "settings": {

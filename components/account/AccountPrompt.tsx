@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { UserRound } from 'lucide-react';
 import { Button, ButtonLink } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import type { SignInMethods } from '@/lib/auth/methods';
 
 const KEY = 'ms_visit_days';
 const DISMISSED = 'ms_account_prompt_dismissed';
@@ -21,7 +22,17 @@ function visitDays(): number {
   }
 }
 
-export function AccountPrompt({ signedIn, force = false, onSkip }: { signedIn: boolean; force?: boolean; onSkip?: () => void }) {
+export function AccountPrompt({
+  signedIn,
+  methods,
+  force = false,
+  onSkip,
+}: {
+  signedIn: boolean;
+  methods: SignInMethods;
+  force?: boolean;
+  onSkip?: () => void;
+}) {
   const t = useTranslations('account');
   const [show, setShow] = useState(force);
   useEffect(() => {
@@ -35,7 +46,7 @@ export function AccountPrompt({ signedIn, force = false, onSkip }: { signedIn: b
     // eslint-disable-next-line react-hooks/set-state-in-effect
     if (!dismissed && visitDays() >= 2) setShow(true);
   }, [signedIn, force]);
-  if (signedIn || !show) return null;
+  if (signedIn || !show || !(methods.google || methods.email)) return null;
   const skip = () => {
     try {
       if (!force) window.localStorage.setItem(DISMISSED, '1');
@@ -52,10 +63,12 @@ export function AccountPrompt({ signedIn, force = false, onSkip }: { signedIn: b
         {t('promptTitle')}
       </p>
       <div className="mt-3 flex flex-wrap gap-2">
-        <ButtonLink href="/signin">{t('email')}</ButtonLink>
-        <ButtonLink href="/signin" variant="secondary">
-          {t('google')}
-        </ButtonLink>
+        {methods.google && <ButtonLink href="/signin">{t('google')}</ButtonLink>}
+        {methods.email && (
+          <ButtonLink href="/signin" variant={methods.google ? 'secondary' : 'primary'}>
+            {t('email')}
+          </ButtonLink>
+        )}
         <Button variant="ghost" onClick={skip}>
           {t('skip')}
         </Button>

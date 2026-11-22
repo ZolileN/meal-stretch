@@ -6,7 +6,8 @@ import { cookies } from 'next/headers';
 import { createTranslator } from 'next-intl';
 import type { Provider } from 'next-auth/providers';
 import { getDb } from '@/lib/db';
-import { env, features } from '@/lib/env';
+import { env } from '@/lib/env';
+import { signInMethods } from '@/lib/auth/methods';
 import { dbAdapter } from '@/lib/auth/adapter';
 import { attachDeviceHousehold } from '@/lib/auth/merge';
 import { sendMagicLink } from '@/lib/auth/mail';
@@ -18,8 +19,9 @@ import en from '@/messages/runtime/en.json';
 export const { handlers, auth, signIn, signOut } = NextAuth(() => {
   const e = env();
   const providers: Provider[] = [];
-  if (features.googleAuth()) providers.push(Google({ clientId: e.AUTH_GOOGLE_ID!, clientSecret: e.AUTH_GOOGLE_SECRET! }));
-  if (features.emailAuth() || e.NODE_ENV !== 'production' || e.E2E) {
+  const methods = signInMethods();
+  if (methods.google) providers.push(Google({ clientId: e.AUTH_GOOGLE_ID!, clientSecret: e.AUTH_GOOGLE_SECRET! }));
+  if (methods.email) {
     providers.push(
       Resend({
         apiKey: e.RESEND_API_KEY ?? 'dev',
