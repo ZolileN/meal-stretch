@@ -67,6 +67,10 @@ export function SettingsForm({ data }: { data: SettingsData }) {
   return (
     <div className="space-y-3">
       <Toast message={msg} onDone={clear} />
+      <Section title={t('account')}>
+        {data.user ? <AccountStatus email={data.user.email} /> : canSignIn ? <ButtonLink href="/signin">{t('signIn')}</ButtonLink> : <p className="text-small text-text-muted">{tAuth('unavailable')}</p>}
+      </Section>
+
       <Section title={t('shops')}>
         <Button variant="secondary" onClick={() => openSheet('shops')} icon={<MapPin aria-hidden className="size-4" />}>
           {t('changeShops')}
@@ -195,10 +199,6 @@ export function SettingsForm({ data }: { data: SettingsData }) {
             );
           })}
         </ul>
-      </Section>
-
-      <Section title={t('account')}>
-        {data.user ? <AccountStatus email={data.user.email} /> : canSignIn ? <ButtonLink href="/signin">{t('signIn')}</ButtonLink> : <p className="text-small text-text-muted">{tAuth('unavailable')}</p>}
       </Section>
 
       <Section title={t('privacy')}>
