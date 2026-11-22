@@ -1,6 +1,6 @@
 # Handover: budget-first supper planner (MVP, Phases 0–8)
 
-Built 2026-11-21 from `PRD.md` and `docs/BUILD.md`. Status per step and phase gates: `docs/progress.md`. Every non-obvious choice: `docs/decisions.md`. Work only a person can do: the prioritised list at the end of this file (full list in `docs/human-todo.md`).
+Built 2026-11-21 from `docs/PRD.md` and `docs/BUILD.md`. Status per step and phase gates: `docs/progress.md`. Every non-obvious choice: `docs/decisions.md`. Work only a person can do: the prioritised list at the end of this file (full list in `docs/human-todo.md`).
 
 ## What was built
 
@@ -118,7 +118,7 @@ localStorage shops                  lib/prices/snapshot ◀── current_prices
 
 ## Human to-do, in priority order
 
-1. **Confirm the reconstructed rules and four money defaults.** Review `CLAUDE.md` and `PRD.md` (rebuilt from the .docx files). Confirm the 2026-11-21 defaults in `docs/decisions.md`: per plate = per serving, the savings split, no double counting between slips and plans, and "until the 25th" = up to the day before.
+1. **Confirm the reconstructed rules and four money defaults.** Review `CLAUDE.md` and `docs/PRD.md` (rebuilt from the .docx files in `docs/`). Confirm the 2026-11-21 defaults in `docs/decisions.md`: per plate = per serving, the savings split, no double counting between slips and plans, and "until the 25th" = up to the day before.
 2. **Production infrastructure.** Neon project, Vercel project and every secret in the env table: `AUTH_SECRET`, `CRON_SECRET`, VAPID keys, `ANTHROPIC_API_KEY`, `BLOB_READ_WRITE_TOKEN`, Resend + verified domain, Google OAuth, `ADMIN_EMAILS`, `APP_URL`. Never set `E2E`.
 3. **Stores.** `pnpm import:osm --tiles --all` (GP and KZN were loaded on 2026-11-21; EC and WC around the pilot areas), verify every branch within 15 km of both pilot areas, then delete `TEST` branches and seed places.
 4. **Recipes.** Review and cook-test the 206 drafts and publish at least 60 in `/admin/recipes`.

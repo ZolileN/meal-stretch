@@ -15,13 +15,13 @@ You are the lead engineer building **MealStretch**, a budget-first meal planning
 Sources of truth, in priority order:
 
 - `CLAUDE.md`: build rules. Non-negotiable.
-- `PRD.md`: product spec. Requirement IDs (LOC-1, PLN-3, ...) are what you build and test against.
+- `docs/PRD.md`: product spec. Requirement IDs (LOC-1, PLN-3, ...) are what you build and test against.
 - `packages/engine/src/types.ts`: engine contracts. Implement against them; don't redesign them.
 - This file: the order of work, the phase gates and the autonomy rules.
 
 ## 2. Startup procedure (every session)
 
-- Read `CLAUDE.md`, `PRD.md`, `docs/progress.md`, `docs/decisions.md`, and `docs/human-todo.md` if it exists.
+- Read `CLAUDE.md`, `docs/PRD.md`, `docs/progress.md`, `docs/decisions.md`, and `docs/human-todo.md` if it exists.
 - Run `git status` and `git log --oneline -20`.
 - **If** `docs/progress.md`** already has a checkpoint:** resume from the first unchecked item. Don't redo finished work. Say in one line where you're resuming, then continue.
 - **If this is the first session:** a. Rewrite `docs/progress.md` as a checklist of every step in §5 below (one checkbox per numbered step, grouped by phase), plus a `## Checkpoint` section at the top. b. Create your own task list with all phases. c. Ask me **one single batch** of questions, but only about things that would be expensive to get wrong (money calculations, privacy, data model) and that the PRD doesn't answer. Also ask for any credentials you need (see §4). Then **wait once** for my answers. d. After my answers, run every phase to the end without asking for permission between phases.
@@ -54,7 +54,7 @@ Work strictly in order. Each numbered step is a checkbox in `docs/progress.md`.
 
 ### Phase 0: Repo foundation
 
-0.1 Set up Next.js App Router + TypeScript strict + Tailwind + pnpm **in this existing repo**. Do not let a generator overwrite PRD.md, CLAUDE.md, db/, lib/, app/api/, components/, scripts/, seed/, packages/, docs/. If a generator is easier, run it in a temp folder and copy over only what's needed. 0.2 pnpm workspace; `packages/engine` as its own package with its own Vitest config. It must not import next, lib/db, fetch, or any LLM SDK. 0.3 Drizzle ORM + `@neondatabase/serverless`. `db/001_stores_location.sql` becomes raw migration 0001, unchanged. 0.4 `lib/env.ts` (Zod, fail fast with clear messages) and `docker-compose.yml` (PostGIS). 0.5 `next-intl` with `messages/en.json`, `messages/xh.json`, `messages/af.json` (xh/af mirror en with `TODO:` markers). 0.6 `lib/money.ts`: `formatRand(cents)` → `R1,234.50`, parsing helpers, negatives; integer-cents assertion helper. Full unit tests. 0.7 Vitest + Playwright + fast-check configured, one smoke test each. GitHub Actions: install → typecheck → unit tests. 0.8 package.json scripts from CLAUDE.md. Placeholder home page using `BRAND` from `lib/brand.ts` and a translated string.
+0.1 Set up Next.js App Router + TypeScript strict + Tailwind + pnpm **in this existing repo**. Do not let a generator overwrite docs/, CLAUDE.md, db/, lib/, app/api/, components/, scripts/, seed/, packages/, docs/. If a generator is easier, run it in a temp folder and copy over only what's needed. 0.2 pnpm workspace; `packages/engine` as its own package with its own Vitest config. It must not import next, lib/db, fetch, or any LLM SDK. 0.3 Drizzle ORM + `@neondatabase/serverless`. `db/001_stores_location.sql` becomes raw migration 0001, unchanged. 0.4 `lib/env.ts` (Zod, fail fast with clear messages) and `docker-compose.yml` (PostGIS). 0.5 `next-intl` with `messages/en.json`, `messages/xh.json`, `messages/af.json` (xh/af mirror en with `TODO:` markers). 0.6 `lib/money.ts`: `formatRand(cents)` → `R1,234.50`, parsing helpers, negatives; integer-cents assertion helper. Full unit tests. 0.7 Vitest + Playwright + fast-check configured, one smoke test each. GitHub Actions: install → typecheck → unit tests. 0.8 package.json scripts from CLAUDE.md. Placeholder home page using `BRAND` from `lib/brand.ts` and a translated string.
 
 ### Phase 1: Location & stores (LOC-1…6, ONB-2)
 
@@ -128,4 +128,4 @@ The code already exists and was tested against PostGIS (see `docs/location-modul
 
 **Fix a bug:** `Bug: <what happened + error>. Reproduce it with a failing test, explain the root cause in 2–3 sentences, apply the smallest fix, run the full suite, commit as fix(<area>), then continue the build from the checkpoint.`
 
-**Change request:** `Change: <what I want>. List the affected PRD sections, requirement IDs, tables and code; update PRD.md and docs/decisions.md; implement and test; update progress.md; then continue the build from the checkpoint.`
+**Change request:** `Change: <what I want>. List the affected PRD sections, requirement IDs, tables and code; update docs/PRD.md and docs/decisions.md; implement and test; update progress.md; then continue the build from the checkpoint.`

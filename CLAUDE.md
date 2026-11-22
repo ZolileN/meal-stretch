@@ -1,7 +1,7 @@
 # CLAUDE.md: MealStretch build rules
 
-These rules are non-negotiable. `PRD.md` is the product spec; `docs/BUILD.md` is the order of work.
-(Reconstructed from PRD.md and docs/BUILD.md §6 on 2026-11-21; the original file was not available.)
+These rules are non-negotiable. `docs/PRD.md` is the product spec; `docs/BUILD.md` is the order of work.
+(Reconstructed from docs/PRD.md and docs/BUILD.md §6 on 2026-11-21; the original file was not available.)
 
 ## Stack
 

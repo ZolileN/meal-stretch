@@ -84,12 +84,12 @@ seed/             Ingredients, recipes, retailers, test shops, guide prices
 scripts/          Dev server, migrations, seeding and importers
 messages/         Translations (en, xh, af)
 tests/            unit/, db/, e2e/
-docs/             Build docs (see below)
+docs/             All documentation, including the spec (see below)
 ```
 
 ## Deploying
 
-The app runs on **Vercel**, with **Neon** for the database. The full guide, including every environment variable and what happens without it, is in [docs/handover.md](docs/handover.md#deploy-to-vercel--neon). In short:
+The app runs on **Vercel**, with **Neon** for the database. The full guide, including every environment variable and what happens without it, is in [handover.md](handover.md#deploy-to-vercel--neon). In short:
 
 1. Create a Neon database and set `DATABASE_URL`.
 2. Run `pnpm db:migrate && pnpm db:seed --production`, then import the shops with `pnpm import:osm --tiles --all`.
@@ -101,18 +101,18 @@ The app runs on **Vercel**, with **Neon** for the database. The full guide, incl
 | File | What's in it |
 | --- | --- |
 | [PRD.md](PRD.md) | The product spec: what to build and why |
-| [CLAUDE.md](CLAUDE.md) | Rules every change must follow (money, privacy, copy, UI) |
-| [docs/BUILD.md](docs/BUILD.md) | The order the MVP was built in |
-| [docs/handover.md](docs/handover.md) | What was built, how to run and deploy it, environment variables |
-| [docs/THEME.md](docs/THEME.md) | Design system: colours, type, components |
-| [docs/decisions.md](docs/decisions.md) | Every non-obvious decision, with the date and reason |
-| [docs/human-todo.md](docs/human-todo.md) | Jobs that need a person (accounts, keys, content, legal) |
-| [docs/pilot-checklist.md](docs/pilot-checklist.md) | Checks before the pilot launch |
+| [CLAUDE.md](../CLAUDE.md) | Rules every change must follow (money, privacy, copy, UI) |
+| [BUILD.md](BUILD.md) | The order the MVP was built in |
+| [handover.md](handover.md) | What was built, how to run and deploy it, environment variables |
+| [THEME.md](THEME.md) | Design system: colours, type, components |
+| [decisions.md](decisions.md) | Every non-obvious decision, with the date and reason |
+| [human-todo.md](human-todo.md) | Jobs that need a person (accounts, keys, content, legal) |
+| [pilot-checklist.md](pilot-checklist.md) | Checks before the pilot launch |
 
 ## Contributing
 
 - **Make each change on its own branch** and open a pull request. Don't commit straight to `main`.
-- **Follow [CLAUDE.md](CLAUDE.md).** The main rules:
+- **Follow [CLAUDE.md](../CLAUDE.md).** The main rules:
   - money is integer cents;
   - every price shown has a source and a date;
   - no hard-coded user-facing text (use next-intl);
