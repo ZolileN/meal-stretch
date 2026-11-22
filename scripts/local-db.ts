@@ -19,6 +19,7 @@ import { seedAll } from './seed-lib';
 
 const port = Number(process.env.LOCAL_DB_PORT ?? 4444);
 const dir = process.env.LOCAL_DB_DIR ?? '.pglite/dev';
+const LOOPBACK = new Set(['127.0.0.1', '::1', '::ffff:127.0.0.1']);
 
 type Q = { query: string; params?: unknown[] };
 
@@ -49,6 +50,11 @@ async function main() {
   (db as unknown as { parsers: unknown }).parsers = RAW;
 
   const server = createServer(async (req, res) => {
+    // No password on this shim, so only this computer may talk to it (not others on the same Wi-Fi).
+    if (!LOOPBACK.has(req.socket.remoteAddress ?? '')) {
+      res.writeHead(403).end();
+      return;
+    }
     if (req.method === 'GET' && req.url === '/health') {
       res.writeHead(200).end('ok');
       return;

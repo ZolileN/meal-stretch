@@ -23,6 +23,12 @@ export type Purpose = 'tweak' | 'receipt' | 'leaflet' | 'recipe_draft' | 'transl
 /** Per-household daily caps (PRD §15). */
 export const DAILY_CAPS: Partial<Record<Purpose, number>> = { tweak: 10, receipt: 5, ideas: 20 };
 
+/**
+ * App-wide daily caps across all households (docs/decisions.md 2026-11-22). A household is only a cookie, so
+ * per-household caps alone can be dodged by clearing cookies; this bounds the worst-case daily spend.
+ */
+export const GLOBAL_DAILY_CAPS: Partial<Record<Purpose, number>> = { tweak: 1000, receipt: 300, ideas: 2000 };
+
 /** Models that accept the server-side refusal fallback (skill: claude-api, 2026-11). */
 const SERVER_FALLBACK = new Set(['claude-fable-5-2', 'claude-fable-5-1', 'claude-opus-5-5', 'claude-opus-5', 'claude-sonnet-5-5']);
 const FALLBACK_BETA = 'server-side-fallback-2026-07-01';
@@ -35,7 +41,7 @@ const PRICES: Record<string, [number, number]> = {
 };
 
 export class ClaudeError extends Error {
-  constructor(public code: 'unavailable' | 'cap_reached' | 'refused' | 'invalid_output' | 'api_error', message: string) {
+  constructor(public code: 'unavailable' | 'cap_reached' | 'global_cap' | 'refused' | 'invalid_output' | 'api_error', message: string) {
     super(message);
     this.name = 'ClaudeError';
   }
@@ -84,11 +90,23 @@ export async function usedToday(db: Db, householdId: string, purpose: Purpose, n
   return Number(r?.n ?? 0);
 }
 
-/** Throws ClaudeError('cap_reached') when the household has used today's allowance. */
-export async function assertCap(db: Db, householdId: string | null, purpose: Purpose, now = new Date()) {
+export async function usedTodayAll(db: Db, purpose: Purpose, now = new Date()): Promise<number> {
+  const [r] = await query<{ n: number }>(
+    db,
+    sql`select count(*)::int as n from llm_calls where purpose = ${purpose} and created_at >= ${dayStartSA(now)}::timestamptz`,
+  );
+  return Number(r?.n ?? 0);
+}
+
+/**
+ * Throws ClaudeError('cap_reached') when the household has used today's allowance, and
+ * ClaudeError('global_cap') when the whole app has.
+ */
+export async function assertCap(db: Db, householdId: string | null, purpose: Purpose, now = new Date(), globalCaps = GLOBAL_DAILY_CAPS) {
   const cap = DAILY_CAPS[purpose];
-  if (!cap || !householdId) return;
-  if ((await usedToday(db, householdId, purpose, now)) >= cap) throw new ClaudeError('cap_reached', `Daily limit of ${cap} reached`);
+  if (cap && householdId && (await usedToday(db, householdId, purpose, now)) >= cap) throw new ClaudeError('cap_reached', `Daily limit of ${cap} reached`);
+  const global = globalCaps[purpose];
+  if (global && (await usedTodayAll(db, purpose, now)) >= global) throw new ClaudeError('global_cap', `App-wide daily limit of ${global} reached`);
 }
 
 let client: Anthropic | null = null;

@@ -4,3 +4,5 @@ onlyBuiltDependencies:
   - esbuild
   - sharp
   - unrs-resolver
+overrides:
+  "@vercel/cli-config>zod": ^4.6.7

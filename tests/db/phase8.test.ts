@@ -65,6 +65,22 @@ describe('accounts (ACC-2): attach or merge the anonymous household', () => {
     const plans = await pg.query<{ n: number }>(`select count(*)::int n from plans where household_id = $1`, [phoneA.id]);
     expect(plans.rows[0]!.n).toBe(2);
   });
+
+  it("shared phone: signing in never takes over another account's household", async () => {
+    const device = crypto.randomUUID();
+    const h = await createHousehold(db, device);
+    const owner = await newUser(`c${Date.now()}@example.com`);
+    expect(await attachDeviceHousehold(db, owner.id, device)).toBe(h.id);
+    // owner signs out; someone else signs in on the same phone (cookie unchanged)
+    const other = await newUser(`d${Date.now()}@example.com`);
+    expect(await attachDeviceHousehold(db, other.id, device)).toBeNull();
+    expect((await householdById(db, h.id))!.userId).toBe(owner.id);
+    expect(await householdByUser(db, other.id)).toBeNull();
+    const access = await pg.query(`select 1 from household_members_access where household_id = $1 and user_id = $2`, [h.id, other.id]);
+    expect(access.rows).toHaveLength(0);
+    // the owner signing back in still gets their household
+    expect(await attachDeviceHousehold(db, owner.id, device)).toBe(h.id);
+  });
 });
 
 describe('share links (ACC-3)', () => {

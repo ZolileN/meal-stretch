@@ -6,7 +6,7 @@ import type { PGlite } from '@electric-sql/pglite';
 import { z } from 'zod';
 import type { Db } from '@/lib/db';
 import { resetEnvCache } from '@/lib/env';
-import { claudeTool, ClaudeError, contentHash, usedToday } from '@/lib/claude';
+import { assertCap, claudeTool, ClaudeError, contentHash, GLOBAL_DAILY_CAPS, usedToday, usedTodayAll } from '@/lib/claude';
 import { createHousehold, householdById, updateHousehold } from '@/lib/household';
 import { createPlan } from '@/lib/plans/service';
 import { applyExtraction, createReceipt, processReceipt, receiptView } from '@/lib/receipts/pipeline';
@@ -71,6 +71,15 @@ describe('lib/claude (fixture mode, cache, caps, Zod)', () => {
     await expect(parseTweak(db, h.id, 'no beef please')).rejects.toMatchObject({ code: 'cap_reached' });
     // a cached repeat doesn't count and isn't blocked
     expect((await parseTweak(db, h.id, 'no fish 3 quick')).cached).toBe(true);
+  });
+  it('app-wide daily cap: a fresh household (new cookie) is still blocked once the whole app is at the limit', async () => {
+    expect(GLOBAL_DAILY_CAPS.receipt).toBeGreaterThan(0);
+    const used = await usedTodayAll(db, 'tweak');
+    expect(used).toBeGreaterThanOrEqual(10);
+    const fresh = await createHousehold(db, crypto.randomUUID());
+    await expect(assertCap(db, fresh.id, 'tweak', new Date(), { tweak: used + 1 })).resolves.toBeUndefined();
+    await expect(assertCap(db, fresh.id, 'tweak', new Date(), { tweak: used })).rejects.toMatchObject({ code: 'global_cap' });
+    await expect(assertCap(db, null, 'tweak', new Date(), { tweak: used })).rejects.toMatchObject({ code: 'global_cap' });
   });
 });
 

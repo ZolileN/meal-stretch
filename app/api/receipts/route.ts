@@ -30,6 +30,7 @@ export async function POST(req: Request) {
   } catch (e) {
     if (e instanceof ReceiptError) return apiError(e.status, e.code, e.message);
     if (e instanceof ClaudeError && e.code === 'cap_reached') return apiError(429, 'cap_reached', 'You can scan 5 slips a day. Try again tomorrow.');
+    if (e instanceof ClaudeError && e.code === 'global_cap') return apiError(503, 'global_cap', 'Slip scanning is busy today. Please try again tomorrow.');
     throw e;
   }
 }
