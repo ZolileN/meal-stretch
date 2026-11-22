@@ -32,6 +32,8 @@
     "nothingTonight": "No supper planned for tonight",
     "nothingTonightText": "This plan has ended. Make a new one for the days ahead.",
     "newPlan": "Make a new plan",
+    "newPlanShort": "New plan",
+    "newPlanSub": "New budget or dates",
     "ideas": "Meal ideas",
     "ideasSub": "Tell us what you feel like"
   },
@@ -295,7 +297,10 @@
     "denied": "Reminders are blocked in your browser settings.",
     "installTitle": "Put {brand} on your home screen",
     "installBody": "Open your plan and list with one tap, even offline.",
-    "install": "Install"
+    "install": "Install",
+    "installIos": "On iPhone: tap the Share button at the bottom of Safari, then “Add to Home Screen”.",
+    "installMenu": "Open your browser menu (⋮) and tap “Install app” or “Add to Home screen”.",
+    "installGotIt": "Got it"
   },
   "receipts": {
     "title": "Scan a receipt",

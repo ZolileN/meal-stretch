@@ -21,6 +21,9 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+const INSTALL_CAPTURE =
+  "window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();window.__msInstall=e;window.dispatchEvent(new Event('ms:installable'))});";
+
 export const viewport: Viewport = {
   themeColor: BRAND.colors.primary,
   width: 'device-width',
@@ -31,6 +34,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const locale = await getLocale();
   return (
     <html lang={locale} className={`${heading.variable} ${body.variable}`}>
+      <head>
+        {/* Catch the install event before React hydrates: on slow phones it fires first and would be lost. */}
+        <script dangerouslySetInnerHTML={{ __html: INSTALL_CAPTURE }} />
+      </head>
       <body className="min-h-dvh bg-bg text-body text-text antialiased">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <VercelInsights />
