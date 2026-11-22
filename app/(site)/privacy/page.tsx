@@ -11,7 +11,7 @@ export default async function Privacy() {
       <p className="text-text">{t('intro', { brand: BRAND.name })}</p>
       <Card className="p-5">
         <ul className="list-disc space-y-3 pl-5 text-small">
-          {(['location', 'household', 'receipts', 'push', 'noAds', 'rights', 'contact'] as const).map((k) => (
+          {(['location', 'household', 'receipts', 'push', 'stats', 'noAds', 'rights', 'contact'] as const).map((k) => (
             <li key={k}>{t(k)}</li>
           ))}
         </ul>
