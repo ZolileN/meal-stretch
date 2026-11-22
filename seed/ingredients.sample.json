@@ -781,5 +781,230 @@
   "perishable": false,
   "pantryStaple": true,
   "category": "spices"
+ },
+ {
+  "id": "chicken_thighs",
+  "name": "Chicken thighs",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "beef_shin",
+  "name": "Beef shin (bone-in)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "oxtail",
+  "name": "Oxtail",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "beef_ribeye",
+  "name": "Ribeye steak",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "beef_rump",
+  "name": "Rump steak",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "mutton_stewing",
+  "name": "Stewing mutton",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "lamb_loin_chops",
+  "name": "Lamb loin chops",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "lamb_shank",
+  "name": "Lamb shanks",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "lamb_leg",
+  "name": "Leg of lamb",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "lamb_riblets",
+  "name": "Lamb riblets",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "pork_ribs",
+  "name": "Pork spare ribs (marinated)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "pork_belly",
+  "name": "Pork belly",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "meat"
+ },
+ {
+  "id": "prawns",
+  "name": "Prawn meat (frozen)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "fish"
+ },
+ {
+  "id": "calamari",
+  "name": "Calamari rings (frozen)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "fish"
+ },
+ {
+  "id": "mussels",
+  "name": "Half-shell mussels (frozen)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "fish"
+ },
+ {
+  "id": "snoek",
+  "name": "Braai snoek (frozen)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "fish"
+ },
+ {
+  "id": "snoek_smoked",
+  "name": "Smoked snoek",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "fish"
+ },
+ {
+  "id": "kingklip",
+  "name": "Kingklip (frozen)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "fish"
+ },
+ {
+  "id": "salmon",
+  "name": "Salmon portions (frozen)",
+  "unit": "g",
+  "roundTo": 50,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "fish"
+ },
+ {
+  "id": "butter",
+  "name": "Butter",
+  "unit": "g",
+  "roundTo": 10,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "dairy"
+ },
+ {
+  "id": "fresh_cream",
+  "name": "Fresh cream",
+  "unit": "ml",
+  "roundTo": 50,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "dairy"
+ },
+ {
+  "id": "apricot_jam",
+  "name": "Apricot jam",
+  "unit": "g",
+  "roundTo": 10,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "sauces"
+ },
+ {
+  "id": "worcestershire_sauce",
+  "name": "Worcestershire sauce",
+  "unit": "ml",
+  "roundTo": 5,
+  "perishable": false,
+  "pantryStaple": true,
+  "category": "sauces"
+ },
+ {
+  "id": "bbq_sauce",
+  "name": "Barbecue sauce",
+  "unit": "ml",
+  "roundTo": 10,
+  "perishable": false,
+  "pantryStaple": false,
+  "category": "sauces"
+ },
+ {
+  "id": "mielies",
+  "name": "Mielies (corn on the cob)",
+  "unit": "unit",
+  "roundTo": 1,
+  "perishable": true,
+  "pantryStaple": false,
+  "category": "produce"
  }
 ]

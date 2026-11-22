@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { createEngine, assignShops, varietyLimits } from '../src/index';
+import { createEngine, assignShops, varietyLimits, TREAT_TAG, UPGRADE_BUDGET_SHARE, upgradeCeiling } from '../src/index';
 import type { PlanRequest, PlanResult } from '../src/types';
 import { BRANCH, context, households, householdContext, recipes, request } from '../fixtures';
 
@@ -170,6 +170,62 @@ describe('budget handling (§9.6, PLN-5)', () => {
     expect(d).toBeLessThan(7);
     const fits = engine.plan({ ...cheap, days: d }, householdContext(cheap));
     expect(fits.totals.paidCents).toBeLessThanOrEqual(30_000);
+  });
+});
+
+describe('budget upgrades: spare budget buys treat suppers (balanced mode)', () => {
+  // The fixture catalogue has no treat recipes; mark the pricier proteins as treats for these tests.
+  const TREAT_PROTEINS = ['protein:beef_stewing', 'protein:hake_fillets', 'protein:boerewors', 'protein:chicken_breast_fillets', 'protein:pork_chops'];
+  const withTreats = (ctx: ReturnType<typeof householdContext>) => ({
+    ...ctx,
+    recipes: ctx.recipes.map((r) => (r.tags.some((t) => TREAT_PROTEINS.includes(t)) ? { ...r, tags: [...r.tags, TREAT_TAG] } : r)),
+  });
+  const treatIds = new Set(withTreats(householdContext(request())).recipes.filter((r) => r.tags.includes(TREAT_TAG)).map((r) => r.id));
+  const treats = (r: PlanResult) => r.meals.filter((m) => treatIds.has(m.recipeId)).length;
+  const family = request({ household: { light: 1, average: 2, big: 1 } });
+  const cheapestCost = engine.plan(family, householdContext(family)).totals.paidCents;
+
+  it('the fixture has enough treat recipes to test with', () => expect(treatIds.size).toBeGreaterThanOrEqual(5));
+
+  it('a big budget gets treats, stays within 90% of the budget and keeps the hard constraints', () => {
+    const req = { ...family, budgetCents: cheapestCost * 4 };
+    const r = engine.plan(req, withTreats(householdContext(req)));
+    expect(treats(r)).toBeGreaterThanOrEqual(2);
+    expect(r.totals.paidCents).toBeLessThanOrEqual(upgradeCeiling(req)!);
+    expect(r.budget.status).toBe('under');
+    assertHardConstraints(req, r);
+  });
+
+  it('more budget never means fewer treats', () => {
+    const counts = [1.2, 2, 4].map((k) => {
+      const req = { ...family, budgetCents: Math.round(cheapestCost * k) };
+      return treats(engine.plan(req, withTreats(householdContext(req))));
+    });
+    expect(counts[0]).toBeLessThanOrEqual(counts[1]!);
+    expect(counts[1]).toBeLessThanOrEqual(counts[2]!);
+  });
+
+  it('no upgrades without a budget, in cheapest mode, or when the budget is already used up', () => {
+    for (const req of [
+      { ...family, budgetCents: null },
+      { ...family, budgetCents: cheapestCost * 4, mode: 'cheapest' as const },
+      { ...family, budgetCents: cheapestCost },
+    ]) {
+      const plain = engine.plan(req, householdContext(req));
+      const tagged = engine.plan(req, withTreats(householdContext(req)));
+      expect(tagged.meals.map((m) => m.recipeId)).toEqual(plain.meals.map((m) => m.recipeId));
+    }
+    expect(upgradeCeiling({ ...family, budgetCents: null })).toBeNull();
+    expect(upgradeCeiling({ ...family, budgetCents: 100_000, mode: 'cheapest' })).toBeNull();
+    expect(upgradeCeiling({ ...family, budgetCents: 100_000 })).toBe(Math.floor(100_000 * UPGRADE_BUDGET_SHARE));
+  });
+
+  it('pinned days are never upgraded', () => {
+    const base = engine.plan(family, householdContext(family));
+    const pinned = [{ day: 2, recipeId: base.meals[1]!.recipeId }];
+    const req = { ...family, budgetCents: cheapestCost * 4, pinned };
+    const r = engine.plan(req, withTreats(householdContext(req)));
+    expect(r.meals.find((m) => m.day === 2)!.recipeId).toBe(pinned[0]!.recipeId);
   });
 });
 

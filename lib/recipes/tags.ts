@@ -1,5 +1,5 @@
 /** Recipe tag rules (PRD §11.2). Allergen/diet "contains:" tags are derived from ingredients so they can't be forgotten. */
-export const EXCLUSION_TAGS = ['pork', 'beef', 'fish', 'nuts', 'dairy', 'gluten'] as const;
+export const EXCLUSION_TAGS = ['pork', 'beef', 'fish', 'shellfish', 'nuts', 'dairy', 'gluten'] as const;
 export type ExclusionTag = (typeof EXCLUSION_TAGS)[number];
 
 /** ingredient id → what it contains. Conservative: when unsure (boerewors, polony), include. */
@@ -32,6 +32,23 @@ export const INGREDIENT_CONTAINS: Record<string, ExclusionTag[]> = {
   egg_noodles: ['gluten'],
   soy_sauce: ['gluten'],
   feta_cheese: ['dairy'],
+  beef_shin: ['beef'],
+  oxtail: ['beef'],
+  beef_ribeye: ['beef'],
+  beef_rump: ['beef'],
+  pork_ribs: ['pork'],
+  pork_belly: ['pork'],
+  // Avoiding fish also avoids seafood; "shellfish" is for people who eat fish but not shellfish (allergy).
+  prawns: ['fish', 'shellfish'],
+  calamari: ['fish', 'shellfish'],
+  mussels: ['fish', 'shellfish'],
+  snoek: ['fish'],
+  snoek_smoked: ['fish'],
+  kingklip: ['fish'],
+  salmon: ['fish'],
+  worcestershire_sauce: ['fish'], // contains anchovies
+  butter: ['dairy'],
+  fresh_cream: ['dairy'],
 };
 
 const MEAT_OR_FISH_CATEGORIES = new Set(['meat', 'fish']);

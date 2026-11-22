@@ -22,7 +22,7 @@ export const planInputSchema = z
       .optional(),
     shops: z.object({ mainBranchId: z.number().int().positive(), topUpBranchId: z.number().int().positive().nullable() }).optional(),
     loyalty: z.array(loyaltyId).max(10).optional(),
-    exclusions: z.array(z.enum(EXCLUSION_TAGS)).max(6).optional(),
+    exclusions: z.array(z.enum(EXCLUSION_TAGS)).max(EXCLUSION_TAGS.length).optional(),
     days: z.number().int().min(3).max(14).optional(),
     period: z
       .discriminatedUnion('kind', [

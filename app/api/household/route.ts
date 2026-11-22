@@ -12,7 +12,7 @@ const schema = z
     average: z.number().int().min(0).max(12),
     big: z.number().int().min(0).max(12),
     loyalty: z.array(z.string().regex(/^[a-z_]{2,30}$/)).max(10),
-    exclusions: z.array(z.enum(EXCLUSION_TAGS)).max(6),
+    exclusions: z.array(z.enum(EXCLUSION_TAGS)).max(EXCLUSION_TAGS.length),
     neverSwapProteins: z.array(z.string().regex(/^[a-z0-9_]{2,60}$/)).max(30),
     paydayDom: z.number().int().min(1).max(31).nullable(),
     language: z.enum(['en', 'xh', 'af']),

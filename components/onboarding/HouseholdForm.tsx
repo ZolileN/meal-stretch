@@ -13,8 +13,8 @@ import { fieldClass } from '@/components/ui/field';
 import { useShops } from '@/components/location/LocationProvider';
 import { addDaysIso, DEFAULT_PAYDAY, isoDateInSA, periodDays, type PeriodChoice } from '@/lib/period';
 
-const AVOID = ['pork', 'beef', 'fish', 'nuts', 'dairy', 'gluten'] as const;
-const avoidKey = { pork: 'avoidPork', beef: 'avoidBeef', fish: 'avoidFish', nuts: 'avoidNuts', dairy: 'avoidDairy', gluten: 'avoidGluten' } as const;
+const AVOID = ['pork', 'beef', 'fish', 'shellfish', 'nuts', 'dairy', 'gluten'] as const;
+const avoidKey = { pork: 'avoidPork', beef: 'avoidBeef', fish: 'avoidFish', shellfish: 'avoidShellfish', nuts: 'avoidNuts', dairy: 'avoidDairy', gluten: 'avoidGluten' } as const;
 
 /** Starting values for a returning household (a new plan starts from the last one's people, budget and avoid list). */
 export interface HouseholdDefaults {

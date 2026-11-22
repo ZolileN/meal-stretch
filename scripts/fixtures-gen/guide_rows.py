@@ -3,9 +3,10 @@ Each row: retailer, product as listed, pack qty + unit, ingredient, price in cen
 Regenerate seed/prices.guide.csv with: python3 scripts/fixtures-gen/guide_rows.py"""
 import csv, sys
 DATE = '2026-11-21'
+CURRENT = DATE  # lookup date of the rows that follow (batch 14 was looked up on 2026-11-22)
 ROWS = []
 def g(retailer, product, qty, unit, ingredient, cents, url):
-    ROWS.append((retailer, product, qty, unit, ingredient, cents, url))
+    ROWS.append((retailer, product, qty, unit, ingredient, cents, url, CURRENT))
 
 # ── batch 1: chicken + beef ──
 g('shoprite', "Farmer's Choice Frozen Mixed Chicken Portions 2kg", 2000, 'g', 'chicken_portions_mixed', 8999, "https://www.shoprite.co.za/All-Departments/Food/Frozen-Food/Frozen-Meat-and-Poultry/Frozen-Chicken/Farmer's-Choice-Frozen-Mixed-Chicken-Portions-2kg/p/10807062EA")
@@ -217,14 +218,63 @@ g('shoprite', 'Frozen Baby Hake Fillets (per kg)', 1000, 'g', 'hake_fillets', 99
 g('pnp', 'Spice Mecca Chilli Powder 100g', 100, 'g', 'chilli_powder', 2999, 'https://www.pnp.co.za/pnp-chilli-powder-100ml/p/000000000000937609_EA')
 g('checkers', 'Spice Mecca Chilli Powder 100g', 100, 'g', 'chilli_powder', 2999, 'https://www.checkers.co.za/product/osmans-taj-mahal-extra-special-chilli-powder-100g-5fff0347bd593b24364f6224')
 
+# ── batch 14 (2026-11-22): lamb, mutton, steak, oxtail, ribs, chicken thighs, seafood, braai extras ──
+# Regular prices (not promotions) where a page showed both.
+CURRENT = '2026-11-22'
+g('checkers', 'Lamb Loin Chops (per kg)', 1000, 'g', 'lamb_loin_chops', 22999, 'https://www.checkers.co.za/product/lamb-loin-chops-per-kg-10151864KG')
+g('pnp', 'PnP Lamb Shanks (per kg)', 1000, 'g', 'lamb_shank', 18999, 'https://www.pnp.co.za/pnp-lamb-shanks-p-kg/p/000000000000234882_KGM')
+g('checkers', 'Simple Truth Natural Lamb Shank (per kg)', 1000, 'g', 'lamb_shank', 18999, 'https://www.checkers.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Lamb/Simple-Truth-Natural-Lamb-Shank-Per-kg/p/10154182KG')
+g('pnp', 'PnP Leg of Lamb Roast (per kg)', 1000, 'g', 'lamb_leg', 19999, 'https://www.pnp.co.za/pnp-leg-of-lamb-roast/p/000000000000192453_KGM')
+g('checkers', 'Lamb Leg (per kg)', 1000, 'g', 'lamb_leg', 20999, 'https://www.checkers.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Lamb/Lamb-Leg-Per-kg/p/10151868KG')
+g('checkers', 'Thinly Sliced Lamb Riblets (per kg)', 1000, 'g', 'lamb_riblets', 16999, 'https://www.checkers.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Lamb/Thinly-Sliced-Lamb-Riblets-Per-kg/p/10470176KG')
+g('checkers', 'Simple Truth Natural Lamb Riblets (per kg)', 1000, 'g', 'lamb_riblets', 18999, 'https://www.checkers.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Lamb/Simple-Truth-Natural-Lamb-Riblets-Per-kg/p/10195783KG')
+g('shoprite', 'Stewing Mutton (per kg)', 1000, 'g', 'mutton_stewing', 9999, 'https://www.shoprite.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Stewing-Mutton-Per-Kg/p/10151909KG')
+g('checkers', 'Stewing Mutton (per kg)', 1000, 'g', 'mutton_stewing', 12999, 'https://www.checkers.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Lamb/Stewing-Mutton-Per-Kg/p/10151909KG')
+g('shoprite', 'Mutton Potjiekos (per kg)', 1000, 'g', 'mutton_stewing', 12999, 'https://www.shoprite.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Lamb/Mutton-Potjiekos-Per-kg/p/10152353KG')
+g('shoprite', 'Beef Oxtail (per kg)', 1000, 'g', 'oxtail', 12999, 'https://www.shoprite.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Beef/Beef-Oxtail-Per-kg/p/10152050KG')
+g('checkers', 'Beef Oxtail (per kg)', 1000, 'g', 'oxtail', 14999, 'https://www.checkers.co.za/product/beef-oxtail-per-kg-5d3af63bf434cf8420737dfb')
+g('checkers', 'Steakhouse Classic Rib Eye Beef Steak (per kg)', 1000, 'g', 'beef_ribeye', 39999, 'https://www.checkers.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Beef/Steakhouse-Classic-Rib-Eye-Beef-Steak-Per-kg/p/10163742KG')
+g('shoprite', 'Rump Beef Steak (per kg)', 1000, 'g', 'beef_rump', 18999, 'https://www.shoprite.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Beef/Rump-Beef-Steak-Per-kg/p/10151688KG')
+g('checkers', 'Rump Beef Steak (per kg)', 1000, 'g', 'beef_rump', 22699, 'https://www.checkers.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Beef/Rump-Beef-Steak-Per-kg/p/10151688KG')
+g('pnp', 'PnP Rump Steak (per kg)', 1000, 'g', 'beef_rump', 25999, 'https://www.pnp.co.za/pnp-rump-steak/p/000000000000214042_KGM')
+g('checkers', 'Bone In Beef Shin (per kg)', 1000, 'g', 'beef_shin', 14999, 'https://www.checkers.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Beef/Bone-In-Beef-Shin-Per-kg/p/10151671KG')
+g('shoprite', 'Bone In Beef Shin (per kg)', 1000, 'g', 'beef_shin', 14999, 'https://www.shoprite.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Beef/Bone-In-Beef-Shin-Per-kg/p/10151671KG')
+g('shoprite', 'Chicken Thighs (per kg)', 1000, 'g', 'chicken_thighs', 5999, 'https://www.shoprite.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Chicken/Chicken-Thighs-Per-kg/p/10151743KG')
+g('checkers', "Farmer's Choice Chicken Thighs (per kg)", 1000, 'g', 'chicken_thighs', 9999, 'https://www.checkers.co.za/product/farmers-choice-chicken-thighs-per-kg-10732975KG')
+g('checkers', 'Grillhouse Style Sticky BBQ Marinated Pork Spare Ribs (per kg)', 1000, 'g', 'pork_ribs', 13999, 'https://checkers.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Pork/Grillhouse-Style-Sticky-BBQ-Marinated-Pork-Spare-Ribs-Per-kg/p/10358856KG')
+g('checkers', 'Pork Spare Rib (per kg)', 1000, 'g', 'pork_ribs', 10888, 'https://www.checkers.co.za/product/pork-spare-rib-per-kg-10151983KG')
+g('shoprite', 'Pork Belly (per kg)', 1000, 'g', 'pork_belly', 8999, 'https://www.shoprite.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Pork/Pork-Belly-Per-kg/p/10151980KG')
+g('checkers', 'Pork Belly On The Bone (per kg)', 1000, 'g', 'pork_belly', 10999, 'https://www.checkers.co.za/All-Departments/Food/Fresh-Food/Fresh-Meat-and-Poultry/Fresh-Pork/Pork-Belly-On-The-Bone-Per-kg/p/10162301KG')
+g('checkers', 'Cape Point Frozen Prawn Meat 800g', 800, 'g', 'prawns', 19999, 'https://www.checkers.co.za/All-Departments/Food/Frozen-Food/Frozen-Fish-and-Seafood/Frozen-Prawns/Cape-Point-Frozen-Prawn-Meat-800g/p/10505391EA')
+g('pnp', "PnP Fishmonger's Catering Prawn Meat 800g", 800, 'g', 'prawns', 19999, "https://www.pnp.co.za/pnpstorefront/pnp/en/All-Products/Frozen-Food/Frozen-Fish-&-Seafood/Seafood/PnP-Fishmonger's-Catering-Prawn-Meat-800g/p/000000000000784079_EA")
+g('checkers', 'Cape Point Frozen Calamari Rings 500g', 500, 'g', 'calamari', 12999, 'https://checkers.co.za/All-Departments/Food/Frozen-Food/Frozen-Fish-and-Seafood/Frozen-Seafood-and-Shellfish/Cape-Point-Frozen-Calamari-Rings-500g/p/10548708EA')
+g('checkers', 'Cape Point Frozen Half Shell Mussels 400g', 400, 'g', 'mussels', 11499, 'https://www.checkers.co.za/product/cape-point-frozen-half-shell-mussels-400g-10401240EA')
+g('checkers', 'Cape Point Frozen Ready-to-Grill Braai Snoek 1kg', 1000, 'g', 'snoek', 16499, 'https://www.checkers.co.za/product/cape-point-frozen-ready-to-grill-braai-snoek-1kg-10794741EA')
+g('pnp', 'Mediterranean Smoked Snoek Fillets 200g', 200, 'g', 'snoek_smoked', 7499, 'https://www.pnp.co.za/mediterranean-smoked-snoek-fillets-200g/p/000000000000941257_EA')
+g('pnp', "PnP Fishmonger's Kingklip 500g", 500, 'g', 'kingklip', 17999, 'https://www.pnp.co.za/c/frozen-fish-1006626562')
+g('checkers', 'Cape Point Kingklip Portions 2kg', 2000, 'g', 'kingklip', 69999, 'https://www.checkers.co.za/All-Departments/Food/Frozen-Food/Frozen-Fish-and-Seafood/Frozen-Fish-Fillets/Cape-Point-Kingklip-Portions-2kg/p/10836803EA')
+g('pnp', "PnP Fishmonger's Norwegian Salmon 500g", 500, 'g', 'salmon', 33499, 'https://www.pnp.co.za/pnp-fishmonger-s-norwegian-salmon-500g/p/000000000000784081_EA')
+g('checkers', 'Forage And Feast Frozen Norwegian Salmon Portions 500g', 500, 'g', 'salmon', 39999, 'https://www.checkers.co.za/All-Departments/Food/Frozen-Food/Frozen-Fish-and-Seafood/Frozen-Fish-Fillets/Forage-And-Feast-Frozen-Norwegian-Salmon-Portions-500g/p/10736664EA')
+g('checkers', 'Fair Cape Dairies Salted Butter 500g', 500, 'g', 'butter', 8499, 'https://www.checkers.co.za/product/fair-cape-dairies-salted-butter-500g-10839107EA')
+g('checkers', 'Crystal Valley Salted Butter Brick 500g', 500, 'g', 'butter', 8999, 'https://www.checkers.co.za/product/crystal-valley-salted-butter-brick-500g-10347864EA')
+g('shoprite', 'Clover Cream 250ml', 250, 'ml', 'fresh_cream', 3699, 'https://www.shoprite.co.za/All-Departments/Food/Fresh-Food/Milk,-Butter-and-Eggs/Long-Life-Milk-and-Cream/Clover-Cream-250ml/p/10141984EA')
+g('checkers', 'Clover Original Cream 250ml', 250, 'ml', 'fresh_cream', 3699, 'https://www.checkers.co.za/All-Departments/Food/Fresh-Food/Milk,-Butter-and-Eggs/Fresh-Cream-and-Custard/Clover-Original-Cream-250ml/p/10141984EA')
+g('shoprite', 'Ritebrand Smooth Apricot Jam 450g', 450, 'g', 'apricot_jam', 3299, 'https://shoprite.co.za/All-Departments/Food/Food-Cupboard/Spreads,-Honey-and-Preserves/Jams-and-Marmalade/Ritebrand-Smooth-Apricot-Jam-450g/p/10145872EA')
+g('checkers', 'Checkers Housebrand Smooth Apricot Jam 450g', 450, 'g', 'apricot_jam', 3299, 'https://www.checkers.co.za/All-Departments/Food/Food-Cupboard/Spreads,-Honey-and-Preserves/Jams-and-Marmalade/Checkers-Housebrand-Smooth-Apricot-Jam-450g/p/10133260EA')
+g('shoprite', 'The Kitchen Worcestershire Sauce 250ml', 250, 'ml', 'worcestershire_sauce', 2799, 'https://www.shoprite.co.za/product/the-kitchen-worcestershire-sauce-250ml-10760952EA')
+g('checkers', "Colman's Holbrookes Original Worcestershire Sauce 250ml", 250, 'ml', 'worcestershire_sauce', 2699, "https://www.checkers.co.za/All-Departments/Food/Food-Cupboard/Table-Condiments-and-Dressings/Brown-Sauces/Colman's-Holbrookes-Original-Worcestershire-Sauce-250ml/p/10128761EA")
+g('shoprite', 'Championship Smokey Barbeque Marinade 750ml', 750, 'ml', 'bbq_sauce', 4499, 'https://www.shoprite.co.za/All-Departments/Food/Food-Cupboard/Table-Condiments-and-Dressings/BBQ-Sauce-and-Marinades/Championship-Smokey-BBQ-Marinade-Bottle-750ml/p/10766848EA')
+g('checkers', 'Championship Smokey BBQ Marinade Bottle 750ml', 750, 'ml', 'bbq_sauce', 4699, 'https://www.checkers.co.za/All-Departments/Food/Food-Cupboard/Table-Condiments-and-Dressings/BBQ-Sauce-and-Marinades/Championship-Smokey-BBQ-Marinade-Bottle-750ml/p/10766848EA')
+g('shoprite', 'Sweetcorn 4s', 4, 'unit', 'mielies', 2699, 'https://www.shoprite.co.za/All-Departments/Food/Fresh-Food/Fresh-Vegetables/Sweetcorn-4s/p/10151615EA')
+
 if __name__ == '__main__':
     out = 'seed/prices.guide.csv'
     with open(out, 'w', newline='') as f:
-        f.write('# GUIDE PRICES looked up with web search on ' + DATE + ' (MVP, docs/decisions.md). Regular shelf prices as listed online;\n')
+        f.write('# GUIDE PRICES looked up with web search from ' + DATE + ' (date per row; MVP, docs/decisions.md). Regular shelf prices as listed online;\n')
         f.write('# they may differ in store. Import: pnpm import:prices seed/prices.guide.csv --source guide\n')
         w = csv.writer(f, lineterminator='\n')
         w.writerow(['retailer_id', 'branch_id', 'province', 'product_name', 'brand', 'pack_qty', 'pack_unit', 'ingredient_id', 'price_cents',
                     'member_price_cents', 'special_price_cents', 'special_ends_on', 'observed_at', 'source_url'])
-        for r, name, qty, unit, ing, cents, url in ROWS:
-            w.writerow([r, '', '', name, '', qty, unit, ing, cents, '', '', '', DATE, url])
+        for r, name, qty, unit, ing, cents, url, day in ROWS:
+            w.writerow([r, '', '', name, '', qty, unit, ing, cents, '', '', '', day, url])
     print(len(ROWS), 'rows →', out)
