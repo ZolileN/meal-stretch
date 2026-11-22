@@ -13,13 +13,26 @@ import { Toast } from '@/components/ui/Toast';
 import { MealCard } from './MealCard';
 import { PlanSummaryCard } from './PlanSummaryCard';
 import { StealCard } from './StealCard';
+import type { SignInMethods } from '@/lib/auth/methods';
 
 // Secondary, below-the-fold pieces load after the plan itself (first-load JS budget, PRD §15).
 const PlanExtras = dynamic(() => import('./PlanExtras').then((m) => m.PlanExtras), { ssr: false });
 const TweakBox = dynamic(() => import('./TweakBox').then((m) => m.TweakBox), { ssr: false });
 const AccountPrompt = dynamic(() => import('@/components/account/AccountPrompt').then((m) => m.AccountPrompt), { ssr: false });
 
-export function PlanScreen({ view, today, shoppedPrompt = false, signedIn = false }: { view: PlanView; today: string; shoppedPrompt?: boolean; signedIn?: boolean }) {
+export function PlanScreen({
+  view,
+  today,
+  shoppedPrompt = false,
+  signedIn = false,
+  signInMethods = { google: false, email: false },
+}: {
+  view: PlanView;
+  today: string;
+  shoppedPrompt?: boolean;
+  signedIn?: boolean;
+  signInMethods?: SignInMethods;
+}) {
   const t = useTranslations('plan');
   const tc = useTranslations('coach');
   const [notice, setNotice] = useState<string | null>(null);
@@ -58,7 +71,7 @@ export function PlanScreen({ view, today, shoppedPrompt = false, signedIn = fals
       {editable && <TweakBox planId={view.planId} />}
       {view.steal && <StealCard steal={view.steal} />}
       <PlanExtras />
-      <AccountPrompt signedIn={signedIn} />
+      <AccountPrompt signedIn={signedIn} methods={signInMethods} />
     </main>
   );
 }

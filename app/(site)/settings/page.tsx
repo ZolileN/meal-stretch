@@ -4,6 +4,7 @@ import { getDb, query } from '@/lib/db';
 import { env } from '@/lib/env';
 import { currentHousehold } from '@/lib/household';
 import { sessionUser } from '@/lib/auth/session';
+import { signInMethods } from '@/lib/auth/methods';
 import { listShareLinks } from '@/lib/share';
 import { pgArray } from '@/lib/location/queries';
 import { SettingsForm } from '@/components/settings/SettingsForm';
@@ -31,6 +32,7 @@ export default async function SettingsPage() {
           language: h?.language ?? 'en',
           shareLinks: h ? await listShareLinks(db, h.id) : [],
           user: user ? { email: user.email } : null,
+          signInMethods: signInMethods(),
           appUrl: env().APP_URL,
         }}
       />
