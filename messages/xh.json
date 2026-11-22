@@ -497,6 +497,7 @@
     "receipts": "TODO: Receipts: only if you choose to scan one. We read the products and prices, remove card numbers, names and phone numbers, and delete the photo after 30 days.",
     "push": "TODO: Reminders: only if you allow them. You can switch each kind off in Settings.",
     "noAds": "TODO: No adverts, no ad trackers, and we never sell your data.",
+    "stats": "TODO: Usage stats: we count which pages are visited and how fast they load, without cookies and without knowing who you are.",
     "rights": "TODO: You can download or delete your data any time in Settings → Data & privacy.",
     "contact": "TODO: Questions about your data: contact us using the email in the app store listing.",
     "link": "TODO: Privacy"
