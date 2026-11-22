@@ -2,7 +2,7 @@
 import { NextResponse } from 'next/server';
 import { sql } from 'drizzle-orm';
 import { z } from 'zod';
-import { parseBody } from '@/lib/api';
+import { limitOr429, parseBody } from '@/lib/api';
 import { getDb } from '@/lib/db';
 import { currentHousehold, ensureHousehold } from '@/lib/household';
 import { track } from '@/lib/events';
@@ -10,6 +10,8 @@ import { track } from '@/lib/events';
 const schema = z.object({ endpoint: z.string().url().max(1000).startsWith('https://'), keys: z.object({ p256dh: z.string().min(20).max(200), auth: z.string().min(8).max(100) }) });
 
 export async function POST(req: Request) {
+  const limited = await limitOr429(req, 'push-subscribe', 10, 3600);
+  if (limited) return limited;
   const body = await parseBody(req, schema);
   if (!body.ok) return body.res;
   const db = getDb();

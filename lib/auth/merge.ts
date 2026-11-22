@@ -46,7 +46,9 @@ export async function mergeHouseholds(db: Db, fromId: string, toId: string): Pro
 
 /** Called right after sign-in with the device cookie (if any). Returns the account's household id. */
 export async function attachDeviceHousehold(db: Db, userId: string, deviceId: string | null): Promise<string | null> {
-  const device = deviceId ? await householdByDevice(db, deviceId) : null;
+  const found = deviceId ? await householdByDevice(db, deviceId) : null;
+  // Shared phone: the cookie may still point at someone else's household after they signed out. Never take it over.
+  const device = found && (found.userId === null || found.userId === userId) ? found : null;
   const mine = await householdByUser(db, userId);
   let target: string | null = mine?.id ?? null;
   if (device && !mine) {
