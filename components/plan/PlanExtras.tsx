@@ -2,10 +2,11 @@
 /** Shown only once a plan exists: install prompt (§6) and push permission with an explanation first (§14). */
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Bell, Download } from 'lucide-react';
+import { Bell, Download, Share } from 'lucide-react';
 import { BRAND } from '@/lib/brand';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { installMode, isIos, type InstallMode } from '@/lib/install';
 
 type InstallEvent = Event & { prompt: () => Promise<void>; userChoice: Promise<{ outcome: string }> };
 declare global {
@@ -46,34 +47,59 @@ export function PlanExtras() {
   );
 }
 
-function InstallPrompt() {
+export function InstallPrompt() {
   const t = useTranslations('push');
-  const [evt, setEvt] = useState<InstallEvent | null>(null);
+  const [mode, setMode] = useState<InstallMode>('hidden');
   useEffect(() => {
-    if (read('ms_install_dismissed')) return;
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    if (window.__msInstall) setEvt(window.__msInstall);
-    const on = () => setEvt(window.__msInstall ?? null);
-    window.addEventListener('ms:installable', on);
-    return () => window.removeEventListener('ms:installable', on);
+    const decide = () =>
+      setMode(
+        installMode({
+          dismissed: Boolean(read('ms_install_dismissed')),
+          standalone: window.matchMedia('(display-mode: standalone)').matches || (navigator as { standalone?: boolean }).standalone === true,
+          hasEvent: Boolean(window.__msInstall),
+          ios: isIos(navigator.userAgent, navigator.maxTouchPoints),
+          touch: window.matchMedia('(pointer: coarse)').matches,
+        }),
+      );
+    // Give Chrome a moment to offer its prompt before falling back to how-to steps.
+    const timer = window.setTimeout(decide, window.__msInstall ? 0 : 2500);
+    const installed = () => setMode('hidden');
+    window.addEventListener('ms:installable', decide);
+    window.addEventListener('appinstalled', installed);
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener('ms:installable', decide);
+      window.removeEventListener('appinstalled', installed);
+    };
   }, []);
-  if (!evt) return null;
+  if (mode === 'hidden') return null;
+  const dismiss = () => (write('ms_install_dismissed', '1'), setMode('hidden'));
   return (
     <Card className="p-5" data-testid="install-prompt">
       <ExtraTitle icon={<Download className="size-5" />}>{t('installTitle', { brand: BRAND.name })}</ExtraTitle>
       <p className="mt-1 text-small text-text-muted">{t('installBody')}</p>
+      {mode === 'ios' && (
+        <p className="mt-2 flex items-start gap-2 text-small text-text">
+          <Share aria-hidden className="mt-0.5 size-4 shrink-0 text-primary" />
+          {t('installIos')}
+        </p>
+      )}
+      {mode === 'menu' && <p className="mt-2 text-small text-text">{t('installMenu')}</p>}
       <div className="mt-3 flex flex-wrap gap-2">
-        <Button
-          onClick={async () => {
-            await evt.prompt();
-            window.__msInstall = undefined;
-            setEvt(null);
-          }}
-        >
-          {t('install')}
-        </Button>
-        <Button variant="ghost" onClick={() => (write('ms_install_dismissed', '1'), setEvt(null))}>
-          {t('notNow')}
+        {mode === 'prompt' && (
+          <Button
+            onClick={async () => {
+              const evt = window.__msInstall;
+              window.__msInstall = undefined;
+              setMode('hidden');
+              await evt?.prompt();
+            }}
+          >
+            {t('install')}
+          </Button>
+        )}
+        <Button variant={mode === 'prompt' ? 'ghost' : 'secondary'} onClick={dismiss}>
+          {mode === 'prompt' ? t('notNow') : t('installGotIt')}
         </Button>
       </div>
     </Card>

@@ -16,17 +16,29 @@ import { addDaysIso, DEFAULT_PAYDAY, isoDateInSA, periodDays, type PeriodChoice 
 const AVOID = ['pork', 'beef', 'fish', 'nuts', 'dairy', 'gluten'] as const;
 const avoidKey = { pork: 'avoidPork', beef: 'avoidBeef', fish: 'avoidFish', nuts: 'avoidNuts', dairy: 'avoidDairy', gluten: 'avoidGluten' } as const;
 
-export function HouseholdForm({ paydayDom = DEFAULT_PAYDAY }: { paydayDom?: number }) {
+/** Starting values for a returning household (a new plan starts from the last one's people, budget and avoid list). */
+export interface HouseholdDefaults {
+  light: number;
+  average: number;
+  big: number;
+  budgetRands: number | null;
+  avoid: string[];
+}
+
+export function HouseholdForm({ paydayDom = DEFAULT_PAYDAY, defaults }: { paydayDom?: number; defaults?: HouseholdDefaults }) {
   const t = useTranslations('onboarding');
   const router = useRouter();
   const { shops } = useShops();
   const today = useMemo(() => isoDateInSA(new Date()), []);
-  const [people, setPeople] = useState(1);
-  const [split, setSplit] = useState<{ light: number; big: number } | null>(null);
-  const [budget, setBudget] = useState('');
+  const total = defaults ? defaults.light + defaults.average + defaults.big : 0;
+  const [people, setPeople] = useState(total > 0 ? Math.min(total, 12) : 1);
+  const [split, setSplit] = useState<{ light: number; big: number } | null>(
+    defaults && (defaults.light > 0 || defaults.big > 0) ? { light: defaults.light, big: defaults.big } : null,
+  );
+  const [budget, setBudget] = useState(defaults?.budgetRands ? String(defaults.budgetRands) : '');
   const [choice, setChoice] = useState<PeriodChoice>({ kind: 'week' });
   const [date, setDate] = useState(addDaysIso(today, 6));
-  const [avoid, setAvoid] = useState<string[]>([]);
+  const [avoid, setAvoid] = useState<string[]>(() => (defaults?.avoid ?? []).filter((a) => (AVOID as readonly string[]).includes(a)));
   const [state, setState] = useState<{ busy: boolean; error: string | null }>({ busy: false, error: null });
 
   const light = split ? Math.min(split.light, people) : 0;

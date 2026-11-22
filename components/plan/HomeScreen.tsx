@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { Clock, CookingPot, PackageCheck, Repeat, Sparkles, TrendingDown, Zap } from 'lucide-react';
+import { Clock, CookingPot, PackageCheck, Plus, Repeat, Sparkles, TrendingDown, Zap } from 'lucide-react';
 import { formatRandShort } from '@/lib/money';
 import { pickTonight } from '@/lib/plans/tonight';
 import type { PlanView } from '@/lib/plans/view';
@@ -18,6 +18,7 @@ import { PlanSummaryCard } from './PlanSummaryCard';
 import { StealCard } from './StealCard';
 
 const SwapSheet = dynamic(() => import('./SwapSheet').then((m) => m.SwapSheet), { ssr: false });
+const InstallPrompt = dynamic(() => import('./PlanExtras').then((m) => m.InstallPrompt), { ssr: false });
 
 export function HomeScreen({ view, today }: { view: PlanView; today: string }) {
   const t = useTranslations('home');
@@ -100,10 +101,11 @@ export function HomeScreen({ view, today }: { view: PlanView; today: string }) {
         </>
       )}
 
-      {editable && (
-        <>
-          <SectionHeader title={t('shortcuts')} className="pt-3" />
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(6.5rem,1fr))] gap-3">
+      <SectionHeader title={t('shortcuts')} className="pt-3" />
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(6.5rem,1fr))] gap-3">
+        <ShortcutTile icon={<Plus className="size-5" />} title={t('newPlanShort')} subtitle={t('newPlanSub')} href="/start/household" />
+        {editable && (
+          <>
             {tonight && <ShortcutTile icon={<Sparkles className="size-5" />} title={t('ideas')} subtitle={t('ideasSub')} onClick={() => setSwap('ideas')} />}
             <ShortcutTile
               icon={<TrendingDown className="size-5" />}
@@ -120,11 +122,12 @@ export function HomeScreen({ view, today }: { view: PlanView; today: string }) {
               disabled={busy !== null}
               onClick={() => rerun('quick', { mode: view.mode, maxCookMinutes: 30 }, t('quickDone'))}
             />
-          </div>
-        </>
-      )}
+          </>
+        )}
+      </div>
 
       {view.steal && <StealCard steal={view.steal} />}
+      <InstallPrompt />
     </main>
   );
 }

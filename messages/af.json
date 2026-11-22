@@ -32,6 +32,8 @@
     "nothingTonight": "TODO: No supper planned for tonight",
     "nothingTonightText": "TODO: This plan has ended. Make a new one for the days ahead.",
     "newPlan": "TODO: Make a new plan",
+    "newPlanShort": "TODO: New plan",
+    "newPlanSub": "TODO: New budget or dates",
     "ideas": "TODO: Meal ideas",
     "ideasSub": "TODO: Tell us what you feel like"
   },
@@ -295,7 +297,10 @@
     "denied": "TODO: Reminders are blocked in your browser settings.",
     "installTitle": "TODO: Put {brand} on your home screen",
     "installBody": "TODO: Open your plan and list with one tap, even offline.",
-    "install": "TODO: Install"
+    "install": "TODO: Install",
+    "installIos": "TODO: On iPhone: tap the Share button at the bottom of Safari, then “Add to Home Screen”.",
+    "installMenu": "TODO: Open your browser menu (⋮) and tap “Install app” or “Add to Home screen”.",
+    "installGotIt": "TODO: Got it"
   },
   "receipts": {
     "title": "TODO: Scan a receipt",

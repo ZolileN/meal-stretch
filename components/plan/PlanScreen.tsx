@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import { useTranslations } from 'next-intl';
 import { pickTonight } from '@/lib/plans/tonight';
 import type { PlanView } from '@/lib/plans/view';
+import { Plus } from 'lucide-react';
 import { ButtonLink } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { CoachMark } from '@/components/ui/CoachMark';
@@ -70,6 +71,9 @@ export function PlanScreen({
       </ul>
       {editable && <TweakBox planId={view.planId} />}
       {view.steal && <StealCard steal={view.steal} />}
+      <ButtonLink href="/start/household" variant="secondary" icon={<Plus aria-hidden className="size-4" />} data-testid="new-plan">
+        {t('newPlan')}
+      </ButtonLink>
       <PlanExtras />
       <AccountPrompt signedIn={signedIn} methods={signInMethods} />
     </main>
