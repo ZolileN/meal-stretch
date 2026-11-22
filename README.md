@@ -2,7 +2,7 @@
 
 **A budget-first supper planner for South African households.** Tell it how much money you have, how many people you're feeding and until when, and it plans the suppers and builds a priced shopping list for the shops near you.
 
-Live: https://meal-stretch.vercel.app
+Live: <https://meal-stretch.vercel.app>
 
 ## What it does
 
@@ -27,7 +27,7 @@ Prices older than 7 days are marked stale, and prices older than 21 days aren't 
 ## Tech stack
 
 | Area | Choice |
-|---|---|
+| --- | --- |
 | App | Next.js 16 (App Router), React 19, TypeScript (strict), Tailwind CSS 4 |
 | Planning engine | Pure TypeScript package in `packages/engine`: no I/O, deterministic, p95 under 300 ms for 14 days × 200 recipes |
 | Database | Postgres + PostGIS + `pg_trgm` on Neon, Drizzle ORM. Locally: PGlite + PostGIS (no Docker or install needed) |
@@ -47,7 +47,7 @@ cp .env.example .env.local   # the defaults use the local database
 pnpm dev                     # starts the local database, then Next.js on http://localhost:3000
 ```
 
-The first start takes about 20 seconds while the local database loads PostGIS and the seed data. Then open http://localhost:3000, search for "Somerset West" or "Bluewater Bay", pick a `TEST …` shop and make a plan. The local shops and prices are made up, for testing.
+The first start takes about 20 seconds while the local database loads PostGIS and the seed data. Then open <http://localhost:3000>, search for "Somerset West" or "Bluewater Bay", pick a `TEST …` shop and make a plan. The local shops and prices are made up, for testing.
 
 The local data is stored in `.pglite/dev`. Delete that folder to start fresh.
 
@@ -56,7 +56,7 @@ You don't need any API keys to run it locally. Without an Anthropic key, Claude 
 ## Commands
 
 | Command | What it does |
-|---|---|
+| --- | --- |
 | `pnpm dev` | Local database + Next.js dev server |
 | `pnpm build` / `pnpm start` | Production build / run it |
 | `pnpm typecheck` | TypeScript for the app and the engine |
@@ -74,7 +74,7 @@ To run a script against the production database, put `DATABASE_URL` in a git-ign
 
 ## Project layout
 
-```
+```text
 app/              Pages, API routes and admin screens (Next.js App Router)
 components/       UI; components/ui is the design system (see docs/THEME.md)
 lib/              Server logic: plans, prices, location, receipts, auth, Claude wrapper, env
@@ -99,7 +99,7 @@ The app runs on **Vercel**, with **Neon** for the database. The full guide, incl
 ## Documentation
 
 | File | What's in it |
-|---|---|
+| --- | --- |
 | [PRD.md](PRD.md) | The product spec: what to build and why |
 | [CLAUDE.md](CLAUDE.md) | Rules every change must follow (money, privacy, copy, UI) |
 | [docs/BUILD.md](docs/BUILD.md) | The order the MVP was built in |
