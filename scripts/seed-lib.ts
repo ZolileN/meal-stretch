@@ -17,6 +17,11 @@ export interface SeedOptions {
   log?: (msg: string) => void;
   /** Fictional TEST branches (dev/test only). Default true. */
   testBranches?: boolean;
+  /**
+   * Approximate dev/test place centres (seed/places.seed.json). Default true. Production skips them:
+   * the OpenStreetMap import supplies real places, and re-seeding would bring deleted ones back.
+   */
+  seedPlaces?: boolean;
   /** Fictional fixture prices (dev/test only). Default true. */
   fixturePrices?: boolean;
   /**
@@ -145,7 +150,7 @@ export async function seedAll(db: Db, opts: SeedOptions = {}) {
   const log = opts.log ?? (() => {});
   const fixtures = opts.fixturePrices !== false;
   log(`seeded ${await seedRetailers(db)} retailers`);
-  log(`seeded ${await seedPlaces(db)} places`);
+  if (opts.seedPlaces !== false) log(`seeded ${await seedPlaces(db)} places`);
   if (opts.testBranches !== false) log(`seeded ${await seedTestBranches(db)} TEST branches`);
   log(`seeded ${await seedIngredients(db)} ingredients`);
   log(`seeded ${await seedRecipes(db, { devPublish: opts.devPublishRecipes ?? fixtures })} recipes`);
