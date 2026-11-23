@@ -22,6 +22,16 @@ describe('seed', () => {
     // other test files may add their own rows; the seed itself must add nothing on re-run
     expect(after).toEqual(before);
     expect(before.recipes).toBeGreaterThanOrEqual(60);
+  }, 180_000); // re-seeds every recipe (~40 s for 256 on PGlite), too close to the 60 s default
+
+  it('production options never re-add dev place centres that were deleted', async () => {
+    const { db, pg } = await seededTestDb();
+    const swartkops = `select 1 from places where osm_id = 'seed/swartkops'`;
+    await pg.query(`delete from places where osm_id = 'seed/swartkops'`);
+    await seedAll(db, { seedPlaces: false, testBranches: false, fixturePrices: false });
+    expect((await pg.query(swartkops)).rows).toHaveLength(0);
+    await seedAll(db); // dev seed restores it for the other tests
+    expect((await pg.query(swartkops)).rows).toHaveLength(1);
   });
 
   it('every recipe ingredient exists (FK) and published recipes load for the engine', async () => {
